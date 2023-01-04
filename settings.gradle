@@ -1,4 +1,4 @@
-rootProject.name = 'gemfirexd-oss'
+rootProject.name = 'hydra-test'
 
 include ':gemfire-jgroups'
 include ':gemfire-trove'
@@ -9,16 +9,8 @@ include 'gemfire-shared'
 include 'gemfire-core'
 include 'gemfire-web'
 include 'gemfire-examples'
-include 'gemfirexd:shared'
-include 'gemfirexd:prebuild'
-include 'gemfirexd:core'
-include 'gemfirexd:client'
-include 'gemfirexd:native'
-include ':gemfirexd-hibernate'
-include 'gemfirexd:tools'
 include ':tests-core'
 
 project(':gemfire-jgroups').projectDir = "$rootDir/lgpl/gemfire-jgroups" as File
 project(':gemfire-trove').projectDir = "$rootDir/lgpl/gemfire-trove" as File
-project(':gemfirexd-hibernate').projectDir = "$rootDir/lgpl/gemfirexd-hibernate" as File
 project(':tests-core').projectDir = "$rootDir/tests/core" as File
