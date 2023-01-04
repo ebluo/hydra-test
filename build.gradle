@@ -59,12 +59,12 @@ allprojects {
     PRODUCT_VENDOR = 'Pivotal Software, Inc.'
     COPYRIGHT = "Copyright 1997-2015, ${PRODUCT_VENDOR} All rights reserved."
 
-    if (rootProject.name == 'gemfirexd-oss') {
+    if (rootProject.name == 'hydra-test') {
       subprojectBase = ':'
       gitCmd = "git --git-dir=${rootDir}/.git --work-tree=${rootDir}"
     } else {
-      subprojectBase = ':gemfirexd-oss:'
-      gitCmd = "git --git-dir=${project(':gemfirexd-oss').projectDir}/.git --work-tree=${project(':gemfirexd-oss').projectDir}"
+      subprojectBase = ':hydra-test:'
+      gitCmd = "git --git-dir=${project(':hydra-test').projectDir}/.git --work-tree=${project(':hydra-test').projectDir}"
     }
 
     gitBranch = "${gitCmd} rev-parse --abbrev-ref HEAD".execute().text.trim()
@@ -88,11 +88,7 @@ allprojects {
   }
 
   ext {
-    if (rootProject.name == 'gemfirexd-oss') {
-      testResultsBase = "${rootProject.buildDir}/tests"
-    } else {
-      testResultsBase = "${rootProject.buildDir}/tests/gfxd"
-    }
+    testResultsBase = "${rootProject.buildDir}/tests"
   }
 
   group = 'org.pivotal.gemfirexd'
@@ -364,31 +360,6 @@ subprojects {
           'jline.terminal'                 : 'scala.tools.jline.UnsupportedTerminal',
           'gemfiretest.sourceDir'          : "${projectDir}/src/test/resources"
 
-        if (rootProject.name == 'gemfirexd-oss') {
-          def eol = System.getProperty('line.separator')
-          beforeTest { desc ->
-            def now = new Date().format('yyyy-MM-dd HH:mm:ss.SSS Z')
-            def progress = new File(workingDir, "progress.txt")
-            def output = new File(workingDir, "output.txt")
-            progress << "${now} Starting test ${desc.className} ${desc.name}${eol}"
-            output << "${now} STARTING TEST ${desc.className} ${desc.name}${eol}${eol}"
-          }
-          onOutput { desc, event ->
-            def output = new File(workingDir, "output.txt")
-            output  << event.message
-          }
-          afterTest { desc, result ->
-            def now = new Date().format('yyyy-MM-dd HH:mm:ss.SSS Z')
-            def progress = new File(workingDir, "progress.txt")
-            def output = new File(workingDir, "output.txt")
-            progress << "${now} Completed test ${desc.className} ${desc.name} with result: ${result.resultType}${eol}"
-            output << "${eol}${now} COMPLETED TEST ${desc.className} ${desc.name} with result: ${result.resultType}${eol}${eol}"
-            result.exceptions.each { t ->
-              progress << "  EXCEPTION: ${getStackTrace(t)}${eol}"
-              output << "${getStackTrace(t)}${eol}"
-            }
-          }
-        }
       }
     }
   })
@@ -412,7 +383,6 @@ gradle.taskGraph.whenReady({ graph ->
 
 task generateSources {
   dependsOn subprojectBase + 'gemfire-core:createVersionPropertiesFile'
-  dependsOn subprojectBase + 'gemfirexd:generateSources'
 }
 
 def includeJar(def jarFile) {
@@ -421,123 +391,4 @@ def includeJar(def jarFile) {
     jarName.contains('hbase') || jarName.contains('pxf') ||
     jarName.contains('osgi') || jarName.contains('ant-') ||
     jarName.contains('jline')
-}
-
-// pack the entire GemFireXD product tree
-task product(dependsOn: [ subprojectBase + 'gemfirexd:client:jar',
-    subprojectBase + 'gemfirexd:core:jar',
-    subprojectBase + 'gemfirexd:tools:jar',
-    subprojectBase + 'tests-sql:jar',
-    subprojectBase + 'gemfirexd:shared:javadoc',
-    subprojectBase + 'gemfirexd:core:javadoc' ]) << {
-
-  def productDir = file("${rootProject.buildDir}/gfxd")
-  delete productDir
-
-  def sharedProject = project(subprojectBase + 'gemfirexd:shared')
-  def clientProject = project(subprojectBase + 'gemfirexd:client')
-  def gemcoreProject = project(subprojectBase + 'gemfire-core')
-  def coreProject = project(subprojectBase + 'gemfirexd:core')
-  def toolsProject = project(subprojectBase + 'gemfirexd:tools')
-
-  def gcmDir = System.getProperty('GCMDIR', '/gcm')
-
-  def extraJars = (gemcoreProject.configurations.provided - gemcoreProject.configurations.runtime +
-        coreProject.configurations.provided - coreProject.configurations.runtime +
-        toolsProject.configurations.provided - toolsProject.configurations.runtime).filter {
-    includeJar(it)
-  }
-  // first copy the product and dependent jars
-  copy {
-    from(clientProject.jar.destinationDir) {
-      include clientProject.jar.archiveName
-    }
-    from(coreProject.jar.destinationDir) {
-      include coreProject.jar.archiveName
-    }
-    from(toolsProject.jar.destinationDir) {
-      include toolsProject.jar.archiveName
-    }
-    from extraJars
-    into "${productDir}/lib"
-  }
-
-  // next the scripts
-  copy {
-    from(toolsProject.projectDir.getAbsolutePath() + '/bin') {
-      include 'gfxd'
-      include 'color'
-      include 'appdirector/gemfirexd*'
-      include 'dataextractor'
-      include 'dataextractloader'
-      include 'gfxd-completion.bash'
-      if (osName.isWindows()) {
-        include 'gfxd.bat'
-        include 'dataextractor.bat'
-        include 'dataextractloader.bat'
-      }
-    }
-    into "${productDir}/bin"
-    filter { line ->
-      line.replaceAll('__VERSION__', version)
-    }
-    fileMode 0755
-  }
-
-  // the native JNI library
-  if (osName.isLinux()) {
-    copy {
-      from coreProject.projectDir.getAbsolutePath() + '/lib'
-      into "${productDir}/lib"
-    }
-  }
-
-  // examples, javadocs, vsd
-  copy {
-    from(project(subprojectBase + 'gemfirexd').projectDir.getAbsolutePath() + '/examples') {
-      exclude 'src/main/java/mapreduce/README.txt'
-      exclude 'src/main/java/mapreduce/pom.xml'
-    }
-    from(coreProject.projectDir.getAbsolutePath()) {
-      include 'src/main/java/com/pivotal/gemfirexd/callbacks/DBSynchronizer.java'
-      include 'src/main/java/com/pivotal/gemfirexd/callbacks/AsyncEventHelper.java'
-    }
-    into "${productDir}/examples"
-  }
-  copy {
-    from(project(subprojectBase + 'gemfirexd').projectDir.getAbsolutePath() + '/examples') {
-      include 'src/main/java/mapreduce/README.txt'
-      include 'src/main/java/mapreduce/pom.xml'
-    }
-    into "${productDir}/examples"
-    filter { line ->
-      line.replaceAll('__VERSION__', version)
-    }
-  }
-  copy {
-    from project(subprojectBase + 'gemfirexd').projectDir.getAbsolutePath() + '/quickstart'
-    into "${productDir}/quickstart"
-  }
-  copy {
-    from "${gcmDir}/where/vsd/70/vsd"
-    into "${productDir}/tools/vsd"
-  }
-  copy {
-    from sharedProject.javadoc.destinationDir
-    from coreProject.javadoc.destinationDir
-    into "${productDir}/docs/japi"
-  }
-  copy {
-    from(rootDir.getAbsolutePath() + '/release/images') {
-      include 'GemFireXD_190x81.png'
-    }
-    from(rootDir.getAbsolutePath() + '/release/docfiles') {
-      include 'copyright.html'
-      include 'support.html'
-      include 'DocIndex.css'
-      include 'gfxd-index.html'
-    }
-    into "${productDir}/docs"
-    rename 'gfxd-index.html', 'index.html'
-  }
 }

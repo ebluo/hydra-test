@@ -1,5 +1,0 @@
-#!/bin/bash
-
-#edit to provide correct build location
-export S_HOME=/export/varuna1/sample_code/gemfirexd/build-artifacts/linux
-echo S_HOME=$S_HOME

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-#remove all dat files before exporting
-rm -rf $S_HOME/../../../dat/*.dat
-
-echo "All dat files have been removed"
