@@ -65,7 +65,6 @@ dependencies {
 
   jcaCompile sourceSets.main.output
 
-  provided project(path: subprojectBase + 'gemfire-junit', configuration: 'testOutput')
 }
 
 // Creates the version properties file and writes it to the classes dir
@@ -99,13 +98,6 @@ jar {
   exclude 'com/gemstone/gemfire/management/internal/web/**'
   exclude 'com/gemstone/gemfire/internal/i18n/StringIdResourceBundle_ja.txt'
   exclude 'com/gemstone/gemfire/admin/doc-files/ds4_0.dtd'
-}
-
-task webJar (type: Jar, dependsOn: classes) {
-  description 'Assembles the jar archive containing the gemfire management web classes.'
-  from sourceSets.main.output
-  baseName 'gemfire-web'
-  include 'com/gemstone/gemfire/management/internal/web/**'
 }
 
 task raJar (type: Jar, dependsOn: classes) {
