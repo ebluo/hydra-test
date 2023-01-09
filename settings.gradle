@@ -1,14 +1,5 @@
 rootProject.name = 'hydra-test'
 
-include ':gemfire-jgroups'
-include ':gemfire-trove'
-include 'gemfire-joptsimple'
-include 'gemfire-json'
-include 'gemfire-shared'
-include 'gemfire-core'
-include 'gemfire-examples'
 include ':tests-core'
 
-project(':gemfire-jgroups').projectDir = "$rootDir/lgpl/gemfire-jgroups" as File
-project(':gemfire-trove').projectDir = "$rootDir/lgpl/gemfire-trove" as File
 project(':tests-core').projectDir = "$rootDir/tests/core" as File

@@ -1,4 +1,0 @@
-dependencies {
-  compile 'net.java.dev.jna:jna:4.0.0'
-  compile project(subprojectBase + 'gemfire-trove')
-}
