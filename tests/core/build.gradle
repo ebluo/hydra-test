@@ -13,9 +13,19 @@ idea {
 }
 
 dependencies {
-  provided project(subprojectBase + 'gemfire-jgroups')
-  provided project(subprojectBase + 'gemfire-core')
-  provided project(subprojectBase + 'gemfire-examples')
+  provided files("${System.getProperty('user.home')}/gemfire-jgroups-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-core-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-examples-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-json-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-joptsimple-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-shared-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/gemfire-trove-2.0-SNAPSHOT.1.jar")
+
+  compile 'commons-io:commons-io:2.4'
+  compile 'javax.transaction:javax.transaction-api:1.2'
+  compile 'mx4j:mx4j:3.0.2'
+  compile 'mx4j:mx4j-tools:3.0.1'
+  compile 'org.xerial.snappy:snappy-java:1.1.2'
 
   compile "junit:junit:${junitVersion}"
   compile "org.apache.ant:ant:${antVersion}"
