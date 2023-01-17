@@ -2064,17 +2064,17 @@ public class CommandTest {
     expectedInToString.add("subscriptionConflationEnabled=" + expectedValue);
     methodNames.remove(methodName);
     
-    methodName = "isHdfsWriteOnly";
-    expectedValue = info.hdfsWriteOnly;
-    verifyValue(expectedValue, methodName, attr, null);
-    expectedInToString.add("hdfsWriteOnly=" + expectedValue);
-    methodNames.remove(methodName);
+    // methodName = "isHdfsWriteOnly"; //rm hdfs
+    // expectedValue = info.hdfsWriteOnly;
+    // verifyValue(expectedValue, methodName, attr, null);
+    // expectedInToString.add("hdfsWriteOnly=" + expectedValue);
+    // methodNames.remove(methodName);
     
-    methodName = "getHdfsStoreName";
-    expectedValue = info.hdfsStoreName;
-    verifyValue(expectedValue, methodName, attr, null);
-    expectedInToString.add("hdfsStoreName=" + expectedValue);
-    methodNames.remove(methodName);
+    // methodName = "getHdfsStoreName";
+    // expectedValue = info.hdfsStoreName;
+    // verifyValue(expectedValue, methodName, attr, null);
+    // expectedInToString.add("hdfsStoreName=" + expectedValue);
+    // methodNames.remove(methodName);
     
 
     Collections.sort(expectedInToString);

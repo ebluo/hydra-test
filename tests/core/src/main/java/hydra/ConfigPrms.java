@@ -322,15 +322,15 @@ public class ConfigPrms extends BasePrms {
    * An entry in {@link HDFSStorePrms#names} giving the HDFS store
    * configuration.
    */
-  public static Long hdfsStoreConfig;
+  // public static Long hdfsStoreConfig; //rm hdfs
 
   /**
    * Returns the value of {@link #hdfsStoreConfig}, or null if it is not set.
    * @throws HydraConfigException if not found in {@link HDFSStorePrms#names}.
    */
-  public static String getHDFSStoreConfig() {
-    return getString(hdfsStoreConfig);
-  }
+  // public static String getHDFSStoreConfig() { //rm hdfs
+  //   return getString(hdfsStoreConfig);
+  // }
 
   //----------------------------------------------------------------------------
   // Utility methods
@@ -392,8 +392,8 @@ public class ConfigPrms extends BasePrms {
       } else if (key == hadoopConfig) {
         description = TestConfig.getInstance().getHadoopDescription(val);
 
-      } else if (key == hdfsStoreConfig) {
-        description = TestConfig.getInstance().getHDFSStoreDescription(val);
+      // } else if (key == hdfsStoreConfig) { //rm hdfs
+      //   description = TestConfig.getInstance().getHDFSStoreDescription(val);
 
       } else {
         throw new HydraInternalException("Unknown key: " + nameForKey(key));

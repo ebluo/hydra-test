@@ -184,10 +184,10 @@ public void initInstance(String regDescriptName) {
         // edgeClients always support ConcurrentMap 
         supportsConcurrentMap = true;
      }
-     String hdfsStoreConfig = attr.getHDFSStoreName();
-     if (hdfsStoreConfig != null) {
-        HDFSStoreHelper.createHDFSStore(hdfsStoreConfig);
-     }
+   //   String hdfsStoreConfig = attr.getHDFSStoreName(); //rm hdfs
+   //   if (hdfsStoreConfig != null) {
+   //      HDFSStoreHelper.createHDFSStore(hdfsStoreConfig);
+   //   }
 
      aRegion = CacheHelper.getCache().createRegion(regionName, attr);
      Log.getLogWriter().info("Created region " + aRegion.getFullPath());
@@ -511,11 +511,11 @@ public static void HydraTask_verifyRegionContents() {
    testInstance.verifyRegionContents();
 }
 
-public static void HydraTask_verifyHDFSRegionContents() {
-   InitImageBB.getBB().printSharedCounters();
-   NameBB.getBB().printSharedCounters();
-   ((KnownKeysTest)testInstance).verifyHDFSRegionContents();
-}
+// public static void HydraTask_verifyHDFSRegionContents() { //rm hdfs
+//    InitImageBB.getBB().printSharedCounters();
+//    NameBB.getBB().printSharedCounters();
+//    ((KnownKeysTest)testInstance).verifyHDFSRegionContents();
+// }
 
 /** Hydra task to verify the size of the region after the load.
  *  This MUST be called as a batched task, and will throw
@@ -759,246 +759,246 @@ y the inconsistencies are not causing an Exception to be thrown. */
  *
  *  For HDFS regions (with eviction) we cannot rely on region.size(), containsKey(), containsValueForKey()
  */
-public static void HydraTask_verifyHDFSRegionSize() {
-   ((KnownKeysTest)testInstance).verifyHDFSRegionSize();
-}
+// public static void HydraTask_verifyHDFSRegionSize() { //rm hdfs
+//    ((KnownKeysTest)testInstance).verifyHDFSRegionSize();
+// }
 
-protected void verifyHDFSRegionSize() {
-   // we already completed this check once; we can't do it again without reinitializing the 
-   // verify state variables
-   if (verifyRegionSizeCompleted) { 
-      throw new TestException("Test configuration problem; already verified region size, cannot call this task again without resetting batch variables");
-   }
+// protected void verifyHDFSRegionSize() {
+//    // we already completed this check once; we can't do it again without reinitializing the 
+//    // verify state variables
+//    if (verifyRegionSizeCompleted) { 
+//       throw new TestException("Test configuration problem; already verified region size, cannot call this task again without resetting batch variables");
+//    }
 
-   // This won't work for HDFS regions with eviction, so simply return
-   if (!aRegion.getAttributes().getEvictionAttributes().getAlgorithm().equals(EvictionAlgorithm.NONE)) {
-      Log.getLogWriter().info("verifyHDFSRegionSize() returning (without validating) as this HDFS region is configured with eviction");
-      throw new StopSchedulingTaskOnClientOrder("Cannot verify region size for HDFS regions");
-   }
+//    // This won't work for HDFS regions with eviction, so simply return
+//    if (!aRegion.getAttributes().getEvictionAttributes().getAlgorithm().equals(EvictionAlgorithm.NONE)) {
+//       Log.getLogWriter().info("verifyHDFSRegionSize() returning (without validating) as this HDFS region is configured with eviction");
+//       throw new StopSchedulingTaskOnClientOrder("Cannot verify region size for HDFS regions");
+//    }
 
-   long lastLogTime = System.currentTimeMillis();
-   int size = aRegion.size();
-   long numOriginalKeysCreated = InitImageBB.getBB().getSharedCounters().read(InitImageBB.NUM_ORIGINAL_KEYS_CREATED);
-   int numKeysToCreate = keyIntervals.getNumKeys();
-   long nameCounter = NameFactory.getPositiveNameCounter();
-   Log.getLogWriter().info("In HydraTask_verifyRegionSize, region size is " + size + 
-                           ", numKeysToCreate is " + numKeysToCreate +
-                           ", numOriginalKeysCreated is " + numOriginalKeysCreated +
-                           ", nameCounter is " + nameCounter);
+//    long lastLogTime = System.currentTimeMillis();
+//    int size = aRegion.size();
+//    long numOriginalKeysCreated = InitImageBB.getBB().getSharedCounters().read(InitImageBB.NUM_ORIGINAL_KEYS_CREATED);
+//    int numKeysToCreate = keyIntervals.getNumKeys();
+//    long nameCounter = NameFactory.getPositiveNameCounter();
+//    Log.getLogWriter().info("In HydraTask_verifyRegionSize, region size is " + size + 
+//                            ", numKeysToCreate is " + numKeysToCreate +
+//                            ", numOriginalKeysCreated is " + numOriginalKeysCreated +
+//                            ", nameCounter is " + nameCounter);
 
-   // make sure the test agrees with itself
-   if ((numOriginalKeysCreated != numKeysToCreate) ||
-       (numOriginalKeysCreated != nameCounter)) {
-      throw new TestException("Error in test, numOriginalKeysCreated " + numOriginalKeysCreated + 
-                              ", numKeysToCreate " + numKeysToCreate +
-                              ", nameCounter " + nameCounter);
-   }
+//    // make sure the test agrees with itself
+//    if ((numOriginalKeysCreated != numKeysToCreate) ||
+//        (numOriginalKeysCreated != nameCounter)) {
+//       throw new TestException("Error in test, numOriginalKeysCreated " + numOriginalKeysCreated + 
+//                               ", numKeysToCreate " + numKeysToCreate +
+//                               ", nameCounter " + nameCounter);
+//    }
 
-   // make sure all keys/values are present
-   long minTaskGranularitySec = TestConfig.tab().longAt(TestHelperPrms.minTaskGranularitySec);
-   long minTaskGranularityMS = minTaskGranularitySec * TestHelper.SEC_MILLI_FACTOR;
-   long startTime = System.currentTimeMillis();
-   boolean first = true;
-   while (verifyRegionSizeIndex < numKeysToCreate) {
-      verifyRegionSizeIndex++;
-      if (first) {
-         Log.getLogWriter().info("In HydraTask_verifyRegionSize, starting verify with verifyRegionSizeIndex " + verifyRegionSizeIndex);
-         first = false;
-      }
-      Object key = NameFactory.getObjectNameForCounter(verifyRegionSizeIndex);
-      if (!aRegion.containsKey(key)) 
-         missingKeys.add(key);
-      if (!aRegion.containsValueForKey(key))
-         missingValues.add(key);
-      if (System.currentTimeMillis() - lastLogTime > LOG_INTERVAL_MILLIS) {
-         Log.getLogWriter().info("Verified " + verifyRegionSizeIndex + " keys/values out of " + numKeysToCreate);
-         lastLogTime = System.currentTimeMillis();
-      }
-      if (System.currentTimeMillis() - startTime >= minTaskGranularityMS) {
-         Log.getLogWriter().info("In HydraTask_verifyRegionSize, returning before completing verify " +
-             "because of task granularity (this task must be batched to complete); last key verified is " + 
-             key);
-         return;  // task is batched; we are done with this batch
-      }
-   }
-   verifyRegionSizeCompleted = true;
-   if (missingKeys.size() != 0) {
-      // shutdownHook will cause all members to dump partitioned region info
-      throw new TestException("Missing " + missingKeys.size() + " keys: " + missingKeys);
-   }
-   if (missingValues.size() != 0) {
-      // shutdownHook will cause all members to dump partitioned region info
-      throw new TestException("Missing " + missingValues.size() + " values: " + missingValues);
-   }
-   if (size != numKeysToCreate) {
-      throw new TestException("Unexpected region size " + size + "; expected " + numKeysToCreate);
-   }
-   String aStr = "In HydraTask_verifyRegionSize, verified " + verifyRegionSizeIndex + " keys and values";
-   Log.getLogWriter().info(aStr);
-   throw new StopSchedulingTaskOnClientOrder(aStr);
-}
+//    // make sure all keys/values are present
+//    long minTaskGranularitySec = TestConfig.tab().longAt(TestHelperPrms.minTaskGranularitySec);
+//    long minTaskGranularityMS = minTaskGranularitySec * TestHelper.SEC_MILLI_FACTOR;
+//    long startTime = System.currentTimeMillis();
+//    boolean first = true;
+//    while (verifyRegionSizeIndex < numKeysToCreate) {
+//       verifyRegionSizeIndex++;
+//       if (first) {
+//          Log.getLogWriter().info("In HydraTask_verifyRegionSize, starting verify with verifyRegionSizeIndex " + verifyRegionSizeIndex);
+//          first = false;
+//       }
+//       Object key = NameFactory.getObjectNameForCounter(verifyRegionSizeIndex);
+//       if (!aRegion.containsKey(key)) 
+//          missingKeys.add(key);
+//       if (!aRegion.containsValueForKey(key))
+//          missingValues.add(key);
+//       if (System.currentTimeMillis() - lastLogTime > LOG_INTERVAL_MILLIS) {
+//          Log.getLogWriter().info("Verified " + verifyRegionSizeIndex + " keys/values out of " + numKeysToCreate);
+//          lastLogTime = System.currentTimeMillis();
+//       }
+//       if (System.currentTimeMillis() - startTime >= minTaskGranularityMS) {
+//          Log.getLogWriter().info("In HydraTask_verifyRegionSize, returning before completing verify " +
+//              "because of task granularity (this task must be batched to complete); last key verified is " + 
+//              key);
+//          return;  // task is batched; we are done with this batch
+//       }
+//    }
+//    verifyRegionSizeCompleted = true;
+//    if (missingKeys.size() != 0) {
+//       // shutdownHook will cause all members to dump partitioned region info
+//       throw new TestException("Missing " + missingKeys.size() + " keys: " + missingKeys);
+//    }
+//    if (missingValues.size() != 0) {
+//       // shutdownHook will cause all members to dump partitioned region info
+//       throw new TestException("Missing " + missingValues.size() + " values: " + missingValues);
+//    }
+//    if (size != numKeysToCreate) {
+//       throw new TestException("Unexpected region size " + size + "; expected " + numKeysToCreate);
+//    }
+//    String aStr = "In HydraTask_verifyRegionSize, verified " + verifyRegionSizeIndex + " keys and values";
+//    Log.getLogWriter().info(aStr);
+//    throw new StopSchedulingTaskOnClientOrder(aStr);
+// }
 
 /** HDFS regions are recovered lazily from disk ... only operations (like get()) which invoke the cacheLoader
  *  will retrieve data from HDFS.  So, we cannot rely on region.size(), containsKey, containsValueForKey, etc.
  */
-public void verifyHDFSRegionContents() {
-   // we already completed this check once; we can't do it again without reinitializing the 
-   // verify state variables
-   if (verifyRegionContentsCompleted) {
-      throw new TestException("Test configuration problem; already verified region contents, cannot call this task again without resetting batch variables");
-   }
+// public void verifyHDFSRegionContents() {
+//    // we already completed this check once; we can't do it again without reinitializing the 
+//    // verify state variables
+//    if (verifyRegionContentsCompleted) {
+//       throw new TestException("Test configuration problem; already verified region contents, cannot call this task again without resetting batch variables");
+//    }
 
-   // iterate keys
-   long lastLogTime = System.currentTimeMillis();
-   long minTaskGranularitySec = TestConfig.tab().longAt(TestHelperPrms.minTaskGranularitySec);
-   long minTaskGranularityMS = minTaskGranularitySec * TestHelper.SEC_MILLI_FACTOR;
-   long startTime = System.currentTimeMillis();
-   long size = aRegion.size();
-   boolean first = true;
-   int numKeysToCheck = keyIntervals.getNumKeys() + numNewKeys;
-   while (verifyRegionContentsIndex < numKeysToCheck) {
-      verifyRegionContentsIndex++;
-      if (first) {
-         Log.getLogWriter().info("In verifyRegionContents, region has " + size + 
-            " keys; starting verify at verifyRegionContentsIndex " + verifyRegionContentsIndex +
-            "; verifying key names with indexes through (and including) " + numKeysToCheck);
-         first = false;
-      }
+//    // iterate keys
+//    long lastLogTime = System.currentTimeMillis();
+//    long minTaskGranularitySec = TestConfig.tab().longAt(TestHelperPrms.minTaskGranularitySec);
+//    long minTaskGranularityMS = minTaskGranularitySec * TestHelper.SEC_MILLI_FACTOR;
+//    long startTime = System.currentTimeMillis();
+//    long size = aRegion.size();
+//    boolean first = true;
+//    int numKeysToCheck = keyIntervals.getNumKeys() + numNewKeys;
+//    while (verifyRegionContentsIndex < numKeysToCheck) {
+//       verifyRegionContentsIndex++;
+//       if (first) {
+//          Log.getLogWriter().info("In verifyRegionContents, region has " + size + 
+//             " keys; starting verify at verifyRegionContentsIndex " + verifyRegionContentsIndex +
+//             "; verifying key names with indexes through (and including) " + numKeysToCheck);
+//          first = false;
+//       }
 
-      // check region size the first time through the loop to avoid it being called
-      // multiple times when this is batched
-      if (verifyRegionContentsIndex == 1) {
-         if (totalNumKeys != size) {
-            String tmpStr = "Expected region size to be " + totalNumKeys + ", but it is size " + size;
-            Log.getLogWriter().info(tmpStr);
-            verifyRegionContentsSizeStr.append(tmpStr + "\n");
-         }
-      }
+//       // check region size the first time through the loop to avoid it being called
+//       // multiple times when this is batched
+//       if (verifyRegionContentsIndex == 1) {
+//          if (totalNumKeys != size) {
+//             String tmpStr = "Expected region size to be " + totalNumKeys + ", but it is size " + size;
+//             Log.getLogWriter().info(tmpStr);
+//             verifyRegionContentsSizeStr.append(tmpStr + "\n");
+//          }
+//       }
 
-      Object key = NameFactory.getObjectNameForCounter(verifyRegionContentsIndex);
-      try {
-         if (((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.NONE)) &&
-              (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.NONE)))    ||
-             ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.GET)) &&
-             (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.GET)))) {
-            // this key was untouched after its creation
-            Object value = aRegion.get(key);
-            checkValue(key, value);
-         } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.INVALIDATE)) &&
-                    (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.INVALIDATE))) {
-            Object value = aRegion.get(key);
-            if (value != null) {
-              throw new TestException("Expected get(" + key + ") to return null, but it returned " + value + " key was invalidated");
-            }
-         } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.LOCAL_INVALIDATE)) &&
-                    (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.LOCAL_INVALIDATE))) {
-            // this key was locally invalidated
-            Object value = aRegion.get(key);
-            checkValue(key, value);
-         } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.DESTROY)) &&
-                    (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.DESTROY))) {
-            // this key was destroyed
-            boolean gotENFE = false;
-            try {
-               Object value = aRegion.get(key);
-               if (value != null) {  // loader should return null for a destroyed entry
-                  throw new TestException("Expected get(" + key + ") to return null, but it returned " + value + " : entry was destroyed");
-               }
-               aRegion.destroy(key); // try to destroy the destroyed entry, we should get ENFE
-            } catch (EntryNotFoundException e) {
-               gotENFE = true;
-            }
-            if (!gotENFE) {
-               throw new TestException("Expected get(" + key + ") to throw EntryNotFoundException, but it did not : entry was destroyed");
-            }
-         } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.LOCAL_DESTROY)) &&
-                    (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.LOCAL_DESTROY))) {
-            // this key was locally destroyed
-            Object value = aRegion.get(key);
-            checkValue(key, value);
-         } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.UPDATE_EXISTING_KEY)) &&
-                    (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.UPDATE_EXISTING_KEY))) {
-            // this key was updated
-            Object value = aRegion.get(key);
-            checkUpdatedValue(key, value);
-         } else if (verifyRegionContentsIndex > keyIntervals.getNumKeys()) {
-            // key was newly added
-            Object value = aRegion.get(key);
-            checkValue(key, value);
-         }
-      } catch (TestException e) {
-         Log.getLogWriter().info(TestHelper.getStackTrace(e));
+//       Object key = NameFactory.getObjectNameForCounter(verifyRegionContentsIndex);
+//       try {
+//          if (((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.NONE)) &&
+//               (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.NONE)))    ||
+//              ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.GET)) &&
+//              (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.GET)))) {
+//             // this key was untouched after its creation
+//             Object value = aRegion.get(key);
+//             checkValue(key, value);
+//          } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.INVALIDATE)) &&
+//                     (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.INVALIDATE))) {
+//             Object value = aRegion.get(key);
+//             if (value != null) {
+//               throw new TestException("Expected get(" + key + ") to return null, but it returned " + value + " key was invalidated");
+//             }
+//          } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.LOCAL_INVALIDATE)) &&
+//                     (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.LOCAL_INVALIDATE))) {
+//             // this key was locally invalidated
+//             Object value = aRegion.get(key);
+//             checkValue(key, value);
+//          } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.DESTROY)) &&
+//                     (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.DESTROY))) {
+//             // this key was destroyed
+//             boolean gotENFE = false;
+//             try {
+//                Object value = aRegion.get(key);
+//                if (value != null) {  // loader should return null for a destroyed entry
+//                   throw new TestException("Expected get(" + key + ") to return null, but it returned " + value + " : entry was destroyed");
+//                }
+//                aRegion.destroy(key); // try to destroy the destroyed entry, we should get ENFE
+//             } catch (EntryNotFoundException e) {
+//                gotENFE = true;
+//             }
+//             if (!gotENFE) {
+//                throw new TestException("Expected get(" + key + ") to throw EntryNotFoundException, but it did not : entry was destroyed");
+//             }
+//          } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.LOCAL_DESTROY)) &&
+//                     (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.LOCAL_DESTROY))) {
+//             // this key was locally destroyed
+//             Object value = aRegion.get(key);
+//             checkValue(key, value);
+//          } else if ((verifyRegionContentsIndex >= keyIntervals.getFirstKey(KeyIntervals.UPDATE_EXISTING_KEY)) &&
+//                     (verifyRegionContentsIndex <= keyIntervals.getLastKey(KeyIntervals.UPDATE_EXISTING_KEY))) {
+//             // this key was updated
+//             Object value = aRegion.get(key);
+//             checkUpdatedValue(key, value);
+//          } else if (verifyRegionContentsIndex > keyIntervals.getNumKeys()) {
+//             // key was newly added
+//             Object value = aRegion.get(key);
+//             checkValue(key, value);
+//          }
+//       } catch (TestException e) {
+//          Log.getLogWriter().info(TestHelper.getStackTrace(e));
 
-         Set failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.FAILED_TXOPS);
-         Set inDoubtOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
-         if (!failedOps.contains(key) && !inDoubtOps.contains(key)) {
-            verifyRegionContentsErrStr.append(e.getMessage() + "\n");
-         }
-      }
+//          Set failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.FAILED_TXOPS);
+//          Set inDoubtOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
+//          if (!failedOps.contains(key) && !inDoubtOps.contains(key)) {
+//             verifyRegionContentsErrStr.append(e.getMessage() + "\n");
+//          }
+//       }
 
-      if (System.currentTimeMillis() - lastLogTime > LOG_INTERVAL_MILLIS) {
-         Log.getLogWriter().info("Verified key " + verifyRegionContentsIndex + " out of " + totalNumKeys);
-         lastLogTime = System.currentTimeMillis();
-      }
+//       if (System.currentTimeMillis() - lastLogTime > LOG_INTERVAL_MILLIS) {
+//          Log.getLogWriter().info("Verified key " + verifyRegionContentsIndex + " out of " + totalNumKeys);
+//          lastLogTime = System.currentTimeMillis();
+//       }
 
-      // Note that ENDTASKS cannot be batched ... so don't batch this method for ENDTASKS
-      if (System.currentTimeMillis() - startTime >= minTaskGranularityMS) {
-         String taskType = RemoteTestModule.getCurrentThread().getCurrentTask().getTaskTypeString();
-         if (!taskType.equalsIgnoreCase("ENDTASK")) {
-           Log.getLogWriter().info("In HydraTask_verifyRegionContents, returning before completing verify " +
-               "because of task granularity (this task must be batched to complete); last key verified is " + 
-               key);
-           return;  // task is batched; we are done with this batch
-         }
-      }
-   }
-   verifyRegionContentsCompleted = true;
-   StringBuffer error = new StringBuffer();
-   Set failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.FAILED_TXOPS);
-   if (failedOps.size() > 0) {
-     if (verifyRegionContentsErrStr.length() > 0) {
-        error.append("Test detected BUG 43428 (" + failedOps.size() + " failed transactions) with additional issues reported\n");
-        error.append(verifyRegionContentsSizeStr);
-        error.append(verifyRegionContentsErrStr);
-        throw new TestException(error.toString());
-     } else {
-/* behavior documented by bug 43428 will not be changed in the near future.  Don't flag this failure unless there were additional data inconsistencies reported in the test.  Log a message in case any one looks at the logs and wonders why the inconsistencies are not causing an Exception to be thrown. */
-        error.append("Test detected BUG 43428 (" + failedOps.size() + " failed transactions) with no additional issues reported\n");
-        error.append(verifyRegionContentsSizeStr);
-        error.append(verifyRegionContentsErrStr);
-        //throw new TestException(error.toString());
-        Log.getLogWriter().info("Inconsistencies are related to Transaction HA behavior (not currently supported): " + error.toString());
-     }
-   } else if (ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS).size() > 0) {
-     failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
-     if (verifyRegionContentsErrStr.length() > 0) {
-        error.append("Test reported " + failedOps.size() + " TransactionInDoubtExceptions with additional issues reported\n");
-        error.append(verifyRegionContentsSizeStr);
-        error.append(verifyRegionContentsErrStr);
-        throw new TestException(error.toString());
-     } else {
-/* behavior documented by bug 43428 will not be changed in the near future.  Don't flag this failure unless there were additional data inconsistencies reported in the test.  Log a message in case any one looks at the logs and wonders wh
-y the inconsistencies are not causing an Exception to be thrown. */
-        error.append("Test reported " + failedOps.size() + " TransactionInDoubtExceptions with no additional issues reported\n");
-        error.append(verifyRegionContentsSizeStr);
-        error.append(verifyRegionContentsErrStr);
-        //throw new TestException(error.toString());
-        Log.getLogWriter().info("Inconsistencies are related to Transaction HA behavior (not currently supported): " + error.toString());
-     }
-   } else if (verifyRegionContentsErrStr.length() > 0) {
-      // shutdownHook will cause all members to dump partitioned region info
-      verifyRegionContentsSizeStr.append(verifyRegionContentsErrStr);
-      throw new TestException(verifyRegionContentsSizeStr.toString());
-   } 
-   String aStr = "In HydraTask_verifyRegionContents, verified " + numKeysToCheck + " keys/values";
-   Log.getLogWriter().info(aStr);
+//       // Note that ENDTASKS cannot be batched ... so don't batch this method for ENDTASKS
+//       if (System.currentTimeMillis() - startTime >= minTaskGranularityMS) {
+//          String taskType = RemoteTestModule.getCurrentThread().getCurrentTask().getTaskTypeString();
+//          if (!taskType.equalsIgnoreCase("ENDTASK")) {
+//            Log.getLogWriter().info("In HydraTask_verifyRegionContents, returning before completing verify " +
+//                "because of task granularity (this task must be batched to complete); last key verified is " + 
+//                key);
+//            return;  // task is batched; we are done with this batch
+//          }
+//       }
+//    }
+//    verifyRegionContentsCompleted = true;
+//    StringBuffer error = new StringBuffer();
+//    Set failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.FAILED_TXOPS);
+//    if (failedOps.size() > 0) {
+//      if (verifyRegionContentsErrStr.length() > 0) {
+//         error.append("Test detected BUG 43428 (" + failedOps.size() + " failed transactions) with additional issues reported\n");
+//         error.append(verifyRegionContentsSizeStr);
+//         error.append(verifyRegionContentsErrStr);
+//         throw new TestException(error.toString());
+//      } else {
+// /* behavior documented by bug 43428 will not be changed in the near future.  Don't flag this failure unless there were additional data inconsistencies reported in the test.  Log a message in case any one looks at the logs and wonders why the inconsistencies are not causing an Exception to be thrown. */
+//         error.append("Test detected BUG 43428 (" + failedOps.size() + " failed transactions) with no additional issues reported\n");
+//         error.append(verifyRegionContentsSizeStr);
+//         error.append(verifyRegionContentsErrStr);
+//         //throw new TestException(error.toString());
+//         Log.getLogWriter().info("Inconsistencies are related to Transaction HA behavior (not currently supported): " + error.toString());
+//      }
+//    } else if (ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS).size() > 0) {
+//      failedOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
+//      if (verifyRegionContentsErrStr.length() > 0) {
+//         error.append("Test reported " + failedOps.size() + " TransactionInDoubtExceptions with additional issues reported\n");
+//         error.append(verifyRegionContentsSizeStr);
+//         error.append(verifyRegionContentsErrStr);
+//         throw new TestException(error.toString());
+//      } else {
+// /* behavior documented by bug 43428 will not be changed in the near future.  Don't flag this failure unless there were additional data inconsistencies reported in the test.  Log a message in case any one looks at the logs and wonders wh
+// y the inconsistencies are not causing an Exception to be thrown. */
+//         error.append("Test reported " + failedOps.size() + " TransactionInDoubtExceptions with no additional issues reported\n");
+//         error.append(verifyRegionContentsSizeStr);
+//         error.append(verifyRegionContentsErrStr);
+//         //throw new TestException(error.toString());
+//         Log.getLogWriter().info("Inconsistencies are related to Transaction HA behavior (not currently supported): " + error.toString());
+//      }
+//    } else if (verifyRegionContentsErrStr.length() > 0) {
+//       // shutdownHook will cause all members to dump partitioned region info
+//       verifyRegionContentsSizeStr.append(verifyRegionContentsErrStr);
+//       throw new TestException(verifyRegionContentsSizeStr.toString());
+//    } 
+//    String aStr = "In HydraTask_verifyRegionContents, verified " + numKeysToCheck + " keys/values";
+//    Log.getLogWriter().info(aStr);
 
-   // ENDTASKs cannot be batched, so only throw the StopSchedulingException on INIT, TASK and CLOSE tasks
-   String taskType = RemoteTestModule.getCurrentThread().getCurrentTask().getTaskTypeString();
-   if (!taskType.equalsIgnoreCase("ENDTASK")) {
-     throw new StopSchedulingTaskOnClientOrder(aStr);
-   }
-}
+//    // ENDTASKs cannot be batched, so only throw the StopSchedulingException on INIT, TASK and CLOSE tasks
+//    String taskType = RemoteTestModule.getCurrentThread().getCurrentTask().getTaskTypeString();
+//    if (!taskType.equalsIgnoreCase("ENDTASK")) {
+//      throw new StopSchedulingTaskOnClientOrder(aStr);
+//    }
+// }
 
 // ======================================================================== 
 // other methods

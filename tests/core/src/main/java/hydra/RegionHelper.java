@@ -28,7 +28,7 @@ import org.apache.geode.cache.EvictionAttributes;
 import org.apache.geode.cache.Region;
 import org.apache.geode.cache.RegionAttributes;
 import org.apache.geode.cache.RegionExistsException;
-import org.apache.geode.cache.hdfs.internal.HDFSStoreFactoryImpl;
+//import org.apache.geode.cache.hdfs.internal.HDFSStoreFactoryImpl;  //rm hdfs
 import org.apache.geode.internal.cache.PartitionAttributesImpl;
 
 /**
@@ -127,10 +127,10 @@ public class RegionHelper {
       if (diskStoreConfig != null) {
         DiskStoreHelper.createDiskStore(diskStoreConfig);
       }
-      String hdfsStoreConfig = attributes.getHDFSStoreName();
-      if (hdfsStoreConfig != null) {
-        HDFSStoreHelper.createHDFSStore(hdfsStoreConfig);
-      }
+      // String hdfsStoreConfig = attributes.getHDFSStoreName(); //rm hdfs
+      // if (hdfsStoreConfig != null) {
+      //   HDFSStoreHelper.createHDFSStore(hdfsStoreConfig);
+      // }
       String poolConfig = attributes.getPoolName();
       if (poolConfig != null) {
         PoolHelper.createPool(poolConfig);
@@ -253,10 +253,10 @@ public class RegionHelper {
       return null; // we're all done here
     }
 
-    if (!datts.getDataPolicy().withHDFS() || !eatts.getDataPolicy().withHDFS()){
-      // we are not expecting any side effects without HDFS involvement
-      return "\n  DESIRED = " + desired + "\n  EXISTING = " + existing;
-    }
+    // if (!datts.getDataPolicy().withHDFS() || !eatts.getDataPolicy().withHDFS()){ //rm hdfs
+    //   // we are not expecting any side effects without HDFS involvement
+    //   return "\n  DESIRED = " + desired + "\n  EXISTING = " + existing;
+    // }
 
     // both are using HDFS, so check for side effects in existing attributes
 
@@ -266,15 +266,15 @@ public class RegionHelper {
     if (!daeqids.equals(eaeqids)) {
       Set<String> removed = null;
       // remove the product-generated async event queues
-      for (String eaeqid : eaeqids) {
-        if (eaeqid.startsWith(HDFSStoreFactoryImpl.DEFAULT_ASYNC_QUEUE_ID_FOR_HDFS)) {
-          eaeqids.remove(eaeqid);
-          if (removed == null) {
-            removed = new TreeSet();
-          }
-          removed.add(eaeqid);
-        }
-      }
+      // for (String eaeqid : eaeqids) {  //rm hdfs
+      //   if (eaeqid.startsWith(HDFSStoreFactoryImpl.DEFAULT_ASYNC_QUEUE_ID_FOR_HDFS)) {
+      //     eaeqids.remove(eaeqid);
+      //     if (removed == null) {
+      //       removed = new TreeSet();
+      //     }
+      //     removed.add(eaeqid);
+      //   }
+      // }
       if (!daeqids.equals(eaeqids)) {
         String err = "asyncEventQueueIds do not match";
         if (removed != null) {

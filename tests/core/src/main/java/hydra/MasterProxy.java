@@ -446,14 +446,14 @@ public class MasterProxy extends UnicastRemoteObject implements MasterProxyIF
      HadoopMgr.removeHadoop(hdd, nd, pid, secure);
    }
 
-   public void recordHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
-   throws RemoteException {
-     Nuker.getInstance().recordHDFSPIDNoDumps(hd, pid, secure);
-   }
-   public void removeHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
-   throws RemoteException {
-     Nuker.getInstance().removeHDFSPIDNoDumps(hd, pid, secure);
-   }
+  //  public void recordHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure) //rm hdfs
+  //  throws RemoteException {
+  //    Nuker.getInstance().recordHDFSPIDNoDumps(hd, pid, secure);
+  //  }
+  //  public void removeHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
+  //  throws RemoteException {
+  //    Nuker.getInstance().removeHDFSPIDNoDumps(hd, pid, secure);
+  //  }
 
    public void recordRootCommand(HostDescription hd, String cmd, String dir)
    throws RemoteException {

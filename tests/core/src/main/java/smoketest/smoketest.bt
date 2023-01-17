@@ -13,4 +13,4 @@ cacheperf/comparisons/dataScalability/dataScalability.conf
 hydratest/version/clientcache/clientcache3.conf
 
 include $JTESTS/hydratest/version/version.bt
-include $JTESTS/hydratest/hdfs/hdfs.bt
+//include $JTESTS/hydratest/hdfs/hdfs.bt  //rm hdfs

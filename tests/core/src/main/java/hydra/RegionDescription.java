@@ -107,9 +107,9 @@ implements Serializable {
   private EvictionAttributes evictionAttributes;
   private List<GatewaySenderDescription> gatewaySenderDescriptions; // from gatewaySenderNames
   private List<String> gatewaySenderNames;
-  private HDFSStoreDescription hdfsStoreDescription; // from hdfsStoreName
-  private String hdfsStoreName;
-  private Boolean hdfsWriteOnly;
+  // private HDFSStoreDescription hdfsStoreDescription; // from hdfsStoreName //rm hdfs
+  // private String hdfsStoreName;
+  // private Boolean hdfsWriteOnly;
   private Boolean ignoreJTA;
   private Boolean indexMaintenanceSynchronous;
   private Integer initialCapacity;
@@ -550,44 +550,44 @@ implements Serializable {
   /**
    * Returns the HDFS store description name.
    */
-  public String getHDFSStoreName() {
-    return this.hdfsStoreName;
-  }
+  // public String getHDFSStoreName() { //rm hdfs
+  //   return this.hdfsStoreName;
+  // }
 
   /**
    * Sets the HDFS store description name.
    */
-  private void setHDFSStoreName(String str) {
-    this.hdfsStoreName = str;
-  }
+  // private void setHDFSStoreName(String str) {
+  //   this.hdfsStoreName = str;
+  // }
 
   /**
    * Returns the HDFS store description.
    */
-  public HDFSStoreDescription getHDFSStoreDescription() {
-    return this.hdfsStoreDescription;
-  }
+  // public HDFSStoreDescription getHDFSStoreDescription() {
+  //   return this.hdfsStoreDescription;
+  // }
 
   /**
    * Sets the HDFS store description.
    */
-  private void setHDFSStoreDescription(HDFSStoreDescription hsd) {
-    this.hdfsStoreDescription = hsd;
-  }
+  // private void setHDFSStoreDescription(HDFSStoreDescription hsd) {
+  //   this.hdfsStoreDescription = hsd;
+  // }
 
   /**
    * Returns the HDFS write-only.
    */
-  private Boolean getHDFSWriteOnly() {
-    return this.hdfsWriteOnly;
-  }
+  // private Boolean getHDFSWriteOnly() {
+  //   return this.hdfsWriteOnly;
+  // }
 
   /**
    * Sets the HDFS write-only.
    */
-  private void setHDFSWriteOnly(Boolean bool) {
-    this.hdfsWriteOnly = bool;
-  }
+  // private void setHDFSWriteOnly(Boolean bool) {
+  //   this.hdfsWriteOnly = bool;
+  // }
 
   /**
    * Returns the ignore JTA.
@@ -940,10 +940,10 @@ implements Serializable {
         }
       }
     }
-    if (this.getHDFSStoreDescription() != null) {
-      f.setHDFSStoreName(this.getHDFSStoreDescription().getName());
-    }
-    f.setHDFSWriteOnly(this.getHDFSWriteOnly().booleanValue());
+    // if (this.getHDFSStoreDescription() != null) { //rm hdfs
+    //   f.setHDFSStoreName(this.getHDFSStoreDescription().getName());
+    // }
+    // f.setHDFSWriteOnly(this.getHDFSWriteOnly().booleanValue());
     f.setIgnoreJTA(this.getIgnoreJTA().booleanValue());
     f.setIndexMaintenanceSynchronous(this.getIndexMaintenanceSynchronous().booleanValue());
     f.setInitialCapacity(this.getInitialCapacity().intValue());
@@ -997,8 +997,8 @@ implements Serializable {
     buf.append("\n  entryTimeToLive: " + r.getEntryTimeToLive());
     buf.append("\n  evictionAttributes: " + r.getEvictionAttributes());
     buf.append("\n  gatewaySenders: " + (new TreeSet(r.getGatewaySenderIds())));
-    buf.append("\n  hdfsStoreName: " + r.getHDFSStoreName());
-    buf.append("\n  hdfsWriteOnly: " + r.getHDFSWriteOnly());
+    // buf.append("\n  hdfsStoreName: " + r.getHDFSStoreName()); //rm hdfs
+    // buf.append("\n  hdfsWriteOnly: " + r.getHDFSWriteOnly());
     buf.append("\n  ignoreJTA: " + r.getIgnoreJTA());
     buf.append("\n  indexMaintenanceSynchronous: " + r.getIndexMaintenanceSynchronous());
     buf.append("\n  initialCapacity: " + r.getInitialCapacity());
@@ -1047,8 +1047,8 @@ implements Serializable {
     buf.append("\n  entryTimeToLive: " + r.getEntryTimeToLive());
     //buf.append("\n  evictionAttributes: " + r.getEvictionAttributes()); // HDFS
     buf.append("\n  gatewaySenders: " + (new TreeSet(r.getGatewaySenderIds())));
-    buf.append("\n  hdfsStoreName: " + r.getHDFSStoreName());
-    buf.append("\n  hdfsWriteOnly: " + r.getHDFSWriteOnly());
+    // buf.append("\n  hdfsStoreName: " + r.getHDFSStoreName()); //rm hdfs
+    // buf.append("\n  hdfsWriteOnly: " + r.getHDFSWriteOnly());
     buf.append("\n  ignoreJTA: " + r.getIgnoreJTA());
     buf.append("\n  indexMaintenanceSynchronous: " + r.getIndexMaintenanceSynchronous());
     buf.append("\n  initialCapacity: " + r.getInitialCapacity());
@@ -1152,8 +1152,8 @@ implements Serializable {
     map.put(header + "entryTimeToLive", this.getEntryTimeToLive());
     map.put(header + "evictionAttributes", this.getEvictionAttributes());
     map.put(header + "gatewaySenderNames", this.getGatewaySenderNames());
-    map.put(header + "hdfsStoreName", this.getHDFSStoreName());
-    map.put(header + "hdfsWriteOnly", this.getHDFSWriteOnly());
+    // map.put(header + "hdfsStoreName", this.getHDFSStoreName()); //rm hdfs
+    // map.put(header + "hdfsWriteOnly", this.getHDFSWriteOnly());
     map.put(header + "ignoreJTA", this.getIgnoreJTA());
     map.put(header + "indexMaintenanceSynchronous", this.getIndexMaintenanceSynchronous());
     map.put(header + "initialCapacity", this.getInitialCapacity());
@@ -1475,22 +1475,22 @@ implements Serializable {
       }
     }
     // hdfsStoreName (generates HDFSStoreDescription)
-    {
-      Long key = RegionPrms.hdfsStoreName;
-      String str = tab.getString(key, tab.getWild(key, index, null));
-      if (str != null && !str.equalsIgnoreCase(BasePrms.NONE)) {
-        rd.setHDFSStoreDescription(getHDFSStoreDescription(str, key, config));
-        rd.setHDFSStoreName("HDFSStoreDescription." + str);
-      }
-    }
+    // { //rm hdfs
+    //   Long key = RegionPrms.hdfsStoreName;
+    //   String str = tab.getString(key, tab.getWild(key, index, null));
+    //   if (str != null && !str.equalsIgnoreCase(BasePrms.NONE)) {
+    //     rd.setHDFSStoreDescription(getHDFSStoreDescription(str, key, config));
+    //     rd.setHDFSStoreName("HDFSStoreDescription." + str);
+    //   }
+    // }
     // hdfsWriteOnly
-    {
-      Long key = RegionPrms.hdfsWriteOnly;
-      Boolean bool = tab.getBoolean(key, tab.getWild(key, index, null));
-      if (bool != null) {
-        rd.setHDFSWriteOnly(bool);
-      }
-    }
+    // {
+    //   Long key = RegionPrms.hdfsWriteOnly;
+    //   Boolean bool = tab.getBoolean(key, tab.getWild(key, index, null));
+    //   if (bool != null) {
+    //     rd.setHDFSWriteOnly(bool);
+    //   }
+    // }
     // ignoreJTA
     {
       Long key = RegionPrms.ignoreJTA;
@@ -1732,12 +1732,12 @@ implements Serializable {
     }
     // defer gatewaySenderDescriptions
     // defer gatewaySenderNames
-    if (rd.hdfsStoreDescription != null) {
-      f.setHDFSStoreName(rd.getHDFSStoreDescription().getName());
-    }
-    if (rd.hdfsWriteOnly != null) {
-      f.setHDFSWriteOnly(rd.getHDFSWriteOnly().booleanValue());
-    }
+    // if (rd.hdfsStoreDescription != null) { //rm hdfs
+    //   f.setHDFSStoreName(rd.getHDFSStoreDescription().getName());
+    // }
+    // if (rd.hdfsWriteOnly != null) {
+    //   f.setHDFSWriteOnly(rd.getHDFSWriteOnly().booleanValue());
+    // }
     if (rd.ignoreJTA != null) {
       f.setIgnoreJTA(rd.getIgnoreJTA().booleanValue());
     }
@@ -1815,8 +1815,8 @@ implements Serializable {
     rd.setEvictionAttributes(ra.getEvictionAttributes());
     // defer gatewaySenderDescriptions
     // defer gatewaySenderNames
-    rd.setHDFSStoreName(ra.getHDFSStoreName());
-    rd.setHDFSWriteOnly(Boolean.valueOf(ra.getHDFSWriteOnly()));
+    // rd.setHDFSStoreName(ra.getHDFSStoreName()); //rm hdfs
+    // rd.setHDFSWriteOnly(Boolean.valueOf(ra.getHDFSWriteOnly()));
     rd.setIgnoreJTA(Boolean.valueOf(ra.getIgnoreJTA()));
     rd.setIndexMaintenanceSynchronous(Boolean.valueOf(ra.getIndexMaintenanceSynchronous()));
     rd.setInitialCapacity(Integer.valueOf(ra.getInitialCapacity()));
@@ -2173,17 +2173,17 @@ implements Serializable {
     } else if (str.equalsIgnoreCase("normal")) {
       return DataPolicy.NORMAL;
 
-    } else if (str.equalsIgnoreCase("hdfsPartition")
-            || str.equalsIgnoreCase("hdfsPartitioned")
-            || str.equalsIgnoreCase("hdfs_partition")
-            || str.equalsIgnoreCase("hdfs_partitioned")) {
-      return DataPolicy.HDFS_PARTITION;
+    // } else if (str.equalsIgnoreCase("hdfsPartition") //rm hdfs
+    //         || str.equalsIgnoreCase("hdfsPartitioned")
+    //         || str.equalsIgnoreCase("hdfs_partition")
+    //         || str.equalsIgnoreCase("hdfs_partitioned")) {
+    //   return DataPolicy.HDFS_PARTITION;
 
-    } else if (str.equalsIgnoreCase("hdfsPersistentPartition")
-            || str.equalsIgnoreCase("hdfsPersistentPartitioned")
-            || str.equalsIgnoreCase("hdfs_persistent_partition")
-            || str.equalsIgnoreCase("hdfs_persistent_partitioned")) {
-      return DataPolicy.HDFS_PERSISTENT_PARTITION;
+    // } else if (str.equalsIgnoreCase("hdfsPersistentPartition")
+    //         || str.equalsIgnoreCase("hdfsPersistentPartitioned")
+    //         || str.equalsIgnoreCase("hdfs_persistent_partition")
+    //         || str.equalsIgnoreCase("hdfs_persistent_partitioned")) {
+    //   return DataPolicy.HDFS_PERSISTENT_PARTITION;
 
     } else if (str.equalsIgnoreCase("preloaded")
             || str.equalsIgnoreCase("preload")) {
@@ -2579,17 +2579,17 @@ implements Serializable {
    * @throws HydraConfigException if the given string is not listed in {@link
    *         HDFSStorePrms#names}.
    */
-  private static HDFSStoreDescription getHDFSStoreDescription(String str,
-                                                  Long key, TestConfig config) {
-    HDFSStoreDescription hsd = config.getHDFSStoreDescription(str);
-    if (hsd == null) {
-      String s = BasePrms.nameForKey(key) + " not found in "
-               + BasePrms.nameForKey(HDFSStorePrms.names) + ": " + str;
-      throw new HydraConfigException(s);
-    } else {
-      return hsd;
-    }
-  }
+  // private static HDFSStoreDescription getHDFSStoreDescription(String str, //rm hdfs
+  //                                                 Long key, TestConfig config) {
+  //   HDFSStoreDescription hsd = config.getHDFSStoreDescription(str);
+  //   if (hsd == null) {
+  //     String s = BasePrms.nameForKey(key) + " not found in "
+  //              + BasePrms.nameForKey(HDFSStorePrms.names) + ": " + str;
+  //     throw new HydraConfigException(s);
+  //   } else {
+  //     return hsd;
+  //   }
+  // }
 
 //------------------------------------------------------------------------------
 // Interest policy configuration support
@@ -2847,9 +2847,9 @@ implements Serializable {
     this.evictionAttributes = readEvictionAttributes(in);
     this.gatewaySenderDescriptions = (List<GatewaySenderDescription>)in.readObject();
     this.gatewaySenderNames = (List<String>)in.readObject();
-    this.hdfsStoreName = (String)in.readObject();
-    this.hdfsStoreDescription = (HDFSStoreDescription)in.readObject();
-    this.hdfsWriteOnly = (Boolean)in.readObject();
+    // this.hdfsStoreName = (String)in.readObject(); //rm hdfs
+    // this.hdfsStoreDescription = (HDFSStoreDescription)in.readObject();
+    // this.hdfsWriteOnly = (Boolean)in.readObject();
     this.ignoreJTA = (Boolean)in.readObject();
     this.indexMaintenanceSynchronous = (Boolean)in.readObject();
     this.initialCapacity = (Integer)in.readObject();
@@ -2913,9 +2913,9 @@ implements Serializable {
     writeEvictionAttributes(this.evictionAttributes, out);
     out.writeObject(this.gatewaySenderDescriptions);
     out.writeObject(this.gatewaySenderNames);
-    out.writeObject(this.hdfsStoreName);
-    out.writeObject(this.hdfsStoreDescription);
-    out.writeObject(this.hdfsWriteOnly);
+    // out.writeObject(this.hdfsStoreName); //rm hdfs
+    // out.writeObject(this.hdfsStoreDescription);
+    // out.writeObject(this.hdfsWriteOnly);
     out.writeObject(this.ignoreJTA);
     out.writeObject(this.indexMaintenanceSynchronous);
     out.writeObject(this.initialCapacity);
@@ -2952,10 +2952,10 @@ implements Serializable {
         return DataPolicy.EMPTY;
       } else if (str.equals(DataPolicy.NORMAL.toString())) {
         return DataPolicy.NORMAL;
-      } else if (str.equals(DataPolicy.HDFS_PARTITION.toString())) {
-        return DataPolicy.HDFS_PARTITION;
-      } else if (str.equals(DataPolicy.HDFS_PERSISTENT_PARTITION.toString())) {
-        return DataPolicy.HDFS_PERSISTENT_PARTITION;
+      // } else if (str.equals(DataPolicy.HDFS_PARTITION.toString())) { //rm hdfs
+      //   return DataPolicy.HDFS_PARTITION;
+      // } else if (str.equals(DataPolicy.HDFS_PERSISTENT_PARTITION.toString())) {
+      //   return DataPolicy.HDFS_PERSISTENT_PARTITION;
       } else if (str.equals(DataPolicy.PRELOADED.toString())) {
         return DataPolicy.PRELOADED;
       } else if (str.equals(DataPolicy.PARTITION.toString())) {

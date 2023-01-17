@@ -175,7 +175,7 @@ public class CreateRegionExecutor extends AbstractTestCommandExecutor {
     }else if (mode.contains("override-pr")){
       r = filterPRShortCuts(r);
     }
-    r = removeHDFSShortCuts(r);
+    // r = removeHDFSShortCuts(r); //rm hdfs
     RegionShortcut selected = HydraUtil.getRandomElement(r);
     return selected.name();
   }
@@ -230,17 +230,17 @@ public class CreateRegionExecutor extends AbstractTestCommandExecutor {
     return list;
   }
   
-  private RegionShortcut[] removeHDFSShortCuts(RegionShortcut[] r) {
-    List<RegionShortcut> list = new ArrayList<RegionShortcut>();
-    for(RegionShortcut rs : r){
-      if(!rs.name().contains("_HDFS_")){
-        list.add(rs);
-      }
-    }
-    RegionShortcut[] array = new RegionShortcut[list.size()];
-    HydraUtil.logInfo("Removed HDFS shortcuts : " + list);
-    return list.toArray(array);
-  }
+  // private RegionShortcut[] removeHDFSShortCuts(RegionShortcut[] r) { //rm hdfs
+  //   List<RegionShortcut> list = new ArrayList<RegionShortcut>();
+  //   for(RegionShortcut rs : r){
+  //     if(!rs.name().contains("_HDFS_")){
+  //       list.add(rs);
+  //     }
+  //   }
+  //   RegionShortcut[] array = new RegionShortcut[list.size()];
+  //   HydraUtil.logInfo("Removed HDFS shortcuts : " + list);
+  //   return list.toArray(array);
+  // }
 
   private RegionShortcut[] filterOnlyDiskShortCuts(RegionShortcut[] r) {    
     List<RegionShortcut> list = new ArrayList<RegionShortcut>();

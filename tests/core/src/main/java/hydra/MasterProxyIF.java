@@ -246,10 +246,10 @@ public interface MasterProxyIF extends Remote {
    public void removeHadoop(HadoopDescription hdd, NodeDescription nd, int pid, boolean secure)
    throws RemoteException;
 
-   public void recordHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
-   throws RemoteException;
-   public void removeHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
-   throws RemoteException;
+   // public void recordHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure) //rm hdfs
+   // throws RemoteException;
+   // public void removeHDFSPIDNoDumps(HostDescription hd, int pid, boolean secure)
+   // throws RemoteException;
 
    //// move script management
    public void recordDir(HostDescription hd, String name, String dir)

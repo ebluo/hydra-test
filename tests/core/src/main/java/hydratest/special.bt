@@ -13,4 +13,4 @@ hydratest/reboot/reboot.bt
 //------------------------------------------------------------------------------
 // requires a local.conf as listed in the .bt file
 
-hydratest/reboot/hdfs.bt
+//hydratest/reboot/hdfs.bt //rm hdfs
