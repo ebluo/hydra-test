@@ -443,13 +443,13 @@ public class OffHeapHelper {
         //check if it is a HDFS region, if so ingore the check
         Class<? extends LocalRegion> clazz = localReg.getClass();
         boolean isHDFS = false;
-        try {
-          Method isHDFSRegionMethod = clazz.getDeclaredMethod("isHDFSRegion", (Class<?> [])null);
-          isHDFSRegionMethod.setAccessible(true);
-          isHDFS =  ((Boolean)isHDFSRegionMethod.invoke(localReg, (Object[])null)).booleanValue();
-        }catch(Throwable th) {
-          throw new RuntimeException("Could not determine if it is a HDFS region",th);
-        }
+        // try { //rm hdfs
+        //   Method isHDFSRegionMethod = clazz.getDeclaredMethod("isHDFSRegion", (Class<?> [])null);
+        //   isHDFSRegionMethod.setAccessible(true);
+        //   isHDFS =  ((Boolean)isHDFSRegionMethod.invoke(localReg, (Object[])null)).booleanValue();
+        // }catch(Throwable th) {
+        //   throw new RuntimeException("Could not determine if it is a HDFS region",th);
+        // }
         if(!isHDFS) {
           errStr.append(localReg.getFullPath() + " has off-heap enabled, but the following " + onHeapKeys.size() + 
             " keys had values not found in off-heap memory: " + onHeapKeys + 

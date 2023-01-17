@@ -37,7 +37,7 @@ public class Nuker
 
   protected static final String UNIX_SYSDIRS = "unix_sysdirs.txt";
   protected static final String WINDOWS_SYSDIRS = "windows_sysdirs.txt";
-  protected static final String HDFS_DIRS = "hdfs_dirs.txt";
+  // protected static final String HDFS_DIRS = "hdfs_dirs.txt"; //rm hdfs
 
   private Platform platform;
   private HostDescription mhd;
@@ -53,7 +53,7 @@ public class Nuker
 
   /** stores all known test artifact directories, both local and remote */
   private Set directories = new HashSet();
-  private Set hdfs_directories = new HashSet();
+  // private Set hdfs_directories = new HashSet();
 
 //------------------------------------------------------------------------------
 // Methods for use by hydra master
@@ -164,21 +164,21 @@ public class Nuker
   /**
    * Records a remote HDFS directory in an existing cluster for later removal.
    */
-  public synchronized void recordHDFSDir(String hadoopDist, String url,
-                                         boolean moveAfterTest) {
-    String src = url + "/user/" + System.getProperty("user.name");
-    if (moveAfterTest) {
-      String dst = this.userDir + "movedHadoopData";
-      String mkdircmd = UnixPlatform.SHELL + " mkdir -p " + dst + "\n";
-      FileUtil.appendToFile(this.hmfn, mkdircmd);
-      String mvcmd = UnixPlatform.SHELL + " " + hadoopDist
-                   + "/bin/hadoop fs -copyToLocal " + src + " " + dst + "\n";
-      FileUtil.appendToFile(this.hmfn, mvcmd);
-    }
-    String rmcmd = UnixPlatform.SHELL + " "
-                 + hadoopDist + "/bin/hadoop fs -rm -r -f " + src + "\n";
-    FileUtil.appendToFile(this.hmfn, rmcmd);
-  }
+  // public synchronized void recordHDFSDir(String hadoopDist, String url, //rm hdfs
+  //                                        boolean moveAfterTest) {
+  //   String src = url + "/user/" + System.getProperty("user.name");
+  //   if (moveAfterTest) {
+  //     String dst = this.userDir + "movedHadoopData";
+  //     String mkdircmd = UnixPlatform.SHELL + " mkdir -p " + dst + "\n";
+  //     FileUtil.appendToFile(this.hmfn, mkdircmd);
+  //     String mvcmd = UnixPlatform.SHELL + " " + hadoopDist
+  //                  + "/bin/hadoop fs -copyToLocal " + src + " " + dst + "\n";
+  //     FileUtil.appendToFile(this.hmfn, mvcmd);
+  //   }
+  //   String rmcmd = UnixPlatform.SHELL + " "
+  //                + hadoopDist + "/bin/hadoop fs -rm -r -f " + src + "\n";
+  //   FileUtil.appendToFile(this.hmfn, rmcmd);
+  // }
 
   /**
    * Records a remote HDFS directory for later move. Adds both local and remote
@@ -186,19 +186,19 @@ public class Nuker
    * both runtime use by clients and script use by the master controller and
    * batterytest.
    */
-  protected synchronized void recordHDFSDir(HostDescription hd,
-            NodeType nodeType, String dir, boolean moveAfterTest) {
-    if (!this.hdfs_directories.contains(dir)) {
-      String dirname = getDirName(hd, dir);
-      String dirpath = getDirPath(hd, dir);
-      recordHDFSDir(hd, nodeType, dir, dirname);
-      if (moveAfterTest) {
-        recordMoveDirCommands(this.hmfn, hd, dir, dirpath, dirname);
-      } else {
-        recordRemoveDirCommands(this.hmfn, hd, dir, dirpath, dirname);
-      }
-    }
-  }
+  // protected synchronized void recordHDFSDir(HostDescription hd,
+  //           NodeType nodeType, String dir, boolean moveAfterTest) {
+  //   if (!this.hdfs_directories.contains(dir)) {
+  //     String dirname = getDirName(hd, dir);
+  //     String dirpath = getDirPath(hd, dir);
+  //     recordHDFSDir(hd, nodeType, dir, dirname);
+  //     if (moveAfterTest) {
+  //       recordMoveDirCommands(this.hmfn, hd, dir, dirpath, dirname);
+  //     } else {
+  //       recordRemoveDirCommands(this.hmfn, hd, dir, dirpath, dirname);
+  //     }
+  //   }
+  // }
 
   private void recordHDFSDir(HostDescription hd, NodeType nodeType,
                              String dir, String dirname) {
@@ -211,15 +211,15 @@ public class Nuker
    * for all platforms needed to support both runtime use by clients and script
    * use by the master controller and batterytest.
    */
-  protected synchronized void recordDir(HostDescription hd, String name,
-                                                            String dir) {
-    if (!this.directories.contains(dir)) {
-      String dirname = getDirName(hd, dir);
-      String dirpath = getDirPath(hd, dir);
-      recordDir(hd, name, dir, dirname);
-      recordMoveDirCommands(this.mfn, hd, dir, dirpath, dirname);
-    }
-  }
+  // protected synchronized void recordDir(HostDescription hd, String name,
+  //                                                           String dir) {
+  //   if (!this.directories.contains(dir)) {
+  //     String dirname = getDirName(hd, dir);
+  //     String dirpath = getDirPath(hd, dir);
+  //     recordDir(hd, name, dir, dirname);
+  //     recordMoveDirCommands(this.mfn, hd, dir, dirpath, dirname);
+  //   }
+  // }
 
   private void recordDir(HostDescription hd, String name,
                          String dir, String dirname) {
@@ -447,10 +447,10 @@ public class Nuker
   /**
    * Records a Hadoop PID in the nukehadoop script.
    */
-  protected void recordHDFSPIDNoDumps(HostDescription hd, int pid,
-                                      boolean secure) {
-    recordPID(this.hnfn, null, null, hd, pid, false, secure);
-  }
+  // protected void recordHDFSPIDNoDumps(HostDescription hd, int pid, //rm hdfs
+  //                                     boolean secure) {
+  //   recordPID(this.hnfn, null, null, hd, pid, false, secure);
+  // }
 
   /**
    * Records a PID in various scripts, as indicated.
@@ -504,10 +504,10 @@ public class Nuker
   /**
    * Removes an HDFS PID from the nukehadoop scripts.
    */
-  protected void removeHDFSPIDNoDumps(HostDescription hd, int pid,
-                                      boolean secure) {
-    removePID(this.hnfn, null, null, hd, pid, false, secure);
-  }
+  // protected void removeHDFSPIDNoDumps(HostDescription hd, int pid, //rm hdfs
+  //                                     boolean secure) {
+  //   removePID(this.hnfn, null, null, hd, pid, false, secure);
+  // }
 
   /**
    * Removes a PID from various scripts, as indicated.

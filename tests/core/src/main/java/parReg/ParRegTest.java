@@ -16,7 +16,7 @@
  */
 package parReg;
 
-import hdfs.HDFSUtil;
+// import hdfs.HDFSUtil; //rm hdfs
 
 import hydra.BridgeHelper;
 import hydra.BridgePrms;
@@ -1039,9 +1039,9 @@ public static void HydraTask_validatePR() {
   Log.getLogWriter().info(testInstance.aRegion.getFullPath() + " size is " + testInstance.aRegion.size() + " isDataStore " + testInstance.isDataStore);
   if (testInstance.isDataStore && (testInstance.aRegion.size() == 0)) { // this ensures that recovery did recover something
      // with HDFS tests we cannot guarantee that we haven't evicted the entire PR
-     if (!testInstance.aRegion.getAttributes().getDataPolicy().withHDFS()) {
-       throw new TestException("Expected " + testInstance.aRegion.getFullPath() + " to have a size > 0, but it has size " + testInstance.aRegion.size());
-     }
+    //  if (!testInstance.aRegion.getAttributes().getDataPolicy().withHDFS()) { //rm hdfs
+    //    throw new TestException("Expected " + testInstance.aRegion.getFullPath() + " to have a size > 0, but it has size " + testInstance.aRegion.size());
+    //  }
   }
   testInstance.verifyFromSnapshot();
 }
@@ -1061,10 +1061,10 @@ public static void HydraTask_prepareForValidation() {
   if (counter == 1) {
     // HDFS support (no region.size(), region.keySet(), region.containsKey(), etc
     boolean withEviction = (testInstance.aRegion.getAttributes().getEvictionAttributes().getAlgorithm().equals(EvictionAlgorithm.NONE)) ? false : true;
-    if (ConfigPrms.getHadoopConfig() != null) {
-      testInstance.writeHDFSRegionSnapshotToBB();
-      return;
-    }
+    // if (ConfigPrms.getHadoopConfig() != null) { //rm hdfs
+    //   testInstance.writeHDFSRegionSnapshotToBB();
+    //   return;
+    // }
 
     Map regionSnapshot = new HashMap();
     Set keySet = testInstance.aRegion.keySet();
@@ -5002,10 +5002,10 @@ public void verifyFromSnapshotOnly() {
 
    // HDFS support 
    boolean withEviction = (aRegion.getAttributes().getEvictionAttributes().getAlgorithm().equals(EvictionAlgorithm.NONE)) ? false : true;
-   if (aRegion.getAttributes().getDataPolicy().withHDFS()) {
-      verifyHDFSRegionFromSnapshot();
-      return;
-   }
+  //  if (aRegion.getAttributes().getDataPolicy().withHDFS()) { //rm hdfs
+  //     verifyHDFSRegionFromSnapshot();
+  //     return;
+  //  }
 
    if (isEmptyClient) {
      verifyServerKeysFromSnapshot();
@@ -5122,58 +5122,58 @@ public void verifyFromSnapshotOnly() {
 /** HDFS version (cannot use region.size, containsKey, containsValueForKey)
  *  limited validation (no checks for missing/extra entries)
  */
-public void verifyHDFSRegionFromSnapshot() {
+// public void verifyHDFSRegionFromSnapshot() { //rm hdfs
 
-   StringBuffer aStr = new StringBuffer();
-   regionSnapshot = (Map)(ParRegBB.getBB().getSharedMap().get(ParRegBB.RegionSnapshot));
-   destroyedKeys = (Set)(ParRegBB.getBB().getSharedMap().get(ParRegBB.DestroyedKeys));
-   StringBuffer problemKeys = new StringBuffer();
+//    StringBuffer aStr = new StringBuffer();
+//    regionSnapshot = (Map)(ParRegBB.getBB().getSharedMap().get(ParRegBB.RegionSnapshot));
+//    destroyedKeys = (Set)(ParRegBB.getBB().getSharedMap().get(ParRegBB.DestroyedKeys));
+//    StringBuffer problemKeys = new StringBuffer();
 
-   int snapshotSize = regionSnapshot.size();
-   Log.getLogWriter().info("Verifying HDFS Region from snapshot containing " + snapshotSize + " entries...");
+//    int snapshotSize = regionSnapshot.size();
+//    Log.getLogWriter().info("Verifying HDFS Region from snapshot containing " + snapshotSize + " entries...");
 
-   Set inDoubtOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
-   if (inDoubtOps.size() > 0) {
-      Log.getLogWriter().info(inDoubtOps.size() + " TransactionInDoubtExceptions occurred on the following keys:" + inDoubtOps);
-   }
-   Iterator it = regionSnapshot.entrySet().iterator();
-   while (it.hasNext()) { // iterating the expected keys
-      Map.Entry entry = (Map.Entry)it.next();
-      Object key = entry.getKey();
-      Object expectedValue = entry.getValue();
+//    Set inDoubtOps = ParRegBB.getBB().getFailedOps(ParRegBB.INDOUBT_TXOPS);
+//    if (inDoubtOps.size() > 0) {
+//       Log.getLogWriter().info(inDoubtOps.size() + " TransactionInDoubtExceptions occurred on the following keys:" + inDoubtOps);
+//    }
+//    Iterator it = regionSnapshot.entrySet().iterator();
+//    while (it.hasNext()) { // iterating the expected keys
+//       Map.Entry entry = (Map.Entry)it.next();
+//       Object key = entry.getKey();
+//       Object expectedValue = entry.getValue();
 
-      try {
-         Object actualValue = aRegion.get(key);
-         ParRegUtil.verifyMyValue(key, expectedValue, actualValue, ParRegUtil.EQUAL);
-      } catch (TestException e) {
-         aStr.append(e.getMessage() + "\n");
-         problemKeys.append(key + " ");
-      }
-   }
+//       try {
+//          Object actualValue = aRegion.get(key);
+//          ParRegUtil.verifyMyValue(key, expectedValue, actualValue, ParRegUtil.EQUAL);
+//       } catch (TestException e) {
+//          aStr.append(e.getMessage() + "\n");
+//          problemKeys.append(key + " ");
+//       }
+//    }
  
-   // check that destroyedKeys are not in the region
-   it = destroyedKeys.iterator();
-   while (it.hasNext()) {
-      Object key = it.next();
-      try {
-         ParRegUtil.verifyContainsKey(aRegion, key, false);
-      } catch (TestException e) {
-         aStr.append(e.getMessage() + "\n");
-         problemKeys.append(key + " ");
-      }
-   }
+//    // check that destroyedKeys are not in the region
+//    it = destroyedKeys.iterator();
+//    while (it.hasNext()) {
+//       Object key = it.next();
+//       try {
+//          ParRegUtil.verifyContainsKey(aRegion, key, false);
+//       } catch (TestException e) {
+//          aStr.append(e.getMessage() + "\n");
+//          problemKeys.append(key + " ");
+//       }
+//    }
 
-   if (aStr.length() > 0) {
-      Log.getLogWriter().info("Starting mapreduce job to help debug: " + aStr.toString());
-      HDFSUtil.getAllHDFSEventsForKey(problemKeys.toString());
+//    if (aStr.length() > 0) {
+//       Log.getLogWriter().info("Starting mapreduce job to help debug: " + aStr.toString());
+//       HDFSUtil.getAllHDFSEventsForKey(problemKeys.toString());
 
-      // shutdownHook will cause all members to dump partitioned region info
-      HDFSUtil.dumpHDFSResultRegion();
-      ((LocalRegion)aRegion).dumpBackingMap();
-      throw new TestException(aStr.toString());
-   }
-   Log.getLogWriter().info("Done verifying HDFS Region from snapshot containing " + snapshotSize + " entries...");
-}
+//       // shutdownHook will cause all members to dump partitioned region info
+//       HDFSUtil.dumpHDFSResultRegion();
+//       ((LocalRegion)aRegion).dumpBackingMap();
+//       throw new TestException(aStr.toString());
+//    }
+//    Log.getLogWriter().info("Done verifying HDFS Region from snapshot containing " + snapshotSize + " entries...");
+// }
 
 /** Verify server keys in this client which might be empty or thin.
  */
@@ -5398,10 +5398,10 @@ protected void concVerify() {
 
       // HDFS support (no region.size(), region.keySet(), region.containsKey(), etc
       boolean withEviction = (aRegion.getAttributes().getEvictionAttributes().getAlgorithm().equals(EvictionAlgorithm.NONE)) ? false : true;
-      if ((aRegion.getAttributes().getDataPolicy().withHDFS()) && withEviction) {
-        writeHDFSRegionSnapshotToBB();
-        return;
-      }
+      // if ((aRegion.getAttributes().getDataPolicy().withHDFS()) && withEviction) { //rm hdfs
+      //   writeHDFSRegionSnapshotToBB();
+      //   return;
+      // }
 
       regionSnapshot = new HashMap();
       destroyedKeys = new HashSet();
@@ -5445,33 +5445,33 @@ protected void concVerify() {
  *  entries in the cache.  We can build the region snapshot by interating over 
  *  Object_1 ... Object_<positiveNameCounter> 
  */
-protected void writeHDFSRegionSnapshotToBB() {
+// protected void writeHDFSRegionSnapshotToBB() { //rm hdfs
 
-   regionSnapshot = new HashMap();
-   destroyedKeys = new HashSet();
-   Log.getLogWriter().info("This thread is the concurrentLeader, creating HDFS region snapshot..."); 
+//    regionSnapshot = new HashMap();
+//    destroyedKeys = new HashSet();
+//    Log.getLogWriter().info("This thread is the concurrentLeader, creating HDFS region snapshot..."); 
 
-   long lastKeyCounter = NameFactory.getPositiveNameCounter();
-   for (int i = 1; i <= lastKeyCounter; i++) {
-      Object key = NameFactory.getObjectNameForCounter(i);
-      if (aRegion.containsKey(key)) {
-         Object value = aRegion.get(key);
+//    long lastKeyCounter = NameFactory.getPositiveNameCounter();
+//    for (int i = 1; i <= lastKeyCounter; i++) {
+//       Object key = NameFactory.getObjectNameForCounter(i);
+//       if (aRegion.containsKey(key)) {
+//          Object value = aRegion.get(key);
    
-         if ((value instanceof BaseValueHolder) || (value instanceof PdxInstance)) {
-            regionSnapshot.put(key, (PdxTest.toValueHolder(value)).myValue);
-         } else {
-            regionSnapshot.put(key, value);
-         }
-      }
-   }
+//          if ((value instanceof BaseValueHolder) || (value instanceof PdxInstance)) {
+//             regionSnapshot.put(key, (PdxTest.toValueHolder(value)).myValue);
+//          } else {
+//             regionSnapshot.put(key, value);
+//          }
+//       }
+//    }
 
-   Log.getLogWriter().info("Done creating HDFS region snapshot with " + regionSnapshot.size() + " entries; " + regionSnapshot);
-   ParRegBB.getBB().getSharedMap().put(ParRegBB.RegionSnapshot, regionSnapshot);
-   Log.getLogWriter().info("Done creating destroyed keys with " + destroyedKeys.size() + " keys");
-   ParRegBB.getBB().getSharedMap().put(ParRegBB.DestroyedKeys, destroyedKeys);
-   long snapshotWritten = ParRegBB.getBB().getSharedCounters().incrementAndRead(ParRegBB.SnapshotWritten);
-   Log.getLogWriter().info("Incremented SnapshotWritten, now is " + snapshotWritten);
-}
+//    Log.getLogWriter().info("Done creating HDFS region snapshot with " + regionSnapshot.size() + " entries; " + regionSnapshot);
+//    ParRegBB.getBB().getSharedMap().put(ParRegBB.RegionSnapshot, regionSnapshot);
+//    Log.getLogWriter().info("Done creating destroyed keys with " + destroyedKeys.size() + " keys");
+//    ParRegBB.getBB().getSharedMap().put(ParRegBB.DestroyedKeys, destroyedKeys);
+//    long snapshotWritten = ParRegBB.getBB().getSharedCounters().incrementAndRead(ParRegBB.SnapshotWritten);
+//    Log.getLogWriter().info("Incremented SnapshotWritten, now is " + snapshotWritten);
+// }
 
   /**
    * @param uniqueBackupID A unique number used to create a directory in the

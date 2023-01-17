@@ -22,8 +22,8 @@ import hydra.ClientRegionHelper;
 import hydra.ConfigPrms;
 import hydra.DiskStoreHelper;
 import hydra.DistributedSystemHelper;
-import hydra.HDFSStoreDescription;
-import hydra.HDFSStoreHelper;
+// import hydra.HDFSStoreDescription; //rm hdfs
+// import hydra.HDFSStoreHelper;
 import hydra.Log;
 import hydra.MasterController;
 import hydra.PoolDescription;
@@ -44,7 +44,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import hdfs.HDFSUtil;
+// import hdfs.HDFSUtil;
 import pdx.PdxTest;
 import pdx.PdxTestVersionHelper;
 import rebalance.RebalanceUtil;
@@ -1041,29 +1041,29 @@ public synchronized static void HydraTask_waitForRecovery(GemFireCache cache) {
 
 /** todo@lhughes -- temporary wait to recreate buckets for HDFS data
  */
-public synchronized static void HydraTask_recreateBucketsFromHDFS() {
-   HydraTask_recreateBucketsFromHDFS(CacheHelper.getCache());
-}
-public synchronized static void HydraTask_recreateBucketsFromHDFS(GemFireCache cache) {
-   Set<Region<?,?>> regSet = cache.rootRegions();
-   Integer thisVmId = RemoteTestModule.getMyVmid();
-   Iterator it = regSet.iterator();
-   while (it.hasNext()) {
-      Region aRegion = (Region)(it.next());
-      PartitionAttributes prAttr = aRegion.getAttributes().getPartitionAttributes();
-      if (prAttr != null) { // is a partitioned region
-         if (prAttr.getLocalMaxMemory() != 0) { // is a data store, not an accessor
-           Set keys = aRegion.keySet();
-           Log.getLogWriter().info("after aRegion.keySet() recreateBucketsFromHDFS found keySet size = " + keys.size() + " with region.size() = " + aRegion.size() + " for " + aRegion.getFullPath());
-           for (Iterator kit = keys.iterator(); kit.hasNext(); ) {
-              Object key = kit.next();
-              aRegion.get(key);
-           }
-           Log.getLogWriter().info("iterating aRegion.keySet() recreateBucketsFromHDFS found keySet size = " + keys.size() + " with region.size() = " + aRegion.size() + " for " + aRegion.getFullPath());
-         }
-      }
-   }
-}
+// public synchronized static void HydraTask_recreateBucketsFromHDFS() { //rm hdfs
+//    HydraTask_recreateBucketsFromHDFS(CacheHelper.getCache());
+// }
+// public synchronized static void HydraTask_recreateBucketsFromHDFS(GemFireCache cache) {
+//    Set<Region<?,?>> regSet = cache.rootRegions();
+//    Integer thisVmId = RemoteTestModule.getMyVmid();
+//    Iterator it = regSet.iterator();
+//    while (it.hasNext()) {
+//       Region aRegion = (Region)(it.next());
+//       PartitionAttributes prAttr = aRegion.getAttributes().getPartitionAttributes();
+//       if (prAttr != null) { // is a partitioned region
+//          if (prAttr.getLocalMaxMemory() != 0) { // is a data store, not an accessor
+//            Set keys = aRegion.keySet();
+//            Log.getLogWriter().info("after aRegion.keySet() recreateBucketsFromHDFS found keySet size = " + keys.size() + " with region.size() = " + aRegion.size() + " for " + aRegion.getFullPath());
+//            for (Iterator kit = keys.iterator(); kit.hasNext(); ) {
+//               Object key = kit.next();
+//               aRegion.get(key);
+//            }
+//            Log.getLogWriter().info("iterating aRegion.keySet() recreateBucketsFromHDFS found keySet size = " + keys.size() + " with region.size() = " + aRegion.size() + " for " + aRegion.getFullPath());
+//          }
+//       }
+//    }
+// }
 
 //========================================================
 //  Methods to help coordinate an end task disk recovery
@@ -1076,10 +1076,10 @@ public static void writeDiskDirsToBB(Region reg) {
   String diskStoreName = reg.getAttributes().getDiskStoreName();
 
   // perhaps this DiskStore is meant for HDFS (vs. the Region)
-  if (diskStoreName == null && (ConfigPrms.getHadoopConfig() != null)) {
-     HDFSStoreDescription hsd = HDFSStoreHelper.getHDFSStoreDescription(HDFSUtil.getHDFSStoreName(reg));
-     diskStoreName = hsd.getDiskStoreDescription().getName();
-  }
+//   if (diskStoreName == null && (ConfigPrms.getHadoopConfig() != null)) { //rm hdfs
+//      HDFSStoreDescription hsd = HDFSStoreHelper.getHDFSStoreDescription(HDFSUtil.getHDFSStoreName(reg));
+//      diskStoreName = hsd.getDiskStoreDescription().getName();
+//   }
 
   if (diskStoreName == null) {
     Log.getLogWriter().info("The region " + reg.getFullPath() + " does not have a diskStore; not writing disk dirs to bb");
@@ -1133,10 +1133,10 @@ public static void createDiskStoreIfNecessary(String hydraRegionConfigName) {
   String diskStoreName = attr.getDiskStoreName();
 
   // perhaps this DiskStore is meant for HDFS (vs. the Region)
-  if (diskStoreName == null && attr.getDataPolicy().withHDFS()) {
-     String hdfsStoreName = attr.getHDFSStoreName();
-     diskStoreName = HDFSStoreHelper.getHDFSStoreDescription(hdfsStoreName).getDiskStoreDescription().getName();
-  }
+//   if (diskStoreName == null && attr.getDataPolicy().withHDFS()) { //rm hdfs
+//      String hdfsStoreName = attr.getHDFSStoreName();
+//      diskStoreName = HDFSStoreHelper.getHDFSStoreDescription(hdfsStoreName).getDiskStoreDescription().getName();
+//   }
 
   if (diskStoreName == null) { // no diskStore named, so no DiskStore to create
     if (hydraRegionConfigName.indexOf("accessor") >= 0) {

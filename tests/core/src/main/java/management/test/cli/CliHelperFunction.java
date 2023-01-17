@@ -136,8 +136,8 @@ public class CliHelperFunction extends FunctionAdapter {
     info.publisher = attr.getPublisher();
     info.statisticsEnabled = attr.getStatisticsEnabled();
     info.subscriptionConflationEnabled = attr.getEnableSubscriptionConflation();
-    info.hdfsStoreName = attr.getHDFSStoreName();
-    info.hdfsWriteOnly = attr.getHDFSWriteOnly();
+    // info.hdfsStoreName = attr.getHDFSStoreName(); //rm hdfs
+    // info.hdfsWriteOnly = attr.getHDFSWriteOnly();
     info.directSubregions = new HashSet();
     Set<Region> aSet = aRegion.subregions(false);
     for (Region reg: aSet) {

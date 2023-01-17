@@ -30,7 +30,7 @@ import hydra.DistributedSystemHelper;
 import hydra.GatewayPrms;
 import hydra.GatewaySenderHelper;
 import hydra.GatewaySenderPrms;
-import hydra.HDFSStoreHelper;
+// import hydra.HDFSStoreHelper; //rm hdfs
 import hydra.Log;
 import hydra.PoolHelper;
 import hydra.PoolPrms;

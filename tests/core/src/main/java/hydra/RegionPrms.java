@@ -299,13 +299,13 @@ public class RegionPrms extends BasePrms {
    * (String(s))
    * HDFS store name for each region.
    */
-  public static Long hdfsStoreName;
+  // public static Long hdfsStoreName; //rm hdfs
 
   /**
    * (boolean(s))
    * HDFS write-only for each region.
    */
-  public static Long hdfsWriteOnly;
+  // public static Long hdfsWriteOnly;
 
   /**
    * (boolean(s))

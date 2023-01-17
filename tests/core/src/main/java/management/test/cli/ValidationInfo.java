@@ -94,8 +94,8 @@ public class ValidationInfo implements Serializable {
   public EvictionAttributes evictionAttr = null;
   public Integer numBucketsWithoutRedundancy = null;
   public Boolean enableOffHeapMemory;
-  public Boolean hdfsWriteOnly;
-  public String hdfsStoreName;
+  // public Boolean hdfsWriteOnly; //rm hdfs
+  // public String hdfsStoreName;
 
   @Override
   public String toString() {
@@ -130,9 +130,7 @@ public class ValidationInfo implements Serializable {
         + ", membershipAttr=" + membershipAttr + ", evictionAttr="
         + evictionAttr + ", numBucketsWithoutRedundancy="
         + numBucketsWithoutRedundancy + ", enableOffHeapMemory="
-        + enableOffHeapMemory + ", hdfsWriteOnly="
-        + hdfsWriteOnly + ", hdfsStoreName="
-        + hdfsStoreName + "]";
+        + enableOffHeapMemory + "]";
   }
   
 

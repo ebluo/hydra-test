@@ -88,7 +88,7 @@ public class TestConfig implements Serializable {
   private SortedMap<String,HostAgentDescription> HostAgentDescriptions = new TreeMap();
   private SortedMap PoolDescriptions = new TreeMap();
   private SortedMap DiskStoreDescriptions = new TreeMap();
-  private SortedMap<String,HDFSStoreDescription> HDFSStoreDescriptions = new TreeMap();
+  // private SortedMap<String,HDFSStoreDescription> HDFSStoreDescriptions = new TreeMap(); //rm hdfs
   private SortedMap CacheDescriptions = new TreeMap();
   private SortedMap ResourceManagerDescriptions = new TreeMap();
   private SortedMap RegionDescriptions = new TreeMap();
@@ -235,7 +235,7 @@ public class TestConfig implements Serializable {
     VersionDescription.configure(this);
     ClientDescription.configure(this);
     DiskStoreDescription.configure(this);
-    HDFSStoreDescription.configure(this);
+    // HDFSStoreDescription.configure(this); //rm hdfs
     BridgeDescription.configure(this);
     PoolDescription.configure(this);
     FixedPartitionDescription.configure(this);
@@ -851,26 +851,26 @@ public class TestConfig implements Serializable {
     DiskStoreDescriptions.put(name, dsd);
   }
 
-  public Map getHDFSStoreDescriptions() {
-    return HDFSStoreDescriptions;
-  }
+  // public Map getHDFSStoreDescriptions() { //rm hdfs
+  //   return HDFSStoreDescriptions;
+  // }
 
-  public HDFSStoreDescription getHDFSStoreDescription(String name) {
-    return (HDFSStoreDescription)HDFSStoreDescriptions.get(name);
-  }
+  // public HDFSStoreDescription getHDFSStoreDescription(String name) {
+  //   return (HDFSStoreDescription)HDFSStoreDescriptions.get(name);
+  // }
 
   /**
   * Adds the specified HDFS description to the test configuration.
   * @param hsd the HDFS store description to add
   * @throws HydraConfigException if a HDFS store description with the same name already exists
   */
-  protected void addHDFSStoreDescription(HDFSStoreDescription hsd) {
-    String name = hsd.getName();
-    if (HDFSStoreDescriptions.containsKey(name)) {
-      throw new HydraConfigException("HDFS store description " + name + " already exists");
-    }
-    HDFSStoreDescriptions.put(name, hsd);
-  }
+  // protected void addHDFSStoreDescription(HDFSStoreDescription hsd) { //rm hdfs
+  //   String name = hsd.getName();
+  //   if (HDFSStoreDescriptions.containsKey(name)) {
+  //     throw new HydraConfigException("HDFS store description " + name + " already exists");
+  //   }
+  //   HDFSStoreDescriptions.put(name, hsd);
+  // }
 
   public Map getCacheDescriptions() {
     return CacheDescriptions;
@@ -1479,9 +1479,9 @@ public class TestConfig implements Serializable {
     if (DiskStoreDescriptions.size() != 0 )
       for ( Iterator i = DiskStoreDescriptions.values().iterator(); i.hasNext(); )
         map.putAll( ((DiskStoreDescription)i.next()).toSortedMap() );
-    if (HDFSStoreDescriptions.size() != 0 )
-      for ( Iterator i = HDFSStoreDescriptions.values().iterator(); i.hasNext(); )
-        map.putAll( ((HDFSStoreDescription)i.next()).toSortedMap() );
+    // if (HDFSStoreDescriptions.size() != 0 ) //rm hdfs
+    //   for ( Iterator i = HDFSStoreDescriptions.values().iterator(); i.hasNext(); )
+    //     map.putAll( ((HDFSStoreDescription)i.next()).toSortedMap() );
     if (CacheDescriptions.size() != 0 )
       for ( Iterator i = CacheDescriptions.values().iterator(); i.hasNext(); )
         map.putAll( ((CacheDescription)i.next()).toSortedMap() );

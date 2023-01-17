@@ -197,21 +197,21 @@ management/test/jmx/memberMBean.conf
 	jmxIterations = 150 duration = 600
 
 // hdfs.bt 
-hdfs/parReg/concKnownKeysPersist.conf
-  A=config configHosts=1  configVMsPerHost=1 configThreadsPerVM=1
-  B=peer   peerHosts  =10 peerVMsPerHost  =1 peerThreadsPerVM  =20
-  numKeys=10000 byteArraySize=5
-  batchSizeMB=5 batchTimeInterval=5000
+//hdfs/parReg/concKnownKeysPersist.conf //rm hdfs
+//  A=config configHosts=1  configVMsPerHost=1 configThreadsPerVM=1
+//  B=peer   peerHosts  =10 peerVMsPerHost  =1 peerThreadsPerVM  =20
+//  numKeys=10000 byteArraySize=5
+//  batchSizeMB=5 batchTimeInterval=5000
 
-hdfs/parReg/concKnownKeysStreaming.conf
-  A=config configHosts=1  configVMsPerHost=1 configThreadsPerVM=1
-  B=peer   peerHosts  =10 peerVMsPerHost  =1 peerThreadsPerVM  =20
-  numKeys=10000 byteArraySize=5
-  batchSizeMB=5 batchTimeInterval=5000
+//hdfs/parReg/concKnownKeysStreaming.conf
+//  A=config configHosts=1  configVMsPerHost=1 configThreadsPerVM=1
+//  B=peer   peerHosts  =10 peerVMsPerHost  =1 peerThreadsPerVM  =20
+//  numKeys=10000 byteArraySize=5
+//  batchSizeMB=5 batchTimeInterval=5000
 
-hdfs/parReg/concKnownKeysMapReduce.conf
-  peerHosts=10 peerVMsPerHost=1 peerThreadsPerVM=20 numKeys=10000 byteArraySize=5
-  batchSizeMB=5 batchTimeInterval=5000
-  hdfsWriteOnly = true mapReduceClass = hdfs.mapreduce.KnownKeysMRv1
+//hdfs/parReg/concKnownKeysMapReduce.conf
+//  peerHosts=10 peerVMsPerHost=1 peerThreadsPerVM=20 numKeys=10000 byteArraySize=5
+//  batchSizeMB=5 batchTimeInterval=5000
+//  hdfsWriteOnly = true mapReduceClass = hdfs.mapreduce.KnownKeysMRv1
 
 
