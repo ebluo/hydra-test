@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
 
 /**
  * Helps clients use {@link ClientRegionDescription}.  Methods are thread-safe.

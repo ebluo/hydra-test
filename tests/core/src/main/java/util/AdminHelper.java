@@ -23,11 +23,11 @@ import splitBrain.SplitBrainPrms;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.admin.*;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 /**
  *  Helper class to initialize a hydra client VM as an Admin VM.

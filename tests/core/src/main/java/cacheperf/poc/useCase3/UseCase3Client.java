@@ -19,10 +19,10 @@ package cacheperf.poc.useCase3;
 
 import cacheperf.*;
 import com.useCase3.rds.model.trade.RDSCDSContract;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.cache.query.types.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.cache.query.types.*;
 import hydra.*;
 import java.util.*;
 import perffmwk.*;

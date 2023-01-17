@@ -16,7 +16,7 @@
  */
 package wan; 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** Event Test Listener. 
  *  Log listener (to display events as they arrive)

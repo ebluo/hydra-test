@@ -22,8 +22,8 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
 
 public class Trade implements DataSerializable {
   long   TradeId;

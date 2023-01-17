@@ -22,8 +22,8 @@ import java.util.*;
 import util.*;
 //import hydra.*;
 import hydra.blackboard.*;
-//import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.internal.NanoTimer;
+//import org.apache.geode.cache.*;
+//import org.apache.geode.internal.NanoTimer;
 
 public class SerialRegionEventTest extends EventTest {
 

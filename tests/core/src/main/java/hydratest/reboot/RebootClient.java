@@ -16,7 +16,7 @@
  */
 package hydratest.reboot;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 import hydra.*;
 
 /**

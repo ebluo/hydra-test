@@ -21,8 +21,8 @@ import java.util.Properties;
 
 import parReg.execute.RoutingHolder;
 
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.PartitionResolver;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.PartitionResolver;
 import hydra.*;
 
 public class KeyResolver implements PartitionResolver, Serializable,

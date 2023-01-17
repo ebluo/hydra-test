@@ -18,7 +18,7 @@ package nbsTests;
 
 import hct.EventListener;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 public class EventCounterListener extends EventListener {
   

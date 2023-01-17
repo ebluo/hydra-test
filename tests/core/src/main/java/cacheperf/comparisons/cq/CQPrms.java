@@ -17,7 +17,7 @@
 
 package cacheperf.comparisons.cq;
 
-import com.gemstone.gemfire.cache.query.CqListener;
+import org.apache.geode.cache.query.CqListener;
 import hydra.*;
 
 /**

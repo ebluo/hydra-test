@@ -22,10 +22,10 @@ import util.*;
 
 import tx.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.membership.jgroup.MembershipManagerHelper;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.membership.jgroup.MembershipManagerHelper;
 
 import java.util.*;
 

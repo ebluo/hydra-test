@@ -18,7 +18,7 @@ package resman;
 
 import hydra.Log;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ResourceManLoader implements CacheLoader, Declarable {
 

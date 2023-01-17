@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -24,9 +24,9 @@ import management.test.cli.CLITest;
 import management.util.HydraUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.management.internal.cli.dto.Key1;
-import com.gemstone.gemfire.management.internal.cli.dto.Value2;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.dto.Key1;
+import org.apache.geode.management.internal.cli.dto.Value2;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
 
 public class PutExecutor extends AbstractTestCommandExecutor {
   

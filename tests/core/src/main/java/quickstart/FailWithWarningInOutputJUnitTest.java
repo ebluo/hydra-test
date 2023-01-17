@@ -16,9 +16,9 @@
  */
 package quickstart;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 
 /**
  * Verifies that quickstart test output containing an unexpected warning message

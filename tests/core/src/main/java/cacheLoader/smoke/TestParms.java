@@ -20,9 +20,9 @@ import hydra.*;
 import hydra.blackboard.*;
 import util.*;
 import perffmwk.PerfStatMgr;
-//import com.gemstone.gemfire.LogWriter;
-//import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
+//import org.apache.geode.LogWriter;
+//import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
 import java.text.DecimalFormat;
 
 public class TestParms extends BasePrms {

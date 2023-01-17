@@ -19,11 +19,11 @@ package tx;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.Token;
-import com.gemstone.gemfire.internal.cache.TXState;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.Token;
+import org.apache.geode.internal.cache.TXState;
+import org.apache.geode.internal.cache.LocalRegion;
 import java.util.*;
 
 /**

@@ -43,24 +43,24 @@ import management.util.HydraUtil;
 import management.util.ManagementUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.CacheWriter;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.ExpirationAction;
-import com.gemstone.gemfire.cache.LoaderHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionEvent;
-import com.gemstone.gemfire.cache.RegionShortcut;
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.commands.CreateAlterDestroyRegionCommands;
-import com.gemstone.gemfire.management.internal.cli.dto.Key1;
-import com.gemstone.gemfire.management.internal.cli.dto.Value1;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
-import com.gemstone.gemfire.management.internal.cli.result.ResultData;
-import com.gemstone.gemfire.management.internal.cli.result.TabularResultData;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.CacheWriter;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.ExpirationAction;
+import org.apache.geode.cache.LoaderHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionEvent;
+import org.apache.geode.cache.RegionShortcut;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.commands.CreateAlterDestroyRegionCommands;
+import org.apache.geode.management.internal.cli.dto.Key1;
+import org.apache.geode.management.internal.cli.dto.Value1;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.internal.cli.result.ResultData;
+import org.apache.geode.management.internal.cli.result.TabularResultData;
 
 public class CreateRegionExecutor extends AbstractTestCommandExecutor {
 

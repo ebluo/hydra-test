@@ -16,7 +16,7 @@
  */
 package hydratest.version.admin;
 
-import com.gemstone.gemfire.admin.DistributedSystemConfig;
+import org.apache.geode.admin.DistributedSystemConfig;
 
 /**
  * Class for testing hydra version support.

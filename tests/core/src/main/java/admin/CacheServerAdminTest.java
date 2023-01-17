@@ -17,11 +17,11 @@
    
 package admin;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.admin.internal.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.LogWriter;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.admin.*;
+import org.apache.geode.admin.internal.*;
 
 import hydra.*;
 import hydra.blackboard.*;

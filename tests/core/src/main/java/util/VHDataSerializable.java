@@ -29,7 +29,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-import com.gemstone.gemfire.DataSerializable;
+import org.apache.geode.DataSerializable;
 
 /**
  * @author lynn

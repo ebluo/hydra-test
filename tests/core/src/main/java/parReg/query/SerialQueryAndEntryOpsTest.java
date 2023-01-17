@@ -30,14 +30,14 @@ import query.*;
 import query.QueryTest;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.cache.query.types.*;
-import com.gemstone.gemfire.cache.query.internal.types.*;
-import com.gemstone.gemfire.cache.query.internal.*;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.cache.query.types.*;
+import org.apache.geode.cache.query.internal.types.*;
+import org.apache.geode.cache.query.internal.*;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.pdx.PdxInstance;
 
 /**
  * A version of the <code>QueryTask</code> that performs operations

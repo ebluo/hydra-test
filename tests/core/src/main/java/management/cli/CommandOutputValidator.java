@@ -24,9 +24,9 @@ import java.util.regex.Pattern;
 
 import management.util.HydraUtil;
 
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.GfshParser;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.GfshParser;
+import org.apache.geode.management.internal.cli.result.CommandResult;
 
 public class CommandOutputValidator {
 

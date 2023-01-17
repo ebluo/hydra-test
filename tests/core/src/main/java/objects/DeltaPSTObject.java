@@ -17,11 +17,11 @@
 
 package objects;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.Delta;
-//import com.gemstone.gemfire.Instantiator;
-import com.gemstone.gemfire.InvalidDeltaException;
-import com.gemstone.gemfire.cache.util.ObjectSizer;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.Delta;
+//import org.apache.geode.Instantiator;
+import org.apache.geode.InvalidDeltaException;
+import org.apache.geode.cache.util.ObjectSizer;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;

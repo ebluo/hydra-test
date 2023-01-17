@@ -16,10 +16,10 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.Gateway;
-import com.gemstone.gemfire.cache.util.GatewayHub;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.Gateway;
+import org.apache.geode.cache.util.GatewayHub;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;

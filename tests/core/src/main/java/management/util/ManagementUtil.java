@@ -62,13 +62,13 @@ import management.jmx.JMXPrms;
 import management.test.federation.FederationBlackboard;
 import util.TestException;
 
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.internal.AvailablePortHelper;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.cli.CommandManager;
-import com.gemstone.gemfire.management.internal.cli.parser.CommandTarget;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.internal.AvailablePortHelper;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.cli.CommandManager;
+import org.apache.geode.management.internal.cli.parser.CommandTarget;
 
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class ManagementUtil {

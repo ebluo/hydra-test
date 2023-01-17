@@ -20,7 +20,7 @@ package objects;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.gemstone.gemfire.internal.cache.lru.Sizeable;
+import org.apache.geode.internal.cache.lru.Sizeable;
 
 /**
  *  An order, which implements Sizeable for better use with an memory evictor

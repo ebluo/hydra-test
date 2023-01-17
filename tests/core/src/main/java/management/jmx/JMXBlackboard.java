@@ -30,7 +30,7 @@ import java.util.Set;
 
 import management.util.HydraUtil;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 /**
  * -

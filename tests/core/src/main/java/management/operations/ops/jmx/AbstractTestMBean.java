@@ -27,8 +27,8 @@ import javax.management.ListenerNotFoundException;
 import javax.management.MBeanServerConnection;
 import javax.management.ObjectName;
 
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.beans.ResourceNotification;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.beans.ResourceNotification;
 import management.jmx.Expectation;
 import management.jmx.JMXNotificationListener;
 import management.jmx.SimpleJMXRecorder;

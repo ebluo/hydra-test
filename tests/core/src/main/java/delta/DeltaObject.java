@@ -25,7 +25,7 @@ import hydra.Log;
 import hydra.RemoteTestModule;
 import hydra.TestConfig;
 
-import com.gemstone.gemfire.Delta;
+import org.apache.geode.Delta;
 import util.RandomValues;
 import util.TestException;
 import util.TestHelper;

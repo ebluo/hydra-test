@@ -17,9 +17,9 @@
 
 package regions.validate;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.DistributionConfig;
 import hydra.*;
 
 import java.util.*;

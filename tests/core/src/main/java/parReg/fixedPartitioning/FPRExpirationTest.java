@@ -35,9 +35,9 @@ import java.util.Vector;
 import parReg.ParRegBB;
 import parReg.eviction.ParRegExpirationTest;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.FixedPartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.FixedPartitionAttributes;
+import org.apache.geode.cache.Region;
 
 public class FPRExpirationTest extends ParRegExpirationTest {
 

@@ -31,11 +31,11 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-import com.gemstone.gemfire.distributed.internal.deadlock.DeadlockDetector;
-import com.gemstone.gemfire.distributed.internal.deadlock.Dependency;
-import com.gemstone.gemfire.distributed.internal.deadlock.DependencyGraph;
-import com.gemstone.gemfire.distributed.internal.deadlock.DependencyMonitorManager;
-import com.gemstone.gemfire.distributed.internal.deadlock.ThreadReference;
+import org.apache.geode.distributed.internal.deadlock.DeadlockDetector;
+import org.apache.geode.distributed.internal.deadlock.Dependency;
+import org.apache.geode.distributed.internal.deadlock.DependencyGraph;
+import org.apache.geode.distributed.internal.deadlock.DependencyMonitorManager;
+import org.apache.geode.distributed.internal.deadlock.ThreadReference;
 
 /**
  * @author dsmith

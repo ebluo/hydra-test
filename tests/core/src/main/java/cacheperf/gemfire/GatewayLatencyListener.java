@@ -18,9 +18,9 @@
 package cacheperf.gemfire;
 
 import cacheperf.AbstractLatencyListener;
-import com.gemstone.gemfire.cache.Operation;
-import com.gemstone.gemfire.cache.util.GatewayEvent;
-import com.gemstone.gemfire.cache.util.GatewayEventListener;
+import org.apache.geode.cache.Operation;
+import org.apache.geode.cache.util.GatewayEvent;
+import org.apache.geode.cache.util.GatewayEventListener;
 import java.util.Iterator;
 import java.util.List;
 

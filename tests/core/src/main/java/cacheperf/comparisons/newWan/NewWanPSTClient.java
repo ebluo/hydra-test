@@ -29,9 +29,9 @@ import java.util.Set;
 import cacheperf.CachePerfClient;
 import cacheperf.CachePerfPrms;
 
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.internal.cache.RegionQueue;
-import com.gemstone.gemfire.internal.cache.wan.AbstractGatewaySender;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.internal.cache.RegionQueue;
+import org.apache.geode.internal.cache.wan.AbstractGatewaySender;
 
 public class NewWanPSTClient extends CachePerfClient {
   

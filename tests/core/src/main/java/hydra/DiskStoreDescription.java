@@ -17,10 +17,10 @@
 
 package hydra;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.DiskStore;
-import com.gemstone.gemfire.cache.DiskStoreFactory;
-import com.gemstone.gemfire.internal.cache.DiskStoreFactoryImpl;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.DiskStore;
+import org.apache.geode.cache.DiskStoreFactory;
+import org.apache.geode.internal.cache.DiskStoreFactoryImpl;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;

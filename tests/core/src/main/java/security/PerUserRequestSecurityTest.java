@@ -43,17 +43,17 @@ import java.util.Vector;
 
 import util.TestException;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionService;
-import com.gemstone.gemfire.cache.client.ClientCache;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.client.internal.ProxyCache;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.cache.query.cq.dunit.CqQueryTestListener;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionService;
+import org.apache.geode.cache.client.ClientCache;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.client.internal.ProxyCache;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.cache.query.cq.dunit.CqQueryTestListener;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 /**
  * Contains the hydra task for the perUsersRequsetSecurity framework test

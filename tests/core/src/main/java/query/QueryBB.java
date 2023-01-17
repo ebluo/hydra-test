@@ -18,8 +18,8 @@ package query;
 
 //import util.*;
 //import hydra.*;
-import com.gemstone.gemfire.pdx.PdxSerializable;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxInstance;
 
 import java.util.Map;
 
@@ -29,7 +29,7 @@ import pdx.PdxTestVersionHelper;
 
 import hydra.Log;
 import hydra.blackboard.Blackboard;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 public class QueryBB extends Blackboard {
    

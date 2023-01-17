@@ -16,8 +16,8 @@
  */
 package admin.keepalive;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.admin.*;
 import java.util.*;
 
 import hydra.HydraRuntimeException;

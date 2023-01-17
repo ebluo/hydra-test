@@ -18,11 +18,11 @@ package parReg.eviction;
 
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.CustomExpiry;
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.ExpirationAction;
-import com.gemstone.gemfire.cache.ExpirationAttributes;
-import com.gemstone.gemfire.cache.Region.Entry;
+import org.apache.geode.cache.CustomExpiry;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.ExpirationAction;
+import org.apache.geode.cache.ExpirationAttributes;
+import org.apache.geode.cache.Region.Entry;
 
 public class ParRegCustomExpiry implements CustomExpiry, Declarable {
 

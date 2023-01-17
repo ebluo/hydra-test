@@ -17,16 +17,16 @@
 
 package util;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.*;
-import com.gemstone.gemfire.distributed.internal.membership.*;
-import com.gemstone.gemfire.cache.query.QueryService;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.*;
+import org.apache.geode.distributed.internal.membership.*;
+import org.apache.geode.cache.query.QueryService;
 import hydra.*;
 import java.util.*;
 
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.distributed.DistributedMember;
 
 /**
  *

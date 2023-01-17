@@ -41,10 +41,10 @@ import util.NameFactory;
 import util.PRObserver;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.FixedPartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.BucketRegion;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.FixedPartitionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.BucketRegion;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 public class FPREvictionTest extends FixedPartitioningTest {
 

@@ -18,7 +18,7 @@ package util;
 
 import util.TestHelper;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.blackboard.*;
 
 import java.util.*;

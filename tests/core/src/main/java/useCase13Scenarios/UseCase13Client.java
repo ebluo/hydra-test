@@ -17,8 +17,8 @@
 
 package useCase13Scenarios;
 
-//import com.gemstone.gemfire.*;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.*;
+//import org.apache.geode.cache.*;
 //import distcache.*;
 import distcache.gemfire.*;
 import hydra.*;

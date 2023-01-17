@@ -17,8 +17,8 @@
 package rebalance;
 
 import hydra.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.control.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.control.*;
 
 /**
  *  A class to hold the standard deviation (from avg) for 

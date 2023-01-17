@@ -17,7 +17,7 @@
 
 package security;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 import hydra.*;
 
 /**

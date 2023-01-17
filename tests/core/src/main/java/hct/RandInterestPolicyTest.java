@@ -20,8 +20,8 @@ import java.util.*;
 import util.*;
 import hydra.*;
 import cq.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.LocalRegion;
 
 public class RandInterestPolicyTest {
     

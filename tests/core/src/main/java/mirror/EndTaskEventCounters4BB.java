@@ -19,7 +19,7 @@ package mirror;
 //import util.*;
 //import hydra.*;
 import hydra.blackboard.*;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 public class EndTaskEventCounters4BB extends Blackboard {
    

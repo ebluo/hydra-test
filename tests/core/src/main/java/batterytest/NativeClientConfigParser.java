@@ -17,7 +17,7 @@
 
 package batterytest;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 import hydra.*;
 import java.io.*;
 import java.util.*;

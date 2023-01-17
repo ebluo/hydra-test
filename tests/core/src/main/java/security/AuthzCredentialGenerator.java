@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.operations.OperationContext.OperationCode;
-import com.gemstone.gemfire.security.AccessControl;
+import org.apache.geode.cache.operations.OperationContext.OperationCode;
+import org.apache.geode.security.AccessControl;
 
 /**
  * Encapsulates obtaining authorized and unauthorized credentials for a given

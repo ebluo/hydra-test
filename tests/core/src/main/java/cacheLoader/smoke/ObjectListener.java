@@ -16,8 +16,8 @@
  */
 package cacheLoader.smoke;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
 
 import hydra.*;
 import hydra.blackboard.*;

@@ -29,7 +29,7 @@ import java.nio.charset.CoderResult;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import com.gemstone.gemfire.InternalGemFireError;
+import org.apache.geode.InternalGemFireError;
 
 /**
  * An output stream that writes data to an underlying output stream, while

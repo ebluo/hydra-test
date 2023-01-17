@@ -17,8 +17,8 @@
 
 package perffmwk;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.StatArchiveReader;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.StatArchiveReader;
 
 import hydra.*;
 

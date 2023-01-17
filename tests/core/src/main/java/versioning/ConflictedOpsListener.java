@@ -18,10 +18,10 @@ package versioning;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.EntryEventImpl;
+import org.apache.geode.internal.cache.LocalRegion;
 import java.util.*;
 import java.util.concurrent.*;
 

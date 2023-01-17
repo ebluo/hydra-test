@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.util.Gateway;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.util.Gateway;
+import org.apache.geode.internal.NanoTimer;
 import java.util.*;
 
 /**

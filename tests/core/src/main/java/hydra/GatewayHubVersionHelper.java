@@ -16,8 +16,8 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.cache.util.Gateway;
-import com.gemstone.gemfire.cache.util.GatewayHub;
+import org.apache.geode.cache.util.Gateway;
+import org.apache.geode.cache.util.GatewayHub;
 import java.util.List;
 
 /**

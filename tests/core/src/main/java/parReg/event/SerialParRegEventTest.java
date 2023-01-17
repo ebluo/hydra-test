@@ -18,7 +18,7 @@ package parReg.event;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class SerialParRegEventTest extends event.SerialRegionEventTest {
 

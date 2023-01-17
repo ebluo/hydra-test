@@ -34,10 +34,10 @@ import management.test.cli.CLITest;
 import management.util.HydraUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
+import org.apache.geode.cache.Region;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.result.CommandResult;
 
 public class RebalanceExecutor extends AbstractTestCommandExecutor {
   

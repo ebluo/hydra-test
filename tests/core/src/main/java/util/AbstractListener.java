@@ -18,10 +18,10 @@ package util;
 
 import util.TestHelper;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.DistributionManager;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.DistributionManager;
+import org.apache.geode.cache.query.*;
 import hydra.blackboard.*;
 //import java.lang.reflect.*;
 import java.util.*;

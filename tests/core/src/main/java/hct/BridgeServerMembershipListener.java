@@ -20,7 +20,7 @@ package hct;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.util.*;
 
 public class BridgeServerMembershipListener extends AbstractListener implements BridgeMembershipListener {
 

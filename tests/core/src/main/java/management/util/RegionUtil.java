@@ -18,7 +18,7 @@ package management.util;
 
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public class RegionUtil {
 

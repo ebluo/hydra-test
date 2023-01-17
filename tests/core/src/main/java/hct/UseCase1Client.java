@@ -23,8 +23,8 @@ import java.rmi.*;
 import java.io.*;
 import hydra.*;
 import util.TestException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
 
 /**
  * UseCase1 CBB POC reproduction

@@ -18,9 +18,9 @@ package util;
 
 //import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.util.*;
-//import com.gemstone.gemfire.internal.NanoTimer;
+//import org.apache.geode.internal.NanoTimer;
 
 public class Validator {
 

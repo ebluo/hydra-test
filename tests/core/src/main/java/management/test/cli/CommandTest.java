@@ -96,44 +96,44 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.EvictionAlgorithm;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.PartitionAttributesFactory;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.Function;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.compression.Compressor;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.AvailablePortHelper;
-import com.gemstone.gemfire.internal.JarDeployer;
-import com.gemstone.gemfire.internal.cache.CachePerfStats;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.RegionEntryContext;
-import com.gemstone.gemfire.internal.util.PasswordUtil;
-import com.gemstone.gemfire.management.DistributedRegionMXBean;
-import com.gemstone.gemfire.management.EvictionAttributesData;
-import com.gemstone.gemfire.management.ManagementException;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.MemberMXBean;
-import com.gemstone.gemfire.management.MembershipAttributesData;
-import com.gemstone.gemfire.management.PartitionAttributesData;
-import com.gemstone.gemfire.management.RegionAttributesData;
-import com.gemstone.gemfire.management.RegionMXBean;
-import com.gemstone.gemfire.management.internal.cli.CommandManager;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
-import com.gemstone.gemfire.management.internal.cli.result.ResultData;
-import com.gemstone.gemfire.management.internal.cli.result.TabularResultData;
-import com.gemstone.gemfire.management.internal.cli.shell.Gfsh;
-import com.gemstone.gemfire.management.internal.cli.util.CommandStringBuilder;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.EvictionAlgorithm;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.PartitionAttributesFactory;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.Function;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.cache.partition.PartitionListener;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.compression.Compressor;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.AvailablePortHelper;
+import org.apache.geode.internal.JarDeployer;
+import org.apache.geode.internal.cache.CachePerfStats;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.RegionEntryContext;
+import org.apache.geode.internal.util.PasswordUtil;
+import org.apache.geode.management.DistributedRegionMXBean;
+import org.apache.geode.management.EvictionAttributesData;
+import org.apache.geode.management.ManagementException;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.MemberMXBean;
+import org.apache.geode.management.MembershipAttributesData;
+import org.apache.geode.management.PartitionAttributesData;
+import org.apache.geode.management.RegionAttributesData;
+import org.apache.geode.management.RegionMXBean;
+import org.apache.geode.management.internal.cli.CommandManager;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.internal.cli.result.ResultData;
+import org.apache.geode.management.internal.cli.result.TabularResultData;
+import org.apache.geode.management.internal.cli.shell.Gfsh;
+import org.apache.geode.management.internal.cli.util.CommandStringBuilder;
 
 /**
  * @author lynn
@@ -7615,9 +7615,9 @@ public class CommandTest {
               "com/hydratest/CreateAsyncEventQueueTestListener",
               "package com.hydratest;"
                   + "import java.util.List; import java.util.Properties;"
-                  + "import com.gemstone.gemfire.internal.cache.xmlcache.Declarable2; "
-                  + "import com.gemstone.gemfire.cache.asyncqueue.AsyncEvent;"
-                  + "import com.gemstone.gemfire.cache.asyncqueue.AsyncEventListener;"
+                  + "import org.apache.geode.internal.cache.xmlcache.Declarable2; "
+                  + "import org.apache.geode.cache.asyncqueue.AsyncEvent;"
+                  + "import org.apache.geode.cache.asyncqueue.AsyncEventListener;"
                   + "public class CreateAsyncEventQueueTestListener implements Declarable2, AsyncEventListener {"
                     + "Properties props;"
                     + "public boolean processEvents(List<AsyncEvent> events) { return true; }"

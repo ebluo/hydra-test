@@ -21,9 +21,9 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Random;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.Instantiator;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.Instantiator;
 
 public class ImntRiskSensitivity implements DataSerializable {
   private static final long serialVersionUID = 1L;

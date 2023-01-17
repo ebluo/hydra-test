@@ -17,11 +17,11 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.cache.server.ClientSubscriptionConfig;
-import com.gemstone.gemfire.cache.server.ServerLoadProbe;
-import com.gemstone.gemfire.internal.cache.BridgeServerImpl;
-import com.gemstone.gemfire.internal.cache.ha.HARegionQueue;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.cache.server.ClientSubscriptionConfig;
+import org.apache.geode.cache.server.ServerLoadProbe;
+import org.apache.geode.internal.cache.BridgeServerImpl;
+import org.apache.geode.internal.cache.ha.HARegionQueue;
 import java.io.File;
 import java.io.Serializable;
 import java.util.Arrays;

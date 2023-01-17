@@ -31,24 +31,24 @@ import hydra.blackboard.*;
 import event.*;
 import cq.CQUtil;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.GemFireException;
-import com.gemstone.gemfire.ForcedDisconnectException;
-import com.gemstone.gemfire.SystemConnectException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.distributed.internal.membership.MembershipTestHook;
-import com.gemstone.gemfire.distributed.internal.membership.jgroup.MembershipManagerHelper;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
-import com.gemstone.gemfire.cache.TransactionDataNodeHasDepartedException;
-import com.gemstone.gemfire.cache.TransactionDataRebalancedException;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheCreation;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheXmlGenerator;
-import com.gemstone.gemfire.management.ManagementException;
+import org.apache.geode.CancelException;
+import org.apache.geode.GemFireException;
+import org.apache.geode.ForcedDisconnectException;
+import org.apache.geode.SystemConnectException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.admin.*;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.distributed.internal.membership.MembershipTestHook;
+import org.apache.geode.distributed.internal.membership.jgroup.MembershipManagerHelper;
+import org.apache.geode.cache.RegionDestroyedException;
+import org.apache.geode.cache.TransactionDataNodeHasDepartedException;
+import org.apache.geode.cache.TransactionDataRebalancedException;
+import org.apache.geode.internal.cache.xmlcache.CacheCreation;
+import org.apache.geode.internal.cache.xmlcache.CacheXmlGenerator;
+import org.apache.geode.management.ManagementException;
 
 /**
  * 

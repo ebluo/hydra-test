@@ -21,8 +21,8 @@ import java.util.zip.GZIPInputStream;
 
 import java.util.Properties;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
 
 /**
  * @author glow

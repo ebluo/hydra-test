@@ -17,11 +17,11 @@
 
 package hydratest.version.replication;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DiskStore;
-import com.gemstone.gemfire.cache.EvictionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.util.GatewayConflictResolver;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DiskStore;
+import org.apache.geode.cache.EvictionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.util.GatewayConflictResolver;
 import hydra.HydraConfigException;
 import hydra.DiskStoreHelper;
 

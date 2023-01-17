@@ -20,8 +20,8 @@ import util.*;
 import hydra.*;
 import diskReg.DiskRegUtil;
 //import hydra.blackboard.SharedCounters;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.Token;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.Token;
 
 /** Event Test CacheWriter for ConcurrentMap tests.  This differs from the 
  *  ETWriter in that callbackArgs are not supported.

@@ -16,8 +16,8 @@
  */
 package com.examples.ds;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystem;
 import java.util.Date;
 import java.util.Properties;
 

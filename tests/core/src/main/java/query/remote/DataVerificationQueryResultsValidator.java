@@ -21,8 +21,8 @@ import hydra.Log;
 import objects.PSTObject;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.query.SelectResults;
-import com.gemstone.gemfire.cache.query.data.Portfolio;
+import org.apache.geode.cache.query.SelectResults;
+import org.apache.geode.cache.query.data.Portfolio;
 
 /**
  * 

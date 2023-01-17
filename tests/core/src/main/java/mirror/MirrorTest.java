@@ -19,7 +19,7 @@ package mirror;
 import diskReg.*;
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.util.*;
 import java.io.File;
 

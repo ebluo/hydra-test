@@ -24,12 +24,12 @@ import util.*;
 import java.io.File;
 import java.util.Properties;
 
-//import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.Locator;
-//import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-//import com.gemstone.gemfire.internal.Assert;
+//import org.apache.geode.admin.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.Locator;
+//import org.apache.geode.distributed.internal.InternalDistributedSystem;
+//import org.apache.geode.internal.Assert;
 
 
 /**

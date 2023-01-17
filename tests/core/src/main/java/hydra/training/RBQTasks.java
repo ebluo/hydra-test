@@ -16,8 +16,8 @@
  */
 package hydra.training;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.NanoTimer;
 import java.util.concurrent.TimeUnit;
 //import hydra.BasePrms;
 import hydra.HydraConfigException;

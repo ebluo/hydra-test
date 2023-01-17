@@ -19,14 +19,14 @@ package cq;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.cache.query.internal.QueryUtils;
-import com.gemstone.gemfire.cache.query.internal.types.TypeUtils;
-import com.gemstone.gemfire.security.NotAuthorizedException;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.cache.query.internal.QueryUtils;
+import org.apache.geode.cache.query.internal.types.TypeUtils;
+import org.apache.geode.security.NotAuthorizedException;
 
 import java.util.*;
 

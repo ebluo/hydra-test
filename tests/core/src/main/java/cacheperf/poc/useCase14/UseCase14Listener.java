@@ -18,7 +18,7 @@
 package cacheperf.poc.useCase14;
 
 import cacheperf.AbstractLatencyListener;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.*;
 import util.TestHelper;
 

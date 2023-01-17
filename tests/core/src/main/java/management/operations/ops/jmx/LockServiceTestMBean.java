@@ -32,7 +32,7 @@ import management.util.HydraUtil;
 import management.util.ManagementUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
 
 
 /**

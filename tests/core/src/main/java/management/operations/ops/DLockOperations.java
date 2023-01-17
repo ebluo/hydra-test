@@ -31,8 +31,8 @@ import management.operations.OperationsBlackboard;
 import management.operations.events.DLockOperationEvents;
 import util.TestException;
 
-import com.gemstone.gemfire.distributed.DistributedLockService;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.distributed.DistributedLockService;
+import org.apache.geode.distributed.DistributedSystem;
 
 public class DLockOperations {
   

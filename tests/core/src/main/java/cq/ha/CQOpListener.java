@@ -22,8 +22,8 @@ import hydra.*;
 import cq.CQUtilBB;
 import hct.ha.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 
 /** CQ Op Listener (updates counters based on CQ operation vs. BaseRegion operation)
  *  Simply increments counters for CQEvents processed by the CQListener; increments counters

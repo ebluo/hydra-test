@@ -18,17 +18,17 @@ package admin.jmx;
 
 import hydra.Log;
 
-import com.gemstone.gemfire.admin.jmx.internal.AdminDistributedSystemJmxImpl;
-import com.gemstone.gemfire.admin.jmx.internal.StatAlertsAggregator;
-import com.gemstone.gemfire.internal.admin.StatAlertDefinition;
-import com.gemstone.gemfire.internal.admin.statalerts.DummyStatisticInfoImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.FunctionDecoratorImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.FunctionHelper;
-import com.gemstone.gemfire.internal.admin.statalerts.GaugeThresholdDecoratorImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.MultiAttrDefinitionImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.NumberThresholdDecoratorImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.SingleAttrDefinitionImpl;
-import com.gemstone.gemfire.internal.admin.statalerts.StatisticInfo;
+import org.apache.geode.admin.jmx.internal.AdminDistributedSystemJmxImpl;
+import org.apache.geode.admin.jmx.internal.StatAlertsAggregator;
+import org.apache.geode.internal.admin.StatAlertDefinition;
+import org.apache.geode.internal.admin.statalerts.DummyStatisticInfoImpl;
+import org.apache.geode.internal.admin.statalerts.FunctionDecoratorImpl;
+import org.apache.geode.internal.admin.statalerts.FunctionHelper;
+import org.apache.geode.internal.admin.statalerts.GaugeThresholdDecoratorImpl;
+import org.apache.geode.internal.admin.statalerts.MultiAttrDefinitionImpl;
+import org.apache.geode.internal.admin.statalerts.NumberThresholdDecoratorImpl;
+import org.apache.geode.internal.admin.statalerts.SingleAttrDefinitionImpl;
+import org.apache.geode.internal.admin.statalerts.StatisticInfo;
 
 public class StatAlertDefinitionHelper {
 

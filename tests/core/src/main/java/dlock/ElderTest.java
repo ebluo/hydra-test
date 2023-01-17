@@ -17,11 +17,11 @@
 
 package dlock;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.DM;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.DM;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.internal.Assert;
 
 import hydra.*;
 import hydra.blackboard.*;

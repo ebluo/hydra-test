@@ -44,13 +44,13 @@ import util.TestException;
 import util.TestHelper;
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.cache.TransactionDataNodeHasDepartedException;
-import com.gemstone.gemfire.cache.TransactionException;
-import com.gemstone.gemfire.cache.TransactionInDoubtException;
-import com.gemstone.gemfire.cache.TransactionDataRebalancedException;
-import com.gemstone.gemfire.cache.CommitConflictException;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.cache.TransactionDataNodeHasDepartedException;
+import org.apache.geode.cache.TransactionException;
+import org.apache.geode.cache.TransactionInDoubtException;
+import org.apache.geode.cache.TransactionDataRebalancedException;
+import org.apache.geode.cache.CommitConflictException;
 
 import durableClients.DurableClientsBB;
 

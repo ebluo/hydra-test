@@ -21,7 +21,7 @@ import util.SilenceListener;
 import util.SilenceListenerBB;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 public class ParallelQueuePersistListener extends SilenceListener {
   public void afterUpdate(EntryEvent event) {

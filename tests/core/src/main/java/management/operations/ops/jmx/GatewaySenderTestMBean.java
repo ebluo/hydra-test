@@ -33,8 +33,8 @@ import management.operations.ops.JMXOperations;
 import management.util.HydraUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.beans.ResourceNotification;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.beans.ResourceNotification;
 
 
 /**

@@ -19,9 +19,9 @@ package objects;
 
 import java.io.*;
 
-import com.gemstone.gemfire.DataSerializable;
-//import com.gemstone.gemfire.Instantiator;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.DataSerializable;
+//import org.apache.geode.Instantiator;
+import org.apache.geode.internal.NanoTimer;
 import hydra.RemoteTestModule;
 
 /**

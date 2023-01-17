@@ -41,15 +41,15 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.DynamicRegionFactory;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionExistsException;
-import com.gemstone.gemfire.cache.TimeoutException;
-import com.gemstone.gemfire.cache.util.BridgeWriter;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.DynamicRegionFactory;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionExistsException;
+import org.apache.geode.cache.TimeoutException;
+import org.apache.geode.cache.util.BridgeWriter;
+import org.apache.geode.distributed.DistributedSystem;
 
 /** Tests dynamic region creation on the server(s)
  *  in hierarchical cache  and peer2peer topologies.

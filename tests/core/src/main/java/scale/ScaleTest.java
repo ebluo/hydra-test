@@ -17,7 +17,7 @@
 package scale; 
 
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ScaleTest extends capCon.EntryEventMemLRUTest {
 

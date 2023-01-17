@@ -18,7 +18,7 @@ package delta;
 
 import hydra.Log;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ValueHolderLoader implements CacheLoader, Declarable {
 

@@ -21,7 +21,7 @@ import hydra.blackboard.SharedMap;
 import parReg.ParRegBB;
 import parReg.execute.RegionOperationsFunction;
 
-import com.gemstone.gemfire.cache.execute.FunctionContext;
+import org.apache.geode.cache.execute.FunctionContext;
 
 public class VMotionRegionOperationsFunction extends RegionOperationsFunction {
 

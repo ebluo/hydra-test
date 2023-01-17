@@ -16,7 +16,7 @@
  */
 package objects.query;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public abstract class BaseGFEQueryFactory extends BaseQueryFactory implements GFEQueryFactory {
 

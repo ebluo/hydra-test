@@ -17,7 +17,7 @@
 
 package cacheperf;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import cacheperf.CachePerfStats;
 import hydra.*;
 import objects.ObjectHelper;

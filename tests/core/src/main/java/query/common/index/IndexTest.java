@@ -33,13 +33,13 @@ import util.TestHelper;
 
 import cacheperf.CachePerfPrms;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.Index;
-import com.gemstone.gemfire.cache.query.IndexExistsException;
-import com.gemstone.gemfire.cache.query.IndexNameConflictException;
-import com.gemstone.gemfire.cache.query.QueryException;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.Index;
+import org.apache.geode.cache.query.IndexExistsException;
+import org.apache.geode.cache.query.IndexNameConflictException;
+import org.apache.geode.cache.query.QueryException;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.internal.Assert;
 
 import distcache.gemfire.GemFireCachePrms;
 

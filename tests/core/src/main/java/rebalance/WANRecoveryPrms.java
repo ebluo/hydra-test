@@ -19,8 +19,8 @@ package rebalance;
 import java.util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.control.*;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.cache.control.*;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 public class WANRecoveryPrms extends BasePrms {
 

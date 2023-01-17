@@ -16,8 +16,8 @@
  */
 package expiration;
 
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.*;
+//import org.apache.geode.distributed.DistributedSystem;
 import hydra.*;
 import java.util.Random;
 import util.*;

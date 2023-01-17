@@ -16,10 +16,10 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.RegionEvent;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.RegionEvent;
 
 import java.util.Properties;
 

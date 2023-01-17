@@ -27,9 +27,9 @@ import java.util.Map.Entry;
 
 import util.TestException;
 
-import com.gemstone.gemfire.DeltaTestImpl;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.internal.cache.LocalRegionHelper;
+import org.apache.geode.DeltaTestImpl;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.internal.cache.LocalRegionHelper;
 
 import delta.DeltaDurableClientValidationListener.CounterHolder;
 

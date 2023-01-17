@@ -18,7 +18,7 @@ package event;
 
 import hydra.*;
 import util.TestHelper;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.util.*;
 
 public class EventPrms extends BasePrms {

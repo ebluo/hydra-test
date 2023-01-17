@@ -17,15 +17,15 @@
 
 package admin;
 
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheClosedException;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.DistributedSystemDisconnectedException;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheClosedException;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.DistributedSystemDisconnectedException;
 
 import hydra.BridgeHelper;
 import hydra.BridgePrms;

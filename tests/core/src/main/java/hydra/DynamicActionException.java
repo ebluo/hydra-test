@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.*;
+import org.apache.geode.*;
 
 public class DynamicActionException extends GemFireException {
 

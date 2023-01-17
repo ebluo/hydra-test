@@ -18,7 +18,7 @@ package com.examples.snapshot;
 
 import java.io.Serializable;
 
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.pdx.PdxInstance;
 
 /**
  * Data class for testing snapshots, cannot be located in com.gemstone.*.

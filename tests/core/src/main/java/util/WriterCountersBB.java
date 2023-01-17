@@ -20,7 +20,7 @@ import java.util.*;
 //import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 /** Blackboard defining counters for events. This blackboard has counters
  *  with names used by the increment methods in {@link util#AbstractWriter}.

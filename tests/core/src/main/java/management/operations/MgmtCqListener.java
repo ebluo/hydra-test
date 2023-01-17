@@ -20,8 +20,8 @@ import static management.util.HydraUtil.logInfo;
 import static management.util.HydraUtil.logError;
 import static management.util.HydraUtil.ObjectToString;
 
-import com.gemstone.gemfire.cache.query.CqEvent;
-import com.gemstone.gemfire.cache.query.CqListener;
+import org.apache.geode.cache.query.CqEvent;
+import org.apache.geode.cache.query.CqListener;
 
 public class MgmtCqListener implements CqListener {
 

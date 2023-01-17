@@ -21,8 +21,8 @@ import java.util.Map;
 
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.util.CacheListenerAdapter;
 
 /**
  * This class is a <code>CacheListener</code> implementation attached to the

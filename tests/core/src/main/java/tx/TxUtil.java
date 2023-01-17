@@ -19,12 +19,12 @@ package tx;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.TXStateInterface;
-import com.gemstone.gemfire.internal.cache.Token;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.TXStateInterface;
+import org.apache.geode.internal.cache.Token;
 import java.util.*;
 
 import parReg.ParRegPrms;

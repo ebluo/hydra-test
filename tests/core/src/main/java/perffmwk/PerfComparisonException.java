@@ -17,7 +17,7 @@
 
 package perffmwk;
 
-import com.gemstone.gemfire.*;
+import org.apache.geode.*;
 
 public class PerfComparisonException extends GemFireException {
 

@@ -19,7 +19,7 @@ package event;
 import java.util.*;
 import util.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ProxySerialRegionEventTest extends ProxyEventTest {
 

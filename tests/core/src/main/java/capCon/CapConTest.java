@@ -18,8 +18,8 @@ package capCon;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.*;
 
 public abstract class CapConTest implements java.io.Serializable {
 

@@ -23,11 +23,11 @@ import java.util.Set;
 
 import newWan.WANTestPrms;
 
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.internal.cache.RegionQueue;
-import com.gemstone.gemfire.internal.cache.wan.AbstractGatewaySender;
-import com.gemstone.gemfire.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
-import com.gemstone.gemfire.internal.cache.wan.serial.SerialGatewaySenderImpl;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.internal.cache.RegionQueue;
+import org.apache.geode.internal.cache.wan.AbstractGatewaySender;
+import org.apache.geode.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
+import org.apache.geode.internal.cache.wan.serial.SerialGatewaySenderImpl;
 
 import hydra.ConfigPrms;
 import hydra.GatewayReceiverHelper;

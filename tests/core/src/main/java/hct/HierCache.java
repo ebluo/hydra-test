@@ -48,21 +48,21 @@ import util.NameFactory;
 import util.PRObserver;
 import util.TestException;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.AdminDistributedSystemFactory;
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.admin.DistributedSystemConfig;
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.internal.Connection;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.cache.util.BridgeMembership;
-import com.gemstone.gemfire.cache.util.BridgeMembershipListener;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.CancelException;
+import org.apache.geode.LogWriter;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.AdminDistributedSystemFactory;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.admin.DistributedSystemConfig;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.internal.Connection;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.cache.util.BridgeMembership;
+import org.apache.geode.cache.util.BridgeMembershipListener;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.internal.cache.LocalRegion;
 
 import cq.CQUtil;
 

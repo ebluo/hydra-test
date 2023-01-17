@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.internal.AvailablePort;
+import org.apache.geode.internal.AvailablePort;
 import java.io.IOException;
 import java.net.BindException;
 import java.net.InetAddress;

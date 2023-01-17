@@ -16,7 +16,7 @@
  */
 package objects.query.broker;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 import hydra.Log;
 import hydra.RegionHelper;

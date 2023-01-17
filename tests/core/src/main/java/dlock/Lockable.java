@@ -17,7 +17,7 @@
 
 package dlock;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public interface Lockable {
 

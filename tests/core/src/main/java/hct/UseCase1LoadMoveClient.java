@@ -28,11 +28,11 @@ import hydra.TestTask;
 import java.io.File;
 import java.util.Random;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.internal.NanoTimer;
 
 /**
  * UseCase1 CBB POC reproduction

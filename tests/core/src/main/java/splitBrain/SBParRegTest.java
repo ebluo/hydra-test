@@ -24,11 +24,11 @@ import util.*;
 import hydra.*;
 import parReg.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 /** Test class for serial and concurrent partitioned region tests with
  *  verification and forced disconnects for HA.

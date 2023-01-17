@@ -17,13 +17,13 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.GatewayConflictResolver;
-import com.gemstone.gemfire.internal.cache.CacheConfig;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.ha.HARegionQueue;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheCreation;
-import com.gemstone.gemfire.pdx.PdxSerializer;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.GatewayConflictResolver;
+import org.apache.geode.internal.cache.CacheConfig;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.ha.HARegionQueue;
+import org.apache.geode.internal.cache.xmlcache.CacheCreation;
+import org.apache.geode.pdx.PdxSerializer;
 import java.io.*;
 import java.util.*;
 

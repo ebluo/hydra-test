@@ -17,12 +17,12 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.admin.jmx.Agent;
-import com.gemstone.gemfire.admin.jmx.AgentConfig;
-import com.gemstone.gemfire.admin.jmx.AgentFactory;
+import org.apache.geode.LogWriter;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.admin.jmx.Agent;
+import org.apache.geode.admin.jmx.AgentConfig;
+import org.apache.geode.admin.jmx.AgentFactory;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.*;

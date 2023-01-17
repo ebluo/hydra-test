@@ -18,8 +18,8 @@ package diskReg.oplogs;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.*;
 import distcache.gemfire.GemFireCachePrms;
 import mapregion.MapPrms;
 import objects.ObjectHelper;

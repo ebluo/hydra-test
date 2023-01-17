@@ -24,9 +24,9 @@ import org.apache.hadoop.io.Writable;
 
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.hdfs.internal.PersistedEventImpl;
-import com.gemstone.gemfire.cache.hdfs.internal.SortedHoplogPersistedEvent;
-import com.gemstone.gemfire.cache.hdfs.internal.UnsortedHoplogPersistedEvent;
+import org.apache.geode.cache.hdfs.internal.PersistedEventImpl;
+import org.apache.geode.cache.hdfs.internal.SortedHoplogPersistedEvent;
+import org.apache.geode.cache.hdfs.internal.UnsortedHoplogPersistedEvent;
 
 public class PEIWritable implements Writable {
 

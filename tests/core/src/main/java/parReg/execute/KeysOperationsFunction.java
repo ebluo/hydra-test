@@ -26,15 +26,15 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.FixedPartitionResolver;
-import com.gemstone.gemfire.cache.PartitionResolver;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.execute.FunctionAdapter;
-import com.gemstone.gemfire.cache.execute.FunctionContext;
-import com.gemstone.gemfire.cache.execute.RegionFunctionContext;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.FixedPartitionResolver;
+import org.apache.geode.cache.PartitionResolver;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.execute.FunctionAdapter;
+import org.apache.geode.cache.execute.FunctionContext;
+import org.apache.geode.cache.execute.RegionFunctionContext;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 public class KeysOperationsFunction extends FunctionAdapter implements
     Declarable {

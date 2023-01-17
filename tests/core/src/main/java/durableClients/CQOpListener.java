@@ -23,9 +23,9 @@ import hydra.*;
 
 import cq.CQUtilBB;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 /**
  * CQ Op Listener. Used also for event validation.

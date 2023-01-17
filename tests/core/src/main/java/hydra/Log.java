@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 
 import hydra.log.AnyLogWriter;
 

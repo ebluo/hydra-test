@@ -19,8 +19,8 @@ package security;
 import java.security.Principal;
 import java.util.Properties;
 
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.internal.cache.tier.sockets.HandShake;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.internal.cache.tier.sockets.HandShake;
 
 import templates.security.LdapUserAuthenticator;
 import templates.security.UserPasswordAuthInit;

@@ -19,8 +19,8 @@ package cacheperf.poc.useCase3_2;
 
 import cacheperf.poc.useCase3_2.UseCase3Prms.ClientName;
 import cacheperf.poc.useCase3_2.UseCase3Prms.RegionName;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.*;
+import org.apache.geode.internal.NanoTimer;
 import distcache.DistCache;
 import cacheperf.CachePerfException;
 import perffmwk.PerformanceStatistics;

@@ -17,7 +17,7 @@
 
 package perffmwk;
 
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.internal.LogWriterImpl;
 import hydra.Log;
 import java.io.*;
 import java.text.*;

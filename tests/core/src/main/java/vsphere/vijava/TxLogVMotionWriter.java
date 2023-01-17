@@ -18,8 +18,8 @@ package vsphere.vijava;
 
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.TransactionEvent;
-import com.gemstone.gemfire.cache.TransactionWriterException;
+import org.apache.geode.cache.TransactionEvent;
+import org.apache.geode.cache.TransactionWriterException;
 
 import tx.TxBB;
 import tx.TxLogWriter;

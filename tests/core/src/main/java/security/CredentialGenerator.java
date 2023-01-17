@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import com.gemstone.gemfire.security.AuthInitialize;
-import com.gemstone.gemfire.security.Authenticator;
+import org.apache.geode.security.AuthInitialize;
+import org.apache.geode.security.Authenticator;
 
 /**
  * Encapsulates obtaining valid and invalid credentials. Implementations will be

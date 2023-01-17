@@ -19,12 +19,12 @@
  */
 package cq;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.IndexExistsException;
-import com.gemstone.gemfire.cache.query.IndexNameConflictException;
-import com.gemstone.gemfire.cache.query.IndexType;
-import com.gemstone.gemfire.cache.query.QueryException;
-import com.gemstone.gemfire.cache.query.QueryService;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.IndexExistsException;
+import org.apache.geode.cache.query.IndexNameConflictException;
+import org.apache.geode.cache.query.IndexType;
+import org.apache.geode.cache.query.QueryException;
+import org.apache.geode.cache.query.QueryService;
 
 import query.index.IndexPrms;
 

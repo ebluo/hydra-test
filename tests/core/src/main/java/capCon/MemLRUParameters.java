@@ -24,12 +24,12 @@ import memscale.OffHeapHelper;
 import util.CacheUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.lru.LRUAlgorithm;
-import com.gemstone.gemfire.internal.cache.lru.MemLRUCapacityController;
-import com.gemstone.gemfire.internal.size.WellKnownClassSizer;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.lru.LRUAlgorithm;
+import org.apache.geode.internal.cache.lru.MemLRUCapacityController;
+import org.apache.geode.internal.size.WellKnownClassSizer;
 
 /** Class to define the parameters of a memLru eviction controller. Hydra parameters
  *  for shared memory size are taken into consideration. This is used primarily for

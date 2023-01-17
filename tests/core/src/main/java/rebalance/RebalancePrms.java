@@ -19,9 +19,9 @@ package rebalance;
 import java.util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.control.*;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.ResourceListener;
+import org.apache.geode.cache.control.*;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.ResourceListener;
 
 public class RebalancePrms extends BasePrms {
 

@@ -16,7 +16,7 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.cache.server.CacheServer;
+import org.apache.geode.cache.server.CacheServer;
 
 /**
  * Provides version-dependent support for {@link BridgeHelper}.

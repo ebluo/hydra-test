@@ -18,7 +18,7 @@
 package objects;
 
 import java.util.*;
-import com.gemstone.gemfire.internal.cache.lru.Sizeable;
+import org.apache.geode.internal.cache.lru.Sizeable;
 
 /**
  *  A vector of orders of configurable size, which implements Sizeable

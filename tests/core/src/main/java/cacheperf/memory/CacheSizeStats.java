@@ -19,8 +19,8 @@ package cacheperf.memory;
 
 import perffmwk.PerformanceStatistics;
 
-import com.gemstone.gemfire.StatisticDescriptor;
-import com.gemstone.gemfire.StatisticsType;
+import org.apache.geode.StatisticDescriptor;
+import org.apache.geode.StatisticsType;
 
 /**
  *  Implements statistics related to cache size tests.

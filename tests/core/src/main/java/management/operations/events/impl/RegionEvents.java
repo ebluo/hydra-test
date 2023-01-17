@@ -29,8 +29,8 @@ import management.operations.OperationsBlackboard;
 import management.operations.events.RegionOperationEvents;
 import management.util.HydraUtil;
 
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.Region;
 
 public class RegionEvents extends AbstractEvents implements RegionOperationEvents {
 

@@ -19,7 +19,7 @@
  */
 package util;
 
-import com.gemstone.gemfire.DataSerializer;
+import org.apache.geode.DataSerializer;
 
 import hydra.TestConfig;
 

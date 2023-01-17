@@ -20,7 +20,7 @@ package cacheperf.comparisons.replicated.delta;
 import cacheperf.CachePerfClient;
 import cacheperf.CachePerfException;
 import cacheperf.CachePerfPrms;
-import com.gemstone.gemfire.Delta;
+import org.apache.geode.Delta;
 import hydra.HydraConfigException;
 import hydra.HydraRuntimeException;
 import java.util.List;

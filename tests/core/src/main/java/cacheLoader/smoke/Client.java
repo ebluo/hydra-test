@@ -16,7 +16,7 @@
  */
 package cacheLoader.smoke;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.rmi.RemoteException;
 
 import hydra.*;

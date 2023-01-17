@@ -16,9 +16,9 @@
  */
 package objects.query.broker;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.IndexType;
-import com.gemstone.gemfire.cache.query.Query;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.IndexType;
+import org.apache.geode.cache.query.Query;
 
 import hydra.BasePrms;
 import hydra.Log;

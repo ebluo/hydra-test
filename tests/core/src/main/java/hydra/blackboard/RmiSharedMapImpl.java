@@ -17,8 +17,8 @@
 
 package hydra.blackboard;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.Assert;
 
 import hydra.*;
 

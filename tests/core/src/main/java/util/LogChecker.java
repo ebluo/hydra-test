@@ -23,8 +23,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gemstone.gemfire.InternalGemFireError;
-import com.gemstone.gemfire.management.ManagementException;
+import org.apache.geode.InternalGemFireError;
+import org.apache.geode.management.ManagementException;
 
 import resultsUtil.FileLineReader;
 

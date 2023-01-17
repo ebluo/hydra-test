@@ -20,7 +20,7 @@ package hct;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.CacheListener;
+import org.apache.geode.cache.CacheListener;
 
 /**
  * Hydra parameters for the BridgeNotify tests.

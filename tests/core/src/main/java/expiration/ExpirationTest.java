@@ -21,8 +21,8 @@ import hydra.blackboard.*;
 import util.*;
 import java.util.*;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
 
 public class ExpirationTest {
 

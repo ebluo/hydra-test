@@ -22,9 +22,9 @@ import util.TestHelper;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.admin.*;
 
 /**
  *

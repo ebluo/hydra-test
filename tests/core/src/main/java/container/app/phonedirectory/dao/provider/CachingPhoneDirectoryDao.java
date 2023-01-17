@@ -20,9 +20,9 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.Region;
 
 import container.app.lang.Configurable;
 import container.app.lang.Destroyable;

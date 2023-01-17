@@ -36,13 +36,13 @@ import util.RandomValues;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
-import com.gemstone.gemfire.cache.Scope;
-import com.gemstone.gemfire.cache.TimeoutException;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.RegionDestroyedException;
+import org.apache.geode.cache.Scope;
+import org.apache.geode.cache.TimeoutException;
 
 /**
  * This class repeats functionality of EventTest.java but written for suiting

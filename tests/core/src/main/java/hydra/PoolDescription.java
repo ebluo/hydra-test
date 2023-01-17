@@ -26,10 +26,10 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import com.gemstone.gemfire.cache.client.ClientCacheFactory;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.client.PoolFactory;
-import com.gemstone.gemfire.internal.cache.PoolFactoryImpl;
+import org.apache.geode.cache.client.ClientCacheFactory;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.client.PoolFactory;
+import org.apache.geode.internal.cache.PoolFactoryImpl;
 
 /**
  * Encodes information needed to describe and create a pool as used by clients.

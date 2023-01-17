@@ -16,10 +16,10 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
-import com.gemstone.gemfire.internal.util.StopWatch;
+import org.apache.geode.*;
+import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
+import org.apache.geode.internal.util.StopWatch;
 
 import java.io.*;
 import java.util.*;

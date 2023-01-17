@@ -18,8 +18,8 @@
 package cacheperf.comparisons.query;
 
 //import cacheperf.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.*;
+import org.apache.geode.internal.NanoTimer;
 //import java.util.*;
 import perffmwk.PerformanceStatistics;
 

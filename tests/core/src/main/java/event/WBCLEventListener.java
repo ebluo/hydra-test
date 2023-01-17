@@ -19,8 +19,8 @@ package event;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
 
 import java.util.*;
 

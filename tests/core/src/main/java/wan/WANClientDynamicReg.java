@@ -29,10 +29,10 @@ import java.io.File;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.CacheException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.DynamicRegionFactory;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.CacheException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.DynamicRegionFactory;
+import org.apache.geode.cache.Region;
 
 /**
  * Supports example tests for WAN distribution.

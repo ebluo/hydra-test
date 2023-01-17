@@ -39,14 +39,14 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.compression.Compressor;
-import com.gemstone.gemfire.internal.cache.CachePerfStats;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.compression.Compressor;
+import org.apache.geode.internal.cache.CachePerfStats;
+import org.apache.geode.internal.cache.LocalRegion;
 
 import diskRecovery.RecoveryTestVersionHelper;
 

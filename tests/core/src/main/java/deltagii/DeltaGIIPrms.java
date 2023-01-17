@@ -18,7 +18,7 @@ package deltagii;
 
 import hydra.BasePrms;
 import util.TestException;
-import com.gemstone.gemfire.internal.cache.InitialImageOperation.GIITestHookType;
+import org.apache.geode.internal.cache.InitialImageOperation.GIITestHookType;
 
 public class DeltaGIIPrms extends BasePrms {
 

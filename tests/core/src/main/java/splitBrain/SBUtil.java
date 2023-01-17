@@ -22,12 +22,12 @@ import vsphere.vijava.VMotionBB;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.distributed.internal.membership.jgroup.MembershipManagerHelper;
-import com.gemstone.gemfire.distributed.internal.membership.MembershipTestHook;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.distributed.internal.membership.jgroup.MembershipManagerHelper;
+import org.apache.geode.distributed.internal.membership.MembershipTestHook;
 
 import java.util.*;
 

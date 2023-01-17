@@ -18,7 +18,7 @@
 package objects;
 
 import java.util.*;
-import com.gemstone.gemfire.internal.cache.lru.Sizeable;
+import org.apache.geode.internal.cache.lru.Sizeable;
 
 /**
  *  A nested vector of orders of configurable width and depth, which

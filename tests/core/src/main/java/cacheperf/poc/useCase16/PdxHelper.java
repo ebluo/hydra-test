@@ -16,8 +16,8 @@
  */
 package cacheperf.poc.useCase16;
 
-import com.gemstone.gemfire.pdx.PdxSerializer;
-import com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer;
+import org.apache.geode.pdx.PdxSerializer;
+import org.apache.geode.pdx.ReflectionBasedAutoSerializer;
 import hydra.Log;
 import java.util.ArrayList;
 import java.util.List;

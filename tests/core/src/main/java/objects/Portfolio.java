@@ -21,11 +21,11 @@ import hydra.Log;
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-//import com.gemstone.gemfire.cache.query.data.Position;
+//import org.apache.geode.cache.query.data.Position;
 //import java.util.HashMap;
 //import java.util.Iterator;
 //import java.util.Map;
-//import com.gemstone.gemfire.cache.query.*;
+//import org.apache.geode.cache.query.*;
 import java.util.HashMap;
 import java.util.Map;
 

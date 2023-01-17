@@ -20,8 +20,8 @@ import util.*;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
 
 import java.util.*;
 

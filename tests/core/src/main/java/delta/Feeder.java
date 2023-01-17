@@ -33,16 +33,16 @@ import java.util.Random;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.EntryExistsException;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.internal.DMStats;
-import com.gemstone.gemfire.internal.cache.BridgeServerImpl;
-import com.gemstone.gemfire.internal.cache.CachePerfStats;
-import com.gemstone.gemfire.internal.cache.DistributedRegion;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheServerStats;
+import org.apache.geode.cache.EntryExistsException;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.internal.DMStats;
+import org.apache.geode.internal.cache.BridgeServerImpl;
+import org.apache.geode.internal.cache.CachePerfStats;
+import org.apache.geode.internal.cache.DistributedRegion;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.tier.sockets.CacheServerStats;
 
 /**
  * A Feeder class for Delta testing. It creates a configurable ( passed

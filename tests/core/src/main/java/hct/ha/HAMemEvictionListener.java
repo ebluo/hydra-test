@@ -17,7 +17,7 @@
 package hct.ha;
 
 import hydra.Log;
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 /**
  * This class extends a <code>HANoFailoverClientListener</code>. The callback

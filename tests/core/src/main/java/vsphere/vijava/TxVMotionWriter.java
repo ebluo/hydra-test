@@ -20,8 +20,8 @@ import tx.TxBB;
 import tx.TxWriter;
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.TransactionEvent;
-import com.gemstone.gemfire.cache.TransactionWriterException;
+import org.apache.geode.cache.TransactionEvent;
+import org.apache.geode.cache.TransactionWriterException;
 
 public class TxVMotionWriter extends TxWriter {
 

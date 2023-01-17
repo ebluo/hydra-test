@@ -20,9 +20,9 @@ import java.io.Serializable;
 
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.RegionEvent;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.RegionEvent;
 
 //TODO fit into overall operations framework
 

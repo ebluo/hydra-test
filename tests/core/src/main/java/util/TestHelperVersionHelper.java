@@ -17,10 +17,10 @@
 
 package util;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.EntryEventImpl;
 
 /**
  * Provides version-dependent support for TestHelper.

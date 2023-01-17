@@ -16,7 +16,7 @@
  */
 package recovDelay; 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.Log;
 
 /** Listener to count events that occur in the current VM while

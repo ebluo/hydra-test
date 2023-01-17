@@ -18,7 +18,7 @@ package event;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A Hydra test that concurrently performs a number of cache-related

@@ -19,7 +19,7 @@ package roles;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.internal.cache.*;
 
 /**
  * Hydra tasks and support methods for testing Roles and Reliability.

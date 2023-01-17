@@ -16,10 +16,10 @@
  */
 package hydratest.security;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.security.AccessControl;
-import com.gemstone.gemfire.cache.operations.OperationContext;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.security.AccessControl;
+import org.apache.geode.cache.operations.OperationContext;
+import org.apache.geode.distributed.DistributedMember;
 
 import java.security.Principal;
 

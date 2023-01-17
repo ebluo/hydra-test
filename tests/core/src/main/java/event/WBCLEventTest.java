@@ -22,7 +22,7 @@ import hydra.*;
 import event.*;
 import util.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import java.util.*;
 

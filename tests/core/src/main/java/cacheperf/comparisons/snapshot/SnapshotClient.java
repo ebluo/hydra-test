@@ -25,9 +25,9 @@ import util.*;
 
 import java.io.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.snapshot.*;
-import com.gemstone.gemfire.cache.snapshot.SnapshotOptions.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.snapshot.*;
+import org.apache.geode.cache.snapshot.SnapshotOptions.*;
 
 /**
  * Extends CachePerfClient to include export and import commands plus basic validation

@@ -18,7 +18,7 @@
 package util;
 
 import hydra.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 /**
  *  A class used to store keys related to the util.AdminHelper class.

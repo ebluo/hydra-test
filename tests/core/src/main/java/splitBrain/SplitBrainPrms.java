@@ -19,8 +19,8 @@ package splitBrain;
 
 import hydra.*;
 import util.TestHelper;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.admin.*;
 import java.util.*;
 
 /**

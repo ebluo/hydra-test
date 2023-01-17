@@ -18,7 +18,7 @@ package tx;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A class to test no conflicts in transactions, achieved by each tx

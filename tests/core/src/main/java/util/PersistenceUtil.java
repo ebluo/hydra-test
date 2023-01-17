@@ -45,12 +45,12 @@ import management.test.cli.CommandTest;
 import parReg.ParRegBB;
 import parReg.ParRegPrms;
 
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.admin.BackupStatus;
-import com.gemstone.gemfire.cache.DiskStoreFactory;
-import com.gemstone.gemfire.cache.persistence.PersistentID;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.util.IOUtils;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.admin.BackupStatus;
+import org.apache.geode.cache.DiskStoreFactory;
+import org.apache.geode.cache.persistence.PersistentID;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.util.IOUtils;
 
 /**
  * @author lynn

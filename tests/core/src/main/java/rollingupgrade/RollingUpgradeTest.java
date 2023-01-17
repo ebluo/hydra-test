@@ -40,12 +40,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.GemFireVersion;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.shared.Version;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.GemFireVersion;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.shared.Version;
 
 import parReg.ParRegUtil;
 import util.BaseValueHolder;

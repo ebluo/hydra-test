@@ -17,7 +17,7 @@
 package getInitialImage; 
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class GiiLoader implements CacheLoader {
 

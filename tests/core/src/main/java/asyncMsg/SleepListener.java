@@ -17,7 +17,7 @@
 
 package asyncMsg;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.*;
 import util.BaseValueHolder;
 

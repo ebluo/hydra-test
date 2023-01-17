@@ -24,13 +24,13 @@ import util.*;
 import vsphere.vijava.VMotionTestBase;
 import delta.DeltaValueHolder;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.query.*;   // SelectResults
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.query.*;   // SelectResults
+import org.apache.geode.distributed.*;
 
 
 import cq.CQUtil;

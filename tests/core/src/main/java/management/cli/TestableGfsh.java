@@ -56,14 +56,14 @@ import org.springframework.shell.event.ShellStatus.Status;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.management.internal.cli.CliUtil;
-import com.gemstone.gemfire.management.internal.cli.CommandManager;
-import com.gemstone.gemfire.management.internal.cli.commands.ShellCommands;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
-import com.gemstone.gemfire.management.internal.cli.shell.Gfsh;
-import com.gemstone.gemfire.management.internal.cli.shell.GfshConfig;
-import com.gemstone.gemfire.management.internal.cli.util.spring.StringUtils;
+import org.apache.geode.management.internal.cli.CliUtil;
+import org.apache.geode.management.internal.cli.CommandManager;
+import org.apache.geode.management.internal.cli.commands.ShellCommands;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.internal.cli.shell.Gfsh;
+import org.apache.geode.management.internal.cli.shell.GfshConfig;
+import org.apache.geode.management.internal.cli.util.spring.StringUtils;
 
 /**
  *

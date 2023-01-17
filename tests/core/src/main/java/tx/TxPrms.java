@@ -19,7 +19,7 @@ package tx;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class TxPrms extends BasePrms {
 

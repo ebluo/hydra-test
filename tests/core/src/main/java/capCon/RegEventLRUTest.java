@@ -16,7 +16,7 @@
  */
 package capCon; 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import util.*;
 
 public class RegEventLRUTest extends RegEventCapCon {

@@ -17,7 +17,7 @@
 package event; 
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** 
  *  MultiListener.

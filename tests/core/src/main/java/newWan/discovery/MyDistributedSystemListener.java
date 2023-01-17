@@ -24,9 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.gemstone.gemfire.internal.cache.wan.DistributedSystemListener;
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
+import org.apache.geode.internal.cache.wan.DistributedSystemListener;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.InternalLocator;
 
 /**
  * Implementation for DistributedSystemListener used to test Jayesh usecase.

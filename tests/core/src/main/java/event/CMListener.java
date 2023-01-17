@@ -19,8 +19,8 @@ package event;
 import util.*;
 import hydra.*;
 //import hydra.blackboard.SharedCounters;
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
 
 /** Event Test Listener (for ConcurrentMap tests).  This differs from 
  *  the standard ETLIstneer in that callbackArgs are not supported.

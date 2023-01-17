@@ -19,10 +19,10 @@ package parReg.eviction;
 import hydra.RemoteTestModule;
 import util.TestException;
 
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceType;
-import com.gemstone.gemfire.internal.cache.control.MemoryEvent;
-import com.gemstone.gemfire.internal.cache.control.MemoryThresholds.MemoryState;
-import com.gemstone.gemfire.internal.cache.control.ResourceListener;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceType;
+import org.apache.geode.internal.cache.control.MemoryEvent;
+import org.apache.geode.internal.cache.control.MemoryThresholds.MemoryState;
+import org.apache.geode.internal.cache.control.ResourceListener;
 
 public class EvictionThresholdListener implements ResourceListener<MemoryEvent> {
   private static int normalCalls = 0;

@@ -17,7 +17,7 @@
 package diskReg;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ConcDiskRegTest extends DiskRegTest {
 

@@ -22,13 +22,13 @@ import hydratest.TaskAttributes;
 
 import cacheperf.CachePerfStats;
 
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.StatisticsFactory;
-import com.gemstone.gemfire.ThreadInterruptedException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystemDisconnectedException;
-import com.gemstone.gemfire.internal.cache.*;
-import com.gemstone.gemfire.internal.cache.tier.sockets.command.PutAll;
+import org.apache.geode.Statistics;
+import org.apache.geode.StatisticsFactory;
+import org.apache.geode.ThreadInterruptedException;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystemDisconnectedException;
+import org.apache.geode.internal.cache.*;
+import org.apache.geode.internal.cache.tier.sockets.command.PutAll;
 
 import java.util.*;
 

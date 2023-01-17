@@ -38,8 +38,8 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolderPrms;
 
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.pdx.PdxInstanceFactory;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.pdx.PdxInstanceFactory;
 
 /** Class to use GemFire's PdxInstanceFactory to create PdxInstances representing pdx domain
  *  objects used in testing. The pdx domain objects used in testing are those versioned classes

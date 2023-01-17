@@ -26,8 +26,8 @@ import util.TestHelper;
 import util.ValueHolder;
 import wan.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystem;
 
 /**
  * CacheListener which verifies that events (for the same key) have values which increment by 1

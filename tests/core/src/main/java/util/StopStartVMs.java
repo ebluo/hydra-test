@@ -19,9 +19,9 @@ package util;
 import hydra.*;
 
 import java.util.*;
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.distributed.DistributedMember;
 
 
 import util.TestException;

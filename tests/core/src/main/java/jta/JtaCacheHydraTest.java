@@ -22,7 +22,7 @@ import hydra.*;
 
 import util.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import javax.naming.Context;
 import javax.transaction.UserTransaction;

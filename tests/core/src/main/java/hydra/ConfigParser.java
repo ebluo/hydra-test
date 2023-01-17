@@ -20,7 +20,7 @@ package hydra;
 import bsh.EvalError;
 import bsh.Interpreter;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 import java.io.*;
 import java.text.*;

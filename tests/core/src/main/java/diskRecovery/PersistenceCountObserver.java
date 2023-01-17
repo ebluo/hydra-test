@@ -16,8 +16,8 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.internal.cache.persistence.PersistentMemberID;
-import com.gemstone.gemfire.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
+import org.apache.geode.internal.cache.persistence.PersistentMemberID;
+import org.apache.geode.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
 
 import hydra.Log;
 

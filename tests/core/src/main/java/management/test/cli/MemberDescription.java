@@ -19,8 +19,8 @@ package management.test.cli;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedMember;
 
 /** Class to contain information about a particular member, regions it defines, etc to be written
  *  to the blackboard and used for validation purposes.

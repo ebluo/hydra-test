@@ -28,10 +28,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.LogWriter;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 import util.TestHelper;
 

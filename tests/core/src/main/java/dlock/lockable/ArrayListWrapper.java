@@ -17,8 +17,8 @@
 
 package dlock.lockable;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.NanoTimer;
 
 import java.util.ArrayList;
 

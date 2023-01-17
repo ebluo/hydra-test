@@ -53,20 +53,20 @@ import management.util.ManagementUtil;
 
 import util.TestException;
 
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.management.CacheServerMXBean;
-import com.gemstone.gemfire.management.DiskStoreMXBean;
-import com.gemstone.gemfire.management.DistributedLockServiceMXBean;
-import com.gemstone.gemfire.management.DistributedRegionMXBean;
-import com.gemstone.gemfire.management.DistributedSystemMXBean;
-import com.gemstone.gemfire.management.GatewayReceiverMXBean;
-import com.gemstone.gemfire.management.GatewaySenderMXBean;
-import com.gemstone.gemfire.management.LockServiceMXBean;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.MemberMXBean;
-import com.gemstone.gemfire.management.RegionMXBean;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.SystemManagementService;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.management.CacheServerMXBean;
+import org.apache.geode.management.DiskStoreMXBean;
+import org.apache.geode.management.DistributedLockServiceMXBean;
+import org.apache.geode.management.DistributedRegionMXBean;
+import org.apache.geode.management.DistributedSystemMXBean;
+import org.apache.geode.management.GatewayReceiverMXBean;
+import org.apache.geode.management.GatewaySenderMXBean;
+import org.apache.geode.management.LockServiceMXBean;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.MemberMXBean;
+import org.apache.geode.management.RegionMXBean;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.SystemManagementService;
 
 public class GemfireMBeanServerConnection implements MBeanServerConnection {
   

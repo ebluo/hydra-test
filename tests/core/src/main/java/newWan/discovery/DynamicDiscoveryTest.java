@@ -36,8 +36,8 @@ import java.util.Map.Entry;
 
 import util.TestException;
 
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.DistributionConfig;
 
 import newWan.WANTest;
 

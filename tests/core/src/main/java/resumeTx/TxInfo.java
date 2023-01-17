@@ -19,10 +19,10 @@ package resumeTx;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.InternalDataSerializer;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.InternalDataSerializer;
 
 /** 
  * Represents an active transation.  Includes txId, number of suspend/resumes (executeTxOps), and filter info

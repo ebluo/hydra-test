@@ -47,16 +47,16 @@ import management.util.ManagementUtil;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.internal.cache.DistributedRegion;
-import com.gemstone.gemfire.management.EvictionAttributesData;
-import com.gemstone.gemfire.management.FixedPartitionAttributesData;
-import com.gemstone.gemfire.management.MembershipAttributesData;
-import com.gemstone.gemfire.management.PartitionAttributesData;
-import com.gemstone.gemfire.management.RegionAttributesData;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.internal.cache.DistributedRegion;
+import org.apache.geode.management.EvictionAttributesData;
+import org.apache.geode.management.FixedPartitionAttributesData;
+import org.apache.geode.management.MembershipAttributesData;
+import org.apache.geode.management.PartitionAttributesData;
+import org.apache.geode.management.RegionAttributesData;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
 
 /**
  * Test Class for RegionTestMBean Attributes, operations and notifications

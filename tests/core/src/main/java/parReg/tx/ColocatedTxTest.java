@@ -20,10 +20,10 @@ import parReg.ParRegPrms;
 //import parReg.execute.PartitionObjectHolder;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.execute.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.execute.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.distributed.*;
 
 import java.util.*;
 

@@ -18,9 +18,9 @@ package splitBrain;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedMember;
 import java.util.*;
 
 /** Test class for serial and concurrent coordinator selection tests

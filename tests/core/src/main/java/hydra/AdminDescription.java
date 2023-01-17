@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.admin.DistributedSystemConfig;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.admin.DistributedSystemConfig;
+import org.apache.geode.distributed.internal.DistributionConfig;
 import java.io.File;
 import java.io.Serializable;
 import java.rmi.RemoteException;

@@ -18,7 +18,7 @@
 package cacheperf.comparisons.dataFeed;
 
 import cacheperf.*;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import hydra.*;
 import java.util.List;
 import objects.*;

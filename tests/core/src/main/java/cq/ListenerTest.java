@@ -18,8 +18,8 @@ package cq;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 
 /**
  * A Hydra test that concurrently performs a number of entry

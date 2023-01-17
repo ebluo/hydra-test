@@ -21,8 +21,8 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Calendar;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
 
 import container.app.domain.AbstractDomainObject;
 import container.app.util.Assert;

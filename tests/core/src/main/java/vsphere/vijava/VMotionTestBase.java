@@ -24,17 +24,17 @@ import hydra.blackboard.SharedMap;
 
 import java.util.Collection;
 
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientNotifier;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientNotifier;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
 import java.util.Set;
 
-import com.gemstone.gemfire.distributed.internal.membership.InternalDistributedMember;
-import com.gemstone.gemfire.internal.cache.InitialImageOperation;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.tier.sockets.command.ExecuteCQ61;
-import com.gemstone.gemfire.internal.cache.tier.sockets.command.RegisterInterest61;
-import com.gemstone.gemfire.internal.cache.vmotion.VMotionObserverAdapter;
-import com.gemstone.gemfire.internal.cache.vmotion.VMotionObserverHolder;
+import org.apache.geode.distributed.internal.membership.InternalDistributedMember;
+import org.apache.geode.internal.cache.InitialImageOperation;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.tier.sockets.command.ExecuteCQ61;
+import org.apache.geode.internal.cache.tier.sockets.command.RegisterInterest61;
+import org.apache.geode.internal.cache.vmotion.VMotionObserverAdapter;
+import org.apache.geode.internal.cache.vmotion.VMotionObserverHolder;
 
 import cq.CQUtilBB;
 

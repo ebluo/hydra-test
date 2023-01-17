@@ -16,7 +16,7 @@
  */
 package admin;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.blackboard.*;
 
 /**

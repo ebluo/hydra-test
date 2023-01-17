@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.server.CacheServer;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.server.CacheServer;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;

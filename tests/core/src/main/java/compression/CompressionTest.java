@@ -19,7 +19,7 @@ package compression;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 import hydra.Log;
 import util.RandomValues;

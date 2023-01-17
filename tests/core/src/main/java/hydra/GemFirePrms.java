@@ -18,7 +18,7 @@
 package hydra;
 
 import java.util.*;
-import com.gemstone.gemfire.cache.Cache;
+import org.apache.geode.cache.Cache;
 
 /**
  *

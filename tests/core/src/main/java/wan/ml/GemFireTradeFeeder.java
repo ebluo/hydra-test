@@ -18,7 +18,7 @@ package wan.ml;
 
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * @author glow

@@ -19,7 +19,7 @@ package hct;
 import util.*;
 import event.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** Event Test Operations Listener.  Maintains counters based on CacheEvents passed
  *  to callback methods.  Validates the callbackArgument (including memberId) and 

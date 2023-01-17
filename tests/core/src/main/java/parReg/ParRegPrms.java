@@ -21,7 +21,7 @@ import hydra.ClientVmMgr;
 import hydra.TestConfig;
 import util.*;
 
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 
 public class ParRegPrms extends BasePrms {

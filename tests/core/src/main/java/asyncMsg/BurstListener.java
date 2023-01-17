@@ -20,7 +20,7 @@ package asyncMsg;
 import hydra.*;
 import util.*;
 import java.util.Vector;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  *  A cache listener that will change its speed depending on hydra parameters.

@@ -18,7 +18,7 @@ package capCon;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public abstract class RegEventCapCon extends event.EventTest {
 

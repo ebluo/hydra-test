@@ -23,8 +23,8 @@ import util.*;
 import cq.*;
 import parReg.ParRegPrms;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.GemFireVersion;
 
 public class BackwardCompatibilityTest {
 

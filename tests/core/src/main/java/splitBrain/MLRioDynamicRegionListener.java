@@ -16,8 +16,8 @@
  */
 package splitBrain;
 
-import com.gemstone.gemfire.cache.DynamicRegionListener;
-import com.gemstone.gemfire.cache.RegionEvent;
+import org.apache.geode.cache.DynamicRegionListener;
+import org.apache.geode.cache.RegionEvent;
 
 class MLRioDynamicRegionListener implements DynamicRegionListener {
 

@@ -17,8 +17,8 @@
 
 package hydra.samples;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import hydra.*;

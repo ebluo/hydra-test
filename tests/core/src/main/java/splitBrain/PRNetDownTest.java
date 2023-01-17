@@ -22,12 +22,12 @@ import util.*;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.ForcedDisconnectException;
-import com.gemstone.gemfire.GemFireException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.ForcedDisconnectException;
+import org.apache.geode.GemFireException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 /** A version of parReg.ParRegTest that allows time to re-establish 
  *  redundancy after the network connections have been dropped before

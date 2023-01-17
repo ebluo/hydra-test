@@ -27,10 +27,10 @@ import java.util.Set;
 import junit.framework.Assert;
 import query.QueryPrms;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.internal.ServerLocation;
 
 public class HACache
 {

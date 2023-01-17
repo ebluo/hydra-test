@@ -18,7 +18,7 @@ package hct;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** Event Test Listener. 
  *  Does validation of callback objects and that the event is invoked in the

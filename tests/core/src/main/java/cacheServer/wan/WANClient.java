@@ -17,7 +17,7 @@
 
 package cacheServer.wan;
 
-import com.gemstone.gemfire.cache.Cache;
+import org.apache.geode.cache.Cache;
 import wan.*;
 
 import hydra.CacheHelper;

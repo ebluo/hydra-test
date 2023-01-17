@@ -29,9 +29,9 @@ import hydra.Log;
 import hydra.TestConfig;
 import cacheperf.CachePerfStats;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.*;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.internal.NanoTimer;
 
 import distcache.DistCache;
 

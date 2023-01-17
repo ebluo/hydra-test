@@ -19,9 +19,9 @@ package cacheperf.comparisons.replicated.execute;
 
 import cacheperf.CachePerfClient;
 import cacheperf.CachePerfPrms;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.ServerConnectivityException;
-import com.gemstone.gemfire.cache.execute.*;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.ServerConnectivityException;
+import org.apache.geode.cache.execute.*;
 import distcache.gemfire.GemFireCacheTestImpl;
 import hydra.Log;
 import hydra.MasterController;

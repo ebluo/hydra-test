@@ -21,10 +21,10 @@ import java.util.*;
 import objects.Portfolio;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.query.*;
 
 import util.*;
 

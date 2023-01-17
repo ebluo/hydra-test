@@ -20,9 +20,9 @@ import java.util.*;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 
 /**
  * A Hydra test that concurrently performs a number of cache-related

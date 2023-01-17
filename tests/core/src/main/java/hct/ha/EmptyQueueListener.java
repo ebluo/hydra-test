@@ -16,8 +16,8 @@
  */
 package hct.ha;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.util.CacheListenerAdapter;
 import hydra.blackboard.SharedCounters;
 import hydra.Log;
 import hydra.MasterController;

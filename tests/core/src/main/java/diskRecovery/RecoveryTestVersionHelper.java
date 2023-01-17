@@ -16,26 +16,26 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.admin.BackupStatus;
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.CacheClosedException;
-import com.gemstone.gemfire.cache.DiskStoreFactory;
-import com.gemstone.gemfire.cache.EvictionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
-import com.gemstone.gemfire.cache.snapshot.CacheSnapshotService;
-import com.gemstone.gemfire.cache.snapshot.SnapshotFilter;
-import com.gemstone.gemfire.cache.snapshot.SnapshotOptions;
-import com.gemstone.gemfire.cache.snapshot.SnapshotOptions.SnapshotFormat;
-import com.gemstone.gemfire.cache.persistence.ConflictingPersistentDataException;
-import com.gemstone.gemfire.cache.persistence.PersistentID;
-import com.gemstone.gemfire.distributed.DistributedSystemDisconnectedException;
-import com.gemstone.gemfire.internal.cache.persistence.PersistenceObserverHolder;
-import com.gemstone.gemfire.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.AdminException;
+import org.apache.geode.admin.BackupStatus;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.CacheClosedException;
+import org.apache.geode.cache.DiskStoreFactory;
+import org.apache.geode.cache.EvictionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.RegionDestroyedException;
+import org.apache.geode.cache.snapshot.CacheSnapshotService;
+import org.apache.geode.cache.snapshot.SnapshotFilter;
+import org.apache.geode.cache.snapshot.SnapshotOptions;
+import org.apache.geode.cache.snapshot.SnapshotOptions.SnapshotFormat;
+import org.apache.geode.cache.persistence.ConflictingPersistentDataException;
+import org.apache.geode.cache.persistence.PersistentID;
+import org.apache.geode.distributed.DistributedSystemDisconnectedException;
+import org.apache.geode.internal.cache.persistence.PersistenceObserverHolder;
+import org.apache.geode.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
+import org.apache.geode.pdx.PdxInstance;
 
 import hydra.CacheHelper;
 import hydra.ClientVmInfo;

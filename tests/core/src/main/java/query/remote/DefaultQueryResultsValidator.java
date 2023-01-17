@@ -17,7 +17,7 @@
 package query.remote;
 
 
-import com.gemstone.gemfire.cache.query.SelectResults;
+import org.apache.geode.cache.query.SelectResults;
 import hydra.HydraVector;
 import hydra.Log;
 import hydra.TestConfig;

@@ -19,8 +19,8 @@ package cacheperf.comparisons.cq;
 
 import java.util.Random;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.*;
 import cacheperf.*;
 import cacheperf.comparisons.dataFeed.DataFeedClient;
 import distcache.gemfire.GemFireCacheTestImpl;

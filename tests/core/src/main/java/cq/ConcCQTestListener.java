@@ -19,8 +19,8 @@ package cq;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 
 /** CQ Test Listener. 
  *  Simply logs events processed by the CQListener, increments counters

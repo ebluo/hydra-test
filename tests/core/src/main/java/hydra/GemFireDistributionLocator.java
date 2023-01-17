@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
+import org.apache.geode.distributed.internal.InternalLocator;
 
 //import java.util.*;
 

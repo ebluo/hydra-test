@@ -32,7 +32,7 @@ import perffmwk.PerfStatMgr;
 import perffmwk.PerfStatValue;
 import perffmwk.StatSpecTokens;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 public class StatTasks {
 

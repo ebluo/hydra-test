@@ -19,9 +19,9 @@ package rebalance;
 import java.util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.control.*;
-import com.gemstone.gemfire.cache.partition.PartitionMemberInfo;
-import com.gemstone.gemfire.cache.partition.PartitionRegionInfo;
+import org.apache.geode.cache.control.*;
+import org.apache.geode.cache.partition.PartitionMemberInfo;
+import org.apache.geode.cache.partition.PartitionRegionInfo;
 
 /** 
  *  A class to represent state of the Partition.  This state includes:

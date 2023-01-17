@@ -16,9 +16,9 @@
  */
 package hydratest.version.partition;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
-import com.gemstone.gemfire.cache.partition.PartitionListenerAdapter;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.partition.PartitionListener;
+import org.apache.geode.cache.partition.PartitionListenerAdapter;
 
 import hydra.Log;
 import java.io.Serializable;

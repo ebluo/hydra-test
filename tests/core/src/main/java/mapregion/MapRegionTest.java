@@ -33,9 +33,9 @@ import hydra.*;
 import util.*;
 import objects.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
 
 import diskReg.DiskRegPrms;
 

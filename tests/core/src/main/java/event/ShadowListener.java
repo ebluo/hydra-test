@@ -19,7 +19,7 @@ package event;
 import java.util.*;
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class ShadowListener extends util.AbstractListener implements CacheListener, Declarable {
 

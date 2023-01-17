@@ -18,10 +18,10 @@ package parReg.execute;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.execute.FunctionAdapter;
-import com.gemstone.gemfire.cache.execute.FunctionContext;
-import com.gemstone.gemfire.internal.cache.execute.MultiRegionFunctionContext;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.execute.FunctionAdapter;
+import org.apache.geode.cache.execute.FunctionContext;
+import org.apache.geode.internal.cache.execute.MultiRegionFunctionContext;
 
 public class OnRegionsFunction extends FunctionAdapter {
 

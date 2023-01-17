@@ -21,10 +21,10 @@ import hydra.*;
 import hydra.blackboard.*;
 import tx.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
-import com.gemstone.gemfire.cache.execute.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
+import org.apache.geode.cache.execute.*;
+import org.apache.geode.distributed.*;
 
 import java.util.*;
 

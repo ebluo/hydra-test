@@ -18,7 +18,7 @@ package parReg.tx;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.util.*;
 
 public class TxRegionListener extends util.AbstractListener implements TransactionListener {

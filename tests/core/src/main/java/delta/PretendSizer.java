@@ -16,7 +16,7 @@
  */
 package delta;
 
-import com.gemstone.gemfire.cache.util.ObjectSizerImpl;
+import org.apache.geode.cache.util.ObjectSizerImpl;
 
 import hydra.Log;
 

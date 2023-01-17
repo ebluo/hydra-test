@@ -20,7 +20,7 @@ package query.index;
 
 import hydra.blackboard.Blackboard;
 
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 public class IndexBB extends Blackboard {
 

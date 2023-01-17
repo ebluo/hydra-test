@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.SystemFailure;
+import org.apache.geode.SystemFailure;
 
 /**
  *

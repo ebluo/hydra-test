@@ -24,11 +24,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.UUID;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.Index;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.cache.query.SelectResults;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.Index;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.cache.query.SelectResults;
 
 import query.QueryTest;
 import query.common.joinsWithOR.data.BranchCommunityAssignmentImpl;

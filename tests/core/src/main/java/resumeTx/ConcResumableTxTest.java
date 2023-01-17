@@ -47,13 +47,13 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheTransactionManager;
-import com.gemstone.gemfire.cache.CommitConflictException;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TransactionId;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheTransactionManager;
+import org.apache.geode.cache.CommitConflictException;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TransactionId;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
 
 import diskRecovery.RecoveryTestVersionHelper;
 

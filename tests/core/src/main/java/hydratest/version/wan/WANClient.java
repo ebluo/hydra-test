@@ -17,9 +17,9 @@
 
 package hydratest.version.wan;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.internal.GemFireVersion;
 import hydra.*;
 
 public class WANClient {

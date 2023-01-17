@@ -103,24 +103,24 @@ import util.VHDataSerializableInstantiator;
 import util.VHDataSerializer;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.DiskStoreFactory;
-import com.gemstone.gemfire.cache.EntryExistsException;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.internal.GemFireVersion;
-import com.gemstone.gemfire.internal.cache.DiskRegion;
-import com.gemstone.gemfire.internal.cache.DiskRegionStats;
-import com.gemstone.gemfire.internal.cache.DiskStoreImpl;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheXmlParser;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.DiskStoreFactory;
+import org.apache.geode.cache.EntryExistsException;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.internal.GemFireVersion;
+import org.apache.geode.internal.cache.DiskRegion;
+import org.apache.geode.internal.cache.DiskRegionStats;
+import org.apache.geode.internal.cache.DiskStoreImpl;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.xmlcache.CacheXmlParser;
 
 /**
  * @author lynn

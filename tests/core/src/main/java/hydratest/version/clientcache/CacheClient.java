@@ -17,9 +17,9 @@
 
 package hydratest.version.clientcache;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.internal.GemFireVersion;
 import hydra.*;
 
 public class CacheClient {

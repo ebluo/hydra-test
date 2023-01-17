@@ -18,11 +18,11 @@
 package conflation;
 
 import cacheperf.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import distcache.gemfire.*;
 import hydra.*;
 
-import com.gemstone.gemfire.internal.InternalInstantiator;
+import org.apache.geode.internal.InternalInstantiator;
 import java.util.*;
 import objects.*;
 import perffmwk.*;

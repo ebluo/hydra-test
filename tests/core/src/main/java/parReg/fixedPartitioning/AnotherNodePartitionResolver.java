@@ -26,9 +26,9 @@ import java.util.Set;
 import parReg.colocation.Month;
 import parReg.execute.PartitionObjectHolder;
 
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.FixedPartitionResolver;
-import com.gemstone.gemfire.internal.cache.xmlcache.Declarable2;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.FixedPartitionResolver;
+import org.apache.geode.internal.cache.xmlcache.Declarable2;
 
 public class AnotherNodePartitionResolver implements FixedPartitionResolver,
     Serializable, Declarable2 {

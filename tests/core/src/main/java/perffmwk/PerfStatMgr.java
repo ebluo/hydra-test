@@ -17,8 +17,8 @@
 
 package perffmwk;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.internal.*;
+import org.apache.geode.*;
+import org.apache.geode.internal.*;
 
 import hydra.*;
 

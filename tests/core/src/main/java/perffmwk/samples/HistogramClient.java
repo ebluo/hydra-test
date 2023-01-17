@@ -17,7 +17,7 @@
 
 package perffmwk.samples;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import hydra.HydraThreadLocal;
 import hydra.Log;
 import hydra.MasterController;

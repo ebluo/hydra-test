@@ -22,7 +22,7 @@ import management.operations.ops.cli.TestCommandInstance;
 import management.operations.ops.cli.executors.AbstractTestCommandExecutor;
 import management.util.HydraUtil;
 
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
 
 public class PauseGWSenderExecutor extends AbstractTestCommandExecutor {
 

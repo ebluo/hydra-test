@@ -17,7 +17,7 @@
 
 package wan;
 
-import com.gemstone.gemfire.cache.InterestResultPolicy;
+import org.apache.geode.cache.InterestResultPolicy;
 import hydra.*;
 
 /**

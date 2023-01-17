@@ -25,8 +25,8 @@ import management.operations.OperationEvent;
 import management.operations.OperationPrms;
 import management.operations.events.DLockOperationEvents;
 
-import com.gemstone.gemfire.distributed.DistributedLockService;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.distributed.DistributedLockService;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 public class DLockEvents extends AbstractEvents implements DLockOperationEvents {
 

@@ -23,18 +23,18 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.CacheLoader;
-import com.gemstone.gemfire.cache.CacheWriter;
-import com.gemstone.gemfire.cache.CustomExpiry;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.EvictionAttributes;
-import com.gemstone.gemfire.cache.ExpirationAttributes;
-import com.gemstone.gemfire.cache.InterestPolicy;
-import com.gemstone.gemfire.cache.MembershipAttributes;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.Scope;
-import com.gemstone.gemfire.compression.Compressor;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.CacheLoader;
+import org.apache.geode.cache.CacheWriter;
+import org.apache.geode.cache.CustomExpiry;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.EvictionAttributes;
+import org.apache.geode.cache.ExpirationAttributes;
+import org.apache.geode.cache.InterestPolicy;
+import org.apache.geode.cache.MembershipAttributes;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.Scope;
+import org.apache.geode.compression.Compressor;
 
 /** Information to be used to validate MBeans. Many of the items in this class are
  *  in RegionAttributes, which does not always contain Serializable objects, so it can't be returned

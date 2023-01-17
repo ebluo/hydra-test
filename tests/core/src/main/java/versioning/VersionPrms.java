@@ -20,7 +20,7 @@ package versioning;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.util.*;
 
 /**
  * Hydra parameters for the versioning tests.

@@ -26,9 +26,9 @@ import java.util.*;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.util.CacheListenerAdapter;
+import org.apache.geode.distributed.DistributedSystem;
 
 /**
  * This class is a <code>CacheListener</code> implementation attached to the

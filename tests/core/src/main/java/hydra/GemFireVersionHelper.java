@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.distributed.internal.DM;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.distributed.internal.DM;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;

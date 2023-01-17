@@ -17,7 +17,7 @@
 
 package cacheperf.comparisons.connection.preload;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import java.io.*;
 import java.util.*;
 import java.util.jar.JarEntry;

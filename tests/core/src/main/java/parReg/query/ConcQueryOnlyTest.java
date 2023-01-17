@@ -19,8 +19,8 @@ package parReg.query;
 import util.PRObserver;
 import hydra.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
 
 public class ConcQueryOnlyTest extends SerialQueryAndEntryOpsTest {
   

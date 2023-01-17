@@ -19,7 +19,7 @@ package wan;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import pdx.PdxTest;
 
 import hydra.*;

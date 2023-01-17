@@ -21,7 +21,7 @@ import java.util.*;
 import hydra.*;
 import util.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class PrTxPrms extends BasePrms {
 

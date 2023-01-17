@@ -16,9 +16,9 @@
  */
 package regions.validate;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.Assert;
 import objects.ObjectHelper;
 import util.NameFactory;
 

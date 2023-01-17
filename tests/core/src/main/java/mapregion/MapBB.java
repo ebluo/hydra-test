@@ -30,7 +30,7 @@ package mapregion;
 //import util.*;
 import hydra.*;
 import hydra.blackboard.Blackboard;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 
 public class MapBB extends Blackboard{

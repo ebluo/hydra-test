@@ -16,8 +16,8 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.LogWriter;
+import org.apache.geode.distributed.internal.DistributionConfig;
 import hydra.HostHelper.OSType;
 import java.io.*;
 import java.rmi.RemoteException;

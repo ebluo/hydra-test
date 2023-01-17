@@ -16,9 +16,9 @@
  */
 package cacheperf.comparisons.replicated.execute;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.execute.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.execute.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
 
 import java.io.Serializable;
 import java.util.Properties;

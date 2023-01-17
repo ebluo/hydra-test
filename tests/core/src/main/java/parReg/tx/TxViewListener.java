@@ -17,7 +17,7 @@
 package parReg.tx; 
 
 import hydra.Log;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class TxViewListener extends util.AbstractListener implements TransactionListener {
 

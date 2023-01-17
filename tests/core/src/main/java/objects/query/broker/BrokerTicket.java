@@ -17,11 +17,11 @@
 
 package objects.query.broker;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.Instantiator;
-import com.gemstone.gemfire.cache.util.ObjectSizer;
-import com.gemstone.gemfire.internal.util.Sizeof;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.Instantiator;
+import org.apache.geode.cache.util.ObjectSizer;
+import org.apache.geode.internal.util.Sizeof;
 
 import java.io.DataInput;
 import java.io.DataOutput;

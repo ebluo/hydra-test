@@ -19,8 +19,8 @@ package query.remote;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.query.SelectResults;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
+import org.apache.geode.cache.query.SelectResults;
+import org.apache.geode.internal.cache.EntryEventImpl;
 /**
  * Validates query result which is fired from a afterDestroy call back 
  * of cache listener attatched to the region. It verifies that the

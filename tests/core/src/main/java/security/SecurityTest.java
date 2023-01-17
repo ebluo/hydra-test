@@ -43,17 +43,17 @@ import util.TestException;
 import util.TestHelper;
 import util.TxHelper;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.ServerConnectivityException;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.security.AuthenticationFailedException;
-import com.gemstone.gemfire.security.NotAuthorizedException;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.ServerConnectivityException;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.security.AuthenticationFailedException;
+import org.apache.geode.security.NotAuthorizedException;
 
 import cq.CQUtil;
 

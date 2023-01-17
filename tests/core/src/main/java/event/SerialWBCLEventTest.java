@@ -21,7 +21,7 @@ import event.*;
 import hydra.blackboard.*;
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A version of the <code>EventTask</code> that performs operations

@@ -23,9 +23,9 @@ import hydra.*;
 import util.*;
 import java.util.*;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
+//import org.apache.geode.cache.util.*;
 
 public class AsyncMsgInitImageTest extends getInitialImage.InitImageTest {
 

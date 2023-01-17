@@ -19,10 +19,10 @@ package rebalance;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.*;
 
 public class RebalanceResourceObserver extends InternalResourceManager.ResourceObserverAdapter {
 

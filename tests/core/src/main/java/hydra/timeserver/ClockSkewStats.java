@@ -19,8 +19,8 @@ package hydra.timeserver;
 
 import perffmwk.PerformanceStatistics;
 
-import com.gemstone.gemfire.StatisticDescriptor;
-import com.gemstone.gemfire.StatisticsType;
+import org.apache.geode.StatisticDescriptor;
+import org.apache.geode.StatisticsType;
 
 /**
  * Statistics for recording clock skew and drift.

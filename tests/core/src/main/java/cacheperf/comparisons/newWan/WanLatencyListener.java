@@ -21,11 +21,11 @@ import hydra.GemFirePrms;
 import hydra.TestConfig;
 import cacheperf.AbstractLatencyListener;
 
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.RegionEvent;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventCallbackArgument;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.RegionEvent;
+import org.apache.geode.internal.cache.EntryEventImpl;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument;
 
 /**
  *  A cache listener that records message wan latency statistics on updates.

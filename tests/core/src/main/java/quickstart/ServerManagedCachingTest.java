@@ -16,7 +16,7 @@
  */
 package quickstart;
 
-import com.gemstone.gemfire.internal.cache.CacheServerLauncher;
+import org.apache.geode.internal.cache.CacheServerLauncher;
 
 public class ServerManagedCachingTest extends QuickstartTestCase {
 

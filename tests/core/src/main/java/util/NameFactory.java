@@ -18,7 +18,7 @@ package util;
 
 //import hydra.Log;
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A factory class that creates unique names for {@link Region}s and

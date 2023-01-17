@@ -17,8 +17,8 @@
 package parReg.event; 
 
 import util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 public class ConcParRegEventTest extends event.ConcRegionEventTest {
 

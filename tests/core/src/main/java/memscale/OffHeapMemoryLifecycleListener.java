@@ -28,7 +28,7 @@ import java.util.List;
 
 import util.TestException;
 
-import com.gemstone.gemfire.internal.offheap.SimpleMemoryAllocatorImpl;
+import org.apache.geode.internal.offheap.SimpleMemoryAllocatorImpl;
 
 /**
  * @author lynng

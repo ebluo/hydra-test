@@ -17,11 +17,11 @@
 
 package hydra;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.internal.HostStatHelper;
-import com.gemstone.gemfire.internal.PureJavaMode;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.*;
+import org.apache.geode.*;
+import org.apache.geode.internal.HostStatHelper;
+import org.apache.geode.internal.PureJavaMode;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.*;
 import java.io.*;
 import java.rmi.RemoteException;
 import java.util.*;

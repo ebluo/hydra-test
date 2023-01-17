@@ -18,7 +18,7 @@ package mirror;
 
 import hydra.blackboard.*;
 //import hydra.Log;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class EndTaskListener5 extends util.AbstractListener implements CacheListener {
 

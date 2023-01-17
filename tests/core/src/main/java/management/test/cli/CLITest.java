@@ -79,19 +79,19 @@ import management.util.ManagementUtil;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.cache.wan.GatewayReceiver;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.internal.cli.dto.Key1;
-import com.gemstone.gemfire.management.internal.cli.dto.Value2;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.shell.Gfsh;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.cache.wan.GatewayReceiver;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.InternalLocator;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.internal.cli.dto.Key1;
+import org.apache.geode.management.internal.cli.dto.Value2;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.shell.Gfsh;
 
 public class CLITest {
   

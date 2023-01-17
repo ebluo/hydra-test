@@ -22,8 +22,8 @@
  */
 package cq;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionDestroyedException;
 
 import mapregion.MapBB;
 import mapregion.MapPrms;

@@ -18,7 +18,7 @@
 package cacheperf.poc.useCase14;
 
 import cacheperf.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import distcache.gemfire.*;
 import hydra.*;
 

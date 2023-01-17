@@ -20,7 +20,7 @@ import java.util.*;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.query.*;
 
 public class CQExecuteVersionHelper {
   public SelectResults executeWithInitialResults(CqQuery cq) throws CqClosedException, RegionNotFoundException, CqException {

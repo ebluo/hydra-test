@@ -26,18 +26,18 @@ import parReg.ParRegTest;
 import parReg.ParRegUtil;
 import util.*;
 
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.Operation;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.hdfs.HDFSEventQueueAttributes;
-import com.gemstone.gemfire.cache.hdfs.HDFSEventQueueAttributesFactory;
-import com.gemstone.gemfire.cache.hdfs.HDFSStore;
-import com.gemstone.gemfire.cache.hdfs.internal.HDFSStoreImpl;
-import com.gemstone.gemfire.cache.hdfs.internal.PersistedEventImpl;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.Operation;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.hdfs.HDFSEventQueueAttributes;
+import org.apache.geode.cache.hdfs.HDFSEventQueueAttributesFactory;
+import org.apache.geode.cache.hdfs.HDFSStore;
+import org.apache.geode.cache.hdfs.internal.HDFSStoreImpl;
+import org.apache.geode.cache.hdfs.internal.PersistedEventImpl;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
 
 /**
  *  Generic utility methods for testing with Hoplogs/HDFS

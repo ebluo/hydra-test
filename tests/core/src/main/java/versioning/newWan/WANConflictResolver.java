@@ -20,11 +20,11 @@ import versioning.VersionBB;
 import newWan.WANOperationsClientBB;
 import hydra.Log;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.util.GatewayConflictHelper;
-import com.gemstone.gemfire.cache.util.GatewayConflictResolver;
-import com.gemstone.gemfire.cache.util.TimestampedEntryEvent;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.util.GatewayConflictHelper;
+import org.apache.geode.cache.util.GatewayConflictResolver;
+import org.apache.geode.cache.util.TimestampedEntryEvent;
+import org.apache.geode.pdx.PdxInstance;
 
 /**
  * Custom wan conflict resolver

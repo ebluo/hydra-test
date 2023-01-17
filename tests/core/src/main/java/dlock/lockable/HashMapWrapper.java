@@ -17,7 +17,7 @@
 
 package dlock.lockable;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import java.util.HashMap;
 import util.NameFactory;

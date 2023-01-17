@@ -21,7 +21,7 @@ package parReg.query;
 //import util.CacheUtil;
 //import util.StopStartBB;
 //import hydra.TestConfig;
-import com.gemstone.gemfire.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxSerializable;
 
 import java.util.Map;
 
@@ -34,7 +34,7 @@ import hydra.blackboard.Blackboard;
 
 //import query.QueryPrms;
 //import query.QueryTest;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 public class ParRegQueryBB extends Blackboard {
    

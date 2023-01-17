@@ -24,8 +24,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.net.SocketTimeoutException;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.internal.NanoTimer;
 
 /**
  * A thread that fetches the time from the time server on the specified host

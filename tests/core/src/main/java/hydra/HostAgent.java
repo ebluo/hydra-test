@@ -17,10 +17,10 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.LogWriter;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.internal.DistributionConfig;
 import hydra.HostHelper.OSType;
 import hydra.timeserver.TimeProtocolHandler;
 import hydra.timeserver.TimeServerPrms;

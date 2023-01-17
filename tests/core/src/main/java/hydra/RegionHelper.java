@@ -20,16 +20,16 @@ package hydra;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.EvictionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.RegionExistsException;
-import com.gemstone.gemfire.cache.hdfs.internal.HDFSStoreFactoryImpl;
-import com.gemstone.gemfire.internal.cache.PartitionAttributesImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.EvictionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.RegionExistsException;
+import org.apache.geode.cache.hdfs.internal.HDFSStoreFactoryImpl;
+import org.apache.geode.internal.cache.PartitionAttributesImpl;
 
 /**
  * Helps clients use {@link RegionDescription}.  Methods are thread-safe.

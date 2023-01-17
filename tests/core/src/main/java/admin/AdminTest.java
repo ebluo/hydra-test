@@ -23,15 +23,15 @@ import hydra.blackboard.*;
 import java.util.*;
 import util.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.admin.internal.*;
-import com.gemstone.gemfire.admin.RegionNotFoundException;
-import com.gemstone.gemfire.admin.OperationCancelledException;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.admin.*;
+import org.apache.geode.admin.internal.*;
+import org.apache.geode.admin.RegionNotFoundException;
+import org.apache.geode.admin.OperationCancelledException;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.internal.Assert;
 
 public class AdminTest {
 

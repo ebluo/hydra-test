@@ -25,10 +25,10 @@ import hydra.DistributedSystemHelper;
 import hydra.GatewaySenderHelper;
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventCallbackArgument;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.internal.cache.EntryEventImpl;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument;
 
 import util.QueryObject;
 import util.SilenceListener;

@@ -20,10 +20,10 @@ import java.util.*;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
 
 public class ForcedDiscTest {
     

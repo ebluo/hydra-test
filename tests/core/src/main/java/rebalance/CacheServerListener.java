@@ -23,14 +23,14 @@ import hydra.MasterProxyIF;
 import hydra.ProcessMgr;
 import hydra.RmiRegistryHelper;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.util.CacheListenerAdapter;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
 
 /** 
  * CacheServerListener installs a ResourceObserver (statically).

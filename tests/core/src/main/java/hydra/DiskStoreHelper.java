@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.DiskStore;
-import com.gemstone.gemfire.cache.DiskStoreFactory;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.DiskStore;
+import org.apache.geode.cache.DiskStoreFactory;
 
 /**
  * Helps clients use {@link DiskStoreDescription}.  Methods are thread-safe.

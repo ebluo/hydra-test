@@ -17,12 +17,12 @@
 
 package cacheperf;
 
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.DiskRegion;
-import com.gemstone.gemfire.internal.cache.DiskRegionStats;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.Statistics;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.DiskRegion;
+import org.apache.geode.internal.cache.DiskRegionStats;
+import org.apache.geode.internal.cache.LocalRegion;
 
 import distcache.DistCache;
 import distcache.gemfire.GemFireCacheTestImpl;

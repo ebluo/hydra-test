@@ -18,8 +18,8 @@ package tx;
 
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.TXStateInterface;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.TXStateInterface;
 
 import hydra.*;
 import util.*;
