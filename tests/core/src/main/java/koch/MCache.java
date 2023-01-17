@@ -17,8 +17,8 @@
 
 package koch;
 
-import com.gemstone.gemfire.cache.*; 
-import com.gemstone.gemfire.distributed.*; 
+import org.apache.geode.cache.*; 
+import org.apache.geode.distributed.*; 
 import hydra.*;
  
 public class MCache { 

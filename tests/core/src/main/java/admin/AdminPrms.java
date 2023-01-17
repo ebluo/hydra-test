@@ -18,8 +18,8 @@
 package admin;
 
 import hydra.*;
-import com.gemstone.gemfire.admin.SystemMembershipListener;
-import com.gemstone.gemfire.admin.SystemMemberCacheListener;
+import org.apache.geode.admin.SystemMembershipListener;
+import org.apache.geode.admin.SystemMemberCacheListener;
 /**
 *
 * A class used to store keys for Admin API Tests

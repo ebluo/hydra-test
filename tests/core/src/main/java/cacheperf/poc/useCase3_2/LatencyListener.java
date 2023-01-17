@@ -18,9 +18,9 @@
 package cacheperf.poc.useCase3_2;
 
 import cacheperf.poc.useCase3_2.AbstractLatencyListener;
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.RegionEvent;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.RegionEvent;
 
 /**
  *  A cache listener that records message latency statistics on updates.

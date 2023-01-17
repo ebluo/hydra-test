@@ -22,15 +22,15 @@ import java.util.Properties;
 
 import junit.framework.TestCase;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.client.ClientCache;
-import com.gemstone.gemfire.cache.client.ClientCacheFactory;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.internal.AvailablePort;
-import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.client.ClientCache;
+import org.apache.geode.cache.client.ClientCacheFactory;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.internal.AvailablePort;
+import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 
 import container.app.util.Assert;
 import container.app.util.Filter;

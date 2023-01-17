@@ -17,7 +17,7 @@
 
 package cacheperf.gemfire;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import cacheperf.*;
 import hydra.*;
 import objects.*;

@@ -37,17 +37,17 @@ import util.TestHelper;
 import util.ValueHolder;
 import util.ValueHolderPrms;
 
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.execute.FunctionAdapter;
-import com.gemstone.gemfire.cache.execute.FunctionContext;
-import com.gemstone.gemfire.cache.execute.RegionFunctionContext;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.query.SelectResults;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.pdx.WritablePdxInstance;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.execute.FunctionAdapter;
+import org.apache.geode.cache.execute.FunctionContext;
+import org.apache.geode.cache.execute.RegionFunctionContext;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.query.SelectResults;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.pdx.WritablePdxInstance;
 
 import delta.DeltaValueHolder;
 

@@ -26,11 +26,11 @@ import hydra.*;
 import util.*;
 import hct.*;
 
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.cache.util.*;
-//import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.query.*;   // SelectResults
-import com.gemstone.gemfire.cache.util.BridgeWriterException;
+import org.apache.geode.cache.*;
+//import org.apache.geode.cache.util.*;
+//import org.apache.geode.distributed.*;
+import org.apache.geode.cache.query.*;   // SelectResults
+import org.apache.geode.cache.util.BridgeWriterException;
 
 /**
  * Contains Hydra tasks and supporting methods for testing the GemFire

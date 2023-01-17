@@ -26,9 +26,9 @@ import util.TestException;
 import hydra.CacheHelper;
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
-import com.gemstone.gemfire.cache.partition.PartitionManager;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.partition.PartitionListener;
+import org.apache.geode.cache.partition.PartitionManager;
 
 /**
  * @author lynn

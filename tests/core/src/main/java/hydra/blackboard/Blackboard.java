@@ -19,7 +19,7 @@ package hydra.blackboard;
 
 import hydra.*;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 import java.lang.reflect.*;
 import java.rmi.RemoteException;

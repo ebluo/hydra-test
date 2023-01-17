@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.internal.*;
-import com.gemstone.gemfire.distributed.internal.*;
+import org.apache.geode.internal.*;
+import org.apache.geode.distributed.internal.*;
 
 import java.io.*;
 import java.rmi.RemoteException;

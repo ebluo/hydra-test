@@ -33,16 +33,16 @@ import objects.*;
 
 import cacheperf.gemfire.query.QueryPerfPrms;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.query.Index;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.cache.query.QueryExecutionTimeoutException;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.cache.query.internal.QueryObserverAdapter;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.query.Index;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.cache.query.QueryExecutionTimeoutException;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.cache.query.internal.QueryObserverAdapter;
 
 /**
  * A Hydra test that concurrently performs a number of cache-related operations

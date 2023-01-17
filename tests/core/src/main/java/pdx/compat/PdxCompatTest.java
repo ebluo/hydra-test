@@ -58,12 +58,12 @@ import util.TestHelper;
 import util.VHDataSerializable;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DiskStore;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DiskStore;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
 
 import diskRecovery.RecoveryBB;
 import diskRecovery.RecoveryPrms;

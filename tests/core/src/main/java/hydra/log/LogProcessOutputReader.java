@@ -16,9 +16,9 @@
  */
 package hydra.log;
 
-import com.gemstone.gemfire.LogWriter;
-//import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+//import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 
 import hydra.HydraRuntimeException;
 

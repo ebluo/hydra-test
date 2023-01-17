@@ -27,21 +27,21 @@ import java.io.File;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.CachePerfStats;
-import com.gemstone.gemfire.internal.cache.DiskRegion;
-import com.gemstone.gemfire.internal.cache.DiskRegionStats;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.InitialImageOperation;
-import com.gemstone.gemfire.internal.cache.InitialImageOperation.GIITestHook;
-import com.gemstone.gemfire.internal.cache.InitialImageOperation.GIITestHookType;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.TombstoneService;
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.StatisticsFactory;
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.StatisticsType;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.CachePerfStats;
+import org.apache.geode.internal.cache.DiskRegion;
+import org.apache.geode.internal.cache.DiskRegionStats;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.InitialImageOperation;
+import org.apache.geode.internal.cache.InitialImageOperation.GIITestHook;
+import org.apache.geode.internal.cache.InitialImageOperation.GIITestHookType;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.TombstoneService;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.StatisticsFactory;
+import org.apache.geode.Statistics;
+import org.apache.geode.StatisticsType;
 
 /**
  * @author lhughes

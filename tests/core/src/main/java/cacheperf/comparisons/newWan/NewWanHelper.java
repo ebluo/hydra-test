@@ -24,7 +24,7 @@ import hydra.TestConfig;
 
 import java.util.Vector;
 
-import com.gemstone.gemfire.cache.wan.GatewaySender;
+import org.apache.geode.cache.wan.GatewaySender;
 
 /**
  * 

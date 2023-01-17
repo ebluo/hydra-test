@@ -17,10 +17,10 @@
 
 package hydra;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
+import org.apache.geode.*;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.distributed.internal.InternalLocator;
 import java.io.*;
 import java.rmi.*;
 import java.rmi.server.*;

@@ -19,12 +19,12 @@ package resumeTx;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.execute.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.Token;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.execute.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.Token;
 
 import hydra.*;
 

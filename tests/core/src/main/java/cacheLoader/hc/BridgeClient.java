@@ -16,9 +16,9 @@
  */
 package cacheLoader.hc;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.NanoTimer;
-import com.gemstone.gemfire.cache.ClientHelper;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.NanoTimer;
+import org.apache.geode.cache.ClientHelper;
 import java.lang.reflect.*;
 import java.util.*;
 

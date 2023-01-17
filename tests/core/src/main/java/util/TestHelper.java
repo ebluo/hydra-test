@@ -20,16 +20,16 @@ import hydra.*;
 import hydra.blackboard.*;
 import java.lang.reflect.*;
 
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.CachePerfStats;
-import com.gemstone.gemfire.internal.cache.lru.Sizeable;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.size.WellKnownClassSizer;
-import com.gemstone.gemfire.pdx.PdxSerializable;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.CachePerfStats;
+import org.apache.geode.internal.cache.lru.Sizeable;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.size.WellKnownClassSizer;
+import org.apache.geode.pdx.PdxSerializable;
 
-import com.gemstone.gemfire.StatisticsFactory;
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.StatisticsType;
+import org.apache.geode.StatisticsFactory;
+import org.apache.geode.Statistics;
+import org.apache.geode.StatisticsType;
 
 import diskRecovery.RecoveryTestVersionHelper;
 

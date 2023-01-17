@@ -17,7 +17,7 @@
 
 package hct;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.util.*;
 import java.io.*;
 import hydra.*;

@@ -28,14 +28,14 @@ import rebalance.RebalancePrms;
 import rebalance.RebalanceUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.control.RebalanceFactory;
-import com.gemstone.gemfire.cache.control.RebalanceOperation;
-import com.gemstone.gemfire.cache.control.RebalanceResults;
-import com.gemstone.gemfire.cache.control.ResourceManager;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.control.RebalanceFactory;
+import org.apache.geode.cache.control.RebalanceOperation;
+import org.apache.geode.cache.control.RebalanceResults;
+import org.apache.geode.cache.control.ResourceManager;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 public class ParRegColocationWithListener extends ParRegColocation {
 

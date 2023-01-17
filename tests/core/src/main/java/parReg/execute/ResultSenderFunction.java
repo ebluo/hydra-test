@@ -24,9 +24,9 @@ import java.util.Set;
 import parReg.ParRegBB;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.execute.FunctionAdapter;
-import com.gemstone.gemfire.cache.execute.FunctionContext;
-import com.gemstone.gemfire.cache.execute.RegionFunctionContext;
+import org.apache.geode.cache.execute.FunctionAdapter;
+import org.apache.geode.cache.execute.FunctionContext;
+import org.apache.geode.cache.execute.RegionFunctionContext;
 
 
 public class ResultSenderFunction extends FunctionAdapter{

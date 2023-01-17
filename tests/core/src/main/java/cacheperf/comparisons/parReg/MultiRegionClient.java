@@ -19,7 +19,7 @@ package cacheperf.comparisons.parReg;
 
 import cacheperf.CachePerfClient;
 import cacheperf.CachePerfPrms;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 import distcache.gemfire.GemFireCachePrms;
 import hydra.ConfigPrms;
 import hydra.EdgeHelper;

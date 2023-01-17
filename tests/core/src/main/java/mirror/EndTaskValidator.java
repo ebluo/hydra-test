@@ -20,7 +20,7 @@ package mirror;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import java.lang.reflect.*;
 import java.util.*;
 

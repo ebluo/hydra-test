@@ -18,9 +18,9 @@ package container.app.phonedirectory.dao.provider.support;
 
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.util.CacheListenerAdapter;
 
 import container.app.dao.DataAccessType;
 import container.app.phonedirectory.domain.PhoneDirectoryEntry;

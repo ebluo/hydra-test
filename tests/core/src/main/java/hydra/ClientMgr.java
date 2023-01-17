@@ -33,7 +33,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.Vector;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 /** 
  *  Creates, starts, and stops client vms, among other things.

@@ -18,7 +18,7 @@ package splitBrain;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class SBListener extends util.AbstractListener implements CacheListener, Declarable {
 

@@ -19,10 +19,10 @@ package parReg.execute;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import com.gemstone.gemfire.cache.execute.Function;
-import com.gemstone.gemfire.cache.execute.FunctionException;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.cache.execute.Function;
+import org.apache.geode.cache.execute.FunctionException;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.distributed.DistributedMember;
 
 @SuppressWarnings("unchecked")
 public class MemberResultsCollector implements ResultCollector {

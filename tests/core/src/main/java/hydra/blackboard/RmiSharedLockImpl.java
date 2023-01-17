@@ -26,7 +26,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 /**
  * Maintains a remotely shared lock for a blackboard instance.

@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Vector;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 /** 
 *

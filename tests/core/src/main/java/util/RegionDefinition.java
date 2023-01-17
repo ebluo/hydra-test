@@ -23,8 +23,8 @@ import java.util.*;
 
 import memscale.OffHeapHelper;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
 
 
 /** Class used to define a valid combination of attributes and specifications

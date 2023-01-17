@@ -17,7 +17,7 @@
 
 package util;
 
-import com.gemstone.gemfire.*;
+import org.apache.geode.*;
 
 import java.io.*;
 

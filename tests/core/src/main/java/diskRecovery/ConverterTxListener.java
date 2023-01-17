@@ -16,9 +16,9 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.cache.TransactionEvent;
-import com.gemstone.gemfire.cache.TransactionListener;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.cache.TransactionEvent;
+import org.apache.geode.cache.TransactionListener;
 
 import java.util.Properties;
 

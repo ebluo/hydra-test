@@ -19,11 +19,11 @@
  */
 package util;
 
-import com.gemstone.gemfire.GemFireRethrowable;
-import com.gemstone.gemfire.cache.Declarable;
-import com.gemstone.gemfire.pdx.PdxReader;
-import com.gemstone.gemfire.pdx.PdxSerializer;
-import com.gemstone.gemfire.pdx.PdxWriter;
+import org.apache.geode.GemFireRethrowable;
+import org.apache.geode.cache.Declarable;
+import org.apache.geode.pdx.PdxReader;
+import org.apache.geode.pdx.PdxSerializer;
+import org.apache.geode.pdx.PdxWriter;
 
 import hydra.HydraRuntimeException;
 import hydra.Log;

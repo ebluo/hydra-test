@@ -22,10 +22,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.i18n.LogWriterI18n;
-import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.i18n.LogWriterI18n;
+import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 import com.gemstone.org.jgroups.util.StringId;
 import hydra.HydraRuntimeException;
 

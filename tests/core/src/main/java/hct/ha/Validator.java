@@ -30,10 +30,10 @@ import java.util.Map.Entry;
 
 import util.TestException;
 
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.internal.SocketCreator;
-import com.gemstone.gemfire.internal.cache.LocalRegionHelper;
-import com.gemstone.gemfire.internal.cache.tier.sockets.ClientProxyMembershipID;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.internal.SocketCreator;
+import org.apache.geode.internal.cache.LocalRegionHelper;
+import org.apache.geode.internal.cache.tier.sockets.ClientProxyMembershipID;
 
 import delta.DeltaPropagationBB;
 

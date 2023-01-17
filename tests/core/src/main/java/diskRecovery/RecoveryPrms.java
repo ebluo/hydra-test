@@ -16,8 +16,8 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.admin.SystemMembershipListener;
-import com.gemstone.gemfire.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
+import org.apache.geode.admin.SystemMembershipListener;
+import org.apache.geode.internal.cache.persistence.PersistenceObserverHolder.PersistenceObserver;
 
 import java.util.Vector;
 

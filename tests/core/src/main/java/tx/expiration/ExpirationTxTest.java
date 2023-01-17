@@ -19,7 +19,7 @@ package tx.expiration;
 //import util.*;
 //import hydra.*;
 //import hydra.blackboard.*;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 //import java.lang.*;
 //import java.util.*;
 import tx.*;

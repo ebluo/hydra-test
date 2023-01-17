@@ -22,10 +22,10 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.Properties;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.PartitionResolver;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.PartitionResolver;
 
 public class RiskPartitionKey implements DataSerializable, PartitionResolver {
 

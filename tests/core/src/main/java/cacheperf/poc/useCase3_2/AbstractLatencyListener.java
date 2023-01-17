@@ -18,8 +18,8 @@
 package cacheperf.poc.useCase3_2;
 
 import cacheperf.poc.useCase3_2.UseCase3Prms.RegionName;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.NanoTimer;
 import hydra.*;
 import objects.ObjectHelper;
 import util.*;

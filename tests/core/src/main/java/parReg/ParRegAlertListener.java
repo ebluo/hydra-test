@@ -18,7 +18,7 @@
 package parReg;
 
 import hydra.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class ParRegAlertListener implements AlertListener {
 

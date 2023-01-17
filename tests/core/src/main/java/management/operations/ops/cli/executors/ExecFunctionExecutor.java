@@ -33,7 +33,7 @@ import management.util.HydraUtil;
 import management.util.ManagementUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
 
 public class ExecFunctionExecutor extends AbstractTestCommandExecutor {
   

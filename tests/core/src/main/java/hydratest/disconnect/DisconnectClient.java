@@ -16,7 +16,7 @@
  */
 package hydratest.disconnect;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 import hydra.*;
 
 /**

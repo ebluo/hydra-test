@@ -24,9 +24,9 @@ import management.cli.TestableGfsh;
 import management.util.HydraUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.CommandManager;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.CommandManager;
+import org.apache.geode.management.internal.cli.result.CommandResult;
 
 public class ShellCommandTest {  
   

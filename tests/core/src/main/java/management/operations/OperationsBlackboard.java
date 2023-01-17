@@ -35,7 +35,7 @@ import management.util.HydraUtil;
 
 import util.RegionDefinition;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public class OperationsBlackboard extends Blackboard implements RegionOperationEvents, EntryOperationEvents, FunctionOperationEvents,
     TransactionOperationEvents, RegionQueryOperationEvents, CQAndIndexOperationEvents {

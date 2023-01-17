@@ -19,8 +19,8 @@ package splitBrain;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 import java.util.*;
 
 public class RegMembershipListener extends AbstractListener implements RegionMembershipListener {

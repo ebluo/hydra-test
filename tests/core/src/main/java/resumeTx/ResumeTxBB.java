@@ -21,7 +21,7 @@ import hydra.blackboard.*;
 import tx.*;
 import util.*;
 
-import com.gemstone.gemfire.cache.TransactionId;
+import org.apache.geode.cache.TransactionId;
 
 import java.util.*;
 

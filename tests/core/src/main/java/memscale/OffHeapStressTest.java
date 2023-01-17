@@ -47,17 +47,17 @@ import util.PRObserver;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.OutOfOffHeapMemoryException;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheClosedException;
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.DistributedSystemDisconnectedException;
-import com.gemstone.gemfire.internal.offheap.OffHeapMemoryStats;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.CancelException;
+import org.apache.geode.OutOfOffHeapMemoryException;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheClosedException;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.DistributedSystemDisconnectedException;
+import org.apache.geode.internal.offheap.OffHeapMemoryStats;
+import org.apache.geode.pdx.PdxInstance;
 
 import diskRecovery.RecoveryBB;
 import diskRecovery.RecoveryTestVersionHelper;

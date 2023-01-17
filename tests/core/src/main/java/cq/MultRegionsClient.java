@@ -41,13 +41,13 @@ import util.NameFactory;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.query.CqQuery;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.RegionDestroyedException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.query.CqQuery;
 
 public class MultRegionsClient {
   protected static MultRegionsClient testInstance;

@@ -16,7 +16,7 @@
  */
 package cq.hct; 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import cq.CQUtilBB;
 
 /** Event Test Listener. 

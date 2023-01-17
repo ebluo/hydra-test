@@ -17,9 +17,9 @@
 
 package cacheperf.gemfire.morgan;
 
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.internal.NanoTimer;
 import hydra.*;
 import java.util.Properties;
 

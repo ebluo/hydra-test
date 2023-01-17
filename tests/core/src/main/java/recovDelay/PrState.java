@@ -20,8 +20,8 @@ import java.util.*;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 /** Class to hold the state of a pr in a member.
  */

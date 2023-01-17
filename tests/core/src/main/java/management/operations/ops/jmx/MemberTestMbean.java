@@ -38,14 +38,14 @@ import management.util.HydraUtil;
 import management.util.ManagementUtil;
 import util.TestException;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.management.GemFireProperties;
-import com.gemstone.gemfire.management.JVMMetrics;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.OSMetrics;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.beans.ResourceNotification;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.management.GemFireProperties;
+import org.apache.geode.management.JVMMetrics;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.OSMetrics;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.beans.ResourceNotification;
 
 /**
  * Test Class for MemberMBean Attributes, operations and notifications

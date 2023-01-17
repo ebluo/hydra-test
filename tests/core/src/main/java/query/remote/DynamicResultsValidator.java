@@ -20,9 +20,9 @@ import hydra.Log;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.query.SelectResults;
-import com.gemstone.gemfire.internal.cache.EntryEventImpl;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.query.SelectResults;
+import org.apache.geode.internal.cache.EntryEventImpl;
 
 public class DynamicResultsValidator implements QueryResultsValidator 
 {

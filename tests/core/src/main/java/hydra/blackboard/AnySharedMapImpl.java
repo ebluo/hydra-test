@@ -21,7 +21,7 @@ import hydra.HydraInternalException;
 import hydra.HydraRuntimeException;
 import hydra.Log;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 import java.rmi.*;
 import java.util.*;

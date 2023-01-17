@@ -19,10 +19,10 @@ package quickstart;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.internal.AvailablePort;
-import com.gemstone.gemfire.internal.LocalLogWriter;
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.internal.AvailablePort;
+import org.apache.geode.internal.LocalLogWriter;
+import org.apache.geode.internal.LogWriterImpl;
 
 import junit.framework.TestCase;
 

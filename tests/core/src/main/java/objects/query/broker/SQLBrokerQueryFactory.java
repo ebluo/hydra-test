@@ -18,7 +18,7 @@ package objects.query.broker;
 
 import cacheperf.CachePerfPrms;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 import hydra.BasePrms;
 import hydra.GsRandom;

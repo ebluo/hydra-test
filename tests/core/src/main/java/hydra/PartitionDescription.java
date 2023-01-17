@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.partition.PartitionListener;
 
 import java.io.Serializable;
 import java.util.*;

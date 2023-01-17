@@ -20,10 +20,10 @@ import tx.*;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.TXStateProxy;
-import com.gemstone.gemfire.cache.partition.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.TXStateProxy;
+import org.apache.geode.cache.partition.*;
 
 import java.util.*;
 

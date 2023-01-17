@@ -23,10 +23,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.gemstone.gemfire.cache.TransactionId;
-import com.gemstone.gemfire.internal.cache.TXId;
-import com.gemstone.gemfire.internal.shared.Version;
-import com.gemstone.gemfire.internal.util.BlobHelper;
+import org.apache.geode.cache.TransactionId;
+import org.apache.geode.internal.cache.TXId;
+import org.apache.geode.internal.shared.Version;
+import org.apache.geode.internal.util.BlobHelper;
 
 public class RtxUtilVersionHelper {
 

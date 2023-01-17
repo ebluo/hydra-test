@@ -42,18 +42,18 @@ import util.TestException;
 import wan.CacheClientPrms;
 import wan.CacheServerPrms;
 
-import com.gemstone.gemfire.InternalGemFireException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.EntryDestroyedException;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.internal.cache.RegionQueue;
-import com.gemstone.gemfire.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
-import com.gemstone.gemfire.internal.cache.wan.serial.SerialGatewaySenderImpl;
-import com.gemstone.gemfire.security.AuthenticationFailedException;
+import org.apache.geode.InternalGemFireException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.EntryDestroyedException;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.internal.cache.RegionQueue;
+import org.apache.geode.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
+import org.apache.geode.internal.cache.wan.serial.SerialGatewaySenderImpl;
+import org.apache.geode.security.AuthenticationFailedException;
 
 /**
  * New wan security tests

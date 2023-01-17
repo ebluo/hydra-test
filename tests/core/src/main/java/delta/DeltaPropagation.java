@@ -30,16 +30,16 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Iterator;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.BucketRegion;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientUpdater;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.BucketRegion;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientUpdater;
 
 /**
  * Contains Hydra tasks and supporting methods for testing the GemFire cache

@@ -21,9 +21,9 @@ import java.util.concurrent.TimeUnit;
 
 import parReg.ParRegBB;
 
-import com.gemstone.gemfire.cache.execute.FunctionException;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.distributed.DistributedMember;
+import org.apache.geode.cache.execute.FunctionException;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.distributed.DistributedMember;
 
 public class BBResultCollector implements ResultCollector {
 

@@ -19,9 +19,9 @@ package diskReg.oplogs;
 import mapregion.*;
 import diskReg.DiskRegUtil;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.TestHelperForHydraTests;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.TestHelperForHydraTests;
 import hydra.*;
 import objects.*;
 import java.util.*;

@@ -17,8 +17,8 @@
 
 package hydratest.version.admin;
 
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.internal.GemFireVersion;
 import hydra.*;
 
 public class AdminClient {

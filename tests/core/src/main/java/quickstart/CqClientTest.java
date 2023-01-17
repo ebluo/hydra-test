@@ -18,8 +18,8 @@ package quickstart;
 
 import java.util.Properties;
 
-import com.gemstone.gemfire.internal.AvailablePort;
-import com.gemstone.gemfire.internal.cache.CacheServerLauncher;
+import org.apache.geode.internal.AvailablePort;
+import org.apache.geode.internal.cache.CacheServerLauncher;
 
 /**
  * Tests the functionality of the continuous query quickstart example.

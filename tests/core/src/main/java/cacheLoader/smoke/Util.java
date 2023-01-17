@@ -16,8 +16,8 @@
  */
 package cacheLoader.smoke;
 
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.cache.*;
+//import org.apache.geode.LogWriter;
 
 public class Util { 
 

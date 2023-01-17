@@ -17,14 +17,14 @@
 
 package objects.query;
 
-import com.gemstone.gemfire.cache.query.FunctionDomainException;
-import com.gemstone.gemfire.cache.query.IndexExistsException;
-import com.gemstone.gemfire.cache.query.IndexNameConflictException;
-import com.gemstone.gemfire.cache.query.NameResolutionException;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.cache.query.QueryInvocationTargetException;
-import com.gemstone.gemfire.cache.query.RegionNotFoundException;
-import com.gemstone.gemfire.cache.query.TypeMismatchException;
+import org.apache.geode.cache.query.FunctionDomainException;
+import org.apache.geode.cache.query.IndexExistsException;
+import org.apache.geode.cache.query.IndexNameConflictException;
+import org.apache.geode.cache.query.NameResolutionException;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.cache.query.QueryInvocationTargetException;
+import org.apache.geode.cache.query.RegionNotFoundException;
+import org.apache.geode.cache.query.TypeMismatchException;
 
 import java.util.List;
 import java.util.Map;

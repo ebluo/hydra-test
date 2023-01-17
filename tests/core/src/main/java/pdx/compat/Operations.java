@@ -26,14 +26,14 @@ import pdx.PdxTest;
 import util.BaseValueHolder;
 import util.OperationsClient;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheClosedException;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.PartitionedRegionStorageException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionDestroyedException;
-import com.gemstone.gemfire.cache.persistence.PartitionOfflineException;
-import com.gemstone.gemfire.distributed.DistributedSystemDisconnectedException;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheClosedException;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.PartitionedRegionStorageException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionDestroyedException;
+import org.apache.geode.cache.persistence.PartitionOfflineException;
+import org.apache.geode.distributed.DistributedSystemDisconnectedException;
 
 public class Operations extends OperationsClient {
 

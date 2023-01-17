@@ -23,8 +23,8 @@ import hydra.MasterProxyIF;
 import hydra.ProcessMgr;
 import hydra.RmiRegistryHelper;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Declarable;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Declarable;
 
 /** 
  * CacheServer LogListener - to log events in CacheServer VMs.

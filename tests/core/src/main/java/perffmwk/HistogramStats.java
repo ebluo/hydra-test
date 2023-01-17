@@ -17,8 +17,8 @@
 
 package perffmwk;
 
-import com.gemstone.gemfire.StatisticDescriptor;
-import com.gemstone.gemfire.StatisticsType;
+import org.apache.geode.StatisticDescriptor;
+import org.apache.geode.StatisticsType;
 import hydra.Log;
 import perffmwk.PerformanceStatistics;
 

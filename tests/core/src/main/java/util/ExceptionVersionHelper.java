@@ -17,8 +17,8 @@
 
 package util;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.CacheRuntimeException;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.CacheRuntimeException;
 
 /**
  * Provides version-dependent support for exceptions.

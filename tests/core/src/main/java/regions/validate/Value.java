@@ -16,7 +16,7 @@
  */
 package regions.validate;
 
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.internal.LogWriterImpl;
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

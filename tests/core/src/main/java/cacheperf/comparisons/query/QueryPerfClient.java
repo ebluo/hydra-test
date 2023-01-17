@@ -17,8 +17,8 @@
 
 package cacheperf.comparisons.query;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.Query;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.Query;
 
 import distcache.gemfire.GemFireCacheTestImpl;
 import hydra.*;

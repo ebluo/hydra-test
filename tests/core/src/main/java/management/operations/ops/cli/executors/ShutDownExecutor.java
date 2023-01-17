@@ -16,7 +16,7 @@
  */
 package management.operations.ops.cli.executors;
 
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
 
 import management.operations.ops.cli.TestCommand.CommandOption;
 import management.operations.ops.cli.TestCommandInstance;

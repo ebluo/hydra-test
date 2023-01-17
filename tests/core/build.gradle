@@ -13,13 +13,7 @@ idea {
 }
 
 dependencies {
-  provided files("${System.getProperty('user.home')}/gemfire-jgroups-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-core-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-examples-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-json-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-joptsimple-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-shared-2.0-SNAPSHOT.1.jar")
-  provided files("${System.getProperty('user.home')}/gemfire-trove-2.0-SNAPSHOT.1.jar")
+  provided files("${System.getProperty('user.home')}/geode-core-1.1.0.jar")
 
   compile 'commons-io:commons-io:2.4'
   compile 'javax.transaction:javax.transaction-api:1.2'

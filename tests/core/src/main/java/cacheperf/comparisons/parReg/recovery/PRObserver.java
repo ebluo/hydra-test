@@ -18,10 +18,10 @@
 package cacheperf.comparisons.parReg.recovery;
 
 import cacheperf.TaskSyncBlackboard;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.NanoTimer;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.NanoTimer;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
 import hydra.Log;
 
 public class PRObserver extends ResourceObserverAdapter {

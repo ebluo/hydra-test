@@ -22,14 +22,14 @@ import hydra.RemoteTestModule;
 
 import java.io.Serializable;
 
-import com.gemstone.gemfire.cache.Operation;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEvent;
-import com.gemstone.gemfire.cache.wan.GatewayEventFilter;
-import com.gemstone.gemfire.cache.wan.GatewayQueueEvent;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventCallbackArgument;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventImpl;
+import org.apache.geode.cache.Operation;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.asyncqueue.AsyncEvent;
+import org.apache.geode.cache.wan.GatewayEventFilter;
+import org.apache.geode.cache.wan.GatewayQueueEvent;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventImpl;
 
 public class MyEventFilterBeforeTransmit implements GatewayEventFilter {
 

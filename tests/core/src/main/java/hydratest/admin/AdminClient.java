@@ -16,9 +16,9 @@
  */
 package hydratest.admin;
 
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.admin.internal.*;
-import com.gemstone.gemfire.admin.jmx.*;
+import org.apache.geode.admin.*;
+import org.apache.geode.admin.internal.*;
+import org.apache.geode.admin.jmx.*;
 import hydra.*;
 
 public class AdminClient {

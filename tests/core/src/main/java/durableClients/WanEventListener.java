@@ -22,8 +22,8 @@ import java.util.HashMap;
 
 import wan.WANClient;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
 
 /**
  * 

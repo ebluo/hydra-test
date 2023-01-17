@@ -22,9 +22,9 @@ import java.util.*;
 import hydra.*;
 import util.*;
 
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.admin.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.*;
 
 /**
  * Convenience class for various admin listeners: SystemMembershipListener,

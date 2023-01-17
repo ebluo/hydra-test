@@ -17,7 +17,7 @@
 package capCon;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class MemLRUSpikes extends MemLRUTest {
 

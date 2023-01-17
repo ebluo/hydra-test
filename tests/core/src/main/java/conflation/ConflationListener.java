@@ -18,8 +18,8 @@
 package conflation;
 
 import cacheperf.CachePerfStats;
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
 import hydra.*;
 import java.util.*;
 import objects.*;

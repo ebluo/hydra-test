@@ -17,10 +17,10 @@
 package parReg.tx;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 
 import java.util.*;
 import util.*;

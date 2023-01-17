@@ -20,8 +20,8 @@ import hydra.Log;
 
 import java.io.Serializable;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.partition.PartitionListener;
 
 public class TestPartitionListener implements PartitionListener, Serializable {
   public TestPartitionListener() {

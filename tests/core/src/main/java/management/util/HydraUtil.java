@@ -44,11 +44,11 @@ import management.jmx.JMXPrms;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.query.CqEvent;
-import com.gemstone.gemfire.management.internal.ManagementConstants;
-import com.gemstone.gemfire.management.internal.cli.json.GfJsonException;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.query.CqEvent;
+import org.apache.geode.management.internal.ManagementConstants;
+import org.apache.geode.management.internal.cli.json.GfJsonException;
+import org.apache.geode.management.internal.cli.result.CommandResult;
 
 
 @SuppressWarnings({"unchecked", "rawtypes"})

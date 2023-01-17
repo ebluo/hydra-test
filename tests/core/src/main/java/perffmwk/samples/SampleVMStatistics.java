@@ -17,8 +17,8 @@
 
 package perffmwk.samples;
 
-import com.gemstone.gemfire.internal.NanoTimer;
-import com.gemstone.gemfire.*;
+import org.apache.geode.internal.NanoTimer;
+import org.apache.geode.*;
 //import java.util.*;
 import perffmwk.*;
 

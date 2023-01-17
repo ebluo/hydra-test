@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.internal.LogWriterImpl;
+import org.apache.geode.internal.LogWriterImpl;
 import util.TestHelper;
 
 /**

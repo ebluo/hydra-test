@@ -17,12 +17,12 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.client.PoolFactory;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.client.PoolFactory;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.internal.NanoTimer;
 import hydra.blackboard.SharedLock;
 import hydra.blackboard.SharedMap;
 import java.util.*;

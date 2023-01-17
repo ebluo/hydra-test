@@ -32,11 +32,11 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheListener;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.offheap.OffHeapMemoryStats;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheListener;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.offheap.OffHeapMemoryStats;
 
 public class MemLRUTest extends CapConTest {
 

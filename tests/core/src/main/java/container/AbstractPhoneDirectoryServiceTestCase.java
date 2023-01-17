@@ -22,10 +22,10 @@ import junit.extensions.TestSetup;
 import junit.framework.Assert;
 import junit.framework.Test;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.ClientCache;
-import com.gemstone.gemfire.cache.client.ClientRegionShortcut;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.ClientCache;
+import org.apache.geode.cache.client.ClientRegionShortcut;
 
 import container.app.phonedirectory.dao.provider.CachingPhoneDirectoryDao;
 import container.app.phonedirectory.domain.Address;

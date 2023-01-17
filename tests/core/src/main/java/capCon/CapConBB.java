@@ -19,7 +19,7 @@ package capCon;
 //import util.*;
 import hydra.*;
 import hydra.blackboard.Blackboard;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 import java.util.TreeSet;
 
 public class CapConBB extends Blackboard {

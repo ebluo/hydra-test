@@ -35,13 +35,13 @@ import java.util.Vector;
 import management.util.ManagementUtil;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.AttributesFactory;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.RegionFactory;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.management.ManagementService;
+import org.apache.geode.cache.AttributesFactory;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.RegionFactory;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.management.ManagementService;
 
 /**
  * @author lynn

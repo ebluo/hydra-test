@@ -16,7 +16,7 @@
  */
 package hydra;
 
-import com.gemstone.gemfire.internal.ProcessOutputReader;
+import org.apache.geode.internal.ProcessOutputReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;

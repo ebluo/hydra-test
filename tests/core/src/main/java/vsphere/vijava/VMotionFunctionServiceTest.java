@@ -38,12 +38,12 @@ import util.RandomValues;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.Function;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.Function;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 public class VMotionFunctionServiceTest extends FunctionServiceTest {
 

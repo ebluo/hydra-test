@@ -20,7 +20,7 @@ package admin;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class AdminAlertListener implements AlertListener {
 

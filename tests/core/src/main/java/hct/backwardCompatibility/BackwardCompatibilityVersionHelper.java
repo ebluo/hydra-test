@@ -22,7 +22,7 @@ import hydra.*;
 import util.*;
 import cq.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** VersionHelper class (for Transaction support) */
 public class BackwardCompatibilityVersionHelper {

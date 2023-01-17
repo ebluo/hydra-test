@@ -19,8 +19,8 @@ package cq;
 import java.util.*;
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 
 /** An instance of this class records an initial result set of a CQ along
  *  with its events.

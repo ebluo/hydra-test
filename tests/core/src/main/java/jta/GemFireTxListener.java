@@ -19,7 +19,7 @@ package jta;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import java.sql.*;
 

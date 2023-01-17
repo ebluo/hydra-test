@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.FixedPartitionAttributes;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.FixedPartitionAttributes;
 import hydra.blackboard.SharedLock;
 import hydra.blackboard.SharedMap;
 import java.util.*;

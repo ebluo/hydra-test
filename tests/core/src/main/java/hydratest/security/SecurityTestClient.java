@@ -17,8 +17,8 @@
 
 package hydratest.security;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedSystem;
 import hydra.*;
 import java.io.File;
 import java.io.IOException;

@@ -23,14 +23,14 @@ import pdx.PdxTestVersionHelper;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.pdx.PdxSerializable;
-import com.gemstone.gemfire.cache.TransactionDataNodeHasDepartedException;
-import com.gemstone.gemfire.cache.TransactionDataRebalancedException;
-import com.gemstone.gemfire.cache.TransactionException;
-import com.gemstone.gemfire.cache.TransactionInDoubtException;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.pdx.PdxSerializable;
+import org.apache.geode.cache.TransactionDataNodeHasDepartedException;
+import org.apache.geode.cache.TransactionDataRebalancedException;
+import org.apache.geode.cache.TransactionException;
+import org.apache.geode.cache.TransactionInDoubtException;
+import org.apache.geode.pdx.PdxInstance;
 
 import java.io.File;
 import java.lang.reflect.Field;

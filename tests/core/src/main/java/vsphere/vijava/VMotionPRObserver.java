@@ -20,9 +20,9 @@ import java.util.ArrayList;
 
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceObserverAdapter;
 
 public class VMotionPRObserver extends ResourceObserverAdapter {
 

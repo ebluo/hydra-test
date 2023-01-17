@@ -16,7 +16,7 @@
  */
 package cacheperf.memory;
 
-import com.gemstone.gemfire.cache.query.IndexType;
+import org.apache.geode.cache.query.IndexType;
 
 import hydra.BasePrms;
 import hydra.HydraConfigException;

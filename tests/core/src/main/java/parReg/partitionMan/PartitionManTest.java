@@ -46,14 +46,14 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.control.RebalanceFactory;
-import com.gemstone.gemfire.cache.control.RebalanceOperation;
-import com.gemstone.gemfire.cache.control.RebalanceResults;
-import com.gemstone.gemfire.cache.control.ResourceManager;
-import com.gemstone.gemfire.cache.partition.PartitionManager;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.control.RebalanceFactory;
+import org.apache.geode.cache.control.RebalanceOperation;
+import org.apache.geode.cache.control.RebalanceResults;
+import org.apache.geode.cache.control.ResourceManager;
+import org.apache.geode.cache.partition.PartitionManager;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.pdx.PdxInstance;
 
 /**
  * @author lynn

@@ -27,9 +27,9 @@ import util.OperationCountersBB;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
-import com.gemstone.gemfire.internal.cache.wan.serial.SerialGatewaySenderImpl;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
+import org.apache.geode.internal.cache.wan.serial.SerialGatewaySenderImpl;
 
 import cq.CQUtilBB;
 

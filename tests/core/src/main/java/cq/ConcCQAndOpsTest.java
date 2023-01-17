@@ -17,10 +17,10 @@
 
 package cq;
 
-import com.gemstone.gemfire.cache.query.CqQuery;
-import com.gemstone.gemfire.cache.query.SelectResults;
-import com.gemstone.gemfire.cache.query.CqResults;
-import com.gemstone.gemfire.cache.query.IndexInvalidException;
+import org.apache.geode.cache.query.CqQuery;
+import org.apache.geode.cache.query.SelectResults;
+import org.apache.geode.cache.query.CqResults;
+import org.apache.geode.cache.query.IndexInvalidException;
 
 import hydra.*;
 

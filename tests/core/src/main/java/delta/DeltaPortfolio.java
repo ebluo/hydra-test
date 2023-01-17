@@ -24,9 +24,9 @@ import java.io.IOException;
 
 import objects.Portfolio;
 
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.Delta;
-import com.gemstone.gemfire.InvalidDeltaException;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.Delta;
+import org.apache.geode.InvalidDeltaException;
 /**
  * To tests delta propagation in concurrent enviroment
  * 

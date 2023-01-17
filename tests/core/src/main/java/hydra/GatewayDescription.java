@@ -17,10 +17,10 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.util.Gateway;
-import com.gemstone.gemfire.cache.util.Gateway.OrderPolicy;
-import com.gemstone.gemfire.cache.util.GatewayEventListener;
-import com.gemstone.gemfire.cache.util.GatewayQueueAttributes;
+import org.apache.geode.cache.util.Gateway;
+import org.apache.geode.cache.util.Gateway.OrderPolicy;
+import org.apache.geode.cache.util.GatewayEventListener;
+import org.apache.geode.cache.util.GatewayQueueAttributes;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;

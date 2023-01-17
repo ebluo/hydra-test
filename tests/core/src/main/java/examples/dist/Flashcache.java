@@ -17,7 +17,7 @@
 
 package examples.dist;
 
-import com.gemstone.gemfire.SystemFailure;
+import org.apache.geode.SystemFailure;
 
 import hydra.*;
 import util.*;

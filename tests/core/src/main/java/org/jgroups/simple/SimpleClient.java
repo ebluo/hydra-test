@@ -27,9 +27,9 @@ import java.util.logging.Handler;
 
 import org.jgroups.simple.cache.*;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.i18n.LogWriterI18n;
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.*;
+import org.apache.geode.i18n.LogWriterI18n;
+import org.apache.geode.internal.Assert;
 import com.gemstone.org.jgroups.util.StringId;
 
 import hydra.*;

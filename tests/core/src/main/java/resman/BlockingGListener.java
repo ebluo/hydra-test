@@ -18,8 +18,8 @@ package resman;
 
 import java.util.List;
 
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEventListener;
-import com.gemstone.gemfire.cache.util.GatewayEventListener;
+import org.apache.geode.cache.asyncqueue.AsyncEventListener;
+import org.apache.geode.cache.util.GatewayEventListener;
 
 public class BlockingGListener implements AsyncEventListener, GatewayEventListener {
 

@@ -22,9 +22,9 @@ import java.lang.reflect.*;
 import objects.*;
 import java.util.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.CancelException;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.*;
 import util.TestException;
 
 public class DiskRegRecoveryTest extends DiskRegTest {

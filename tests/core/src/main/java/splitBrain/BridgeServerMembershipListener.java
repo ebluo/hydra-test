@@ -22,7 +22,7 @@ import hydra.blackboard.*;
 
 import util.*;
 
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.util.*;
 
 public class BridgeServerMembershipListener extends AbstractMembershipListener implements BridgeMembershipListener {
 

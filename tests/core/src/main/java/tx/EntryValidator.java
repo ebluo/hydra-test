@@ -18,9 +18,9 @@ package tx;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.Token;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.Token;
 
 import hydra.*;
 import util.*;

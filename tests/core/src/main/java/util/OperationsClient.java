@@ -22,8 +22,8 @@ import parReg.ParRegPrms;
 import hydra.*;
 import parReg.tx.ModRoutingObject;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 
 /**
  * 

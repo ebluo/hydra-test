@@ -18,8 +18,8 @@ package recovDelay;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 
 /** Mark in the bb the earliest time when a region is created, 
  *  or when membership loss is noticed to determine an approximate begin 

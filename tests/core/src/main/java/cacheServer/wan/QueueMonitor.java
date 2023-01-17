@@ -18,18 +18,18 @@ package cacheServer.wan;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.execute.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.execute.*;
 
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.StatisticsFactory;
-import com.gemstone.gemfire.internal.cache.GatewayStats;
-import com.gemstone.gemfire.SystemFailure;
+import org.apache.geode.Statistics;
+import org.apache.geode.StatisticsFactory;
+import org.apache.geode.internal.cache.GatewayStats;
+import org.apache.geode.SystemFailure;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Declarable;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Declarable;
 
 import hydra.*;
 import hydra.blackboard.*;

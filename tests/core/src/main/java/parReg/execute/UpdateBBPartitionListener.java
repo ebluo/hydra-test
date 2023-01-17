@@ -26,9 +26,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.partition.PartitionListener;
-import com.gemstone.gemfire.internal.cache.xmlcache.Declarable2;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.partition.PartitionListener;
+import org.apache.geode.internal.cache.xmlcache.Declarable2;
 
 public class UpdateBBPartitionListener implements PartitionListener,
     Serializable, Declarable2 {

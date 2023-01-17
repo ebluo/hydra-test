@@ -52,19 +52,19 @@ import util.ValueHolder;
 import wan.CacheClientPrms;
 import wan.CacheServerPrms;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.RegionQueue;
-import com.gemstone.gemfire.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
-import com.gemstone.gemfire.internal.cache.wan.serial.SerialGatewaySenderImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.RegionQueue;
+import org.apache.geode.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
+import org.apache.geode.internal.cache.wan.serial.SerialGatewaySenderImpl;
 
 import durableClients.DurableClientsBB;
 

@@ -19,9 +19,9 @@ package diskReg;
 import java.io.Serializable;
 
 import util.*;
-import com.gemstone.gemfire.cache.util.*;
-//import com.gemstone.gemfire.internal.cache.*;
-import com.gemstone.gemfire.internal.cache.lru.Sizeable;
+import org.apache.geode.cache.util.*;
+//import org.apache.geode.internal.cache.*;
+import org.apache.geode.internal.cache.lru.Sizeable;
 
 /**
  * Used by the disk tests to get accurate sizes when using

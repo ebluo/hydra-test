@@ -38,9 +38,9 @@ import util.TestException;
 import util.TestHelper;
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.CacheTransactionManager;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TransactionId;
+import org.apache.geode.cache.CacheTransactionManager;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TransactionId;
 
 public class ResumableApiTest {
 

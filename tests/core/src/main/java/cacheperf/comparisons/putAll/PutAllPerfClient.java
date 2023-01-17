@@ -17,7 +17,7 @@
 
 package cacheperf.comparisons.putAll;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import distcache.gemfire.GemFireCacheTestImpl;
 import hydra.*;

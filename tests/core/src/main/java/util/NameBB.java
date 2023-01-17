@@ -21,7 +21,7 @@ package util;
 import mapregion.MapBB;
 import hydra.Log;
 import hydra.blackboard.Blackboard;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 
 public class NameBB extends Blackboard {
    

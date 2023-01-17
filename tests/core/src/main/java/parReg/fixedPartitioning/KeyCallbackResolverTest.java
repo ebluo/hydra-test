@@ -48,15 +48,15 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.FixedPartitionResolver;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TimeoutException;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.Function;
-import com.gemstone.gemfire.cache.execute.FunctionService;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.FixedPartitionResolver;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TimeoutException;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.Function;
+import org.apache.geode.cache.execute.FunctionService;
 
 public class KeyCallbackResolverTest extends FixedPartitioningTest {
 

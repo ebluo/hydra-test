@@ -17,8 +17,8 @@
 
 package cacheperf.gemfire;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
 import cacheperf.CachePerfStats;
 
 /**

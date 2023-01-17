@@ -18,7 +18,7 @@ package parReg.tx;
 
 import hydra.Log;
 import util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class PrTxLoader implements CacheLoader, Declarable {
 

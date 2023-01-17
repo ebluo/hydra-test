@@ -17,10 +17,10 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
-import com.gemstone.gemfire.cache.util.ObjectSizer;
-import com.gemstone.gemfire.internal.cache.xmlcache.RegionAttributesCreation;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
+import org.apache.geode.cache.util.ObjectSizer;
+import org.apache.geode.internal.cache.xmlcache.RegionAttributesCreation;
 
 import java.io.*;
 import java.util.*;

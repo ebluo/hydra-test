@@ -25,8 +25,8 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.internal.NanoTimer;
 
 /**
  * Manages a connection to a time server.

@@ -16,7 +16,7 @@
  */
 package container.app.phonedirectory.support;
 
-import com.gemstone.gemfire.cache.EntryNotFoundException;
+import org.apache.geode.cache.EntryNotFoundException;
 
 public class PhoneDirectoryEntryNotFoundException extends EntryNotFoundException {
   

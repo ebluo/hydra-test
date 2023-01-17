@@ -57,25 +57,25 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.Statistics;
-import com.gemstone.gemfire.StatisticsFactory;
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Operation;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.RegionShortcut;
-import com.gemstone.gemfire.cache.asyncqueue.internal.AsyncEventQueueStats;
-import com.gemstone.gemfire.cache.hdfs.HDFSIOException;
-import com.gemstone.gemfire.cache.hdfs.internal.HDFSStoreImpl;
-import com.gemstone.gemfire.cache.hdfs.internal.PersistedEventImpl;
-import com.gemstone.gemfire.cache.hdfs.internal.UnsortedHoplogPersistedEvent;
-import com.gemstone.gemfire.cache.hdfs.internal.hoplog.HoplogSetReader.HoplogIterator;
-import com.gemstone.gemfire.cache.hdfs.internal.hoplog.SequenceFileHoplog;
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheServerHelper;
+import org.apache.geode.Statistics;
+import org.apache.geode.StatisticsFactory;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Operation;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.RegionShortcut;
+import org.apache.geode.cache.asyncqueue.internal.AsyncEventQueueStats;
+import org.apache.geode.cache.hdfs.HDFSIOException;
+import org.apache.geode.cache.hdfs.internal.HDFSStoreImpl;
+import org.apache.geode.cache.hdfs.internal.PersistedEventImpl;
+import org.apache.geode.cache.hdfs.internal.UnsortedHoplogPersistedEvent;
+import org.apache.geode.cache.hdfs.internal.hoplog.HoplogSetReader.HoplogIterator;
+import org.apache.geode.cache.hdfs.internal.hoplog.SequenceFileHoplog;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.tier.sockets.CacheServerHelper;
 
 /**
  *  Generic utility methods for testing with Hoplogs/HDFS

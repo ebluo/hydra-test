@@ -22,11 +22,11 @@ import cacheperf.poc.useCase3_2.UseCase3Prms.CacheOp;
 import cacheperf.poc.useCase3_2.UseCase3Prms.ClientName;
 import cacheperf.poc.useCase3_2.UseCase3Prms.RegionName;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.control.*;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.*;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.control.*;
+import org.apache.geode.internal.NanoTimer;
 
 import hydra.*;
 import hydra.blackboard.*;

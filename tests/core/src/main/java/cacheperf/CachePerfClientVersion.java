@@ -17,11 +17,11 @@
 
 package cacheperf;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.control.RebalanceFactory;
-import com.gemstone.gemfire.cache.control.RebalanceOperation;
-import com.gemstone.gemfire.cache.control.RebalanceResults;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.control.RebalanceFactory;
+import org.apache.geode.cache.control.RebalanceOperation;
+import org.apache.geode.cache.control.RebalanceResults;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
 
 import hydra.CacheHelper;
 

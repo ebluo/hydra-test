@@ -16,7 +16,7 @@
  */
 package cacheperf.comparisons.newWan;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 
 import hydra.MasterController;
 import cacheperf.CachePerfClient;

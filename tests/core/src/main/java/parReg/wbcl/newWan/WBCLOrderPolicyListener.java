@@ -26,11 +26,11 @@ import java.util.List;
 import parReg.wbcl.WBCLTestBB;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.EntryExistsException;
-import com.gemstone.gemfire.cache.EntryNotFoundException;
-import com.gemstone.gemfire.cache.Operation;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEvent;
+import org.apache.geode.cache.EntryExistsException;
+import org.apache.geode.cache.EntryNotFoundException;
+import org.apache.geode.cache.Operation;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.asyncqueue.AsyncEvent;
 
 public class WBCLOrderPolicyListener extends MyAsyncEventListener{
   

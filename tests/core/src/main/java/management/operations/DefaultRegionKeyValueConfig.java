@@ -30,9 +30,9 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TimeoutException;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TimeoutException;
 
 public class DefaultRegionKeyValueConfig implements RegionKeyValueConfig {
 

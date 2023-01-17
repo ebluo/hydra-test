@@ -27,11 +27,11 @@ import hydra.*;
 import query.*;
 import parReg.query.index.IndexTest;
 //import hydra.blackboard.*;
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.internal.NanoTimer;
-//import com.gemstone.gemfire.cache.query.Utils;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.cache.query.QueryInvocationTargetException;
+import org.apache.geode.cache.*;
+//import org.apache.geode.internal.NanoTimer;
+//import org.apache.geode.cache.query.Utils;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.cache.query.QueryInvocationTargetException;
 import pdx.PdxTestVersionHelper;
 /**
  * A version of the <code>QueryTask</code> that performs operations

@@ -18,17 +18,17 @@
 package admin;
 
 import hydra.*;
-//import com.gemstone.gemfire.admin.AdminException;
-import com.gemstone.gemfire.admin.AdminDistributedSystem;
-import com.gemstone.gemfire.admin.DistributedSystemConfig;
-import com.gemstone.gemfire.admin.AdminDistributedSystemFactory;
-import com.gemstone.gemfire.admin.jmx.Agent;
+//import org.apache.geode.admin.AdminException;
+import org.apache.geode.admin.AdminDistributedSystem;
+import org.apache.geode.admin.DistributedSystemConfig;
+import org.apache.geode.admin.AdminDistributedSystemFactory;
+import org.apache.geode.admin.jmx.Agent;
 import java.util.*;
 import javax.management.*;
 import javax.management.remote.*;
 
 // This class is in the tests source tree
-import com.gemstone.gemfire.admin.jmx.JMXAdminDistributedSystem;
+import org.apache.geode.admin.jmx.JMXAdminDistributedSystem;
 
 /**
  *  Supports creating AdminDistributedSystem of various types 

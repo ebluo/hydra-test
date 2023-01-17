@@ -18,7 +18,7 @@ package capCon;
 
 import util.*;
 //import hydra.Log;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class LRUListener extends util.AbstractListener implements CacheListener {
 

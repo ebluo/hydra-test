@@ -20,7 +20,7 @@ package hct;
 
 import hydra.ProcessMgr;
 import util.EventCountersBB;
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 /**
  * This event listener is used when conflation is enabled.It will update the value received for a given

@@ -22,7 +22,7 @@ import hydra.blackboard.SharedCounters;
 import hydra.blackboard.SharedMap;
 import management.test.cli.CommandTest;
 
-import com.gemstone.gemfire.distributed.DistributedLockService;
+import org.apache.geode.distributed.DistributedLockService;
 
 /** Class to invoke gfsh commands in a remote jvm that is not a part of the
  *  distributed system.

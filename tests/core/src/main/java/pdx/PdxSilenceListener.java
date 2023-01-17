@@ -19,9 +19,9 @@
  */
 package pdx;
 
-import com.gemstone.gemfire.SerializationException;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.SerializationException;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.pdx.PdxInstance;
 
 import java.io.IOException;
 

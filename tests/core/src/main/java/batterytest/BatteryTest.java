@@ -51,7 +51,7 @@ import util.TestHelper;
 import batterytest.greplogs.GrepLogs;
 import batterytest.greplogs.GrepLogs.GrepLogsException;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 /**
  *  Set up a batterytest by creating a test file containing a list of

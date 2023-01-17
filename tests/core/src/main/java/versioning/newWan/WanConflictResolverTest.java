@@ -49,8 +49,8 @@ import util.StopStartVMs;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.Region;
 
 /**
  * Provide support methods to test conflict detection of new wan events. 

@@ -35,16 +35,16 @@ import parReg.execute.OnRegionsFunction;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.internal.cache.BucketDump;
-import com.gemstone.gemfire.internal.cache.ForceReattemptException;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.execute.InternalFunctionService;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.internal.cache.BucketDump;
+import org.apache.geode.internal.cache.ForceReattemptException;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.execute.InternalFunctionService;
 
 public class UseCase1 {
 

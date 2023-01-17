@@ -29,8 +29,8 @@ import java.util.List;
 import cacheperf.CachePerfClient;
 import cacheperf.CachePerfPrms;
 
-import com.gemstone.gemfire.cache.client.internal.locator.ClientConnectionRequest;
-import com.gemstone.gemfire.distributed.internal.tcpserver.TcpClient;
+import org.apache.geode.cache.client.internal.locator.ClientConnectionRequest;
+import org.apache.geode.distributed.internal.tcpserver.TcpClient;
 
 /**
  * @author dsmith

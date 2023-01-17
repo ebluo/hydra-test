@@ -19,8 +19,8 @@ package parReg.query.index;
 
 import java.util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 import distcache.gemfire.GemFireCachePrms;
 import query.index.IndexPrms;
 import util.*;

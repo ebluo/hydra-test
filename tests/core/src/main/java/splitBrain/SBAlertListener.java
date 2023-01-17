@@ -18,7 +18,7 @@
 package splitBrain;
 
 import hydra.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class SBAlertListener implements AlertListener {
 

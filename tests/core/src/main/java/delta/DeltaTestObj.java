@@ -22,9 +22,9 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-import com.gemstone.gemfire.DeltaTestImpl;
-import com.gemstone.gemfire.InvalidDeltaException;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
+import org.apache.geode.DeltaTestImpl;
+import org.apache.geode.InvalidDeltaException;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
 
 /**
  * 

@@ -23,7 +23,7 @@ import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-import com.gemstone.gemfire.internal.AvailablePort;
+import org.apache.geode.internal.AvailablePort;
 
 
 public class WebServer  {

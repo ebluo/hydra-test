@@ -17,7 +17,7 @@
 
 package hydratest.derby;
 
-import com.gemstone.gemfire.internal.Assert;
+import org.apache.geode.internal.Assert;
 
 import hydra.DerbyServerHelper;
 import hydra.Log;

@@ -19,9 +19,9 @@ package tx;
 
 import java.util.*;
 
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.client.internal.PoolImpl;
 
 import hydra.*;
 

@@ -23,9 +23,9 @@ import parReg.execute.PartitionObjectHolder;
 
 import getInitialImage.InitImageBB;
 
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.PartitionResolver;
-import com.gemstone.gemfire.internal.cache.xmlcache.Declarable2;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.PartitionResolver;
+import org.apache.geode.internal.cache.xmlcache.Declarable2;
 
 import hydra.*;
 

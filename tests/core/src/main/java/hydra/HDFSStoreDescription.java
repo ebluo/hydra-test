@@ -25,13 +25,13 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import com.gemstone.gemfire.cache.hdfs.HDFSEventQueueAttributes;
-import com.gemstone.gemfire.cache.hdfs.HDFSEventQueueAttributesFactory;
-import com.gemstone.gemfire.cache.hdfs.HDFSStore;
-import com.gemstone.gemfire.cache.hdfs.HDFSStore.HDFSCompactionConfig;
-import com.gemstone.gemfire.cache.hdfs.HDFSStoreFactory;
-import com.gemstone.gemfire.cache.hdfs.HDFSStoreFactory.HDFSCompactionConfigFactory;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
+import org.apache.geode.cache.hdfs.HDFSEventQueueAttributes;
+import org.apache.geode.cache.hdfs.HDFSEventQueueAttributesFactory;
+import org.apache.geode.cache.hdfs.HDFSStore;
+import org.apache.geode.cache.hdfs.HDFSStore.HDFSCompactionConfig;
+import org.apache.geode.cache.hdfs.HDFSStoreFactory;
+import org.apache.geode.cache.hdfs.HDFSStoreFactory.HDFSCompactionConfigFactory;
+import org.apache.geode.cache.wan.GatewaySender;
 
 /**
  * Encodes information needed to describe and create an HDFS store.

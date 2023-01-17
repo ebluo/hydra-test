@@ -49,13 +49,13 @@ import util.StopStartPrms;
 import util.StopStartVMs;
 import util.TestException;
 
-import com.gemstone.gemfire.management.DiskMetrics;
-import com.gemstone.gemfire.management.GemFireProperties;
-import com.gemstone.gemfire.management.JVMMetrics;
-import com.gemstone.gemfire.management.NetworkMetrics;
-import com.gemstone.gemfire.management.OSMetrics;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.beans.ResourceNotification;
+import org.apache.geode.management.DiskMetrics;
+import org.apache.geode.management.GemFireProperties;
+import org.apache.geode.management.JVMMetrics;
+import org.apache.geode.management.NetworkMetrics;
+import org.apache.geode.management.OSMetrics;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.beans.ResourceNotification;
 
 
 /**

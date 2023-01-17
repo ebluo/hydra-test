@@ -19,7 +19,7 @@ package rebalance;
 
 import hydra.*;
 import util.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class CapacityAdminListener implements AlertListener {
 

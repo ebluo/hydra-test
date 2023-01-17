@@ -26,15 +26,15 @@ import parReg.*;
 import splitBrain.SplitBrainBB;
 import cq.CQUtilBB;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.control.*;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.partition.PartitionRegionInfo;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.ResourceListener;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.control.*;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.partition.PartitionRegionInfo;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.ResourceListener;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.admin.*;
 
 /** Test class for Basic Rebalancing test cases
  */

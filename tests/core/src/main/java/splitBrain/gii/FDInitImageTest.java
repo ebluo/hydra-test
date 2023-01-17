@@ -23,8 +23,8 @@ import getInitialImage.InitImageBB;
 import getInitialImage.GiiListener;
 import splitBrain.*;
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.distributed.*;
 
 public class FDInitImageTest {
 

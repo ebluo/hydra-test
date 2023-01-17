@@ -19,9 +19,9 @@ package dlock;
 import hydra.*;
 import hydra.blackboard.*;
 import util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.DM;
-import com.gemstone.gemfire.distributed.internal.locks.DLockService;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.DM;
+import org.apache.geode.distributed.internal.locks.DLockService;
 import java.util.*;
 
 public class LeaseTimeTest {

@@ -18,7 +18,7 @@ package management.operations.events;
 
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public interface RegionOperationEvents {
   

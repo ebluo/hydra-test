@@ -17,8 +17,8 @@
 package connPool; 
 
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.*;
 import hydra.*;
 import perffmwk.*;
 import util.*;

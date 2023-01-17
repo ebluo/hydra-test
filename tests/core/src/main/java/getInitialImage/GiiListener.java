@@ -19,7 +19,7 @@ package getInitialImage;
 import util.*;
 //import hydra.*;
 //import hydra.blackboard.SharedCounters;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class GiiListener extends util.AbstractListener implements CacheListener {
 

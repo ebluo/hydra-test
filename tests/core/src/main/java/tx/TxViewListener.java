@@ -18,7 +18,7 @@ package tx;
 
 //import util.*;
 import hydra.Log;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 //import java.util.*;
 
 public class TxViewListener extends util.AbstractListener implements TransactionListener {

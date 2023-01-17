@@ -22,10 +22,10 @@ import hydra.blackboard.*;
 
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.query.*;
 
 import java.util.*;
 

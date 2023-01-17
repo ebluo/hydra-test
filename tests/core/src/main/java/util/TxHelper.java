@@ -17,8 +17,8 @@
 package util; 
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.*;
 import java.util.concurrent.TimeUnit;
 
 import tx.*;

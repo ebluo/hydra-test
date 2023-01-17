@@ -22,7 +22,7 @@ import util.*;
 
 import java.util.*;
 
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.distributed.*;
 
 /**
  * SplitBrain Blackboard

@@ -37,17 +37,17 @@ import java.util.Map;
 import perffmwk.PerfStatMgr;
 import perffmwk.TrimInterval;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.IndexExistsException;
-import com.gemstone.gemfire.cache.query.IndexInvalidException;
-import com.gemstone.gemfire.cache.query.IndexNameConflictException;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.cache.query.RegionNotFoundException;
-import com.gemstone.gemfire.internal.Assert;
-import com.gemstone.gemfire.internal.cache.CachedDeserializable;
-import com.gemstone.gemfire.internal.cache.PreferBytesCachedDeserializable;
-import com.gemstone.gemfire.internal.size.ObjectGraphSizer;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.IndexExistsException;
+import org.apache.geode.cache.query.IndexInvalidException;
+import org.apache.geode.cache.query.IndexNameConflictException;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.cache.query.RegionNotFoundException;
+import org.apache.geode.internal.Assert;
+import org.apache.geode.internal.cache.CachedDeserializable;
+import org.apache.geode.internal.cache.PreferBytesCachedDeserializable;
+import org.apache.geode.internal.size.ObjectGraphSizer;
 
 import distcache.DistCache;
 import distcache.DistCacheFactory;

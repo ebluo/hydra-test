@@ -23,9 +23,9 @@ import pdx.PdxTestVersionHelper;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.pdx.PdxInstance;
 
 /** CQ Listener to log events, increment counters, and gather all events in a Map. 
  *

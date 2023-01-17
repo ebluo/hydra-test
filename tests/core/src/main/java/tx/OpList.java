@@ -18,7 +18,7 @@ package tx;
 
 import java.util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A class that contains the operations that have occurred since a certain

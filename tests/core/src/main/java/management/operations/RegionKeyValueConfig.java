@@ -18,7 +18,7 @@ package management.operations;
 
 import java.util.List;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 /**
  * This interface abstracts out following tasks behind interface so as to

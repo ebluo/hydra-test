@@ -45,12 +45,12 @@ import util.TestException;
 import util.TestHelper;
 import admin.AdminTest;
 
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.internal.cache.BucketDump;
-import com.gemstone.gemfire.internal.cache.ForceReattemptException;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.internal.cache.BucketDump;
+import org.apache.geode.internal.cache.ForceReattemptException;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 /** Test class to fill a partitioned region.
  */

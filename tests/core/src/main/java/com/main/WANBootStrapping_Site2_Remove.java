@@ -19,8 +19,8 @@ package com.main;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.DistributionConfig;
 
 /**
  * This is a stand alone locator with a distributed-system-id = -2

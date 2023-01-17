@@ -32,13 +32,13 @@ import java.util.Iterator;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheFactory;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheFactory;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
 
 import cq.CQUtil;
 

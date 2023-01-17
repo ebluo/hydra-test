@@ -16,7 +16,7 @@
  */
 package management.operations.events;
 
-import com.gemstone.gemfire.distributed.DistributedLockService;
+import org.apache.geode.distributed.DistributedLockService;
 
 public interface DLockOperationEvents {
   

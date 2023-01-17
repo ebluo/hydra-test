@@ -16,8 +16,8 @@
  */
 package hydra.training;
 
-//import com.gemstone.gemfire.internal.LogWriterImpl;
-import com.gemstone.gemfire.SystemFailure;
+//import org.apache.geode.internal.LogWriterImpl;
+import org.apache.geode.SystemFailure;
 
 import hydra.Log;
 import java.io.DataInputStream;

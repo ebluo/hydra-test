@@ -20,8 +20,8 @@ import java.util.*;
 import java.rmi.*;
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.distributed.internal.membership.InternalDistributedMember;
+import org.apache.geode.LogWriter;
+import org.apache.geode.distributed.internal.membership.InternalDistributedMember;
 
 /**
  * A Hydra test that kills, starts, disconnects, connects members of the distributed

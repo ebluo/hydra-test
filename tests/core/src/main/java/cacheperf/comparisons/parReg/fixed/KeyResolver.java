@@ -16,8 +16,8 @@
  */
 package cacheperf.comparisons.parReg.fixed;
 
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.FixedPartitionResolver;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.FixedPartitionResolver;
 import hydra.ConfigPrms;
 import hydra.TestConfig;
 import java.io.Serializable;

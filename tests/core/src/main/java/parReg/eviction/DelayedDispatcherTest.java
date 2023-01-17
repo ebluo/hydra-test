@@ -26,11 +26,11 @@ import parReg.ParRegTest;
 import util.PRObserver;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.internal.cache.control.HeapMemoryMonitor;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceType;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.internal.cache.control.HeapMemoryMonitor;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceType;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
 
 public class DelayedDispatcherTest extends ParRegTest {
 

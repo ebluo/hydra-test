@@ -17,13 +17,13 @@
 
 package hydra.blackboard;
 
-import com.gemstone.gemfire.internal.concurrent.CFactory;
+import org.apache.geode.internal.concurrent.CFactory;
 import hydra.HydraInternalException;
 import hydra.HydraRuntimeException;
 import hydra.Log;
 import hydra.RemoteTestModule;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 import java.rmi.*;
 

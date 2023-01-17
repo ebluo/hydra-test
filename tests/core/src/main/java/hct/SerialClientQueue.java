@@ -22,7 +22,7 @@ import hydra.*;
 import hydra.blackboard.SharedCounters;
 import util.*;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /**
  * A version of the <code>SerialBridgeNotify</code> that performs operations

@@ -32,11 +32,11 @@ import java.util.Vector;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.internal.membership.InternalDistributedMember;
-import com.gemstone.gemfire.internal.cache.BucketDump;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.versions.VersionTag;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.internal.membership.InternalDistributedMember;
+import org.apache.geode.internal.cache.BucketDump;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.versions.VersionTag;
 
 /** Class to hold information about a bucket.
  */

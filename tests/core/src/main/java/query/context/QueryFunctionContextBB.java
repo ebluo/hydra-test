@@ -23,7 +23,7 @@ package query.context;
 import query.index.IndexValidator;
 import hydra.blackboard.Blackboard;
 
-// import com.gemstone.gemfire.cache.*;
+// import org.apache.geode.cache.*;
 
 public class QueryFunctionContextBB extends Blackboard {
 

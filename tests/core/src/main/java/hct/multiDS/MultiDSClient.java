@@ -17,7 +17,7 @@
 
 package hct.multiDS;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import hydra.*;
 import java.util.*;
 import util.TestException;

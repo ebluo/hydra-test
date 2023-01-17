@@ -25,12 +25,12 @@ import hydra.GatewaySenderHelper;
 import hydra.Log;
 import hydra.RemoteTestModule;
 
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventCallbackArgument;
-import com.gemstone.gemfire.internal.cache.wan.GatewaySenderEventImpl;
-import com.gemstone.gemfire.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
-import com.gemstone.gemfire.internal.cache.wan.serial.SerialGatewaySenderImpl;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.cache.wan.GatewaySender;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventCallbackArgument;
+import org.apache.geode.internal.cache.wan.GatewaySenderEventImpl;
+import org.apache.geode.internal.cache.wan.parallel.ParallelGatewaySenderImpl;
+import org.apache.geode.internal.cache.wan.serial.SerialGatewaySenderImpl;
 
 import util.SilenceListener;
 import util.SilenceListenerBB;

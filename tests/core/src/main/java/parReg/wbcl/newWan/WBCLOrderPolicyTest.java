@@ -27,7 +27,7 @@ import util.TestHelper;
 import wan.CacheClientPrms;
 import wan.WANBlackboard;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public class WBCLOrderPolicyTest extends OrderPolicyTest {  
   

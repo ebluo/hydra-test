@@ -17,11 +17,11 @@
 
 package hydratest.version.partition;
 
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEventQueue;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.asyncqueue.AsyncEventQueue;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.distributed.internal.DistributionConfig;
 import hydra.AsyncEventQueueHelper;
 import java.util.Properties;
 

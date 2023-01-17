@@ -17,11 +17,11 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.DiskStore;
-import com.gemstone.gemfire.cache.hdfs.HDFSStore;
-import com.gemstone.gemfire.cache.hdfs.HDFSStoreFactory;
-import com.gemstone.gemfire.cache.hdfs.internal.HDFSStoreFactoryImpl;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.DiskStore;
+import org.apache.geode.cache.hdfs.HDFSStore;
+import org.apache.geode.cache.hdfs.HDFSStoreFactory;
+import org.apache.geode.cache.hdfs.internal.HDFSStoreFactoryImpl;
 
 /**
  * Helps clients use {@link HDFSStoreDescription}.  Methods are thread-safe.

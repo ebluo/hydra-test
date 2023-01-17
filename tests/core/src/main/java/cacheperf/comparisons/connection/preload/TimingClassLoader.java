@@ -16,7 +16,7 @@
  */
 package cacheperf.comparisons.connection.preload;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import java.io.*;
 
 public class TimingClassLoader extends ClassLoader {

@@ -20,7 +20,7 @@ package hct;
 
 import hydra.*;
 
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.cache.util.*;
 
 /**
  * Convenience class for various BridgeMembershipListeners

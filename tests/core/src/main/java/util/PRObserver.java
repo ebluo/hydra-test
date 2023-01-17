@@ -25,10 +25,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.cache.Region;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 /** Class to observe when recovery or rebalancing occurs.
  *  The callbacks implemented here are called for both recovery and rebalancing.

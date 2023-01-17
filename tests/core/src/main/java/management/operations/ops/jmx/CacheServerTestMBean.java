@@ -40,8 +40,8 @@ import util.StopStartPrms;
 import util.StopStartVMs;
 import util.TestException;
 
-import com.gemstone.gemfire.management.ClientHealthStatus;
-import com.gemstone.gemfire.management.ServerLoadData;
+import org.apache.geode.management.ClientHealthStatus;
+import org.apache.geode.management.ServerLoadData;
 
 /**
  * Test Class for CacheServerMBean Attributes, operations and notifications

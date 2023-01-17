@@ -19,9 +19,9 @@ package dlock;
 import hydra.*;
 import util.*;
 
-import com.gemstone.gemfire.CancelException;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.locks.DLockService;
+import org.apache.geode.CancelException;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.locks.DLockService;
 
 public class DLSCreateDestroy {
 

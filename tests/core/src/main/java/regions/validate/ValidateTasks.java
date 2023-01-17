@@ -16,10 +16,10 @@
  */
 package regions.validate;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.Assert;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheXmlGenerator;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.Assert;
+import org.apache.geode.internal.cache.xmlcache.CacheXmlGenerator;
 import distcache.*;
 import distcache.gemfire.GemFireCacheTestImpl;
 import hydra.*;

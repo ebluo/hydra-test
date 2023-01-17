@@ -18,7 +18,7 @@ package parReg.query;
 
 import java.util.*;
 import java.io.Serializable;
-import com.gemstone.gemfire.cache.Declarable;
+import org.apache.geode.cache.Declarable;
 
 import objects.*;
 

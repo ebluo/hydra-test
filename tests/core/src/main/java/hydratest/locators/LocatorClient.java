@@ -17,7 +17,7 @@
 
 package hydratest.locators;
 
-import com.gemstone.gemfire.distributed.DistributedSystem;
+import org.apache.geode.distributed.DistributedSystem;
 import hydra.*;
 import perffmwk.*;
 import java.util.List;

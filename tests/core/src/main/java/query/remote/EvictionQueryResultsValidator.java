@@ -20,8 +20,8 @@ import hydra.Log;
 import hydra.RegionHelper;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.SelectResults;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.SelectResults;
 
 /**
  * Validates results of query which is fired on a region with eviction

@@ -25,7 +25,7 @@ import java.util.zip.CheckedInputStream;
 import java.util.zip.CheckedOutputStream;
 
 
-import com.gemstone.gemfire.cache.wan.GatewayTransportFilter;
+import org.apache.geode.cache.wan.GatewayTransportFilter;
 
 public class MyTransportFilter1 implements GatewayTransportFilter {
 

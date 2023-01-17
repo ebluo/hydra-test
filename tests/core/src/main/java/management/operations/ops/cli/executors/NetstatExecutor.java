@@ -21,9 +21,9 @@ import java.util.Map;
 
 import util.TestException;
 
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.i18n.CliStrings;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.i18n.CliStrings;
+import org.apache.geode.management.internal.cli.result.CommandResult;
 
 import management.cli.CommandOutputValidator;
 import management.cli.TestableGfsh;

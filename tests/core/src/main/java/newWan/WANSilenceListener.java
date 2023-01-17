@@ -20,7 +20,7 @@ import util.SilenceListener;
 import util.SilenceListenerBB;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 /**
  * WANSilenceListener can used for {@link WANTest#putSequentialKeysTask()} 

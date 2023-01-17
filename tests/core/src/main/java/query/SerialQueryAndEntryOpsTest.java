@@ -31,22 +31,22 @@ import query.index.IndexValidator;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.ServerOperationException;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.persistence.PartitionOfflineException;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.cache.query.internal.QueryObserverAdapter;
-import com.gemstone.gemfire.cache.query.internal.QueryObserverHolder;
-import com.gemstone.gemfire.cache.query.internal.index.CompactRangeIndex;
-import com.gemstone.gemfire.cache.query.internal.index.PartitionedIndex;
-import com.gemstone.gemfire.cache.query.internal.index.RangeIndex;
-import com.gemstone.gemfire.cache.query.internal.index.IndexStore.IndexStoreEntry;
-import com.gemstone.gemfire.internal.cache.BucketRegion;
-import com.gemstone.gemfire.internal.cache.LocalDataSet;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.persistence.query.CloseableIterator;
-import com.gemstone.gemfire.pdx.PdxInstance;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.ServerOperationException;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.persistence.PartitionOfflineException;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.cache.query.internal.QueryObserverAdapter;
+import org.apache.geode.cache.query.internal.QueryObserverHolder;
+import org.apache.geode.cache.query.internal.index.CompactRangeIndex;
+import org.apache.geode.cache.query.internal.index.PartitionedIndex;
+import org.apache.geode.cache.query.internal.index.RangeIndex;
+import org.apache.geode.cache.query.internal.index.IndexStore.IndexStoreEntry;
+import org.apache.geode.internal.cache.BucketRegion;
+import org.apache.geode.internal.cache.LocalDataSet;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.persistence.query.CloseableIterator;
+import org.apache.geode.pdx.PdxInstance;
 
 /**
  * A version of the <code>QueryTask</code> that performs operations serially. It

@@ -19,12 +19,12 @@
  */
 package pdx;
 
-import com.gemstone.gemfire.SerializationException;
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.client.ServerOperationException;
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.pdx.PdxSerializer;
-import com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer;
+import org.apache.geode.SerializationException;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.client.ServerOperationException;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.pdx.PdxSerializer;
+import org.apache.geode.pdx.ReflectionBasedAutoSerializer;
 
 import hydra.CacheHelper;
 import hydra.Log;

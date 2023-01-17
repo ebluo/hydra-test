@@ -19,7 +19,7 @@
  */
 package diskRecovery;
 
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheXmlParser;
+import org.apache.geode.internal.cache.xmlcache.CacheXmlParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;

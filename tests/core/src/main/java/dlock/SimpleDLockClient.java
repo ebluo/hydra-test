@@ -17,8 +17,8 @@
 
 package dlock;
 
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.*;
+import org.apache.geode.cache.*;
 
 import hydra.*;
 import java.io.*;

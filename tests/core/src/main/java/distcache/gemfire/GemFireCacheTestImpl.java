@@ -17,8 +17,8 @@
 
 package distcache.gemfire;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
 
 import distcache.*;
 import hydra.*;

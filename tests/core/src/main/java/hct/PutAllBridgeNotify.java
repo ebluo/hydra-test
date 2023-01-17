@@ -19,7 +19,7 @@
  */
 package hct;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import cq.CQUtilPrms;
 import parReg.query.NewPortfolio;

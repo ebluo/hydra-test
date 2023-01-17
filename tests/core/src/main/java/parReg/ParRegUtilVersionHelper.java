@@ -22,20 +22,20 @@ package parReg;
 import hydra.CacheHelper;
 import hydra.Log;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.EntryDestroyedException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.EntryDestroyedException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
 
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.pdx.PdxSerializable;
 
-import com.gemstone.gemfire.internal.cache.BucketDump;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
-import com.gemstone.gemfire.internal.cache.versions.RegionVersionHolder;
-import com.gemstone.gemfire.internal.cache.versions.RegionVersionVector;
-import com.gemstone.gemfire.internal.cache.versions.VersionSource;
-import com.gemstone.gemfire.internal.cache.versions.VersionTag;
+import org.apache.geode.internal.cache.BucketDump;
+import org.apache.geode.internal.cache.LocalRegion;
+import org.apache.geode.internal.cache.versions.RegionVersionHolder;
+import org.apache.geode.internal.cache.versions.RegionVersionVector;
+import org.apache.geode.internal.cache.versions.VersionSource;
+import org.apache.geode.internal.cache.versions.VersionTag;
 
 import pdx.PdxTest;
 import pdx.PdxTestVersionHelper;

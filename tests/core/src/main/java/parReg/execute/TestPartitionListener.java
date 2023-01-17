@@ -20,12 +20,12 @@ package parReg.execute;
 import java.io.Serializable;
 import java.util.Properties;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.partition.PartitionListenerAdapter;
-import com.gemstone.gemfire.cache.partition.PartitionManager;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.xmlcache.Declarable2;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.partition.PartitionListenerAdapter;
+import org.apache.geode.cache.partition.PartitionManager;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.xmlcache.Declarable2;
 
 public class TestPartitionListener extends PartitionListenerAdapter implements
     Serializable, Declarable2 {

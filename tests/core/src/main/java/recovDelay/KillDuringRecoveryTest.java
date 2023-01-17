@@ -20,7 +20,7 @@ import parReg.*;
 import hydra.*;
 import util.*;
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class KillDuringRecoveryTest extends KnownKeysTest {
 

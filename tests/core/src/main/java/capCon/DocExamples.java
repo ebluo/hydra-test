@@ -36,7 +36,7 @@
 package capCon;
 
 // DOCS: begin import for docs snippet
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 // DOCS: end import for docs snippet
 
 import util.NameFactory;

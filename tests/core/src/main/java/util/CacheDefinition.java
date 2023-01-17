@@ -17,8 +17,8 @@
 package util;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.control.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.control.*;
 
 /** Class used to define a valid combination of attributes and specifications
  *  for a cache.

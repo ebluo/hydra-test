@@ -15,7 +15,7 @@
  * LICENSE file.
  */
 package wan.ml;
-import com.gemstone.gemfire.SystemFailure;
+import org.apache.geode.SystemFailure;
 
 import java.util.*;
 import java.util.zip.*;

@@ -17,8 +17,8 @@
 
 package hydratest.network;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.NoAvailableServersException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.NoAvailableServersException;
 import hydra.*;
 
 /**

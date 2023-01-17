@@ -16,7 +16,7 @@
  */
 package util;
 
-import com.gemstone.gemfire.internal.i18n.LocalizedStrings;
+import org.apache.geode.internal.i18n.LocalizedStrings;
 
 /**
  * Provides version support for NameFactory.

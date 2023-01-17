@@ -18,9 +18,9 @@ package cacheperf.comparisons.replicated.execute;
 
 import java.io.Serializable;
 
-import com.gemstone.gemfire.cache.CacheStatistics;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
+import org.apache.geode.cache.CacheStatistics;
+import org.apache.geode.cache.Region;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
 
 public class RegionEntryHelper {
 

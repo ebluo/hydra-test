@@ -17,11 +17,11 @@
 
 package hydra;
 
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEventListener;
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEventQueue;
-import com.gemstone.gemfire.cache.asyncqueue.AsyncEventQueueFactory;
-import com.gemstone.gemfire.cache.util.Gateway.OrderPolicy;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
+import org.apache.geode.cache.asyncqueue.AsyncEventListener;
+import org.apache.geode.cache.asyncqueue.AsyncEventQueue;
+import org.apache.geode.cache.asyncqueue.AsyncEventQueueFactory;
+import org.apache.geode.cache.util.Gateway.OrderPolicy;
+import org.apache.geode.cache.wan.GatewaySender;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

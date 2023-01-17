@@ -31,22 +31,22 @@ import query.QueryTest;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.EvictionAction;
-import com.gemstone.gemfire.cache.EvictionAlgorithm;
-import com.gemstone.gemfire.cache.EvictionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.Index;
-import com.gemstone.gemfire.cache.query.IndexExistsException;
-import com.gemstone.gemfire.cache.query.IndexInvalidException;
-import com.gemstone.gemfire.cache.query.IndexNameConflictException;
-import com.gemstone.gemfire.cache.query.IndexType;
-import com.gemstone.gemfire.cache.query.QueryException;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.cache.query.internal.index.CompactRangeIndex;
-import com.gemstone.gemfire.cache.query.internal.index.MapRangeIndex;
-import com.gemstone.gemfire.cache.query.internal.index.PartitionedIndex;
-import com.gemstone.gemfire.cache.query.internal.index.RangeIndex;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.EvictionAction;
+import org.apache.geode.cache.EvictionAlgorithm;
+import org.apache.geode.cache.EvictionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.Index;
+import org.apache.geode.cache.query.IndexExistsException;
+import org.apache.geode.cache.query.IndexInvalidException;
+import org.apache.geode.cache.query.IndexNameConflictException;
+import org.apache.geode.cache.query.IndexType;
+import org.apache.geode.cache.query.QueryException;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.cache.query.internal.index.CompactRangeIndex;
+import org.apache.geode.cache.query.internal.index.MapRangeIndex;
+import org.apache.geode.cache.query.internal.index.PartitionedIndex;
+import org.apache.geode.cache.query.internal.index.RangeIndex;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 import distcache.gemfire.GemFireCachePrms;
 

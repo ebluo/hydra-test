@@ -41,20 +41,20 @@ import recovDelay.BucketState;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.EvictionAlgorithm;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.control.RebalanceFactory;
-import com.gemstone.gemfire.cache.control.RebalanceResults;
-import com.gemstone.gemfire.cache.control.ResourceManager;
-import com.gemstone.gemfire.cache.partition.PartitionMemberInfo;
-import com.gemstone.gemfire.cache.partition.PartitionRebalanceInfo;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.partition.PartitionRegionInfo;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.EvictionAlgorithm;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.control.RebalanceFactory;
+import org.apache.geode.cache.control.RebalanceResults;
+import org.apache.geode.cache.control.ResourceManager;
+import org.apache.geode.cache.partition.PartitionMemberInfo;
+import org.apache.geode.cache.partition.PartitionRebalanceInfo;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.partition.PartitionRegionInfo;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.internal.cache.PartitionedRegion;
 
 public class RebalanceUtil {
 

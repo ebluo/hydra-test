@@ -43,9 +43,9 @@ import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.admin.jmx.internal.AdminDistributedSystemJmxImpl;
-import com.gemstone.gemfire.internal.admin.StatAlertDefinition;
+import org.apache.geode.LogWriter;
+import org.apache.geode.admin.jmx.internal.AdminDistributedSystemJmxImpl;
+import org.apache.geode.internal.admin.StatAlertDefinition;
 
 /**
  * Intended to serve as a helper for JMX Clients

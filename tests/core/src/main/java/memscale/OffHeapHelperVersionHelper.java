@@ -19,7 +19,7 @@
  */
 package memscale;
 
-import com.gemstone.gemfire.internal.offheap.SimpleMemoryAllocatorImpl.Chunk;
+import org.apache.geode.internal.offheap.SimpleMemoryAllocatorImpl.Chunk;
 
 /**
  * @author lynng

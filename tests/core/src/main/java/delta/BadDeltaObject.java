@@ -21,7 +21,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import hydra.Log;
 import util.TestException;
-import com.gemstone.gemfire.InvalidDeltaException;
+import org.apache.geode.InvalidDeltaException;
 
 /** Class that intentionally causes errors in a users's implementation
  *  of the delta interface to make sure the product throws reasonable

@@ -28,10 +28,10 @@ import java.util.concurrent.CountDownLatch;
 
 import management.util.HydraUtil;
 
-import com.gemstone.gemfire.management.cli.Result;
-import com.gemstone.gemfire.management.internal.cli.CommandManager;
-import com.gemstone.gemfire.management.internal.cli.result.CommandResult;
-import com.gemstone.gemfire.management.internal.cli.shell.Gfsh;
+import org.apache.geode.management.cli.Result;
+import org.apache.geode.management.internal.cli.CommandManager;
+import org.apache.geode.management.internal.cli.result.CommandResult;
+import org.apache.geode.management.internal.cli.shell.Gfsh;
 
 
 /*-

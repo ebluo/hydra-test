@@ -44,24 +44,24 @@ import java.util.Set;
 
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.ClientHelper;
-import com.gemstone.gemfire.cache.GemFireCache;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.client.ClientCache;
-import com.gemstone.gemfire.cache.client.internal.PoolImpl;
-import com.gemstone.gemfire.distributed.internal.InternalDistributedSystem;
-import com.gemstone.gemfire.distributed.internal.ServerLocation;
-import com.gemstone.gemfire.internal.cache.BridgeServerImpl;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.internal.cache.HARegion;
-import com.gemstone.gemfire.internal.cache.LocalRegionHelper;
-import com.gemstone.gemfire.internal.cache.ha.HAHelper;
-import com.gemstone.gemfire.internal.cache.ha.HARegionQueue;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
-import com.gemstone.gemfire.internal.cache.tier.sockets.ClientProxyMembershipID;
-import com.gemstone.gemfire.internal.cache.tier.sockets.HaHelper;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.ClientHelper;
+import org.apache.geode.cache.GemFireCache;
+import org.apache.geode.cache.InterestResultPolicy;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.client.ClientCache;
+import org.apache.geode.cache.client.internal.PoolImpl;
+import org.apache.geode.distributed.internal.InternalDistributedSystem;
+import org.apache.geode.distributed.internal.ServerLocation;
+import org.apache.geode.internal.cache.BridgeServerImpl;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.internal.cache.HARegion;
+import org.apache.geode.internal.cache.LocalRegionHelper;
+import org.apache.geode.internal.cache.ha.HAHelper;
+import org.apache.geode.internal.cache.ha.HARegionQueue;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.internal.cache.tier.sockets.ClientProxyMembershipID;
+import org.apache.geode.internal.cache.tier.sockets.HaHelper;
 
 import cq.CQUtil;
 

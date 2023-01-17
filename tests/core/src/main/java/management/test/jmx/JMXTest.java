@@ -87,19 +87,19 @@ import management.util.ManagementUtil;
 import util.TestException;
 import util.TestHelper;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.CqException;
-import com.gemstone.gemfire.cache.query.QueryService;
-import com.gemstone.gemfire.cache.server.CacheServer;
-import com.gemstone.gemfire.distributed.DistributedMember;
-import com.gemstone.gemfire.distributed.DistributedSystem;
-import com.gemstone.gemfire.distributed.Locator;
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
-import com.gemstone.gemfire.internal.cache.GemFireCacheImpl;
-import com.gemstone.gemfire.management.ManagementService;
-import com.gemstone.gemfire.management.internal.MBeanJMXAdapter;
-import com.gemstone.gemfire.management.internal.SystemManagementService;
-import com.gemstone.gemfire.management.internal.beans.ResourceNotification;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.CqException;
+import org.apache.geode.cache.query.QueryService;
+import org.apache.geode.cache.server.CacheServer;
+import org.apache.geode.distributed.DistributedMember;
+import org.apache.geode.distributed.DistributedSystem;
+import org.apache.geode.distributed.Locator;
+import org.apache.geode.distributed.internal.InternalLocator;
+import org.apache.geode.internal.cache.GemFireCacheImpl;
+import org.apache.geode.management.ManagementService;
+import org.apache.geode.management.internal.MBeanJMXAdapter;
+import org.apache.geode.management.internal.SystemManagementService;
+import org.apache.geode.management.internal.beans.ResourceNotification;
 
 public class JMXTest {
   

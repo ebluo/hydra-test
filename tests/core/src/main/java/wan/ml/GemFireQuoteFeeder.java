@@ -20,8 +20,8 @@ import java.util.Properties;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
 
 /**
  * @author glow

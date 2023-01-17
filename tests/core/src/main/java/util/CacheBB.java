@@ -20,7 +20,7 @@ package util;
 import hydra.*;
 //import java.io.*;
 import hydra.blackboard.Blackboard;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class CacheBB extends Blackboard {
    

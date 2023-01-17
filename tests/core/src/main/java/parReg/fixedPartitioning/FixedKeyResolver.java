@@ -25,10 +25,10 @@ import java.util.Set;
 import parReg.colocation.Month;
 import parReg.execute.RoutingHolder;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.cache.EntryOperation;
-import com.gemstone.gemfire.cache.FixedPartitionResolver;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.cache.EntryOperation;
+import org.apache.geode.cache.FixedPartitionResolver;
 
 public class FixedKeyResolver implements FixedPartitionResolver, Serializable,
     RoutingHolder, DataSerializable {

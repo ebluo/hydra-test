@@ -20,8 +20,8 @@ package splitBrain;
 import hydra.*;
 import util.*;
 
-import com.gemstone.gemfire.admin.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.admin.*;
+import org.apache.geode.distributed.*;
 
 import java.io.*;
 

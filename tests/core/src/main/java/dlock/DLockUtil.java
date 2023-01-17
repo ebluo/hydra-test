@@ -17,9 +17,9 @@
 
 package dlock;
 
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.*;
+//import org.apache.geode.internal.cache.LocalRegion;
 import java.util.concurrent.locks.Lock;
 import util.*;
 import hydra.*;

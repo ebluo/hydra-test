@@ -18,7 +18,7 @@ package durableClients;
 
 import hydra.BasePrms;
 import util.TestException;
-import com.gemstone.gemfire.cache.InterestResultPolicy;
+import org.apache.geode.cache.InterestResultPolicy;
 
 /**
  * A class to store the Keys for the tests on Durable clients

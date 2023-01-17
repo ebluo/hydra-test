@@ -17,7 +17,7 @@
 
 package cacheperf.comparisons.replicated.execute;
 
-import com.gemstone.gemfire.cache.execute.Function;
+import org.apache.geode.cache.execute.Function;
 import hydra.AbstractDescription;
 import hydra.BasePrms;
 import hydra.HydraConfigException;

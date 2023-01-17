@@ -16,9 +16,9 @@
  */
 package objects;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.DataSerializer;
-import com.gemstone.gemfire.Instantiator;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.DataSerializer;
+import org.apache.geode.Instantiator;
 import hydra.GsRandom;
 import java.io.DataInput;
 import java.io.DataOutput;

@@ -18,8 +18,8 @@ package splitBrain;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
 
 import java.util.HashMap;
 import java.util.Map;

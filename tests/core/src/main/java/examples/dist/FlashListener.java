@@ -19,7 +19,7 @@ package examples.dist;
 import util.*;
 import hydra.*;
 //import hydra.blackboard.SharedCounters;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 /** Flashcache listener, to let the test know when TTL expires
  */

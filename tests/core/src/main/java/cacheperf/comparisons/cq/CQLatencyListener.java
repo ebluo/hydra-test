@@ -17,9 +17,9 @@
 package cacheperf.comparisons.cq;
 
 import cacheperf.AbstractLatencyListener;
-import com.gemstone.gemfire.cache.query.CqEvent;
-import com.gemstone.gemfire.cache.query.CqListener;
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.query.CqEvent;
+import org.apache.geode.cache.query.CqListener;
+import org.apache.geode.cache.EntryEvent;
 
 public class CQLatencyListener extends AbstractLatencyListener
 implements CqListener {

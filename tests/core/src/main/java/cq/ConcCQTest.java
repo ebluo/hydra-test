@@ -36,12 +36,12 @@ import hydra.blackboard.*;
 import cq.EntryEventListener;
 
 import java.util.Collections;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.query.*;
-import com.gemstone.gemfire.internal.NanoTimer;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientNotifier;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientProxy;
-import com.gemstone.gemfire.internal.cache.tier.sockets.ClientProxyMembershipID;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.query.*;
+import org.apache.geode.internal.NanoTimer;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientNotifier;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientProxy;
+import org.apache.geode.internal.cache.tier.sockets.ClientProxyMembershipID;
 
 import dunit.DistributedTestCase;
 import dunit.DistributedTestCase.WaitCriterion;

@@ -17,9 +17,9 @@
 
 package hydra.timeserver;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.internal.AvailablePort;
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.internal.AvailablePort;
+import org.apache.geode.internal.NanoTimer;
 
 import hydra.HostHelper;
 import hydra.Log;

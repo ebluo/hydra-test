@@ -26,12 +26,12 @@ import javax.sql.DataSource;
 import javax.transaction.UserTransaction;
 import javax.transaction.RollbackException;
 
-import com.gemstone.gemfire.InternalGemFireError;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.OSProcess;
-import com.gemstone.gemfire.internal.cache.*;
-import com.gemstone.gemfire.internal.datasource.DataSourceFactory;
-import com.gemstone.gemfire.internal.jta.GlobalTransaction;
+import org.apache.geode.InternalGemFireError;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.OSProcess;
+import org.apache.geode.internal.cache.*;
+import org.apache.geode.internal.datasource.DataSourceFactory;
+import org.apache.geode.internal.jta.GlobalTransaction;
 
 import dunit.DistributedTestCase;
 

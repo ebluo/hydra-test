@@ -19,7 +19,7 @@ package tx;
 import util.*;
 import hydra.*;
 import hydra.blackboard.*;
-//import com.gemstone.gemfire.cache.*;
+//import org.apache.geode.cache.*;
 //import java.util.TreeSet;
 
 public class TxBB extends Blackboard {

@@ -19,8 +19,8 @@ package dlock;
 import hydra.*;
 import hydra.blackboard.*;
 import util.*;
-import com.gemstone.gemfire.*;
-import com.gemstone.gemfire.distributed.*;
+import org.apache.geode.*;
+import org.apache.geode.distributed.*;
 import java.util.*;
 
 public class FairnessTest {

@@ -17,7 +17,7 @@
 package hydratest;
 
 import hydra.*;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 public class BridgeTest {
 

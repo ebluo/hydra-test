@@ -19,8 +19,8 @@
  */
 package util;
 
-import com.gemstone.gemfire.DataSerializable;
-import com.gemstone.gemfire.Instantiator;
+import org.apache.geode.DataSerializable;
+import org.apache.geode.Instantiator;
 
 /**
  * @author lynn

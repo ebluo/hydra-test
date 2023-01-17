@@ -24,7 +24,7 @@ import java.util.zip.Adler32;
 import java.util.zip.CheckedInputStream;
 import java.util.zip.CheckedOutputStream;
 
-import com.gemstone.gemfire.cache.wan.GatewayTransportFilter;
+import org.apache.geode.cache.wan.GatewayTransportFilter;
 
 public class MyTransportFilter2 implements GatewayTransportFilter{
 

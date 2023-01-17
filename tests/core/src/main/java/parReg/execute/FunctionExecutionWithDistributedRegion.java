@@ -41,16 +41,16 @@ import parReg.ParRegUtil;
 import util.PRObserver;
 import util.TestException;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.DataPolicy;
-import com.gemstone.gemfire.cache.PartitionAttributes;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.Function;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.distributed.DistributedLockService;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.DataPolicy;
+import org.apache.geode.cache.PartitionAttributes;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.Function;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.distributed.DistributedLockService;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 public class FunctionExecutionWithDistributedRegion extends ExecutionAndColocationTest {
   

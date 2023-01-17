@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 
-import com.gemstone.gemfire.cache.operations.OperationContext.OperationCode;
+import org.apache.geode.cache.operations.OperationContext.OperationCode;
 import templates.security.DummyAuthorization;
 import templates.security.UsernamePrincipal;
 

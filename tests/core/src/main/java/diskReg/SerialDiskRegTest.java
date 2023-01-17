@@ -19,9 +19,9 @@ package diskReg;
 import util.*;
 import hydra.*;
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.lru.MemLRUCapacityController;
-import com.gemstone.gemfire.internal.cache.LocalRegion;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.lru.MemLRUCapacityController;
+import org.apache.geode.internal.cache.LocalRegion;
 
 public class SerialDiskRegTest extends DiskRegTest {
 

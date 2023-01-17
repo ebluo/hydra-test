@@ -19,7 +19,7 @@ package admin;
 
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class AdminSystemMembershipListener extends AbstractListener implements SystemMembershipListener {
 

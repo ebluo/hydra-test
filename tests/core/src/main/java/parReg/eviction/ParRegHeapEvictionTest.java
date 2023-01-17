@@ -40,13 +40,13 @@ import util.TestException;
 import util.TestHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.query.Query;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.HeapMemoryMonitor;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager.ResourceType;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.query.Query;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.HeapMemoryMonitor;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
+import org.apache.geode.internal.cache.control.InternalResourceManager.ResourceType;
 
 public class ParRegHeapEvictionTest {
 

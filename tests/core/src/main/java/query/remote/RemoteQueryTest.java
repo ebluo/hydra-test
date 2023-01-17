@@ -22,12 +22,12 @@ import mapregion.MapBB;
 import util.TestException;
 import util.TestHelper;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.Pool;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.query.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.Pool;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.query.*;
 import query.*;
-import com.gemstone.gemfire.internal.cache.tier.sockets.CacheClientNotifier;
+import org.apache.geode.internal.cache.tier.sockets.CacheClientNotifier;
 
 
 /**

@@ -19,7 +19,7 @@ package splitBrain;
 import hydra.*;
 import hydra.blackboard.*;
 import java.util.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import util.*;
 
 /**

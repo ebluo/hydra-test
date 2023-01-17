@@ -17,7 +17,7 @@
 
 package distcache.hashmap;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 import distcache.*;
 import hydra.*;
 import java.util.*;

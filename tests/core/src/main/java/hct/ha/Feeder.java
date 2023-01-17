@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import util.TestException;
 import util.TestHelper;

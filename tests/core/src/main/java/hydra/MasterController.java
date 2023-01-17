@@ -17,7 +17,7 @@
 
 package hydra;
 
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.LogWriter;
 
 import hydra.log.LogPrms;
 import hydra.timeserver.*;

@@ -17,15 +17,15 @@
 
 package ssl;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.server.CacheServer;
-//import com.gemstone.gemfire.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.server.CacheServer;
+//import org.apache.geode.*;
 import java.util.*;
 import java.io.*;
-import com.gemstone.gemfire.distributed.internal.*;
-import com.gemstone.gemfire.cache.util.*;
+import org.apache.geode.distributed.internal.*;
+import org.apache.geode.cache.util.*;
 
 /** Connect to a cache as a peer with the config comming from system properties or gemfire.properties... */
 public class SSLBridgeServer {

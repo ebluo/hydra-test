@@ -26,7 +26,7 @@ import java.util.TreeMap;
 import javax.naming.Context;
 import javax.sql.DataSource;
 
-import com.gemstone.gemfire.cache.Cache;
+import org.apache.geode.cache.Cache;
 import hydra.CacheHelper;
 import hydra.HydraRuntimeException;
 import hydra.Log;

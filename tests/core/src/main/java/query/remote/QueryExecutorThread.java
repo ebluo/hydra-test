@@ -16,7 +16,7 @@
  */
 package query.remote;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 /**
  * Thread which executes Query. The thread is spwaned from

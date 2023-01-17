@@ -17,7 +17,7 @@
 
 package util;
 
-import com.gemstone.gemfire.internal.cache.xmlcache.RegionAttributesCreation;
+import org.apache.geode.internal.cache.xmlcache.RegionAttributesCreation;
 
 /**
  * Provides version-dependent support for DeclarativeGenerator.

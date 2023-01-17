@@ -22,8 +22,8 @@ import java.util.Set;
 
 import util.OperationsClient;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.Region;
 
 public class Operations extends OperationsClient {
 

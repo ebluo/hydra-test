@@ -16,7 +16,7 @@
  */
 package hydratest.version.hello;
 
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.internal.GemFireVersion;
 import hydra.Log;
 
 public class HelloWorld

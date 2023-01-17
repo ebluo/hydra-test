@@ -18,7 +18,7 @@ package hct;
 
 import util.*;
 import hydra.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 import event.*;
 
 /** PUtAll Test Listener.  Maintains counters based on CacheEvents passed

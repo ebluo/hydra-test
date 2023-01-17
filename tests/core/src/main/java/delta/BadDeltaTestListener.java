@@ -16,7 +16,7 @@
  */
 package delta; 
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 import hydra.Log;
 import util.TestException;

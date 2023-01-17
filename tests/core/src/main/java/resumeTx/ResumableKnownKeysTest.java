@@ -48,14 +48,14 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TransactionId;
-import com.gemstone.gemfire.cache.client.PoolManager;
-import com.gemstone.gemfire.cache.execute.Execution;
-import com.gemstone.gemfire.cache.execute.FunctionService;
-import com.gemstone.gemfire.cache.execute.ResultCollector;
-import com.gemstone.gemfire.cache.partition.PartitionRegionHelper;
-import com.gemstone.gemfire.cache.partition.PartitionRegionInfo;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TransactionId;
+import org.apache.geode.cache.client.PoolManager;
+import org.apache.geode.cache.execute.Execution;
+import org.apache.geode.cache.execute.FunctionService;
+import org.apache.geode.cache.execute.ResultCollector;
+import org.apache.geode.cache.partition.PartitionRegionHelper;
+import org.apache.geode.cache.partition.PartitionRegionInfo;
 
 public class ResumableKnownKeysTest {
 

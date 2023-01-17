@@ -20,8 +20,8 @@ package hct;
 import hydra.*;
 import hydra.blackboard.*;
 
-import com.gemstone.gemfire.cache.util.*;
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.cache.util.*;
+import org.apache.geode.admin.*;
 
 public class UniversalMembershipListener extends UniversalMembershipListenerAdapter {
 

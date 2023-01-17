@@ -51,17 +51,17 @@ import util.TestHelper;
 import util.TxHelper;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.CacheClosedException;
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.CommitConflictException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.TimeoutException;
-import com.gemstone.gemfire.cache.TransactionDataNodeHasDepartedException;
-import com.gemstone.gemfire.cache.TransactionDataRebalancedException;
-import com.gemstone.gemfire.cache.TransactionException;
-import com.gemstone.gemfire.cache.TransactionInDoubtException;
-import com.gemstone.gemfire.cache.wan.GatewaySender;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.CacheClosedException;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.CommitConflictException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.TimeoutException;
+import org.apache.geode.cache.TransactionDataNodeHasDepartedException;
+import org.apache.geode.cache.TransactionDataRebalancedException;
+import org.apache.geode.cache.TransactionException;
+import org.apache.geode.cache.TransactionInDoubtException;
+import org.apache.geode.cache.wan.GatewaySender;
 
 public class WANOperationsClient extends OperationsClient {
 

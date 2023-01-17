@@ -26,12 +26,12 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.*;
 import org.apache.hadoop.util.*;
 
-import com.gemstone.gemfire.cache.Operation;
+import org.apache.geode.cache.Operation;
 
-import com.gemstone.gemfire.cache.hdfs.internal.PersistedEventImpl;
-import com.gemstone.gemfire.cache.hdfs.internal.hoplog.mapreduce.GFInputFormat;
-import com.gemstone.gemfire.cache.hdfs.internal.hoplog.mapreduce.GFOutputFormat;
-import com.gemstone.gemfire.cache.hdfs.internal.hoplog.mapreduce.GFKey;
+import org.apache.geode.cache.hdfs.internal.PersistedEventImpl;
+import org.apache.geode.cache.hdfs.internal.hoplog.mapreduce.GFInputFormat;
+import org.apache.geode.cache.hdfs.internal.hoplog.mapreduce.GFOutputFormat;
+import org.apache.geode.cache.hdfs.internal.hoplog.mapreduce.GFKey;
 
 import hydra.*;
 import util.*;

@@ -19,10 +19,10 @@ package parReg.tx;
 
 import java.util.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.execute.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.execute.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.internal.cache.*;
 
 import hydra.*;
 import hydra.blackboard.*;

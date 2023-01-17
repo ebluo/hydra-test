@@ -17,7 +17,7 @@
 
 package cacheperf.gemfire;
 
-import com.gemstone.gemfire.cache.EntryEvent;
+import org.apache.geode.cache.EntryEvent;
 
 /**
  *  A cache listener that records message latency statistics on updates and then

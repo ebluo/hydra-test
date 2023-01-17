@@ -22,11 +22,11 @@ import java.util.*;
 
 import newWan.WANTestPrms;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.client.*;
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.internal.cache.PartitionedRegion;
-import com.gemstone.gemfire.internal.cache.control.InternalResourceManager;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.client.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.internal.cache.PartitionedRegion;
+import org.apache.geode.internal.cache.control.InternalResourceManager;
 
 import getInitialImage.*;
 import parReg.colocation.Month;

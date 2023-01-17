@@ -19,8 +19,8 @@ package tx.capCon;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
 import java.util.*;
 import tx.*;
 

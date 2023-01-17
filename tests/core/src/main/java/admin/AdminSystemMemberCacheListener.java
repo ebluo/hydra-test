@@ -17,7 +17,7 @@
 
 package admin;
 
-import com.gemstone.gemfire.admin.*;
+import org.apache.geode.admin.*;
 
 public class AdminSystemMemberCacheListener extends AbstractListener implements SystemMemberCacheListener {
 

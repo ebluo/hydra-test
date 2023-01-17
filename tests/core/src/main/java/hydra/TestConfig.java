@@ -37,10 +37,10 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.internal.AvailablePort;
-import com.gemstone.gemfire.internal.GemFireVersion;
+import org.apache.geode.LogWriter;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.internal.AvailablePort;
+import org.apache.geode.internal.GemFireVersion;
 
 /**
  *

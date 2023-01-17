@@ -17,8 +17,8 @@
 
 package hydra;
 
-import com.gemstone.gemfire.distributed.internal.InternalLocator;
-import com.gemstone.gemfire.LogWriter;
+import org.apache.geode.distributed.internal.InternalLocator;
+import org.apache.geode.LogWriter;
 import java.util.Properties;
 import java.net.InetAddress;
 import java.io.IOException;

@@ -28,8 +28,8 @@ import javax.sql.DataSource;
 import javax.transaction.UserTransaction;
 import javax.transaction.RollbackException;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.internal.cache.*;
+import org.apache.geode.cache.*;
+import org.apache.geode.internal.cache.*;
 
 import util.*;
 import hydra.*;

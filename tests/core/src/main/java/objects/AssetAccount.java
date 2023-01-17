@@ -16,7 +16,7 @@
  */
 package objects;
 
-import com.gemstone.gemfire.internal.NanoTimer;
+import org.apache.geode.internal.NanoTimer;
 import hydra.BasePrms;
 import hydra.RemoteTestModule;
 import java.io.Serializable;

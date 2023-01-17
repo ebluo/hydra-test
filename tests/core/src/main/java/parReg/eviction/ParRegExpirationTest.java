@@ -38,12 +38,12 @@ import util.TestHelper;
 import util.TestHelperPrms;
 import util.TxHelper;
 
-import com.gemstone.gemfire.cache.Cache;
-import com.gemstone.gemfire.cache.CacheLoaderException;
-import com.gemstone.gemfire.cache.CacheWriterException;
-import com.gemstone.gemfire.cache.Region;
-import com.gemstone.gemfire.cache.RegionAttributes;
-import com.gemstone.gemfire.cache.TimeoutException;
+import org.apache.geode.cache.Cache;
+import org.apache.geode.cache.CacheLoaderException;
+import org.apache.geode.cache.CacheWriterException;
+import org.apache.geode.cache.Region;
+import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.TimeoutException;
 
 import expiration.ExpirPrms;
 import expiration.ExpirationBB;

@@ -40,8 +40,8 @@ import util.MethodCoordinator;
 import util.TestException;
 import util.ValueHolder;
 
-import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.LogWriter;
+import org.apache.geode.cache.Region;
 
 public class WanFilterTest {
   

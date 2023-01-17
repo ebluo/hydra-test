@@ -17,7 +17,7 @@
 
 package perffmwk.samples;
 
-import com.gemstone.gemfire.*;
+import org.apache.geode.*;
 import hydra.*;
 import perffmwk.*;
 import java.util.*;

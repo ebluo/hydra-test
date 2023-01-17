@@ -17,9 +17,9 @@
                                                                                
 package tx;
                                                                                
-//import com.gemstone.gemfire.LogWriter;
-import com.gemstone.gemfire.cache.*;
-//import com.gemstone.gemfire.internal.cache.*;
+//import org.apache.geode.LogWriter;
+import org.apache.geode.cache.*;
+//import org.apache.geode.internal.cache.*;
 import hydra.*;
 //import hydra.blackboard.*;
 //import diskReg.DiskRegUtil.*;

@@ -20,10 +20,10 @@ import pdx.PdxTest;
 import util.*;
 import hydra.*;
 
-import com.gemstone.gemfire.cache.*;
-import com.gemstone.gemfire.cache.EntryEvent;
-import com.gemstone.gemfire.pdx.PdxInstance;
-import com.gemstone.gemfire.SerializationException;
+import org.apache.geode.cache.*;
+import org.apache.geode.cache.EntryEvent;
+import org.apache.geode.pdx.PdxInstance;
+import org.apache.geode.SerializationException;
 
 import java.io.IOException;
 

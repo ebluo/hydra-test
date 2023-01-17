@@ -19,8 +19,8 @@ package parReg.tx;
 import java.util.*;
 import java.io.Serializable;
 
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.cache.*;
 
 import util.*;
 import hydra.*;

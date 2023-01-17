@@ -16,7 +16,7 @@
  */
 package objects.query;
 
-import com.gemstone.gemfire.cache.Region;
+import org.apache.geode.cache.Region;
 
 import java.util.List;
 import java.util.Map;

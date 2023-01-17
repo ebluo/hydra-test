@@ -20,13 +20,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.gemstone.gemfire.cache.query.data.CollectionHolder;
-import com.gemstone.gemfire.cache.query.data.ComparableWrapper;
-import com.gemstone.gemfire.cache.query.data.PositionPdx;
-import com.gemstone.gemfire.internal.Assert;
-import com.gemstone.gemfire.pdx.PdxReader;
-import com.gemstone.gemfire.pdx.PdxSerializable;
-import com.gemstone.gemfire.pdx.PdxWriter;
+import org.apache.geode.cache.query.data.CollectionHolder;
+import org.apache.geode.cache.query.data.ComparableWrapper;
+import org.apache.geode.cache.query.data.PositionPdx;
+import org.apache.geode.internal.Assert;
+import org.apache.geode.pdx.PdxReader;
+import org.apache.geode.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxWriter;
 
 public class PdxPortfolio implements PdxSerializable, ConfigurableObject {
 

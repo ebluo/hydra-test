@@ -17,9 +17,9 @@
 
 package hydra;
 
-import com.gemstone.gemfire.internal.LogWriterImpl;
-import com.gemstone.gemfire.distributed.internal.DistributionConfig;
-import com.gemstone.gemfire.security.*;
+import org.apache.geode.internal.LogWriterImpl;
+import org.apache.geode.distributed.internal.DistributionConfig;
+import org.apache.geode.security.*;
 import java.io.Serializable;
 import java.util.*;
 

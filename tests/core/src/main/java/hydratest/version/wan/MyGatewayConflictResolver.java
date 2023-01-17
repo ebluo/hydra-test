@@ -16,9 +16,9 @@
  */
 package hydratest.version.wan;
 
-import com.gemstone.gemfire.cache.util.GatewayConflictHelper;
-import com.gemstone.gemfire.cache.util.GatewayConflictResolver;
-import com.gemstone.gemfire.cache.util.TimestampedEntryEvent;
+import org.apache.geode.cache.util.GatewayConflictHelper;
+import org.apache.geode.cache.util.GatewayConflictResolver;
+import org.apache.geode.cache.util.TimestampedEntryEvent;
 
 public class MyGatewayConflictResolver implements GatewayConflictResolver {
   public void onEvent(TimestampedEntryEvent event, GatewayConflictHelper helper) {

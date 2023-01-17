@@ -17,8 +17,8 @@
 
 package cacheperf.gemfire.slowRecv;
 
-import com.gemstone.gemfire.distributed.*;
-import com.gemstone.gemfire.distributed.internal.*;
+import org.apache.geode.distributed.*;
+import org.apache.geode.distributed.internal.*;
 
 import hydra.*;
 import util.*;

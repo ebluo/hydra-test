@@ -20,8 +20,8 @@ import java.util.*;
 import util.*;
 import hydra.Log;
 
-import com.gemstone.gemfire.SystemFailure;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.SystemFailure;
+import org.apache.geode.cache.*;
 
 public class EvictListener extends util.AbstractListener implements CacheListener {
 

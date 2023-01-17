@@ -26,11 +26,11 @@ import java.util.List;
 
 import memscale.OffHeapHelper;
 
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheCreation;
-import com.gemstone.gemfire.internal.cache.xmlcache.CacheXmlGenerator;
-import com.gemstone.gemfire.internal.cache.xmlcache.RegionAttributesCreation;
+import org.apache.geode.internal.cache.xmlcache.CacheCreation;
+import org.apache.geode.internal.cache.xmlcache.CacheXmlGenerator;
+import org.apache.geode.internal.cache.xmlcache.RegionAttributesCreation;
 
 /** Class to generate xml for declarative caching */
 public class DeclarativeGenerator {

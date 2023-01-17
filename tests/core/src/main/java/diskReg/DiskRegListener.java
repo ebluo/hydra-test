@@ -18,7 +18,7 @@ package diskReg;
 
 import util.*;
 //import hydra.Log;
-import com.gemstone.gemfire.cache.*;
+import org.apache.geode.cache.*;
 
 public class DiskRegListener extends util.AbstractListener implements CacheListener {
 
