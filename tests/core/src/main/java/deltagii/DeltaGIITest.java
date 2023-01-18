@@ -107,37 +107,37 @@ public class DeltaGIITest {
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_createGatewayHub() {
-    String hubConfig = ConfigPrms.getGatewayHubConfig();
-    Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfig);
-    GatewayHubHelper.createGatewayHub(hubConfig);
-  }
+  // public static void HydraTask_createGatewayHub() { //rm ghub
+  //   String hubConfig = ConfigPrms.getGatewayHubConfig();
+  //   Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfig);
+  //   GatewayHubHelper.createGatewayHub(hubConfig);
+  // }
   
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_addGatewayHub() {
-    String gatewayConfig = ConfigPrms.getGatewayConfig();
-    Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfig);
-    GatewayHubHelper.addGateways(gatewayConfig);
-  }
+  // public static void HydraTask_addGatewayHub() {
+  //   String gatewayConfig = ConfigPrms.getGatewayConfig();
+  //   Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfig);
+  //   GatewayHubHelper.addGateways(gatewayConfig);
+  // }
   
   /** Start gateway hub
    * 
    */
-  public static void HydraTask_startGatewayHub() {
-    Log.getLogWriter().info("Starting gateway hub");
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void HydraTask_startGatewayHub() {
+  //   Log.getLogWriter().info("Starting gateway hub");
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /** Stop the gateway hub
    * 
    */
-  public static void HydraTask_stopGatewayHub() {
-    GatewayHubHelper.stopGatewayHub();
-    GatewayHubBlackboard.getInstance().getSharedMap().clear();
-    DistributedSystemBlackboard.getInstance().getSharedMap().clear();
-  }
+  // public static void HydraTask_stopGatewayHub() {
+  //   GatewayHubHelper.stopGatewayHub();
+  //   GatewayHubBlackboard.getInstance().getSharedMap().clear();
+  //   DistributedSystemBlackboard.getInstance().getSharedMap().clear();
+  // }
 
   /** Creates and initializes a server or peer. 
    */

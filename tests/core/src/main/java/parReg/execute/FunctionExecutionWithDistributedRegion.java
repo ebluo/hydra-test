@@ -20,7 +20,7 @@ import hydra.BridgeHelper;
 import hydra.BridgePrms;
 import hydra.CacheHelper;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayPrms;
+// import hydra.GatewayPrms; //rm ghub
 import hydra.Log;
 import hydra.RegionHelper;
 import hydra.RemoteTestModule;
@@ -162,8 +162,8 @@ public class FunctionExecutionWithDistributedRegion extends ExecutionAndColocati
 
     aRegion = RegionHelper.createRegion(regDescriptName);
     isBridgeConfiguration = (TestConfig.tab().vecAt(BridgePrms.names, null) != null);
-    isGatewayConfiguration = (TestConfig.tab()
-        .stringAt(GatewayPrms.names, null) != null);
+    // isGatewayConfiguration = (TestConfig.tab()
+    //     .stringAt(GatewayPrms.names, null) != null);
     lockOperations = TestConfig.tab().booleanAt(ParRegPrms.lockOperations,
         false);
     if (lockOperations) {

@@ -22,7 +22,7 @@ import hydra.CacheHelper;
 import hydra.ClientVmInfo;
 import hydra.ClientVmMgr;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayHubHelper;
+// import hydra.GatewayHubHelper;
 import hydra.GsRandom;
 import hydra.HydraSubthread;
 import hydra.HydraThreadGroup;
@@ -236,28 +236,28 @@ public class StartupShutdownTest {
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_createGatewayHub() {
-    String hubConfigName = "gatewayHub";
-    Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfigName);
-    GatewayHubHelper.createGatewayHub(hubConfigName);
-  }
+  // public static void HydraTask_createGatewayHub() {
+  //   String hubConfigName = "gatewayHub";
+  //   Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfigName);
+  //   GatewayHubHelper.createGatewayHub(hubConfigName);
+  // }
 
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_addGatewayHub() {
-    String gatewayConfigName = "gateway";
-    Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfigName);
-    GatewayHubHelper.addGateways(gatewayConfigName);
-  }
+  // public static void HydraTask_addGatewayHub() {
+  //   String gatewayConfigName = "gateway";
+  //   Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfigName);
+  //   GatewayHubHelper.addGateways(gatewayConfigName);
+  // }
 
   /** Start gateway hub
    * 
    */
-  public static void HydraTask_startGatewayHub() {
-    Log.getLogWriter().info("Starting gateway hub");
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void HydraTask_startGatewayHub() {
+  //   Log.getLogWriter().info("Starting gateway hub");
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   public static void HydraTask_serversAreBack() {
     long counter = RecoveryBB.getBB().getSharedCounters().incrementAndRead(RecoveryBB.serversAreBack);

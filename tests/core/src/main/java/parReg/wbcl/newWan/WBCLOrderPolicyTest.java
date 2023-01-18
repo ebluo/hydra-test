@@ -74,7 +74,7 @@ public class WBCLOrderPolicyTest extends OrderPolicyTest {
      ((WBCLOrderPolicyTest)testInstance).createGatewaySender();     
      ((WBCLOrderPolicyTest)testInstance).createRegion();
      ((WBCLOrderPolicyTest)testInstance).createAsyncEventListener();
-     ((WBCLOrderPolicyTest)testInstance).createGatewayHub();
+    //  ((WBCLOrderPolicyTest)testInstance).createGatewayHub(); //rm ghub
 
      // single randomValues for this VM
      randomValues = new RandomValues();

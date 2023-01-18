@@ -24,7 +24,7 @@ import hydra.ClientVmNotFoundException;
 import hydra.ConfigHashtable;
 import hydra.ConfigPrms;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayHubHelper;
+// import hydra.GatewayHubHelper;  //rm ghub
 import hydra.GsRandom;
 import hydra.HydraRuntimeException;
 import hydra.Log;
@@ -58,11 +58,11 @@ import org.apache.geode.cache.RegionEvent;
 import org.apache.geode.cache.RegionExistsException;
 import org.apache.geode.cache.server.CacheServer;
 import org.apache.geode.cache.util.CacheListenerAdapter;
-import org.apache.geode.cache.util.GatewayHub;
+// import org.apache.geode.cache.util.GatewayHub;
 import org.apache.geode.distributed.DistributedSystem;
 import org.apache.geode.distributed.internal.DistributionConfig;
 import org.apache.geode.distributed.internal.InternalDistributedSystem;
-import org.apache.geode.internal.cache.GatewayHubStatus;
+// import org.apache.geode.internal.cache.GatewayHubStatus;
 import org.apache.geode.internal.cache.HARegion;
 import org.apache.geode.internal.cache.tier.InternalBridgeMembership;
 
@@ -203,7 +203,7 @@ public class RecycleSystem
 
 			RecycleSysBlackboard.getInstance().getSharedMap().remove(disSys.getMemberId());
 			
-			GatewayHubHelper.stopGatewayHub();
+			// GatewayHubHelper.stopGatewayHub();
 			BridgeHelper.stopBridgeServer();
 			CacheHelper.closeCache();
 			
@@ -217,60 +217,60 @@ public class RecycleSystem
 		}
 	}
 	
-	public static void stopGateways()
-	{
-		if (CacheHelper.getCache()!=null && GatewayHubHelper.getGatewayHub()!=null)
-		{
-			GatewayHubHelper.getGatewayHub().stopGateways();
-			//GatewayHubHelper.getGatewayHub().removeGateway(arg0)
-			logger.info("RecycleSystem:stopGateways:: Stopped all Gateways in the Hub");
-		} else 
-		{
-			logger.info("RecycleSystem:stopGateways:: There was no Cache or Hub");
-		}
-	}
+	// public static void stopGateways()
+	// {
+	// 	if (CacheHelper.getCache()!=null && GatewayHubHelper.getGatewayHub()!=null)
+	// 	{
+	// 		GatewayHubHelper.getGatewayHub().stopGateways();
+	// 		//GatewayHubHelper.getGatewayHub().removeGateway(arg0)
+	// 		logger.info("RecycleSystem:stopGateways:: Stopped all Gateways in the Hub");
+	// 	} else 
+	// 	{
+	// 		logger.info("RecycleSystem:stopGateways:: There was no Cache or Hub");
+	// 	}
+	// }
 
-	public static void stopGatewayHub()
-	{
-		if (CacheHelper.getCache()!=null && GatewayHubHelper.getGatewayHub()!=null)
-		{
-			DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
-			Cache cache = CacheHelper.getCache();
-			GemFireMemberStatus status = new GemFireMemberStatus(cache);
+	// public static void stopGatewayHub()
+	// {
+	// 	if (CacheHelper.getCache()!=null && GatewayHubHelper.getGatewayHub()!=null)
+	// 	{
+	// 		DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
+	// 		Cache cache = CacheHelper.getCache();
+	// 		GemFireMemberStatus status = new GemFireMemberStatus(cache);
 			
-			GatewayHubHelper.getGatewayHub().stopGateways();
-			GatewayHubHelper.stopGatewayHub();
-			//GatewayHubHelper.getGatewayHub().removeGateway(arg0)
+	// 		GatewayHubHelper.getGatewayHub().stopGateways();
+	// 		GatewayHubHelper.stopGatewayHub();
+	// 		//GatewayHubHelper.getGatewayHub().removeGateway(arg0)
 
-			// Increment Shared Counter for Gateway
-			if (status.getIsPrimaryGatewayHub())
-			{
-				long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-								decrementAndRead(RecycleSysBlackboard.numOfPrimaryGateways);
+	// 		// Increment Shared Counter for Gateway
+	// 		if (status.getIsPrimaryGatewayHub())
+	// 		{
+	// 			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 							decrementAndRead(RecycleSysBlackboard.numOfPrimaryGateways);
 				
-				logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Prim Hub." +
-							"Current total=" + num);
-			} else if (status.getIsSecondaryGatewayHub())
-			{
-				long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-								decrementAndRead(RecycleSysBlackboard.numOfSecondaryGateways);
+	// 			logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Prim Hub." +
+	// 						"Current total=" + num);
+	// 		} else if (status.getIsSecondaryGatewayHub())
+	// 		{
+	// 			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 							decrementAndRead(RecycleSysBlackboard.numOfSecondaryGateways);
 					
-				logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Seco Hub." +
-							"Current total=" + num);
-			} else 
-			{
-				long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-								decrementAndRead(RecycleSysBlackboard.numOfGateways);
+	// 			logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Seco Hub." +
+	// 						"Current total=" + num);
+	// 		} else 
+	// 		{
+	// 			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 							decrementAndRead(RecycleSysBlackboard.numOfGateways);
 					
-				logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Hub." +
-							"Current total=" + num);
-			} 
+	// 			logger.info("RecycleSystem:stopGateways:: Stopped all Gateways & the Hub." +
+	// 						"Current total=" + num);
+	// 		} 
 				
-		} else 
-		{
-			logger.info("RecycleSystem:stopGateways:: There was no Cache or Hub");
-		}
-	}
+	// 	} else 
+	// 	{
+	// 		logger.info("RecycleSystem:stopGateways:: There was no Cache or Hub");
+	// 	}
+	// }
 	
 	/**
 	 * Initializes a peer cache based on the {@link ConfigPrms}.
@@ -307,65 +307,65 @@ public class RecycleSystem
 	/**
 	 * Initializes a Gateway Hub cache based on the {@link ConfigPrms}.
 	 */
-	public static void createGatewayCache() 
-	{
-		String bridgeConfig 	= ConfigPrms.getBridgeConfig();
-		String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();		
-		String gatewayConfig 	= ConfigPrms.getGatewayConfig();
+	// public static void createGatewayCache() 
+	// {
+	// 	String bridgeConfig 	= ConfigPrms.getBridgeConfig();
+	// 	String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();		
+	// 	String gatewayConfig 	= ConfigPrms.getGatewayConfig();
 
-		startCache();
+	// 	startCache();
 		
-		BridgeHelper.startBridgeServer(bridgeConfig);
-		GatewayHub hub =GatewayHubHelper.createGatewayHub(ConfigPrms.getGatewayHubConfig());
-		logger.info("RecycleSystem::createGatewayCache::setpForDS = " + 
-					CacheHelper.getCache().getDistributedSystem().getName());
+	// 	BridgeHelper.startBridgeServer(bridgeConfig);
+	// 	GatewayHub hub =GatewayHubHelper.createGatewayHub(ConfigPrms.getGatewayHubConfig());
+	// 	logger.info("RecycleSystem::createGatewayCache::setpForDS = " + 
+	// 				CacheHelper.getCache().getDistributedSystem().getName());
 
-	}
+	// }
 	
-	public static void createGateways()
-	{
-		if (GatewayHubHelper.getGatewayHub()!=null)
-		{
-			GatewayHubHelper.addGateways(ConfigPrms.getGatewayConfig());
-			startGatewayHub();			
-		} else {
-			logger.info("RecycleSystem::createGateways::No Gateway Added " + 
-					    "No Gateway Hub identified");
-		}
-	}
+	// public static void createGateways()
+	// {
+	// 	if (GatewayHubHelper.getGatewayHub()!=null)
+	// 	{
+	// 		GatewayHubHelper.addGateways(ConfigPrms.getGatewayConfig());
+	// 		startGatewayHub();			
+	// 	} else {
+	// 		logger.info("RecycleSystem::createGateways::No Gateway Added " + 
+	// 				    "No Gateway Hub identified");
+	// 	}
+	// }
 
 	/**
 	 * Start a a Gateway Hub earlier created
 	 */
-	public static void startGateways() 
-	{
-		try {
-			GatewayHubHelper.getGatewayHub().startGateways();
-		} catch (IOException ioEx) {
-                  String err = "Problem starting gateways";
-                  throw new HydraRuntimeException(err, ioEx);
-		}
-	}
+	// public static void startGateways() 
+	// {
+	// 	try {
+	// 		GatewayHubHelper.getGatewayHub().startGateways();
+	// 	} catch (IOException ioEx) {
+    //               String err = "Problem starting gateways";
+    //               throw new HydraRuntimeException(err, ioEx);
+	// 	}
+	// }
 	
 	/**
 	 * Start a a Gateway Hub earlier created
 	 */
-	public static void startGatewayHub() 
-	{
-			GatewayHubHelper.startGatewayHub();
-               try {
-                        GatewayHubHelper.getGatewayHub().startGateways();
-               } catch (IOException ioEx) {
-                  String err = "Problem starting gateways";
-                  throw new HydraRuntimeException(err, ioEx);
-               }
+	// public static void startGatewayHub() 
+	// {
+	// 		GatewayHubHelper.startGatewayHub();
+    //            try {
+    //                     GatewayHubHelper.getGatewayHub().startGateways();
+    //            } catch (IOException ioEx) {
+    //               String err = "Problem starting gateways";
+    //               throw new HydraRuntimeException(err, ioEx);
+    //            }
 
-	                GemFireMemberStatus status = new GemFireMemberStatus(
-	                    CacheHelper.getCache());
+	//                 GemFireMemberStatus status = new GemFireMemberStatus(
+	//                     CacheHelper.getCache());
 
-	                RecycleSysBlackboard.getInstance().getSharedMap().
-	                      put(status.getMemberId(), status);			
-	}
+	//                 RecycleSysBlackboard.getInstance().getSharedMap().
+	//                       put(status.getMemberId(), status);			
+	// }
 	
 	/**
 	 * Initializes a edge cache based on the {@link ConfigPrms}.
@@ -430,89 +430,89 @@ public class RecycleSystem
 	/**
 	 * Stop the existing Cache entities and then re-init
 	 */
-	public static void restartGatewayCache()
-	{
-	    // Add Gateways
-	    if (executionCount == 0) 
-	    {
-			GatewayHubHelper.addGateways(ConfigPrms.getGatewayConfig());
-			GatewayHubHelper.startGatewayHub();	    
-	    }
+	// public static void restartGatewayCache()
+	// {
+	//     // Add Gateways
+	//     if (executionCount == 0) 
+	//     {
+	// 		GatewayHubHelper.addGateways(ConfigPrms.getGatewayConfig());
+	// 		GatewayHubHelper.startGatewayHub();	    
+	//     }
 	    
-	    int sleepSecs = restart();
-	    try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
+	//     int sleepSecs = restart();
+	//     try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
 	    
-	    // Stop Gateways only
-		stopGateways();
+	//     // Stop Gateways only
+	// 	stopGateways();
 		
-		// Let us re-start
-		startGateways();
+	// 	// Let us re-start
+	// 	startGateways();
 
-		DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
-		Cache cache = CacheHelper.getCache();
-		GemFireMemberStatus status = new GemFireMemberStatus(cache);
-		logger.info("RecycleSystem::restartgatewayCache:Status = " + ((GatewayHubStatus)(status.getGatewayHubStatus())).getGatewayStatuses()[0].getEndpointStatuses().length);
-		logger.info("RecycleSystem::restartgatewayCache:Status = " + status.toString());
-	}
+	// 	DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
+	// 	Cache cache = CacheHelper.getCache();
+	// 	GemFireMemberStatus status = new GemFireMemberStatus(cache);
+	// 	logger.info("RecycleSystem::restartgatewayCache:Status = " + ((GatewayHubStatus)(status.getGatewayHubStatus())).getGatewayStatuses()[0].getEndpointStatuses().length);
+	// 	logger.info("RecycleSystem::restartgatewayCache:Status = " + status.toString());
+	// }
 	
-	public static void printGatewayStatus()
-	{
-		DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
-		Cache cache = CacheHelper.getCache();
-		GemFireMemberStatus status = new GemFireMemberStatus(cache);
-		logger.info("RecycleSystem::restartgatewayCache:Status = " + status.toString());
-		int sleepSecs = restart();
-	    try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
-	}
+	// public static void printGatewayStatus()
+	// {
+	// 	DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
+	// 	Cache cache = CacheHelper.getCache();
+	// 	GemFireMemberStatus status = new GemFireMemberStatus(cache);
+	// 	logger.info("RecycleSystem::restartgatewayCache:Status = " + status.toString());
+	// 	int sleepSecs = restart();
+	//     try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
+	// }
 	
 	/**
 	 * Stop the existing Cache entities and then re-init
 	 */
-	public static void restartGatewayHubs()
-	{
-	    int sleepSecs = restart();
-		try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
+	// public static void restartGatewayHubs()
+	// {
+	//     int sleepSecs = restart();
+	// 	try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
 		
-		// Let us re-start
-		startGatewayHub();
+	// 	// Let us re-start
+	// 	startGatewayHub();
 
-	    sleepSecs = restart();
-	    try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
+	//     sleepSecs = restart();
+	//     try { Thread.sleep(sleepSecs*1000); } catch(Exception e) { logger.warning(e.getMessage()); }
 
-	    DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
-		Cache cache = CacheHelper.getCache();
-		GemFireMemberStatus status = new GemFireMemberStatus(cache);
+	//     DistributedSystem disSys = CacheHelper.getCache().getDistributedSystem();
+	// 	Cache cache = CacheHelper.getCache();
+	// 	GemFireMemberStatus status = new GemFireMemberStatus(cache);
 
-		// Increment Shared Counter for Gateway
-		if (status.getIsPrimaryGatewayHub())
-		{
-			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-							incrementAndRead(RecycleSysBlackboard.numOfPrimaryGateways);
+	// 	// Increment Shared Counter for Gateway
+	// 	if (status.getIsPrimaryGatewayHub())
+	// 	{
+	// 		long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 						incrementAndRead(RecycleSysBlackboard.numOfPrimaryGateways);
 			
-			logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Prim Hub." +
-						"Current total=" + num);
-		} else if (status.getIsSecondaryGatewayHub())
-		{
-			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-							incrementAndRead(RecycleSysBlackboard.numOfSecondaryGateways);
+	// 		logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Prim Hub." +
+	// 					"Current total=" + num);
+	// 	} else if (status.getIsSecondaryGatewayHub())
+	// 	{
+	// 		long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 						incrementAndRead(RecycleSysBlackboard.numOfSecondaryGateways);
 				
-			logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Seco Hub." +
-						"Current total=" + num);
-		} else 
-		{
-			long num = RecycleSysBlackboard.getInstance().getSharedCounters().
-							incrementAndRead(RecycleSysBlackboard.numOfGateways);
+	// 		logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Seco Hub." +
+	// 					"Current total=" + num);
+	// 	} else 
+	// 	{
+	// 		long num = RecycleSysBlackboard.getInstance().getSharedCounters().
+	// 						incrementAndRead(RecycleSysBlackboard.numOfGateways);
 				
-			logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Hub." +
-						"Current total=" + num);
-		} 
+	// 		logger.info("RecycleSystem:startGatewayHub:: Started all Gateways & the Hub." +
+	// 					"Current total=" + num);
+	// 	} 
 
-		// Stop Gateways only
-		stopGatewayHub();
-		hardStop();
+	// 	// Stop Gateways only
+	// 	stopGatewayHub();
+	// 	hardStop();
 		
-		logger.info("RecycleSystem::restartGatewayHubs:Status = " + status.toString());
-	}
+	// 	logger.info("RecycleSystem::restartGatewayHubs:Status = " + status.toString());
+	// }
 	
 	public static void restartEdgeClient() 
 	{

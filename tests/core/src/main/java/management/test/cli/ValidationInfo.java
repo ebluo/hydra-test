@@ -69,7 +69,7 @@ public class ValidationInfo implements Serializable {
   public String diskStoreName = null;  
   public ExpirationAttributes entryIdleTimeout = null;
   public ExpirationAttributes entryTimeToLive = null;
-  public String gatewayHubId = null;
+  // public String gatewayHubId = null; //rm ghub
   public Integer initialCapacity = null;
   public InterestPolicy interestPolicy = null;
   public Class keyConstraint = null;
@@ -113,7 +113,7 @@ public class ValidationInfo implements Serializable {
         + ", customEntryTimeToLive=" + customEntryTimeToLive
         + ", diskStoreName=" + diskStoreName + ", entryIdleTimeout="
         + entryIdleTimeout + ", entryTimeToLive=" + entryTimeToLive
-        + ", gatewayHubId=" + gatewayHubId + ", initialCapacity="
+        + ", initialCapacity="
         + initialCapacity + ", interestPolicy=" + interestPolicy
         + ", keyConstraint=" + keyConstraint + ", loadFactor=" + loadFactor
         + ", poolName=" + poolName + ", regionIdleTimeout=" + regionIdleTimeout

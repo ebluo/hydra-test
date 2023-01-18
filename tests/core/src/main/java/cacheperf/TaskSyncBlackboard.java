@@ -59,7 +59,7 @@ public class TaskSyncBlackboard extends Blackboard {
   public static int putDataAndSyncTask;
   public static int putDataGatewayTask;
   public static int putDataGWSenderTask;
-  public static int cycleGatewayHubConnectionTask;
+  // public static int cycleGatewayHubConnectionTask;
   public static int cycleCQsTask;
   public static int cycleLockTask;
   public static int cycleRegisterInterestRegexTask;

@@ -1912,23 +1912,23 @@ public class CommandTest {
     expectedInToString.add("entryTimeToLive=" + expectedValue);
     methodNames.remove(methodName);
 
-    methodName = "getGatewayHubId";
-    expectedValue = info.gatewayHubId;
-    if (expectedValue != null) {
-      expectedValue = expectedValue.toString();
-      if (expectedValue.equals("")) {
-        expectedValue = null; // RegionAttributesData displays attributes not set as null
-      }
-    }
-    verifyValue(expectedValue, methodName, attr, "Bug 46987 detected; ");
-    if (attr.getGatewayHubId() != null) {
-      if ((attr.getGatewayHubId().equals("")) && (attr.toString().contains("gatewayHubId=null"))) {
-        saveErrorByThread("Bug 46987 detected; getGatewayHubId returns empty String, but result of toString() on RegionAttributesData returns gatewayHubId=null" +
-            ": result of toSring(): " + attr.toString());
-      }
-    }
-    expectedInToString.add("gatewayHubId=" + expectedValue);
-    methodNames.remove(methodName);
+    // methodName = "getGatewayHubId"; //rm ghub
+    // expectedValue = info.gatewayHubId;
+    // if (expectedValue != null) {
+    //   expectedValue = expectedValue.toString();
+    //   if (expectedValue.equals("")) {
+    //     expectedValue = null; // RegionAttributesData displays attributes not set as null
+    //   }
+    // }
+    // verifyValue(expectedValue, methodName, attr, "Bug 46987 detected; ");
+    // if (attr.getGatewayHubId() != null) {
+    //   if ((attr.getGatewayHubId().equals("")) && (attr.toString().contains("gatewayHubId=null"))) {
+    //     saveErrorByThread("Bug 46987 detected; getGatewayHubId returns empty String, but result of toString() on RegionAttributesData returns gatewayHubId=null" +
+    //         ": result of toSring(): " + attr.toString());
+    //   }
+    // }
+    // expectedInToString.add("gatewayHubId=" + expectedValue);
+    // methodNames.remove(methodName);
 
     methodName = "getInitialCapacity";
     expectedValue = info.initialCapacity;

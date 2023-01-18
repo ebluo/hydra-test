@@ -410,7 +410,7 @@ public class MasterController {
     if (!TestConfig.tab().booleanAt(Prms.manageLocatorAgents)) {
       DistributedSystemBlackboard.getInstance().getSharedMap().clear();
     }
-    GatewayHubBlackboard.getInstance().getSharedMap().clear();
+    // GatewayHubBlackboard.getInstance().getSharedMap().clear();
     log.info("Cleared endpoint blackboards");
   }
   /**

@@ -460,8 +460,8 @@ public class ConfigParser {
         || keystr.startsWith("hydra.GatewayReceiverPrms")
         || keystr.startsWith("hydra.GatewaySenderPrms")
         || keystr.startsWith("hydra.AsyncEventQueuePrms")
-        || keystr.startsWith("hydra.GatewayPrms")
-        || keystr.startsWith("hydra.GatewayHubPrms")
+        // || keystr.startsWith("hydra.GatewayPrms")
+        // || keystr.startsWith("hydra.GatewayHubPrms")
         || keystr.startsWith("hydra.FixedPartitionPrms")
         || keystr.startsWith("hydra.PartitionPrms")
         || keystr.startsWith("hydra.ResourceManagerPrms")
@@ -1482,8 +1482,8 @@ public class ConfigParser {
     GatewayReceiverDescription.configure( tc );
     GatewaySenderDescription.configure( tc );
     AsyncEventQueueDescription.configure( tc );
-    GatewayDescription.configure( tc );
-    GatewayHubDescription.configure( tc );
+    // GatewayDescription.configure( tc );
+    // GatewayHubDescription.configure( tc );
 
     // set the test name and runner
     String testDir = tc.getMasterDescription()

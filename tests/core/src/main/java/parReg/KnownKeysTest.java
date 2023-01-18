@@ -36,7 +36,7 @@ public class KnownKeysTest extends InitImageTest {
 
 protected static String DataStoreVmStr = "DataStoreVM_";
 protected static boolean isBridgeConfiguration;
-protected static boolean isGatewayConfiguration;
+// protected static boolean isGatewayConfiguration;
 protected static boolean isClientCache;
 protected static boolean isGatewaySenderConfiguration;
 
@@ -80,7 +80,7 @@ public static void StartTask_initialize() {
    Vector bridgeNames = TestConfig.tab().vecAt(BridgePrms.names, null);
    boolean isBridgeConfiguration = bridgeNames != null;
 
-   Vector gatewayNames = TestConfig.tab().vecAt(GatewayPrms.names, null);
+   Vector gatewayNames = null;
    Vector senderNames = TestConfig.tab().vecAt(GatewaySenderPrms.names, null);
    boolean isWanConfiguration = (gatewayNames == null) ? (senderNames != null) : true;
     
@@ -124,10 +124,10 @@ public synchronized static void HydraTask_initialize() {
    if (testInstance == null) {
       testInstance = new KnownKeysTest();
       ((KnownKeysTest)testInstance).initInstance("clientRegion");
-      if (isGatewayConfiguration) {
-         String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-         GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
+      // if (isGatewayConfiguration) {
+      //    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+      //    GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+      // }
    }
 }
 
@@ -138,7 +138,7 @@ public synchronized static void HydraTask_initialize() {
 public void initInstance(String regDescriptName) {
    super.initInstance();
    isBridgeConfiguration = (TestConfig.tab().stringAt(BridgePrms.names, null) != null);
-   isGatewayConfiguration = (TestConfig.tab().stringAt(GatewayPrms.names, null) != null);
+   // isGatewayConfiguration = (TestConfig.tab().stringAt(GatewayPrms.names, null) != null);
    isGatewaySenderConfiguration = (TestConfig.tab().stringAt(GatewaySenderPrms.names, null) != null);
    lockOperations = TestConfig.tab().booleanAt(ParRegPrms.lockOperations, false);
    highAvailability = TestConfig.tab().booleanAt(ParRegPrms.highAvailability, false);
@@ -192,7 +192,7 @@ public void initInstance(String regDescriptName) {
      aRegion = CacheHelper.getCache().createRegion(regionName, attr);
      Log.getLogWriter().info("Created region " + aRegion.getFullPath());
 
-     isGatewayConfiguration = (TestConfig.tab().stringAt(GatewayPrms.names, null) != null);
+   //   isGatewayConfiguration = (TestConfig.tab().stringAt(GatewayPrms.names, null) != null);
      lockOperations = TestConfig.tab().booleanAt(ParRegPrms.lockOperations, false);
      if (lockOperations) {
         Log.getLogWriter().info("Creating lock service " + LOCK_SERVICE_NAME);
@@ -237,10 +237,10 @@ public synchronized static void HydraTask_dataStoreInitialize() {
       if (isBridgeConfiguration) {
          BridgeHelper.startBridgeServer("bridge");
       }
-      if (isGatewayConfiguration) {
-         String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-         GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
+      // if (isGatewayConfiguration) {
+      //    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+      //    GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+      // }
    }
 }
 
@@ -249,13 +249,13 @@ public synchronized static void HydraTask_dataStoreInitialize() {
  *  Note that all participating Gateways must write their endpoints to
  *  the blackboard prior to any gateway making this call.
  */
-public synchronized static void HydraTask_startGatewayHub() {
-   if (isGatewayConfiguration) {
-      String gatewayConfig = ConfigPrms.getGatewayConfig();
-      GatewayHubHelper.addGateways(gatewayConfig);
-      GatewayHubHelper.startGatewayHub();
-   }
-}
+// public synchronized static void HydraTask_startGatewayHub() {
+//    if (isGatewayConfiguration) {
+//       String gatewayConfig = ConfigPrms.getGatewayConfig();
+//       GatewayHubHelper.addGateways(gatewayConfig);
+//       GatewayHubHelper.startGatewayHub();
+//    }
+// }
 
 /**
  * Creates GatewaySender ids based on the {@link ConfigPrms#gatewaySenderConfig} for new wan senders.

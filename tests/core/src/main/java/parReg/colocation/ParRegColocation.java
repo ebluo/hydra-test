@@ -27,7 +27,7 @@ import hydra.ClientVmNotFoundException;
 import hydra.ConfigPrms;
 import hydra.DiskStorePrms;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayPrms;
+// import hydra.GatewayPrms; //rm ghub
 import hydra.GatewaySenderHelper;
 import hydra.GatewaySenderPrms;
 // import hydra.HDFSStoreHelper; //rm hdfs
@@ -193,7 +193,7 @@ public class ParRegColocation {
     Vector bridgeNames = TestConfig.tab().vecAt(BridgePrms.names, null);
     boolean isBridgeConfiguration = bridgeNames != null;
 
-    Vector gatewayNames = TestConfig.tab().vecAt(GatewayPrms.names, null);
+    Vector gatewayNames = null;
     Vector senderNames = TestConfig.tab().vecAt(GatewaySenderPrms.names, null);
     boolean isWanConfiguration = (gatewayNames == null) ? (senderNames != null) : true;
     

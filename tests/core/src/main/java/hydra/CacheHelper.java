@@ -35,8 +35,8 @@ import org.apache.geode.cache.Cache;
 import org.apache.geode.cache.CacheException;
 import org.apache.geode.cache.CacheFactory;
 import org.apache.geode.cache.DynamicRegionFactory;
-import org.apache.geode.cache.util.GatewayHub;
-import org.apache.geode.cache.util.Gateway;
+// import org.apache.geode.cache.util.GatewayHub; //rm ghub
+// import org.apache.geode.cache.util.Gateway;
 import org.apache.geode.cache.Region;
 import org.apache.geode.cache.RegionAttributes;
 import org.apache.geode.cache.RegionExistsException;
@@ -65,7 +65,7 @@ public class CacheHelper {
 
   /** Maps of cache, region, and bridge descriptions used to generate XML */
   private static Map XmlCacheConfigs = new HashMap();
-  private static Map XmlGatewayHubConfigs = new HashMap();
+  // private static Map XmlGatewayHubConfigs = new HashMap();
   private static Map XmlGatewayConfigs = new HashMap();
   private static Map XmlRegionConfigs = new HashMap();
   private static Map XmlBridgeConfigs = new HashMap();
@@ -651,27 +651,27 @@ public class CacheHelper {
    * to the user to avoid writing to the same filename from multiple VMs.
    *
    */
-  public static synchronized Cache startCacheXmlGenerationForGateway(
-                String cacheConfig,
-                DynamicRegionFactory.Config dynamicRegionConfig, 
-                String gatewayHubConfig, 
-                String cacheXmlFile) {
-    if (cacheConfig == null) {
-      throw new IllegalArgumentException("cacheConfig cannot be null");
-    }
-    if (gatewayHubConfig == null) {
-      throw new IllegalArgumentException("gatewayHubConfig cannot be null");
-    }
-    if (cacheXmlFile == null) {
-      throw new IllegalArgumentException("cacheXmlFile cannot be null");
-    }
+  // public static synchronized Cache startCacheXmlGenerationForGateway(
+  //               String cacheConfig,
+  //               DynamicRegionFactory.Config dynamicRegionConfig, 
+  //               String gatewayHubConfig, 
+  //               String cacheXmlFile) {
+  //   if (cacheConfig == null) {
+  //     throw new IllegalArgumentException("cacheConfig cannot be null");
+  //   }
+  //   if (gatewayHubConfig == null) {
+  //     throw new IllegalArgumentException("gatewayHubConfig cannot be null");
+  //   }
+  //   if (cacheXmlFile == null) {
+  //     throw new IllegalArgumentException("cacheXmlFile cannot be null");
+  //   }
 
-    String fn = FileUtil.absoluteFilenameFor(
-                EnvHelper.expandEnvVars(cacheXmlFile));
-    Cache dummyCache = generateDummyCache(cacheConfig, dynamicRegionConfig, fn);
-    generateDummyGatewayHub(dummyCache, gatewayHubConfig,fn);
-    return dummyCache;
-  }
+  //   String fn = FileUtil.absoluteFilenameFor(
+  //               EnvHelper.expandEnvVars(cacheXmlFile));
+  //   Cache dummyCache = generateDummyCache(cacheConfig, dynamicRegionConfig, fn);
+  //   generateDummyGatewayHub(dummyCache, gatewayHubConfig,fn);
+  //   return dummyCache;
+  // }
 
   /**
    * Generates XML for the given cache (the creation object returned by 
@@ -691,128 +691,128 @@ public class CacheHelper {
    * @throws HydraRuntimeException if an attempt is made to rewrite an existing
    *         cache XML file with different content.
    */
-  public static synchronized void finishCacheXmlGenerationForGateway(
-                Cache cache,
-                String cacheConfig,
-                String gatewayHubConfig,
-                String gatewayConfig,
-                String regionConfig, List regionNames,
-                String bridgeConfig, String poolConfig, String diskStoreConfig,
-                List functions, String cacheXmlFile) {
-    if ( !(cache instanceof CacheCreation) ) {
-      throw new IllegalArgumentException("cache must be a CacheCreation object");
-    }
-    if (cacheXmlFile == null) {
-      throw new IllegalArgumentException("cacheXmlFile cannot be null");
-    }
-    String fn = FileUtil.absoluteFilenameFor(
-                EnvHelper.expandEnvVars(cacheXmlFile));
-    if (!FileUtil.exists(fn)) {
-      log("Generating XML file: " + fn + " from gateway config: "
-         + gatewayConfig + " and region config " + regionConfig
-         + " and bridge config " + bridgeConfig
-         + " and pool config " + poolConfig);
+  // public static synchronized void finishCacheXmlGenerationForGateway(
+  //               Cache cache,
+  //               String cacheConfig,
+  //               String gatewayHubConfig,
+  //               String gatewayConfig,
+  //               String regionConfig, List regionNames,
+  //               String bridgeConfig, String poolConfig, String diskStoreConfig,
+  //               List functions, String cacheXmlFile) {
+  //   if ( !(cache instanceof CacheCreation) ) {
+  //     throw new IllegalArgumentException("cache must be a CacheCreation object");
+  //   }
+  //   if (cacheXmlFile == null) {
+  //     throw new IllegalArgumentException("cacheXmlFile cannot be null");
+  //   }
+  //   String fn = FileUtil.absoluteFilenameFor(
+  //               EnvHelper.expandEnvVars(cacheXmlFile));
+  //   if (!FileUtil.exists(fn)) {
+  //     log("Generating XML file: " + fn + " from gateway config: "
+  //        + gatewayConfig + " and region config " + regionConfig
+  //        + " and bridge config " + bridgeConfig
+  //        + " and pool config " + poolConfig);
 
-      CacheCreation dummyCache = (CacheCreation)cache;
-      generateDummyGateways(dummyCache, gatewayConfig, fn);
-      generateDummyFunctions(dummyCache, functions, fn);
-      generateDummyPool(dummyCache, poolConfig, fn);
-      generateDummyDiskStore(dummyCache, diskStoreConfig, fn);
-      generateDummyBridge(dummyCache, bridgeConfig, fn);
-      if (regionNames != null && regionNames.size() > 0) {
-        for (Iterator i = regionNames.iterator(); i.hasNext();) {
-          String regionName = (String)i.next();
-          generateDummyRegion(dummyCache, regionConfig, regionName, fn);
-        }
-      } else {
-        generateDummyRegion(dummyCache, regionConfig, null, fn);
-      }
+  //     CacheCreation dummyCache = (CacheCreation)cache;
+  //     generateDummyGateways(dummyCache, gatewayConfig, fn);
+  //     generateDummyFunctions(dummyCache, functions, fn);
+  //     generateDummyPool(dummyCache, poolConfig, fn);
+  //     generateDummyDiskStore(dummyCache, diskStoreConfig, fn);
+  //     generateDummyBridge(dummyCache, bridgeConfig, fn);
+  //     if (regionNames != null && regionNames.size() > 0) {
+  //       for (Iterator i = regionNames.iterator(); i.hasNext();) {
+  //         String regionName = (String)i.next();
+  //         generateDummyRegion(dummyCache, regionConfig, regionName, fn);
+  //       }
+  //     } else {
+  //       generateDummyRegion(dummyCache, regionConfig, null, fn);
+  //     }
 
-      // generate the xml file
-      generateCacheXmlFile(fn, dummyCache);
+  //     // generate the xml file
+  //     generateCacheXmlFile(fn, dummyCache);
 
-    } else {
-      if (XmlCacheConfigs.get(fn) == null) {
-        // block attempt to create file in multiple ways
-        String s = "Cache XML file was already created without CacheHelper"
-                 + " or from a different VM using"
-                 + " an unknown, and possibly different, configuration: " + fn;
-        throw new HydraRuntimeException(s);
+  //   } else {
+  //     if (XmlCacheConfigs.get(fn) == null) {
+  //       // block attempt to create file in multiple ways
+  //       String s = "Cache XML file was already created without CacheHelper"
+  //                + " or from a different VM using"
+  //                + " an unknown, and possibly different, configuration: " + fn;
+  //       throw new HydraRuntimeException(s);
 
-      } else {
-        // block attempt to recreate file with clashing configuration
-        String cc = (String)XmlCacheConfigs.get(fn);
-        if (!cc.equals(cacheConfig)) {
-          String s = "Cache XML file already exists using cache configuration "
-                   + cc + ", cannot also use " + cacheConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String ghc = (String)XmlGatewayHubConfigs.get(fn);
-        if ((ghc == null && gatewayHubConfig != null)  
-         || (ghc != null && gatewayHubConfig == null) 
-         || (ghc != null && gatewayHubConfig != null && !ghc.equals(gatewayHubConfig))) {
-          String s = "Cache XML file already exists using gatewayHub configuration "
-                   + ghc + ", cannot also use " + gatewayHubConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String gc = (String)XmlGatewayConfigs.get(fn);
-        if ((gc == null && gatewayConfig != null)  
-         || (gc != null && gatewayConfig == null) 
-         || (gc != null && gatewayConfig != null && !gc.equals(gatewayConfig))) {
-          String s = "Cache XML file already exists using gateway configuration "
-                   + gc + ", cannot also use " + gatewayConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String rc = (String)XmlRegionConfigs.get(fn);
-        if ((rc == null && regionConfig != null)
-         || (rc != null && regionConfig == null)
-	 || (rc != null && regionConfig != null && !rc.equals(regionConfig))) {
-          String s = "Cache XML file already exists using region configuration "
-                   + rc + ", cannot also use " + regionConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String bc = (String)XmlBridgeConfigs.get(fn);
-        if ((bc == null && bridgeConfig != null)
-         || (bc != null && bridgeConfig == null)
-	 || (bc != null && bridgeConfig != null && !bc.equals(bridgeConfig))) {
-          String s = "Cache XML file already exists using bridge configuration "
-                   + bc + ", cannot also use " + bridgeConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String cpc = (String)XmlPoolConfigs.get(fn);
-        if ((cpc == null && poolConfig != null)
-         || (cpc != null && poolConfig == null)
-	 || (cpc != null && poolConfig != null && !cpc.equals(poolConfig))) {
-          String s = "Cache XML file already exists using pool configuration "
-                   + cpc + ", cannot also use " + poolConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        String dsc = (String)XmlDiskStoreConfigs.get(fn);
-        if ((dsc == null && diskStoreConfig != null)
-         || (dsc != null && diskStoreConfig == null)
-	 || (dsc != null && diskStoreConfig != null
-                         && !dsc.equals(diskStoreConfig))) {
-          String s = "Cache XML file already exists using disk store "
-                   + "configuration " + dsc + ", cannot also use "
-                   + diskStoreConfig + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        List fc = (List)XmlFunctionConfigs.get(fn);
-        List functionNames = classnamesFor(functions);
-        if ((fc == null && functionNames != null)
-         || (fc != null && functionNames == null)
-	 || (fc != null && functionNames != null
-                        && !(fc.containsAll(functionNames)
-                             && functionNames.containsAll(fc)))) {
-          String s = "Cache XML file already exists using functions "
-                   + fc + ", cannot also use " + functions + ": " + fn;
-          throw new HydraRuntimeException(s);
-        }
-        // else it was already created with this configuration, which is fine
-        return;
-      }
-    }
-  }
+  //     } else {
+  //       // block attempt to recreate file with clashing configuration
+  //       String cc = (String)XmlCacheConfigs.get(fn);
+  //       if (!cc.equals(cacheConfig)) {
+  //         String s = "Cache XML file already exists using cache configuration "
+  //                  + cc + ", cannot also use " + cacheConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String ghc = (String)XmlGatewayHubConfigs.get(fn);
+  //       if ((ghc == null && gatewayHubConfig != null)  
+  //        || (ghc != null && gatewayHubConfig == null) 
+  //        || (ghc != null && gatewayHubConfig != null && !ghc.equals(gatewayHubConfig))) {
+  //         String s = "Cache XML file already exists using gatewayHub configuration "
+  //                  + ghc + ", cannot also use " + gatewayHubConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String gc = (String)XmlGatewayConfigs.get(fn);
+  //       if ((gc == null && gatewayConfig != null)  
+  //        || (gc != null && gatewayConfig == null) 
+  //        || (gc != null && gatewayConfig != null && !gc.equals(gatewayConfig))) {
+  //         String s = "Cache XML file already exists using gateway configuration "
+  //                  + gc + ", cannot also use " + gatewayConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String rc = (String)XmlRegionConfigs.get(fn);
+  //       if ((rc == null && regionConfig != null)
+  //        || (rc != null && regionConfig == null)
+	//  || (rc != null && regionConfig != null && !rc.equals(regionConfig))) {
+  //         String s = "Cache XML file already exists using region configuration "
+  //                  + rc + ", cannot also use " + regionConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String bc = (String)XmlBridgeConfigs.get(fn);
+  //       if ((bc == null && bridgeConfig != null)
+  //        || (bc != null && bridgeConfig == null)
+	//  || (bc != null && bridgeConfig != null && !bc.equals(bridgeConfig))) {
+  //         String s = "Cache XML file already exists using bridge configuration "
+  //                  + bc + ", cannot also use " + bridgeConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String cpc = (String)XmlPoolConfigs.get(fn);
+  //       if ((cpc == null && poolConfig != null)
+  //        || (cpc != null && poolConfig == null)
+	//  || (cpc != null && poolConfig != null && !cpc.equals(poolConfig))) {
+  //         String s = "Cache XML file already exists using pool configuration "
+  //                  + cpc + ", cannot also use " + poolConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       String dsc = (String)XmlDiskStoreConfigs.get(fn);
+  //       if ((dsc == null && diskStoreConfig != null)
+  //        || (dsc != null && diskStoreConfig == null)
+	//  || (dsc != null && diskStoreConfig != null
+  //                        && !dsc.equals(diskStoreConfig))) {
+  //         String s = "Cache XML file already exists using disk store "
+  //                  + "configuration " + dsc + ", cannot also use "
+  //                  + diskStoreConfig + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       List fc = (List)XmlFunctionConfigs.get(fn);
+  //       List functionNames = classnamesFor(functions);
+  //       if ((fc == null && functionNames != null)
+  //        || (fc != null && functionNames == null)
+	//  || (fc != null && functionNames != null
+  //                       && !(fc.containsAll(functionNames)
+  //                            && functionNames.containsAll(fc)))) {
+  //         String s = "Cache XML file already exists using functions "
+  //                  + fc + ", cannot also use " + functions + ": " + fn;
+  //         throw new HydraRuntimeException(s);
+  //       }
+  //       // else it was already created with this configuration, which is fine
+  //       return;
+  //     }
+  //   }
+  // }
 
   /**
    * Generates XML for the given cache, region, bridge, and pool configurations
@@ -1042,52 +1042,52 @@ public class CacheHelper {
   /**
    * Generates a dummy GatewayHub (and underlying Gateways) from the given cache and gateway configurations
    */
-  private static void generateDummyGatewayHub(Cache dummyCache, String gatewayHubConfig, String fn) {
+  // private static void generateDummyGatewayHub(Cache dummyCache, String gatewayHubConfig, String fn) {
 
-    if (gatewayHubConfig != null) {
-      // create and configure the dummy gatewayHub
-      log("Adding dummy gateway hub from config: " + gatewayHubConfig);
-      GatewayHubDescription ghd = GatewayHubHelper.getGatewayHubDescription(gatewayHubConfig);
+  //   if (gatewayHubConfig != null) {
+  //     // create and configure the dummy gatewayHub
+  //     log("Adding dummy gateway hub from config: " + gatewayHubConfig);
+  //     GatewayHubDescription ghd = GatewayHubHelper.getGatewayHubDescription(gatewayHubConfig);
 
-      String id = GatewayHubHelper.getId(ghd);
-      int port = GatewayHubHelper.getPort(ghd, id);
-      GatewayHub dummyGatewayHub = dummyCache.addGatewayHub(id, port);
-      ghd.configure(dummyGatewayHub);
-      log("Added dummy gateway hub: " + GatewayHubHelper.gatewayHubToString(dummyGatewayHub));
+  //     String id = GatewayHubHelper.getId(ghd);
+  //     int port = GatewayHubHelper.getPort(ghd, id);
+  //     GatewayHub dummyGatewayHub = dummyCache.addGatewayHub(id, port);
+  //     ghd.configure(dummyGatewayHub);
+  //     log("Added dummy gateway hub: " + GatewayHubHelper.gatewayHubToString(dummyGatewayHub));
 
-      // save the gateway hub config for future reference
-      XmlGatewayHubConfigs.put(fn, gatewayHubConfig);
-    }
-  }
+  //     // save the gateway hub config for future reference
+  //     XmlGatewayHubConfigs.put(fn, gatewayHubConfig);
+  //   }
+  // }
 
 
   /**
    * Generates a dummy Gateway from the given cache and gatewayHub configurations
    */
-  private static void generateDummyGateways(Cache dummyCache, String gatewayConfig, String fn) {
+  // private static void generateDummyGateways(Cache dummyCache, String gatewayConfig, String fn) {
 
-    for (Iterator i = dummyCache.getGatewayHubs().iterator(); i.hasNext(); ) {
-      GatewayHub dummyGatewayHub = (GatewayHub)i.next();
-      GatewayDescription gd = GatewayHelper.getGatewayDescription(gatewayConfig);
-      List endpoints = GatewayHubHelper.getEndpoints();
-      String ownds = DistributedSystemHelper.getDistributedSystemName();
-      Set dsnames = GatewayHubHelper.getDistributedSystemNames(endpoints);
-      for (Iterator j = dsnames.iterator(); j.hasNext();) {
-        String dsname = (String)j.next();
-        if (!dsname.equals(ownds)) {
-          int vmid = RemoteTestModule.getMyVmid();
-          String gid = dsname; // remote distributed system
+  //   for (Iterator i = dummyCache.getGatewayHubs().iterator(); i.hasNext(); ) {
+  //     GatewayHub dummyGatewayHub = (GatewayHub)i.next();
+  //     GatewayDescription gd = GatewayHelper.getGatewayDescription(gatewayConfig);
+  //     List endpoints = GatewayHubHelper.getEndpoints();
+  //     String ownds = DistributedSystemHelper.getDistributedSystemName();
+  //     Set dsnames = GatewayHubHelper.getDistributedSystemNames(endpoints);
+  //     for (Iterator j = dsnames.iterator(); j.hasNext();) {
+  //       String dsname = (String)j.next();
+  //       if (!dsname.equals(ownds)) {
+  //         int vmid = RemoteTestModule.getMyVmid();
+  //         String gid = dsname; // remote distributed system
   
-          log("Configuring gateway with id: " + gid);
-          log("Adding dummy gateway from config: " + gatewayConfig);
-          Gateway dummyGateway = dummyGatewayHub.addGateway(gid);
-          gd.configure(dummyGateway, dsname, endpoints, true);
-          XmlGatewayConfigs.put(fn, gatewayConfig);
-          log("Configured gateway: " + GatewayHelper.gatewayToString(dummyGateway));
-        }
-      }
-    }
-  }
+  //         log("Configuring gateway with id: " + gid);
+  //         log("Adding dummy gateway from config: " + gatewayConfig);
+  //         Gateway dummyGateway = dummyGatewayHub.addGateway(gid);
+  //         gd.configure(dummyGateway, dsname, endpoints, true);
+  //         XmlGatewayConfigs.put(fn, gatewayConfig);
+  //         log("Configured gateway: " + GatewayHelper.gatewayToString(dummyGateway));
+  //       }
+  //     }
+  //   }
+  // }
 
   /**
    * Generates a dummy pool from the given cache and pool configuration.
