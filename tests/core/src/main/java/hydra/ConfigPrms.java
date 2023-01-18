@@ -193,15 +193,15 @@ public class ConfigPrms extends BasePrms {
    * (String)
    * An entry in {@link GatewayPrms#names} giving the gateway configuration.
    */
-  public static Long gatewayConfig;
+  // public static Long gatewayConfig;
 
   /**
    * Returns the value of {@link #gatewayConfig}, or null if it is not set.
    * @throws HydraConfigException if not found in {@link GatewayPrms#names}.
    */
-  public static String getGatewayConfig() {
-    return getString(gatewayConfig);
-  }
+  // public static String getGatewayConfig() {
+  //   return getString(gatewayConfig);
+  // }
 
   //----------------------------------------------------------------------------
   // gatewayHubConfig 
@@ -212,15 +212,15 @@ public class ConfigPrms extends BasePrms {
    * An entry in {@link GatewayHubPrms#names} giving the gateway hub
    * configuration.
    */
-  public static Long gatewayHubConfig;
+  // public static Long gatewayHubConfig;
 
   /**
    * Returns the value of {@link #gatewayHubConfig}, or null if it is not set.
    * @throws HydraConfigException if not found in {@link GatewayHubPrms#names}.
    */
-  public static String getGatewayHubConfig() {
-    return getString(gatewayHubConfig);
-  }
+  // public static String getGatewayHubConfig() {
+  //   return getString(gatewayHubConfig);
+  // }
 
   //----------------------------------------------------------------------------
   // diskConfig 
@@ -371,11 +371,11 @@ public class ConfigPrms extends BasePrms {
       } else if (key == asyncEventQueueConfig) {
         description = TestConfig.getInstance().getAsyncEventQueueDescription(val);
 
-      } else if (key == gatewayConfig) {
-        description = TestConfig.getInstance().getGatewayDescription(val);
+      // } else if (key == gatewayConfig) { //rm ghub
+      //   description = TestConfig.getInstance().getGatewayDescription(val);
 
-      } else if (key == gatewayHubConfig) {
-        description = TestConfig.getInstance().getGatewayHubDescription(val);
+      // } else if (key == gatewayHubConfig) {
+      //   description = TestConfig.getInstance().getGatewayHubDescription(val);
 
       } else if (key == diskStoreConfig) {
         description = TestConfig.getInstance().getDiskStoreDescription(val);

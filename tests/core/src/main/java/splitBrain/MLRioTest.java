@@ -98,9 +98,9 @@ public class MLRioTest extends util.OperationsClient {
       // Create GatewayHub, note that the Gateway cannot be started until
       // all Gateways have been created (info placed on BB for hydra to 
       // connect appropriate VMs/ports
-      if(!isNewWanConfig){
-        createGatewayHub();
-      }
+      // if(!isNewWanConfig){ //rm ghub
+      //   createGatewayHub();
+      // }
 
       Log.getLogWriter().info("Installing MembershipNotifierHook");
       SBUtil.addMembershipHook(new MembershipNotifierHook());
@@ -116,18 +116,18 @@ public class MLRioTest extends util.OperationsClient {
     * invoked createGatewayHub(), so the hydra WAN blackboard knows about 
     * all the available servers and endpoints.
     */
-    public synchronized static void HydraTask_startGatewayHubTask() {
-       testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
-    }
+   //  public synchronized static void HydraTask_startGatewayHubTask() {
+   //     testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
+   //  }
 
     /**
      * Starts a gateway hub in a VM that previously created one, after creating
      * gateways.
      */
-    protected void startGatewayHub(String gatewayConfig) {
-      GatewayHubHelper.addGateways(gatewayConfig);
-      GatewayHubHelper.startGatewayHub();
-    }
+   //  protected void startGatewayHub(String gatewayConfig) {
+   //    GatewayHubHelper.addGateways(gatewayConfig);
+   //    GatewayHubHelper.startGatewayHub();
+   //  }
 
     /**
      * Creates GatewaySender ids based on the
@@ -275,13 +275,13 @@ public class MLRioTest extends util.OperationsClient {
    /* 
     * Creates the GatewayHub (if configured)
     */
-   protected void createGatewayHub() {
-      // Gateway initialization (if needed)
-      String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-      if (gatewayHubConfig != null) {
-         GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
-   }
+   // protected void createGatewayHub() {
+   //    // Gateway initialization (if needed)
+   //    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+   //    if (gatewayHubConfig != null) {
+   //       GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+   //    }
+   // }
 
     /** 
      *  Cause a server to beSick/playDead (but don't synchronize with
@@ -336,8 +336,8 @@ public class MLRioTest extends util.OperationsClient {
       
       if(isNewWanConfig){
         createAndStartNewWanComponents();
-      }else{
-        startGatewayHub(ConfigPrms.getGatewayConfig());  
+      // }else{
+      //   startGatewayHub(ConfigPrms.getGatewayConfig());  
       }
     }
 
@@ -442,7 +442,7 @@ public class MLRioTest extends util.OperationsClient {
       Log.getLogWriter().info("Re-initializing BridgeServer and Gateway ..."); 
       initializeBridgeServer();
       if(!isNewWanConfig){
-        startGatewayHub(ConfigPrms.getGatewayConfig());  
+      //   startGatewayHub(ConfigPrms.getGatewayConfig());  
       }else{
         createAndStartNewWanComponents();
       }      

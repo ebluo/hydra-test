@@ -30,7 +30,7 @@ import hydra.ConfigHashtable;
 import hydra.ConfigPrms;
 import hydra.DistributedSystemHelper;
 import hydra.EdgeHelper;
-import hydra.GatewayHubHelper;
+// import hydra.GatewayHubHelper; //rm ghub
 import hydra.GatewaySenderHelper;
 import hydra.GatewaySenderPrms;
 import hydra.GsRandom;
@@ -90,7 +90,7 @@ import org.apache.geode.cache.CommitConflictException;
 import org.apache.geode.cache.TransactionDataNodeHasDepartedException;
 import org.apache.geode.cache.TransactionException;
 import org.apache.geode.cache.TransactionInDoubtException;
-import org.apache.geode.cache.util.GatewayHub;
+// import org.apache.geode.cache.util.GatewayHub;
 
 import cq.CQUtil;
 import cq.CQUtilBB;
@@ -136,7 +136,7 @@ public class OrderPolicyTest extends WANClient {
       testInstance.createCache(cacheConfig);
       testInstance.createGatewaySender();
       testInstance.createRegion(REGION_NAME, regionConfig);
-      testInstance.createGatewayHub();
+      // testInstance.createGatewayHub();
 
       // single randomValues for this VM
       randomValues = new RandomValues();
@@ -159,7 +159,7 @@ public class OrderPolicyTest extends WANClient {
       testInstance.createRegion(REGION_NAME, regionConfig);
       initPdxDiskStore();
       testInstance.startBridgeServer(bridgeConfig);
-      testInstance.createGatewayHub();
+      // testInstance.createGatewayHub();
 
       // single randomValues for this VM
       randomValues = new RandomValues();
@@ -206,12 +206,12 @@ public class OrderPolicyTest extends WANClient {
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways configured based on {@link CacheServerPrms}.
    */
-  public static void startGatewayHubTask() {
-    String gatewayConfig = TestConfig.tab().stringAt(CacheServerPrms.gatewayConfig);
+  // public static void startGatewayHubTask() {
+  //   String gatewayConfig = TestConfig.tab().stringAt(CacheServerPrms.gatewayConfig);
 
-    testInstance.startGatewayHub(gatewayConfig);
-    testInstance.startQueueMonitor();
-  }
+  //   testInstance.startGatewayHub(gatewayConfig);
+  //   testInstance.startQueueMonitor();
+  // }
 
   protected void createGatewaySender(){
     String senderConfig = ConfigPrms.getGatewaySenderConfig();
@@ -334,63 +334,63 @@ public class OrderPolicyTest extends WANClient {
   /**
    * A Hydra TASK that chooses a random gateway hub and pauses/resumes it.
    */
-  public synchronized static void pauseGatewayHub() { 
-    int sleepMs = CacheClientPrms.getSleepSec() * 1000;
-    Log.getLogWriter().info( "Sleeping for " + sleepMs + "ms" );
-    MasterController.sleepForMs( sleepMs );
+  // public synchronized static void pauseGatewayHub() { 
+  //   int sleepMs = CacheClientPrms.getSleepSec() * 1000;
+  //   Log.getLogWriter().info( "Sleeping for " + sleepMs + "ms" );
+  //   MasterController.sleepForMs( sleepMs );
  
-    // pause gateway
-    GatewayHub hub = null;
-    List hubs = CacheHelper.getCache().getGatewayHubs();
-    if (hubs.size() > 0) {
-        hub = CacheHelper.getCache().getGatewayHubs().get(0);
-    }
+  //   // pause gateway
+  //   GatewayHub hub = null;
+  //   List hubs = CacheHelper.getCache().getGatewayHubs();
+  //   if (hubs.size() > 0) {
+  //       hub = CacheHelper.getCache().getGatewayHubs().get(0);
+  //   }
 
-    // pause the gateway 
-    int restartWaitSec = TestConfig.tab().intAt(HctPrms.restartWaitSec);
-    if (hub != null) {
-       Log.getLogWriter().info("Pausing GatewayHub " + hub.toString() + " resuming in " + restartWaitSec + " seconds");
-       hub.pauseGateways();
-    }
+  //   // pause the gateway 
+  //   int restartWaitSec = TestConfig.tab().intAt(HctPrms.restartWaitSec);
+  //   if (hub != null) {
+  //      Log.getLogWriter().info("Pausing GatewayHub " + hub.toString() + " resuming in " + restartWaitSec + " seconds");
+  //      hub.pauseGateways();
+  //   }
 
-    MasterController.sleepForMs( restartWaitSec * 1000 );
-    Log.getLogWriter().info("Resuming GatewayHub " + hub.toString());
-    hub.resumeGateways();
-    Log.getLogWriter().info("Resumed GatewayHub " + hub.toString());
-  }
+  //   MasterController.sleepForMs( restartWaitSec * 1000 );
+  //   Log.getLogWriter().info("Resuming GatewayHub " + hub.toString());
+  //   hub.resumeGateways();
+  //   Log.getLogWriter().info("Resumed GatewayHub " + hub.toString());
+  // }
 
   /**
    * A Hydra TASK that chooses a random gateway hub and stops/starts it.
    */
-  public synchronized static void stopGatewayHub() { 
-    int sleepMs = CacheClientPrms.getSleepSec() * 1000;
-    Log.getLogWriter().info( "Sleeping for " + sleepMs + "ms" );
-    MasterController.sleepForMs( sleepMs );
+  // public synchronized static void stopGatewayHub() { 
+  //   int sleepMs = CacheClientPrms.getSleepSec() * 1000;
+  //   Log.getLogWriter().info( "Sleeping for " + sleepMs + "ms" );
+  //   MasterController.sleepForMs( sleepMs );
  
-    // stop gateway
-    GatewayHub hub = null;
-    List hubs = CacheHelper.getCache().getGatewayHubs();
-    if (hubs.size() > 0) {
-        hub = CacheHelper.getCache().getGatewayHubs().get(0);
-    }
+  //   // stop gateway
+  //   GatewayHub hub = null;
+  //   List hubs = CacheHelper.getCache().getGatewayHubs();
+  //   if (hubs.size() > 0) {
+  //       hub = CacheHelper.getCache().getGatewayHubs().get(0);
+  //   }
 
-    // stop the gateway 
-    int restartWaitSec = TestConfig.tab().intAt(HctPrms.restartWaitSec);
-    if (hub != null) {
-       Log.getLogWriter().info("Stopping GatewayHub " + hub.toString() + " restarting in " + restartWaitSec + " seconds");
-       // todo@lhughes -- why does this NOT work (no failover, hang?, lost events)
-       //hub.stopGateways();
-       hub.stop();
-    }
-    MasterController.sleepForMs( restartWaitSec * 1000 );
-    try {
-       Log.getLogWriter().info("Starting GatewayHub " + hub.toString());
-       hub.startGateways();
-       Log.getLogWriter().info("Started GatewayHub " + hub.toString());
-    } catch (java.io.IOException ioe) {
-       throw new TestException("startGateways caught unexpected Exception " + ioe + "\n" + TestHelper.getStackTrace(ioe));
-    }
-  }
+  //   // stop the gateway 
+  //   int restartWaitSec = TestConfig.tab().intAt(HctPrms.restartWaitSec);
+  //   if (hub != null) {
+  //      Log.getLogWriter().info("Stopping GatewayHub " + hub.toString() + " restarting in " + restartWaitSec + " seconds");
+  //      // todo@lhughes -- why does this NOT work (no failover, hang?, lost events)
+  //      //hub.stopGateways();
+  //      hub.stop();
+  //   }
+  //   MasterController.sleepForMs( restartWaitSec * 1000 );
+  //   try {
+  //      Log.getLogWriter().info("Starting GatewayHub " + hub.toString());
+  //      hub.startGateways();
+  //      Log.getLogWriter().info("Started GatewayHub " + hub.toString());
+  //   } catch (java.io.IOException ioe) {
+  //      throw new TestException("startGateways caught unexpected Exception " + ioe + "\n" + TestHelper.getStackTrace(ioe));
+  //   }
+  // }
 
   /**
    * Check that no Listener Exceptions were posted to the BB 

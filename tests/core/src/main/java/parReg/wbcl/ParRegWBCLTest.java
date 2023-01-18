@@ -50,44 +50,44 @@ public class ParRegWBCLTest extends ParRegTest {
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  public static void startGatewayHubTask() {
-    ((ParRegWBCLTest)testInstance).startGatewayHub(ConfigPrms.getGatewayConfig());
-  }
+  // public static void startGatewayHubTask() { //rm ghub
+  //   ((ParRegWBCLTest)testInstance).startGatewayHub(ConfigPrms.getGatewayConfig());
+  // }
 
   /**
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  protected void startGatewayHub(String gatewayConfig) {
-    isWBCLConfiguration = (TestConfig.tab().stringAt(GatewayPrms.listeners, null) != null);
-    isGateway = true;
+  // protected void startGatewayHub(String gatewayConfig) {
+  //   isWBCLConfiguration = (TestConfig.tab().stringAt(GatewayPrms.listeners, null) != null);
+  //   isGateway = true;
 
-    if (isWBCLConfiguration) {
-       GatewayHubHelper.addWBCLGateway(gatewayConfig);
-    } else {
-       GatewayHubHelper.addGateways(gatewayConfig);
-    }
-    GatewayHubHelper.startGatewayHub();
-  }
+  //   if (isWBCLConfiguration) {
+  //      GatewayHubHelper.addWBCLGateway(gatewayConfig);
+  //   } else {
+  //      GatewayHubHelper.addGateways(gatewayConfig);
+  //   }
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /**
    * Creates a gateway hub using the {@link CacheServerPrms}.
    */
-  protected void createGatewayHub() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-    if (gatewayHubConfig != null) {
-      GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-    }
-  }
+  // protected void createGatewayHub() {
+  //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+  //   if (gatewayHubConfig != null) {
+  //     GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  //   }
+  // }
 
   /**
    * Re-creates a gateway hub (within HAController method)
    */
-  protected void createGatewayHub(String gatewayHubConfig) {
-    if (gatewayHubConfig != null) {
-      GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-    }
-  }
+  // protected void createGatewayHub(String gatewayHubConfig) {
+  //   if (gatewayHubConfig != null) {
+  //     GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  //   }
+  // }
 
   /**
    * Creates a async event queue using the {@link ConfigPrms#asyncEventQueueConfig}.
@@ -112,7 +112,7 @@ public class ParRegWBCLTest extends ParRegTest {
         PRObserver.installObserverHook();
         testInstance = new ParRegWBCLTest();
         ((ParRegWBCLTest)testInstance).aRegion = ((ParRegWBCLTest)testInstance).initializeRegion();
-        ((ParRegWBCLTest)testInstance).createGatewayHub();
+        // ((ParRegWBCLTest)testInstance).createGatewayHub();
         ((ParRegWBCLTest)testInstance).initPdxDiskStore();
         ((ParRegWBCLTest)testInstance).initializeInstance();
         ((ParRegWBCLTest)testInstance).isDataStore = getIsDataStore();
@@ -271,8 +271,8 @@ public class ParRegWBCLTest extends ParRegTest {
         }
         CacheHelper.createCache("cache1");
         aRegion = RegionHelper.createRegion(regionConfigName);
-        createGatewayHub("hub");
-        startGatewayHub("gateway");
+        // createGatewayHub("hub");
+        // startGatewayHub("gateway");
         initPdxDiskStore();
         Log.getLogWriter().info("After recreating " + aRegion.getFullPath() + ", size is " + aRegion.size());
      
@@ -319,17 +319,17 @@ public class ParRegWBCLTest extends ParRegTest {
 
   // Override for HAController(), so we also stop/start the local GatewayHub (in wbcl members)
   protected void HAController() {
-    GatewayHub hub = null;
-    List hubs = CacheHelper.getCache().getGatewayHubs();
-    if (hubs.size() > 0) {
-        hub = CacheHelper.getCache().getGatewayHubs().get(0);
-    }
+    // GatewayHub hub = null;
+    // List hubs = CacheHelper.getCache().getGatewayHubs();
+    // if (hubs.size() > 0) {
+    //     hub = CacheHelper.getCache().getGatewayHubs().get(0);
+    // }
 
-    // stop the gateway while we disconnect from the DS or close the PR
-    if (hub != null) {
-       Log.getLogWriter().info("Stopping GatewayHub " + hub.toString());
-       hub.stop();
-    }
+    // // stop the gateway while we disconnect from the DS or close the PR
+    // if (hub != null) {
+    //    Log.getLogWriter().info("Stopping GatewayHub " + hub.toString());
+    //    hub.stop();
+    // }
     offHeapVerifyTargetCount = getOffHeapVerifyTargetCount();
   
     // run HAController (as is) ... note that the Gateway gets re-started as part of HA_reinitializeRegion

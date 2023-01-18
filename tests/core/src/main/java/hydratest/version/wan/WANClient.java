@@ -36,18 +36,18 @@ public class WANClient {
     RegionHelper.createRegion(ConfigPrms.getRegionConfig());
   }
 
-  public static void reportGatewayAttributesTask() {
-    GatewayHub hub = GatewayHubHelper.getGatewayHub();
-    if (hub == null) {
-      throw new HydraConfigException("Gateway not configured");
-    }
-    else {
-      String s = "In GemFire version " + GemFireVersion.getGemFireVersion()
-               + ", the gateway hub and its gateways are "
-               + GatewayHubHelper.gatewayHubToString(hub);
-      Log.getLogWriter().info(s);
-    }
-  }
+  // public static void reportGatewayAttributesTask() {
+  //   GatewayHub hub = GatewayHubHelper.getGatewayHub();
+  //   if (hub == null) {
+  //     throw new HydraConfigException("Gateway not configured");
+  //   }
+  //   else {
+  //     String s = "In GemFire version " + GemFireVersion.getGemFireVersion()
+  //              + ", the gateway hub and its gateways are "
+  //              + GatewayHubHelper.gatewayHubToString(hub);
+  //     Log.getLogWriter().info(s);
+  //   }
+  // }
 
   public static void closeCacheTask() {
     CacheHelper.closeCache();

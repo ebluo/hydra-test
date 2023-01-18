@@ -104,37 +104,37 @@ public static int EQUIVALENT = 2;
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  public static void HydraTask_startGatewayHubTask() {
-    testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
-  }
+//   public static void HydraTask_startGatewayHubTask() { //rm ghub
+//     testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
+//   }
 
   /**
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  protected void startGatewayHub(String gatewayConfig) {
-    GatewayHubHelper.addGateways(gatewayConfig);
-    GatewayHubHelper.startGatewayHub();
-  }
+//   protected void startGatewayHub(String gatewayConfig) {
+//     GatewayHubHelper.addGateways(gatewayConfig);
+//     GatewayHubHelper.startGatewayHub();
+//   }
 
   /**
    * Creates a gateway hub with the configured HubConfig.
    */
-  protected void createGatewayHub() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-    if (gatewayHubConfig != null) {
-      GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-    }
-  }
+//   protected void createGatewayHub() {
+//     String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+//     if (gatewayHubConfig != null) {
+//       GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+//     }
+//   }
 
   /**
    * Re-creates a gateway hub (within HAController method)
    */
-  protected void createGatewayHub(String gatewayHubConfig) {
-    if (gatewayHubConfig != null) {
-      GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-    }
-  }
+//   protected void createGatewayHub(String gatewayHubConfig) {
+//     if (gatewayHubConfig != null) {
+//       GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+//     }
+//   }
 
   //============================================================================
   // INITTASKS 
@@ -148,7 +148,7 @@ public static int EQUIVALENT = 2;
         // create cache and region (before creating gatewayHub)
         CacheHelper.createCache(ConfigPrms.getCacheConfig());
         testInstance.createRegion();
-        testInstance.createGatewayHub();
+      //   testInstance.createGatewayHub();
         testInstance.initializeInstance();
      }
   }

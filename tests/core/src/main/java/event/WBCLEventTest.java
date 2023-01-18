@@ -42,28 +42,28 @@ public class WBCLEventTest extends EventTest {
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  public static void startGatewayHubTask() {
-    ((WBCLEventTest)eventTest).startGatewayHub(ConfigPrms.getGatewayConfig());
-  }
+  // public static void startGatewayHubTask() { //rm ghub
+  //   ((WBCLEventTest)eventTest).startGatewayHub(ConfigPrms.getGatewayConfig());
+  // }
 
   /**
    * Creates a gateway hub using the {@link CacheServerPrms}.
    */
-  protected void createGatewayHub() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-    if (gatewayHubConfig != null) {
-      GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-    }
-  }
+  // protected void createGatewayHub() {
+  //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+  //   if (gatewayHubConfig != null) {
+  //     GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  //   }
+  // }
 
   /**
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  protected void startGatewayHub(String gatewayConfig) {
-    GatewayHubHelper.addWBCLGateway(gatewayConfig);
-    GatewayHubHelper.startGatewayHub();
-  }
+  // protected void startGatewayHub(String gatewayConfig) {
+  //   GatewayHubHelper.addWBCLGateway(gatewayConfig);
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   //============================================================================
   // INITTASKS (overrides)
@@ -85,7 +85,7 @@ public class WBCLEventTest extends EventTest {
   protected void initialize() {
       CacheHelper.createCache(ConfigPrms.getCacheConfig());
       rootRegion = RegionHelper.createRegion(ConfigPrms.getRegionConfig());
-      ((WBCLEventTest)eventTest).createGatewayHub();
+      // ((WBCLEventTest)eventTest).createGatewayHub();
 
       useTransactions = EventPrms.useTransactions();
       isSerialExecution = EventBB.isSerialExecution();

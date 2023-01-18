@@ -24,8 +24,8 @@ import hydra.ClientVmMgr;
 import hydra.ClientVmNotFoundException;
 import hydra.ConfigPrms;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayHubHelper;
-import hydra.GatewayPrms;
+// import hydra.GatewayHubHelper; //rm ghub
+// import hydra.GatewayPrms;
 import hydra.Log;
 import hydra.PoolHelper;
 import hydra.RegionHelper;
@@ -106,10 +106,10 @@ public class ExecutionAndColocationTest extends KnownKeysTest {
     if (testInstance == null) {
       testInstance = new ExecutionAndColocationTest();
       ((KnownKeysTest)testInstance).initInstance("clientRegion");
-      if (isGatewayConfiguration) {
-        String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-        GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
+      // if (isGatewayConfiguration) {
+      //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+      //   GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+      // }
     }
   }
 
@@ -160,8 +160,8 @@ public class ExecutionAndColocationTest extends KnownKeysTest {
 
     aRegion = RegionHelper.createRegion(regDescriptName);
     isBridgeConfiguration = (TestConfig.tab().stringAt(BridgePrms.names, null) != null);
-    isGatewayConfiguration = (TestConfig.tab()
-        .stringAt(GatewayPrms.names, null) != null);
+    // isGatewayConfiguration = (TestConfig.tab()
+    //     .stringAt(GatewayPrms.names, null) != null);
     lockOperations = TestConfig.tab().booleanAt(ParRegPrms.lockOperations,
         false);
     if (lockOperations) {
@@ -211,10 +211,10 @@ public class ExecutionAndColocationTest extends KnownKeysTest {
       if (isBridgeConfiguration) {
         BridgeHelper.startBridgeServer("bridge");
       }
-      if (isGatewayConfiguration) {
-        String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-        GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
+      // if (isGatewayConfiguration) {
+      //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+      //   GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+      // }
     }
   }
 

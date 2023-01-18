@@ -24,7 +24,7 @@ import org.apache.geode.cache.InterestResultPolicy;
 import hydra.BasePrms;
 import hydra.CachePrms;
 import hydra.ClientPrms;
-import hydra.GatewayHubPrms;
+// import hydra.GatewayHubPrms; //rm ghub
 import hydra.HydraConfigException;
 import hydra.HydraInternalException;
 import hydra.HydraVector;

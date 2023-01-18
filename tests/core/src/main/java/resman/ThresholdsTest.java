@@ -87,9 +87,9 @@ import org.apache.geode.cache.query.IndexNameConflictException;
 import org.apache.geode.cache.query.IndexType;
 import org.apache.geode.cache.query.QueryService;
 import org.apache.geode.cache.query.RegionNotFoundException;
-import org.apache.geode.cache.util.Gateway;
-import org.apache.geode.cache.util.GatewayEventListener;
-import org.apache.geode.cache.util.GatewayHub;
+// import org.apache.geode.cache.util.Gateway; //rm ghub
+// import org.apache.geode.cache.util.GatewayEventListener;
+// import org.apache.geode.cache.util.GatewayHub;
 import org.apache.geode.compression.Compressor;
 import org.apache.geode.distributed.DistributedMember;
 import org.apache.geode.internal.SetUtils;
@@ -564,27 +564,27 @@ public class ThresholdsTest extends ParRegTest {
   }
 
 
-  public static void HydraTask_turnOnGatewayDraining() throws TestException {
+  // public static void HydraTask_turnOnGatewayDraining() throws TestException {
     
-    // Drain if configured for old WAN
-    GemFireCacheImpl cache = GemFireCacheImpl.getInstance();
-    List<GatewayHub> hubs = cache.getGatewayHubs();
-    for(GatewayHub hub : hubs) {
-      List<Gateway> gws = hub.getGateways();
-      for(Gateway gw : gws) {
-        List<GatewayEventListener> lists = gw.getListeners();
-        for(GatewayEventListener gel : lists) {
-          ((BlockingGListener)gel).setDraining(true);
-        }
-      }
-    }
+  //   // Drain if configured for old WAN
+  //   GemFireCacheImpl cache = GemFireCacheImpl.getInstance();
+  //   List<GatewayHub> hubs = cache.getGatewayHubs();
+  //   for(GatewayHub hub : hubs) {
+  //     List<Gateway> gws = hub.getGateways();
+  //     for(Gateway gw : gws) {
+  //       List<GatewayEventListener> lists = gw.getListeners();
+  //       for(GatewayEventListener gel : lists) {
+  //         ((BlockingGListener)gel).setDraining(true);
+  //       }
+  //     }
+  //   }
     
-    // Drain if configured for new WAN
-    Set<AsyncEventQueue> queues = cache.getAsyncEventQueues();
-    for (AsyncEventQueue queue : queues) {
-      ((BlockingGListener) queue.getAsyncEventListener()).setDraining(true);
-    }
-  }
+  //   // Drain if configured for new WAN
+  //   Set<AsyncEventQueue> queues = cache.getAsyncEventQueues();
+  //   for (AsyncEventQueue queue : queues) {
+  //     ((BlockingGListener) queue.getAsyncEventListener()).setDraining(true);
+  //   }
+  // }
   
   /**
    * Creates a async event queue using the {@link ConfigPrms#asyncEventQueueConfig}.
@@ -695,7 +695,7 @@ public class ThresholdsTest extends ParRegTest {
         true,
         ResourceManPrms.getTaskWaitForLowMemSec()*1000,
         1000);
-    HydraTask_turnOnGatewayDraining();
+    // HydraTask_turnOnGatewayDraining();
     ResourceManBB.getBB().getSharedCounters().zero(ResourceManBB.lowMemoryFlag);
   }
 

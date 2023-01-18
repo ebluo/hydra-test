@@ -99,7 +99,7 @@ public class WANRecoveryTest extends util.OperationsClient {
       // Create GatewayHub, note that the Gateway cannot be started until
       // all Gateways have been created (info placed on BB for hydra to 
       // connect appropriate VMs/ports
-      createGatewayHub();
+      // createGatewayHub(); //rm ghub
 
       randomValues = new RandomValues();
    }
@@ -111,24 +111,24 @@ public class WANRecoveryTest extends util.OperationsClient {
     * invoked createGatewayHub(), so the hydra WAN blackboard knows about 
     * all the available servers and endpoints.
     */
-    public synchronized static void HydraTask_startGatewayHubTask() {
-       testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
-    }
+   //  public synchronized static void HydraTask_startGatewayHubTask() {
+   //     testInstance.startGatewayHub(ConfigPrms.getGatewayConfig());
+   //  }
 
     /**
      * Starts a gateway hub in a VM that previously created one, after creating
      * gateways.
      */
-    protected void startGatewayHub(String gatewayConfig) {
-      GatewayHubHelper.addGateways(gatewayConfig);
-      GatewayHubHelper.startGatewayHub();
+   //  protected void startGatewayHub(String gatewayConfig) {
+   //    GatewayHubHelper.addGateways(gatewayConfig);
+   //    GatewayHubHelper.startGatewayHub();
  
-      // only target the primary GatewayHub in WAN Site #1
-      GatewayHub hub = GatewayHubHelper.getGatewayHub();
-      if (hub.getStartupPolicy().equals(GatewayHub.STARTUP_POLICY_PRIMARY)) {
-         parReg.ParRegBB.getBB().getSharedMap().put(RecoveryStopStart.DataStoreVmStr + RemoteTestModule.getMyVmid(), new Integer(RemoteTestModule.getMyVmid()));
-      }
-    }
+   //    // only target the primary GatewayHub in WAN Site #1
+   //    GatewayHub hub = GatewayHubHelper.getGatewayHub();
+   //    if (hub.getStartupPolicy().equals(GatewayHub.STARTUP_POLICY_PRIMARY)) {
+   //       parReg.ParRegBB.getBB().getSharedMap().put(RecoveryStopStart.DataStoreVmStr + RemoteTestModule.getMyVmid(), new Integer(RemoteTestModule.getMyVmid()));
+   //    }
+   //  }
 
    /**
     *  Setup DynamicRegionFactory and create non-dynamic parent regions
@@ -157,13 +157,13 @@ public class WANRecoveryTest extends util.OperationsClient {
    /* 
     * Creates the GatewayHub (if configured)
     */
-   protected void createGatewayHub() {
-      // Gateway initialization (if needed)
-      String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-      if (gatewayHubConfig != null) {
-         GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
-   }
+   // protected void createGatewayHub() {
+   //    // Gateway initialization (if needed)
+   //    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+   //    if (gatewayHubConfig != null) {
+   //       GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+   //    }
+   // }
 
    /**
     * Recycle primary gateway in WAN Site #1

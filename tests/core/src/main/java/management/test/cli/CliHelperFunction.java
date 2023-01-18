@@ -115,7 +115,7 @@ public class CliHelperFunction extends FunctionAdapter {
     info.enableOffHeapMemory = attr.getEnableOffHeapMemory();
     info.entryIdleTimeout = attr.getEntryIdleTimeout();
     info.entryTimeToLive = attr.getEntryTimeToLive();
-    info.gatewayHubId = attr.getGatewayHubId();
+    // info.gatewayHubId = attr.getGatewayHubId();
     info.initialCapacity = attr.getInitialCapacity();
     info.interestPolicy = attr.getSubscriptionAttributes().getInterestPolicy();
     info.keyConstraint = attr.getKeyConstraint();

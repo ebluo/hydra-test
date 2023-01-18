@@ -20,7 +20,7 @@ import hydra.BridgeHelper;
 import hydra.CacheHelper;
 import hydra.ConfigPrms;
 import hydra.DistributedSystemHelper;
-import hydra.GatewayHubHelper;
+// import hydra.GatewayHubHelper; //rm ghub
 import hydra.GatewayReceiverHelper;
 import hydra.GatewaySenderHelper;
 import hydra.Log;
@@ -202,20 +202,20 @@ public class WanMultiVersion {
   /**
    * Creates a gateway hub using the {@link CacheServerPrms}.
    */
-  public synchronized static void createGatewayHubTask() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();        
-    GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-  }
+  // public synchronized static void createGatewayHubTask() {
+  //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();        
+  //   GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  // }
 
   /**
    * Starts a gateway hub in a VM that previously created one, after creating
    * gateways.
    */
-  public synchronized static void startGatewayHubTask() {
-    String gatewayConfig = ConfigPrms.getGatewayConfig();
-    GatewayHubHelper.addGateways(gatewayConfig);
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public synchronized static void startGatewayHubTask() {
+  //   String gatewayConfig = ConfigPrms.getGatewayConfig();
+  //   GatewayHubHelper.addGateways(gatewayConfig);
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /**
    * Registers interest in all keys using the client interest policy.

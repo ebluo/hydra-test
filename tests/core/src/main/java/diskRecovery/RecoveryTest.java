@@ -27,8 +27,8 @@ import hydra.DiskStorePrms;
 import hydra.DistributedSystemBlackboard;
 import hydra.DistributedSystemHelper;
 import hydra.FileUtil;
-import hydra.GatewayHubBlackboard;
-import hydra.GatewayHubHelper;
+// import hydra.GatewayHubBlackboard; //rm ghub
+// import hydra.GatewayHubHelper;
 import hydra.GsRandom;
 import hydra.HostHelper;
 import hydra.HydraRuntimeException;
@@ -846,28 +846,28 @@ public class RecoveryTest {
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_createGatewayHub() {
-    String hubConfigName = RecoveryPrms.getHubConfigName();
-    Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfigName);
-    GatewayHubHelper.createGatewayHub(hubConfigName);
-  }
+  // public static void HydraTask_createGatewayHub() {
+  //   String hubConfigName = RecoveryPrms.getHubConfigName();
+  //   Log.getLogWriter().info("Creating gateway hub with hub config: " + hubConfigName);
+  //   GatewayHubHelper.createGatewayHub(hubConfigName);
+  // }
   
   /** Create gateway hub
    * 
    */
-  public static void HydraTask_addGatewayHub() {
-    String gatewayConfigName = RecoveryPrms.getGatewayConfigName();
-    Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfigName);
-    GatewayHubHelper.addGateways(gatewayConfigName);
-  }
+  // public static void HydraTask_addGatewayHub() {
+  //   String gatewayConfigName = RecoveryPrms.getGatewayConfigName();
+  //   Log.getLogWriter().info("Adding gateway with gateway config: " + gatewayConfigName);
+  //   GatewayHubHelper.addGateways(gatewayConfigName);
+  // }
   
   /** Start gateway hub
    * 
    */
-  public static void HydraTask_startGatewayHub() {
-    Log.getLogWriter().info("Starting gateway hub");
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void HydraTask_startGatewayHub() {
+  //   Log.getLogWriter().info("Starting gateway hub");
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /** Create a region for each region defined in hydra.RegionPrms-names
    * 
@@ -920,11 +920,11 @@ public class RecoveryTest {
   /** Disconnect from the distributed system
    * 
    */
-  public static void HydraTask_stopGatewayHub() {
-    GatewayHubHelper.stopGatewayHub();
-    GatewayHubBlackboard.getInstance().getSharedMap().clear();
-    DistributedSystemBlackboard.getInstance().getSharedMap().clear();
-  }
+  // public static void HydraTask_stopGatewayHub() {
+  //   GatewayHubHelper.stopGatewayHub();
+  //   GatewayHubBlackboard.getInstance().getSharedMap().clear();
+  //   DistributedSystemBlackboard.getInstance().getSharedMap().clear();
+  // }
 
   /** Convert disk files for this jvm.
    * 
@@ -1278,7 +1278,7 @@ public class RecoveryTest {
 
     // start in a particular order
     // start the locators first
-    GatewayHubBlackboard.getInstance().getSharedMap().clear();
+    // GatewayHubBlackboard.getInstance().getSharedMap().clear();
     DistributedSystemBlackboard.getInstance().getSharedMap().clear();
     StopStartVMs.startVMs(newLocators);
     // I'm a locator, so I need to initialize also
@@ -5280,7 +5280,7 @@ public class RecoveryTest {
 
     // start in a particular order
     // start the locators first
-    GatewayHubBlackboard.getInstance().getSharedMap().clear();
+    // GatewayHubBlackboard.getInstance().getSharedMap().clear();
     DistributedSystemBlackboard.getInstance().getSharedMap().clear();
     StopStartVMs.startVMs(newLocators);
 

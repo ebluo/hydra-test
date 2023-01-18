@@ -100,8 +100,8 @@ public class TestConfig implements Serializable {
   private SortedMap GatewayReceiverDescriptions = new TreeMap();
   private SortedMap GatewaySenderDescriptions = new TreeMap();
   private SortedMap<String,AsyncEventQueueDescription> AsyncEventQueueDescriptions = new TreeMap();
-  private SortedMap GatewayHubDescriptions = new TreeMap();
-  private SortedMap GatewayDescriptions = new TreeMap();
+  // private SortedMap GatewayHubDescriptions = new TreeMap(); //rm ghub
+  // private SortedMap GatewayDescriptions = new TreeMap();
   private SortedMap<String,ClientDescription> ClientDescriptions = new TreeMap();
   private SortedMap JProbeDescriptions = new TreeMap();
   private SortedMap HypericServerInstallDescriptions = new TreeMap();
@@ -248,8 +248,8 @@ public class TestConfig implements Serializable {
     ResourceManagerDescription.configure(this);
     CacheDescription.configure(this);
     ClientCacheDescription.configure(this);
-    GatewayDescription.configure(this);
-    GatewayHubDescription.configure(this);
+    // GatewayDescription.configure(this);
+    // GatewayHubDescription.configure(this);
     HypericServerInstallDescription.configure(this);
   }
 
@@ -1108,43 +1108,43 @@ public class TestConfig implements Serializable {
     AsyncEventQueueDescriptions.put(name, aeqd);
   }
 
-  public Map getGatewayHubDescriptions() {
-    return GatewayHubDescriptions;
-  }
-  public GatewayHubDescription getGatewayHubDescription(String name) {
-    return (GatewayHubDescription)GatewayHubDescriptions.get(name);
-  }
+  // public Map getGatewayHubDescriptions() {
+  //   return GatewayHubDescriptions;
+  // }
+  // public GatewayHubDescription getGatewayHubDescription(String name) {
+  //   return (GatewayHubDescription)GatewayHubDescriptions.get(name);
+  // }
   /**
   * Adds the specified gateway hub description to the test configuration.
   * @param ghd the gateway hub description to add
   * @throws HydraConfigException if a gateway hub description with the same name already exists
   */
-  protected void addGatewayHubDescription(GatewayHubDescription ghd) {
-    String name = ghd.getName();
-    if (GatewayHubDescriptions.containsKey(name)) {
-      throw new HydraConfigException("Gateway hub description " + name + " already exists");
-    }
-    GatewayHubDescriptions.put(name, ghd);
-  }
+  // protected void addGatewayHubDescription(GatewayHubDescription ghd) {
+  //   String name = ghd.getName();
+  //   if (GatewayHubDescriptions.containsKey(name)) {
+  //     throw new HydraConfigException("Gateway hub description " + name + " already exists");
+  //   }
+  //   GatewayHubDescriptions.put(name, ghd);
+  // }
 
-  public Map getGatewayDescriptions() {
-    return GatewayDescriptions;
-  }
-  public GatewayDescription getGatewayDescription(String name) {
-    return (GatewayDescription)GatewayDescriptions.get(name);
-  }
+  // public Map getGatewayDescriptions() {
+  //   return GatewayDescriptions;
+  // }
+  // public GatewayDescription getGatewayDescription(String name) {
+  //   return (GatewayDescription)GatewayDescriptions.get(name);
+  // }
   /**
   * Adds the specified gateway description to the test configuration.
   * @param gd the gateway description to add
   * @throws HydraConfigException if a gateway description with the same name already exists
   */
-  protected void addGatewayDescription(GatewayDescription gd) {
-    String name = gd.getName();
-    if (GatewayDescriptions.containsKey(name)) {
-      throw new HydraConfigException("Gateway description " + name + " already exists");
-    }
-    GatewayDescriptions.put(name, gd);
-  }
+  // protected void addGatewayDescription(GatewayDescription gd) {
+  //   String name = gd.getName();
+  //   if (GatewayDescriptions.containsKey(name)) {
+  //     throw new HydraConfigException("Gateway description " + name + " already exists");
+  //   }
+  //   GatewayDescriptions.put(name, gd);
+  // }
 
   public Map<String,ClientDescription> getClientDescriptions() {
     return ClientDescriptions;
@@ -1522,12 +1522,12 @@ public class TestConfig implements Serializable {
     if (AsyncEventQueueDescriptions.size() != 0)
       for (AsyncEventQueueDescription aeqd:AsyncEventQueueDescriptions.values())
         map.putAll(aeqd.toSortedMap());
-    if (GatewayHubDescriptions.size() != 0)
-      for (Iterator i = GatewayHubDescriptions.values().iterator(); i.hasNext();)
-        map.putAll(((GatewayHubDescription)i.next()).toSortedMap());
-    if (GatewayDescriptions.size() != 0)
-      for (Iterator i = GatewayDescriptions.values().iterator(); i.hasNext();)
-        map.putAll(((GatewayDescription)i.next()).toSortedMap());
+    // if (GatewayHubDescriptions.size() != 0)
+    //   for (Iterator i = GatewayHubDescriptions.values().iterator(); i.hasNext();)
+    //     map.putAll(((GatewayHubDescription)i.next()).toSortedMap());
+    // if (GatewayDescriptions.size() != 0)
+    //   for (Iterator i = GatewayDescriptions.values().iterator(); i.hasNext();)
+    //     map.putAll(((GatewayDescription)i.next()).toSortedMap());
     if (HypericServerInstallDescriptions.size() != 0)
         for (Iterator i = HypericServerInstallDescriptions.values().iterator(); i.hasNext();)
           map.putAll(((HypericServerInstallDescription)i.next()).toSortedMap());

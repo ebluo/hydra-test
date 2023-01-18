@@ -115,7 +115,7 @@ public class NetworkPartitionTest extends util.OperationsClient {
 
          CacheServer server =
              BridgeHelper.startBridgeServer(ConfigPrms.getBridgeConfig());
-         createGatewayHub();
+         // createGatewayHub(); //rm ghub
        }
        if (SBUtil.isLeadMember()) {
           Log.getLogWriter().info("This VM is currently the LeadMember");
@@ -316,7 +316,7 @@ public class NetworkPartitionTest extends util.OperationsClient {
         String regionName = rd.getRegionName();
         aRegion = RegionHelper.createRegion(regionName, factory);
 
-        createGatewayHub();
+      //   createGatewayHub();
         
         performInitialChecks(regionName);
       }
@@ -428,13 +428,13 @@ public class NetworkPartitionTest extends util.OperationsClient {
    /* 
     * Creates the GatewayHub (if configured)
     */
-   protected void createGatewayHub() {
-      String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-      // Gateway initialization (if needed)
-      if (gatewayHubConfig != null) {
-         GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-      }
-   }
+   // protected void createGatewayHub() {
+   //    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+   //    // Gateway initialization (if needed)
+   //    if (gatewayHubConfig != null) {
+   //       GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+   //    }
+   // }
 
     /* 
      * Initializes SplitBrain test params for this instance
@@ -465,19 +465,19 @@ public class NetworkPartitionTest extends util.OperationsClient {
      * Starts a gateway hub in a VM that previously created one, after creating
      * gateways
      */
-    public static void startGatewayHubTask() {
-      String gatewayConfig = ConfigPrms.getGatewayConfig();
-      testInstance.startGatewayHub(gatewayConfig);
-    }
+   //  public static void startGatewayHubTask() {
+   //    String gatewayConfig = ConfigPrms.getGatewayConfig();
+   //    testInstance.startGatewayHub(gatewayConfig);
+   //  }
 
     /**
      * Starts a gateway hub in a VM that previously created one, after creating
      * gateways.
      */
-    private void startGatewayHub(String gatewayConfig) {
-      GatewayHubHelper.addGateways(gatewayConfig);
-      GatewayHubHelper.startGatewayHub();
-    }
+   //  private void startGatewayHub(String gatewayConfig) {
+   //    GatewayHubHelper.addGateways(gatewayConfig);
+   //    GatewayHubHelper.startGatewayHub();
+   //  }
 
     /**
      * Creates GatewaySender ids based on the

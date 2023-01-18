@@ -40,18 +40,18 @@ public class ConflationClient extends CachePerfClient {
   /**
    * Creates a gateway hub as required by {@link #startGatewayHubTask}.
    */
-  public static void createGatewayHubTask() {
-    GatewayHubHelper.createGatewayHub("hub");
-  }
+  // public static void createGatewayHubTask() { //rm ghub
+  //   GatewayHubHelper.createGatewayHub("hub");
+  // }
 
   /**
    * Creates gateways and starts the hub.  Assumes {@link #createGatewayHubTask}
    * has already executed.
    */
-  public static void startGatewayHubTask() {
-    GatewayHubHelper.addGateways("gateway");
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void startGatewayHubTask() {
+  //   GatewayHubHelper.addGateways("gateway");
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   //----------------------------------------------------------------------------
   //  Tasks
@@ -249,9 +249,9 @@ public class ConflationClient extends CachePerfClient {
           || TestConfig.tab().stringAt(hydra.RegionPrms.gatewaySenderNames, null) != null){
         updateEvents   = getStatTotalCount("cacheperf.CachePerfStats",
                                               "updateEvents");        
-        if (TestConfig.tab().booleanAt(hydra.GatewayPrms.batchConflation, false)){
-          wanconflations = getStatTotalCount("GatewayStatistics",  "eventsNotQueuedConflated");          
-        }else if (TestConfig.tab().booleanAt(hydra.GatewaySenderPrms.batchConflationEnabled, false)){
+        // if (TestConfig.tab().booleanAt(hydra.GatewayPrms.batchConflation, false)){
+        //   wanconflations = getStatTotalCount("GatewayStatistics",  "eventsNotQueuedConflated");          
+        if (TestConfig.tab().booleanAt(hydra.GatewaySenderPrms.batchConflationEnabled, false)){
           wanconflations = getStatTotalCount("GatewaySenderStatistics",  "eventsNotQueuedConflated");
         }
       } else {

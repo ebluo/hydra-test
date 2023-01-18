@@ -123,19 +123,19 @@ public class LocatorClient {
     CacheHelper.closeCache();
   }
 
-  public static void createGatewayHubTask() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-    GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-  }
+  // public static void createGatewayHubTask() { //rm ghub
+  //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+  //   GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  // }
 
-  public static void addGatewaysTask() {
-    String gatewayConfig = ConfigPrms.getGatewayConfig();
-    GatewayHubHelper.addGateways(gatewayConfig);
-  }
+  // public static void addGatewaysTask() {
+  //   String gatewayConfig = ConfigPrms.getGatewayConfig();
+  //   GatewayHubHelper.addGateways(gatewayConfig);
+  // }
 
-  public static void startGatewayHubTask() {
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void startGatewayHubTask() {
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /**
    * TASK to validate the expected number of members.

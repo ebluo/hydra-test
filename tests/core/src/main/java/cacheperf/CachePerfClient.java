@@ -38,7 +38,7 @@ import org.apache.geode.cache.control.*;
 import org.apache.geode.cache.query.*;
 import org.apache.geode.cache.util.CacheListenerAdapter;
 import org.apache.geode.cache.util.Gateway;
-import org.apache.geode.cache.util.GatewayHub;
+// import org.apache.geode.cache.util.GatewayHub; //rm ghub
 import org.apache.geode.cache.wan.GatewaySender;
 import org.apache.geode.internal.NanoTimer;
 import org.apache.geode.internal.cache.RegionQueue;
@@ -791,40 +791,40 @@ public class CachePerfClient {
   /**
    * TASK to create a gateway hub.
    */
-  public static void createGatewayHubTask() {
-    String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
-    GatewayHubHelper.createGatewayHub(gatewayHubConfig);
-  }
+  // public static void createGatewayHubTask() {
+  //   String gatewayHubConfig = ConfigPrms.getGatewayHubConfig();
+  //   GatewayHubHelper.createGatewayHub(gatewayHubConfig);
+  // }
 
   /**
    * TASK to add gateways.
    */
-  public static void addGatewaysTask() {
-    String gatewayConfig = ConfigPrms.getGatewayConfig();
-    GatewayHubHelper.addGateways(gatewayConfig);
-  }
+  // public static void addGatewaysTask() {
+  //   String gatewayConfig = ConfigPrms.getGatewayConfig();
+  //   GatewayHubHelper.addGateways(gatewayConfig);
+  // }
 
   /**
    * TASK to add a WBCL gateway.
    */
-  public static void addWBCLGatewayTask() {
-    String gatewayConfig = ConfigPrms.getGatewayConfig();
-    GatewayHubHelper.addWBCLGateway(gatewayConfig);
-  }
+  // public static void addWBCLGatewayTask() {
+  //   String gatewayConfig = ConfigPrms.getGatewayConfig();
+  //   GatewayHubHelper.addWBCLGateway(gatewayConfig);
+  // }
 
   /**
    * TASK to start a gateway hub.
    */
-  public static void startGatewayHubTask() {
-    GatewayHubHelper.startGatewayHub();
-  }
+  // public static void startGatewayHubTask() {
+  //   GatewayHubHelper.startGatewayHub();
+  // }
 
   /**
    * TASK to stop a gateway hub.
    */
-  public static void stopGatewayHubTask() {
-    GatewayHubHelper.stopGatewayHub();
-  }
+  // public static void stopGatewayHubTask() {
+  //   GatewayHubHelper.stopGatewayHub();
+  // }
 
   /**
    * Creates GatewaySender ids based on the
@@ -2521,51 +2521,51 @@ public class CachePerfClient {
   /**
    *  TASK to put objects and wait for the gateway queues to drain.
    */
-  public static void putDataGatewayTask() {
-    CachePerfClient c = new CachePerfClient();
-    c.initialize( PUTS );
-    c.putDataGateway();
-  }
-  private void putDataGateway() {
-    if (this.useTransactions) {
-      this.begin();
-    }
-    int gatewayQueueEntries = CachePerfPrms.getGatewayQueueEntries();
-    boolean batchDone = false;
-    do {
-      // delay getting key until inside put loop
-      executeTaskTerminator();   // commits at task termination
-      executeWarmupTerminator(); // commits at warmup termination
-      for (int i = 0; i < gatewayQueueEntries; i++) {
-        int key = getNextKey();
-        put(key);
-        ++this.batchCount;
-        ++this.count;
-        ++this.keyCount;
-        ++this.iterationsSinceTxEnd;
-      }
-      waitForGatewayQueuesToDrain();
-      batchDone = executeBatchTerminator(); // commits at batch termination
-    } while (!batchDone);
-  }
-  private void waitForGatewayQueuesToDrain() {
-    long start = this.statistics.startGatewayQueueDrain();
-    GatewayHub hub = GatewayHubHelper.getGatewayHub();
-    List gateways = hub.getGateways();
-    while (true) {
-      MasterController.sleepForMs(1);
-      int size = 0;
-      for (Iterator i = gateways.iterator(); i.hasNext();) {
-        Gateway gateway = (Gateway)i.next();
-        size += gateway.getQueueSize();
-      }
-      if (size == 0) {
-        break;
-      }
-    }
-    this.statistics.endGatewayQueueDrain(start, 1, this.isMainWorkload,
-                                                   this.histogram);
-  }
+  // public static void putDataGatewayTask() {
+  //   CachePerfClient c = new CachePerfClient();
+  //   c.initialize( PUTS );
+  //   c.putDataGateway();
+  // }
+  // private void putDataGateway() {
+  //   if (this.useTransactions) {
+  //     this.begin();
+  //   }
+  //   int gatewayQueueEntries = CachePerfPrms.getGatewayQueueEntries();
+  //   boolean batchDone = false;
+  //   do {
+  //     // delay getting key until inside put loop
+  //     executeTaskTerminator();   // commits at task termination
+  //     executeWarmupTerminator(); // commits at warmup termination
+  //     for (int i = 0; i < gatewayQueueEntries; i++) {
+  //       int key = getNextKey();
+  //       put(key);
+  //       ++this.batchCount;
+  //       ++this.count;
+  //       ++this.keyCount;
+  //       ++this.iterationsSinceTxEnd;
+  //     }
+  //     waitForGatewayQueuesToDrain();
+  //     batchDone = executeBatchTerminator(); // commits at batch termination
+  //   } while (!batchDone);
+  // }
+  // private void waitForGatewayQueuesToDrain() {
+  //   long start = this.statistics.startGatewayQueueDrain();
+  //   GatewayHub hub = GatewayHubHelper.getGatewayHub();
+  //   List gateways = hub.getGateways();
+  //   while (true) {
+  //     MasterController.sleepForMs(1);
+  //     int size = 0;
+  //     for (Iterator i = gateways.iterator(); i.hasNext();) {
+  //       Gateway gateway = (Gateway)i.next();
+  //       size += gateway.getQueueSize();
+  //     }
+  //     if (size == 0) {
+  //       break;
+  //     }
+  //   }
+  //   this.statistics.endGatewayQueueDrain(start, 1, this.isMainWorkload,
+  //                                                  this.histogram);
+  // }
 
   /**
    *  TASK to put objects with new wan and wait for the sender queues to drain.
@@ -2623,37 +2623,37 @@ public class CachePerfClient {
   /**
    * TASK to cycle a gateway hub connection, avoiding logging.
    */
-  public static void cycleGatewayHubConnectionTask()
-  throws CacheException {
-    CachePerfClient c = new CachePerfClient();
-    c.initialize(CONNECTS);
-    c.cycleGatewayHubConnection();
-  }
-  private void cycleGatewayHubConnection() {
-    GatewayHub hub = GatewayHubHelper.getGatewayHub();
-    int ms = CachePerfPrms.getSleepMs();
-    boolean batchDone = false;
-    do {
-      executeTaskTerminator();
-      executeWarmupTerminator();
-      cycleGatewayHub(hub, ms);
-      ++this.batchCount;
-      ++this.count;
-      batchDone = executeBatchTerminator();
-    } while (!batchDone);
-  }
-  private void cycleGatewayHub(GatewayHub hub, int throttle) {
-    long start = this.statistics.startConnect();
-    try {
-      hub.start();
-    } catch (IOException e) {
-      String s = "Problem starting gateway hub " + hub;
-      throw new HydraRuntimeException(s, e);
-    }
-    this.statistics.endConnect(start, this.isMainWorkload, this.histogram);
-    MasterController.sleepForMs(throttle); // throttle
-    hub.stop();
-  } 
+  // public static void cycleGatewayHubConnectionTask()
+  // throws CacheException {
+  //   CachePerfClient c = new CachePerfClient();
+  //   c.initialize(CONNECTS);
+  //   c.cycleGatewayHubConnection();
+  // }
+  // private void cycleGatewayHubConnection() {
+  //   GatewayHub hub = GatewayHubHelper.getGatewayHub();
+  //   int ms = CachePerfPrms.getSleepMs();
+  //   boolean batchDone = false;
+  //   do {
+  //     executeTaskTerminator();
+  //     executeWarmupTerminator();
+  //     cycleGatewayHub(hub, ms);
+  //     ++this.batchCount;
+  //     ++this.count;
+  //     batchDone = executeBatchTerminator();
+  //   } while (!batchDone);
+  // }
+  // private void cycleGatewayHub(GatewayHub hub, int throttle) {
+  //   long start = this.statistics.startConnect();
+  //   try {
+  //     hub.start();
+  //   } catch (IOException e) {
+  //     String s = "Problem starting gateway hub " + hub;
+  //     throw new HydraRuntimeException(s, e);
+  //   }
+  //   this.statistics.endConnect(start, this.isMainWorkload, this.histogram);
+  //   MasterController.sleepForMs(throttle); // throttle
+  //   hub.stop();
+  // } 
 
   /**
    * TASK to lock and unlock a lock.
